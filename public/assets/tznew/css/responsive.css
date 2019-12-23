@@ -53,8 +53,7 @@
         background: url('images/bg-page.png') no-repeat 50% 50%;
     }
 
-    header {
-        padding: 0 !important;
+    .header-primary {
         height: 84px;
     }
 
@@ -176,6 +175,12 @@
     .app-banner .title {
         font-size: 2.25rem;
         font-weight: 600
+    }
+}
+
+@media all and (min-width: 1462px) {
+    .grid-container-large{
+        max-width: 1432px;
     }
 }
 
