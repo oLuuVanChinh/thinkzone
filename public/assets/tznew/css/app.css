@@ -293,7 +293,7 @@ header .logo img {
 
 .button-loadmore {
     font-size: 1.0rem;
-    padding: 13px 50px;
+    padding: 13px 46px;
     font-weight: 600;
 }
 
@@ -304,7 +304,8 @@ header .logo img {
 .part-title {
     font-size: 2em;
     font-weight: 600;
-    margin-bottom: 10px
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .relative {
@@ -1045,14 +1046,6 @@ header .logo img {
     width: 100%;
     border-radius: 50%;
     -webkit-border-radius: 50%;
-    margin-bottom: 15px;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    border: 10px solid transparent
-}
-
-.list-mentor img:hover {
-    border: 10px solid #3FAA61
 }
 
 .list-mentor .cell span {
@@ -1061,23 +1054,19 @@ header .logo img {
 }
 
 .list-mentor .cell span.strong {
-    font-size: 1.25rem
-}
-
-.list-mentor .cell {
-    margin-bottom: 40px
+    font-size: 1.25rem;
+    margin-bottom: 6px;
 }
 
 .mentor-viewmore {
     display: block;
     width: 100%;
     height: 0;
-    padding-bottom: calc(100% - 20px);
+    padding-bottom: 100%;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     margin-bottom: 15px;
     position: relative;
-    border: 10px solid #fff;
     /*     transition:all 0.4s ease; */
     /*     -webkit-transition:all 0.4s ease; */
 }
@@ -1353,7 +1342,7 @@ footer .menu.infomation .phone {
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
-    margin-bottom: 30px
+    margin-bottom: 28px
 }
 
 .list-post .cell {
@@ -1361,8 +1350,8 @@ footer .menu.infomation .phone {
 }
 
 .list-post .post-title {
-    margin: 0 0 15px;
-    line-height: 1;
+    margin: 0 0 25px;
+    line-height: 24px;
 }
 
 .list-post .post-title a {
@@ -1373,19 +1362,19 @@ footer .menu.infomation .phone {
 }
 
 .post-meta {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: #8993A5
 }
 
 .post-meta .meta-item {
-    padding-left: 20px;
+    padding-left: 22px;
     background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: auto 12px
 }
 
 .post-meta .meta-item:not(:last-child) {
-    margin-right: 20px
+    margin-right: 35px
 }
 
 .post-meta .meta-time {
