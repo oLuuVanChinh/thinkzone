@@ -109,7 +109,7 @@
     }
 
     .part-title {
-        font-size: 3em
+        font-size: 3.375em
     }
 
     footer {
@@ -176,11 +176,24 @@
         font-size: 2.25rem;
         font-weight: 600
     }
+    .mt-2{
+        margin-top: 2.37rem;
+    }
+    .mt-3{
+        margin-top: 5.84rem;
+    }
 }
 
-@media all and (min-width: 1462px) {
+@media all and (min-width: 1492px) {
     .grid-container-large{
-        max-width: 1432px;
+        max-width: 1462px;
+    }
+    /* About */
+    .home-about .cell-left{
+        padding-right: 0.8rem;
+    }
+    .home-about .cell-right{
+        padding-right: 5rem;
     }
 }
 

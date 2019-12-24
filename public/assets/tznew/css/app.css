@@ -304,7 +304,7 @@ header .logo img {
 .part-title {
     font-size: 2em;
     font-weight: 600;
-    margin-bottom: 15px
+    margin-bottom: 10px
 }
 
 .relative {
@@ -518,7 +518,6 @@ header .logo img {
 
 /* style journey */
 .startup-journey {
-    padding: 0 5%;
     text-align: center;
     height: 5px;
     margin-top: 290px;
@@ -1161,34 +1160,6 @@ header .logo img {
 
 .owl-next {
     right: -30px;
-}
-
-.owl-stage-outer,
-.owl-stage {
-    height: 100% !important;
-}
-
-.owl-item {
-    height: 70px !important;
-    position: relative !important;
-    padding: 0 50px
-}
-
-.owl-item > div {
-    position: relative !important;
-    height: 100% !important
-}
-
-.owl-item > div img {
-    position: absolute !important;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    -moz-transform: translateY(-50%) translateX(-50%);
-    max-height: 50px;
-    width: auto !important;
-    display: block
 }
 
 footer {
