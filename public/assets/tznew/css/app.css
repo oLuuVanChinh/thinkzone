@@ -122,7 +122,7 @@ ul {
 }
 
 .dropdown.menu > li {
-    margin-right: 34px
+    margin-right: 24px
 }
 
 .dropdown.menu > li:last-child {
@@ -141,12 +141,7 @@ ul {
     border-color: #3FAA61 transparent transparent;
 }
 
-.top-bar .menu .menu {
-    padding: 10px 0;
-}
-
 .top-bar .menu .menu a {
-    color: #FFF;
     padding: 10px 20px;
     font-size: 0.875em
 }
@@ -155,11 +150,6 @@ ul {
     color: #FFF;
     padding: 13px 25px !important;
     font-size: inherit
-}
-
-.top-bar .menu .menu a:hover,
-.top-bar .menu .menu a.in-active {
-    opacity: 0.3;
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
@@ -181,7 +171,7 @@ header .logo img {
 .mobile-nav-button {
     display: inline-block;
     position: absolute;
-    top: 0.5rem;
+    top: calc(50% - 25px);
     right: 0;
     width: 50px;
     height: 50px;
@@ -191,6 +181,10 @@ header .logo img {
     transition: all 0s;
 }
 
+.header-primary .mobile-nav-button{
+    background-image: url("images/nav-bg-mobile-w.png");
+}
+
 .mobile-nav-button.is-open {
     background-image: url('images/nav-close.png');
 }
@@ -198,7 +192,7 @@ header .logo img {
 .mobile-nav {
     width: 60%;
     max-width: 300px;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -100%;
     min-height: 100%;
@@ -285,7 +279,7 @@ header .logo img {
 }
 
 .home-banner .button,
-.journey-part .button-apply {
+.home-journey .button-apply {
     font-size: 1.25em;
     padding: 17px 50px;
     line-height: normal;
@@ -304,7 +298,7 @@ header .logo img {
 
 .part-title {
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 15px;
     line-height: 1.2;
 }
@@ -531,7 +525,8 @@ header .logo img {
 .startup-journey {
     text-align: center;
     height: 5px;
-    margin-top: 290px;
+    margin-top: 308px;
+    margin-bottom: 130px;
     /*     background:#EDF0FF; */
     border-radius: 5px;
     /*     background-image:url('images/timeline-bar-full.png');
@@ -801,7 +796,7 @@ header .logo img {
     bottom: -19px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
-    z-index: 99
+    z-index: 9
 }
 
 .journey-step li.is-active .node {
@@ -869,9 +864,9 @@ header .logo img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -60px;
+    bottom: -55px;
     display: none;
-    z-index: 999999;
+    z-index: 9;
 }
 
 .journey-step li:hover::after {
@@ -912,15 +907,15 @@ header .logo img {
     border: none;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);;
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     display: block;
     visibility: hidden;
     padding: 15px 0 20px;
     text-align: left;
     background-color: #FFF;
     color: #13274B;
-    z-index: 89;
+    z-index: 1;
 }
 
 .journey-step li:first-child .node-expand {
@@ -1124,7 +1119,7 @@ header .logo img {
 }
 
 .jcarousel-wrapper {
-    margin-top: 60px
+    margin-top: 75px
 }
 
 .owl-prev,
@@ -1173,7 +1168,6 @@ footer .cell {
 
 footer .menu li {
     line-height: 1.4;
-    font-size: 0.875em
 }
 
 footer .menu a {
@@ -1181,7 +1175,8 @@ footer .menu a {
     width: auto;
     padding: unset;
     margin: unset;
-    line-height: 24px
+    line-height: 24px;
+    color: #12274A;
 }
 
 footer img {
@@ -1227,12 +1222,14 @@ footer .menu.infomation .phone {
 .list-unstyled li {
     list-style: none
 }
-
+.list-parter{
+    margin: 0;
+}
 .list-parter .media-item img {
     display: block;
     max-height: 50px;
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
 
 .list-parter .media-item .media-title {
@@ -1252,7 +1249,7 @@ footer .menu.infomation .phone {
 }
 
 .list-parter .media {
-    margin-bottom: 50px
+    margin-bottom: 60px
 }
 
 /* breadcrumbs */
@@ -1280,9 +1277,6 @@ footer .menu.infomation .phone {
 }
 
 /* list-mentor */
-.mentor-group:not(:last-child) {
-    margin-bottom: 40px
-}
 
 .mentor-group .group-name {
     font-weight: 600;
@@ -1291,7 +1285,8 @@ footer .menu.infomation .phone {
 }
 
 .mentor-group .media-object {
-    letter-spacing: 0.02em
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5em;
 }
 
 .mentor-group .media-object .thumbnail {
@@ -1313,11 +1308,13 @@ footer .menu.infomation .phone {
 }
 
 .mentor-group .media-object h4 {
-    font-size: 1.25em
+    font-size: 1.25rem;
+    margin-bottom: 6px;
 }
 
 .mentor-group .media-object .job-title {
     font-size: 1em;
+    margin-bottom: 6px;
 }
 
 .search-box .search-input {
@@ -1336,20 +1333,19 @@ footer .menu.infomation .phone {
     margin-bottom: 0
 }
 
-.search-box .cell {
-    margin-bottom: 30px
-}
-
 .blog-navigation a {
     color: #13274B;
     font-weight: 700;
-    padding: 10px 7px
+    padding: 12px 25px 12px 0;
 }
 
 .blog-navigation .is-active a,
 .blog-navigation a:hover {
     background: none;
     color: #3FAA61;
+}
+.list-post .list-unstyled{
+    margin-bottom: 0;
 }
 
 .list-post .thumbnail {
@@ -1366,11 +1362,11 @@ footer .menu.infomation .phone {
 }
 
 .list-post .cell {
-    margin-bottom: 40px
+    margin-bottom: 30px
 }
 
 .list-post .post-title {
-    margin: 0 0 25px;
+    margin: 0 0 10px;
     line-height: 24px;
 }
 
@@ -1450,12 +1446,14 @@ footer .menu.infomation .phone {
     /* font-size:1.0rem; */
     font-weight: 400;
     text-align: justify;
+    line-height: 1.1875rem;
+    margin-bottom: 1.2em;
 }
 
 .post-entry h2,
 .post-entry h3,
 .post-entry h4 {
-    font-weight: 600;
+    font-weight: bold;
     font-size: 1.5rem;
     margin-top: 40px
 }
@@ -1476,15 +1474,16 @@ footer .menu.infomation .phone {
 .post-footer > div {
     border-top: 1px solid #EDF0FF;
     border-bottom: 1px solid #EDF0FF;
-    padding: 10px 0;
+    padding: 15px 0;
     margin-bottom: 30px
 }
 
 .taglist a {
-    padding: 13px 20px;
+    padding: 10px 20px;
     background: #EDF0FF;
-    font-size: 0.875rem;
-    color: #8993A5
+    font-size: 0.75rem;
+    display: block;
+    color: #8993A5;
 }
 
 .taglist li:not(:last-child) {
@@ -1534,11 +1533,11 @@ footer .menu.infomation .phone {
 }
 
 .self-advert {
-    padding: 50px 20px;
+    padding: 56px 20px 50px 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    border: rgba(63, 170, 97, 0.1) solid 10px;
+    border: rgba(63, 170, 97, 0.1) solid 20px;
 }
 
 .self-advert .button-apply {
@@ -1547,7 +1546,7 @@ footer .menu.infomation .phone {
 }
 
 .detail-relation {
-    margin-top: 60px
+    margin-top: 90px
 }
 
 .box .box-title {

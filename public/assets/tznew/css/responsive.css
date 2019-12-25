@@ -36,23 +36,47 @@
     }
 
     .home-part {
-        padding: 100px 0;
+        padding: 60px 0;
         width: 100%;
-        margin: 0 auto
+    }
+    .slider-info .title {
+        font-size: 2.5em;
+    }
+    .slider-info .sub-title {
+        font-size: 1rem;
     }
 }
 
+@media all and (min-width: 1024px) {
+    .dropdown.menu > li {
+        margin-right: 5px;
+    }
+    .header-primary .menu a{
+        font-size: 0.8em;
+    }
+    .slider-info .title {
+        font-size: 3.5em;
+    }
+    .slider-info .sub-title {
+        font-size: 1.5rem;
+    }
+}
 @media all and (min-width: 1080px) {
     body {
         background-size: 100% auto
     }
 
-    body.home-body {
-        background: url('images/bg-page.png') no-repeat 50% 50%;
+    body.home-body .content{
+        background: url('images/bg-page.png') no-repeat left 710px;
     }
 
     body.home-accelerator .content {
-        background: url('images/bg-accelerator.png') no-repeat 0 1566px;
+        background: url('images/bg-accelerator.png') no-repeat 0% 700px;
+    }
+
+    body.home-partner .content,
+    body.home-mentor .content{
+        background: url('images/bg-body-partner.png') no-repeat 0% 294px;
     }
 
     .header-primary {
@@ -68,7 +92,7 @@
     }
 
     #home-partner {
-        padding: 180px 0
+        padding: 164px 0 200px 0;
     }
 
     #home-partner .part-title {
@@ -116,7 +140,7 @@
     }
 
     footer {
-        padding: 60px 0
+        padding: 74px 0 40px;
     }
 
     .footer-new {
@@ -124,7 +148,7 @@
     }
 
     .list-mentor {
-        margin-top: 80px
+        margin-top: 50px
     }
 
     .page-header {
@@ -146,10 +170,6 @@
     .mentor-group .media-object .thumbnail {
         width: 200px;
         height: 200px
-    }
-
-    .list-post .cell {
-        margin-bottom: 50px
     }
 
     .post-entry {
@@ -193,18 +213,38 @@
         min-height: 196px;
         margin-bottom: 60px;
     }
-}
-
-@media all and (min-width: 1492px) {
     .grid-container-large{
         max-width: 1462px;
     }
+    .grid-container-huge{
+        max-width: 1590px;
+    }
+    .page-header {
+        margin-top: 84px;
+    }
+    .page-header-single{
+        margin-top: 120px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .header-primary .menu a{
+        font-size: 1em;
+    }
+}
+@media all and (min-width: 1492px) {
     /* About */
     .home-about .cell-left{
         padding-right: 0.8rem;
     }
     .home-about .cell-right{
         padding-right: 5rem;
+    }
+    .dropdown.menu > li {
+        margin-right: 34px;
+    }
+    .header-primary .menu a{
+        font-size: 1.125rem;
     }
 }
 

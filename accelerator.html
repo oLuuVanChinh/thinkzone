@@ -24,7 +24,7 @@
 
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
     <link rel="dns-prefetch" href="https://code.jquery.com/">
-    <link href="https://fonts.googleapis.com/css?family=Barlow:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/css/foundation.css">
     <!-- <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/js/jcarousel/jcarousel.responsive.css"> -->
     <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/js/owlCarousel/assets/owl.carousel.min.css">
@@ -117,18 +117,21 @@
     </div>
 </header>
 <!-- End header -->
+<!-- Slider -->
+<div class="section-slider">
+    <div class="slider-items slider-special">
+        <div class="slider-item">
+            <div class="slider-image">
+                <img src="public/assets/tznew/css/images/banner.png" alt="Slider"/>
+            </div>
+            <div class="slider-info grid-container-large">
+                <div class="slider-button"><a href="#" rel="nofollow" class="bg-gradient-green button-large button rounded shadow">Apply Now</a></div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Content -->
 <div id="content" class="content">
-    <!-- Begin .home-banner -->
-    <section class="home-part home-banner">
-        <p class="description">Batch 02 - Spring 2019 is now open for all startup in<br/> Vietnam. Application due at
-            February 16, 2020.</p>
-        <p>
-            <a href="https://forms.gle/SYE6Xk1MeincVDXg6" target="_blank" rel="nofollow"
-               class="bg-gradient-green button rounded button-apply">Apply Now</a>
-        </p>
-    </section>
-    <!-- End .home-banner -->
     <!-- Begin .home-offer -->
     <section class="home-part home-offer" id="home-offer">
         <div class="grid-container grid-container-large">
@@ -219,7 +222,7 @@
     </section>
     <!-- End .home-offer -->
     <!-- Begin .home-journey -->
-    <section class="home-part journey-part" id="home-journey">
+    <section class="home-part home-journey" id="home-journey">
         <div class="grid-container grid-container-large">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
@@ -907,8 +910,8 @@
                     <p class="text-center sky text-medium">A platform that connects organic<br /> food providers with office workers and<br /> moms with infants.</p>
                 </div>
             </div>
-            <div class="flex-container align-center partner-button">
-                <a href="#" rel="nofollow" class="bg-gradient-green button-large button rounded mt-2">View all</a>
+            <div class="flex-container align-center mt-3">
+                <a href="#" rel="nofollow" class="bg-gradient-green button-large button rounded mt-1">View all</a>
             </div>
         </div>
     </section>
@@ -1040,34 +1043,59 @@
     </section>
     <!-- End .home-about -->
 </div>
-<footer class="bg-gray">
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x align-middle">
-            <div class="cell large-6">
-                <div class="grid-x ">
-                    <div class="cell large-6 small-12">
-                        <img src="http://thinkzone.vn/public/assets/tznew/css/images/logo-footer.png" alt="">
-                    </div>
-                    <div class="cell large-6 small-12">
-                        <p>Copyright 2019 <a href="http://admin.thinkzone.vn/setting/edit_option/thinkzone.vn">ThinkZone
-                            Corporation</a>.<br/>All rights reserved.</p></div>
+<!-- Footer -->
+<footer class="bg-gray footer-new">
+    <div class="grid-container grid-container-large">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12 large-3">
+                <div class="logo-footer">
+                    <a href="#"><img src="public/assets/tznew/css/images/logo.png" alt=""></a>
+                </div>
+                <div class="social">
+                    <ul class="menu flex-container">
+                        <li><a href="#"><img src="public/assets/tznew/css/images/facebook-share-icon.png"
+                                             alt="Facebook"/></a></li>
+                        <li><a href="#"><img src="public/assets/tznew/css/images/youtube-icon.png" alt="Youtube"/></a>
+                        </li>
+                        <li><a href="#"><img src="public/assets/tznew/css/images/linkedIn-icon.png" alt="LinkedIn"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <p>&copy; Copyright 2019 <a
+                        href="http://admin.thinkzone.vn/setting/edit_option/thinkzone.vn">ThinkZone</a>.<br/>All rights
+                    reserved.</p>
+            </div>
+            <div class="cell large-3 small-12">
+                <div class="footer-widget">
+                    <h3 class="widget-title">CONTACT US</h3>
+                    <p class="flex-container">
+                        <span class="icon"><img src="public/assets/tznew/css/images/icon-map-pin.png"></span>
+                        <span>Floor 2, Indochina Plaza<br/> 241 Xuan Thuy, Cau Giay, Ha Noi.</span>
+                    </p>
+                    <p class="flex-container">
+                        <span class="icon"><img src="public/assets/tznew/css/images/icon-map-pin.png"></span>
+                        <span>Toong Vista Verde, Faifo Lane<br/> 02 Phan Van Dang, Dist 2, HCM City.</span>
+                    </p>
+                    <p class="flex-container">
+                        <span class="icon"><img src="public/assets/tznew/css/images/icon-email.png"></span>
+                        <span><a href="mailto:contact@thinkzone.vn">contact@thinkzone.vn</a></span>
+                    </p>
+                    <p class="flex-container">
+                        <span class="icon"><img src="public/assets/tznew/css/images/icon-phone.png"></span>
+                        <span><a href="tel:(+84) 24 7100 9999">(+84) 24 7100 9999</a></span>
+                    </p>
                 </div>
             </div>
-            <div class="cell large-6 small-12">
-                <ul class="vertical menu infomation">
-                    <li class="location">Toong Co-working Space, Floor 2, Indochina Plaza, 241 Xuan Thuy | Toong Vista
-                        Verde, Faifo Lane, 02 Phan Van Dang, Dist 2, HCM City
-                    </li>
-                    <li class="email"><a
-                            href="/cdn-cgi/l/email-protection#385b57564c595b4c784c505156534257565d164e56"><span
-                            class="__cf_email__" data-cfemail="14777b7a6075776054607c7d7a7f6e7b7a713a627a">[email&#160;protected]</span></a>
-                    </li>
-                    <li class="phone"><a href="tel:+842471009999">+84 24 7100 9999</a></li>
-                </ul>
+            <div class="cell large-5 large-offset-1 small-12">
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9133304534007!2d105.7802455153139!3d21.036153592900927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4abcf6766d%3A0x3d53b16db55e9419!2sIndochina%20Plaza%20Hanoi%20Residences!5e0!3m2!1svi!2s!4v1577243535595!5m2!1svi!2s"
+                            width="100%" height="219" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
             </div>
         </div>
     </div>
 </footer>
+<!-- /Footer -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/jquery.js"></script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/what-input.js"></script>
@@ -1081,11 +1109,10 @@
 <script>
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        margin: 0,
-        loop: true,
         nav: true,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoWidth: true,
+        loop: false,
         responsive: {
             0: {
                 items: 1
