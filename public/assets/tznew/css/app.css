@@ -286,9 +286,10 @@ header .logo img {
 
 .home-banner .button,
 .journey-part .button-apply {
-    font-size: 1.2em;
-    padding: 18px 50px;
-    font-weight: 600;
+    font-size: 1.25em;
+    padding: 17px 50px;
+    line-height: normal;
+    font-weight: bold;
 }
 
 .button-loadmore {
@@ -303,7 +304,7 @@ header .logo img {
 
 .part-title {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.2;
 }
@@ -366,8 +367,9 @@ header .logo img {
 }
 
 .card-title {
-    font-size: 1.3em;
+    font-size: 1.875rem;
     font-weight: 600;
+    margin-bottom: 0;
 }
 
 .card.highlight {
@@ -381,23 +383,23 @@ header .logo img {
     width: 100%;
     height: 3px;
     background: url('images/bar-sep.png') no-repeat 0 0 transparent;
-    margin-top: -15px
+    margin-top: 20px;
 }
 
 .card.highlight .card-heading:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
     background-image: url('images/bar-sep-white.png');
 }
 
 .card-body {
-    padding: 20px 0;
+    padding: 50px 0;
 }
 
 .card-body .cell {
-    margin-bottom: 40px
+    margin-bottom: 44px
+}
+
+.card-right .card-body .cell {
+    margin-bottom: 48px
 }
 
 .card-left .card-body .cell:nth-child(n+3) {
@@ -405,19 +407,27 @@ header .logo img {
 }
 
 .card-body p {
-    margin-bottom: 10px;
-    line-height: 1.2
+    margin-bottom: 6px;
+    line-height: 1.5;
+    font-size: 1.125rem;
+}
+.card-body p .strong{
+    font-weight: bold;
 }
 
 .card-offer .ico {
-    margin-bottom: 10px
+    margin-bottom: 4px;
+    width: 58px;
+    height: 58px;
 }
 
 .card-offer .card-body img {
-    margin-right: 10px;
+    margin-right: 30px;
+    margin-top: 8px;
     display: inline-block;
     max-height: 32px;
-    width: auto
+    width: auto;
+    vertical-align: top;
 }
 
 .card-offer .card-body p:last-child {
@@ -543,7 +553,7 @@ header .logo img {
 
 .startup-journey li {
     height: auto;
-    background: url('images/verticle-line.png') repeat-y 50% 0;
+    background: url('images/verticle-line.png') no-repeat center 10px;
     width: 25%;
     position: absolute;
     bottom: 0;
@@ -807,13 +817,13 @@ header .logo img {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 1.1em;
     letter-spacing: -0.02em;
 }
 
 .journey-step li {
-    padding-bottom: 50px;
+    padding-bottom: 105px;
     transition: height 0.5s ease;
 }
 
@@ -824,21 +834,24 @@ header .logo img {
     height: 30px;
     transition: height 0.5s ease-in-out;
     -webkit-transition: height 0.5s ease-in-out;
+    font-size: 0.875rem;
+    line-height: 1.15;
 }
 
 .journey-step li:hover .desc {
     visibility: visible;
-    padding-bottom: 10px;
-    height: auto
+    padding-bottom: 0px;
+    padding-top: 6px;
+    height: auto;
 }
 
 .journey-step li:hover .desc:after {
     content: "";
     width: 100%;
-    height: 25px;
-    margin: 15px auto;
+    height: 27px;
+    margin: 43px auto 40px;
     display: block;
-    background: url('images/verticle-line.png') no-repeat 50% 100%;
+    background: url(images/verticle-line.png) no-repeat center center;
 }
 
 .journey-step li:hover {
@@ -865,7 +878,7 @@ header .logo img {
     display: block
 }
 
-.journey-step li.is-active {
+.journey-step li.is-active, .journey-step li.is-active .gray {
     color: #3FAA61
 }
 
@@ -899,13 +912,12 @@ header .logo img {
     border: none;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);;
     display: block;
     visibility: hidden;
-    padding: 15px 0;
+    padding: 15px 0 20px;
     text-align: left;
-    background: url('images/vertical-divider.png') repeat-y 33.333% 0, url('images/vertical-divider.png') repeat-y 66.6666% 0;
     background-color: #FFF;
     color: #13274B;
     z-index: 89;
@@ -1249,15 +1261,18 @@ footer .menu.infomation .phone {
 }
 
 .breadcrumbs a {
-    color: #5773A5;
+    color: #fff;
     font-size: 1em;
     text-transform: capitalize;
 }
 
+.breadcrumbs li{
+    font-size: 1rem;
+}
+
 .breadcrumbs li:not(:last-child)::after {
     content: "/";
-    background: url('images/arrow-right-light.png') no-repeat 50% 50%;
-    background-size: 100%;
+    background: url('images/arrow-right-light.png') no-repeat center 11px;
     text-indent: -999999px;
     width: 5px;
     display: inline-block;
@@ -1342,7 +1357,12 @@ footer .menu.infomation .phone {
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
-    margin-bottom: 28px
+    margin-bottom: 28px;
+    display: block;
+}
+
+.list-post img{
+    width: 100%;
 }
 
 .list-post .cell {
