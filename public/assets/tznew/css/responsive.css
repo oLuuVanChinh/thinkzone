@@ -36,7 +36,6 @@
     }
 
     .home-part {
-        padding: 60px 0;
         width: 100%;
     }
     .slider-info .title {
@@ -67,16 +66,16 @@
     }
 
     body.home-body .content{
-        background: url('images/bg-page.png') no-repeat left 710px;
+        background: url('images/bg-page.png') no-repeat 50% 50%;
     }
 
     body.home-accelerator .content {
-        background: url('images/bg-accelerator.png') no-repeat 0% 700px;
+        background: url('images/bg-accelerator.png') no-repeat 50% 50%;
     }
 
     body.home-partner .content,
     body.home-mentor .content{
-        background: url('images/bg-body-partner.png') no-repeat 0% 294px;
+        background: url('images/bg-body-partner.png') no-repeat 50% 50%;
     }
 
     .header-primary {
@@ -116,11 +115,6 @@
 
     .card.card-left.highlight {
         top: 60px
-    }
-
-    .card.card-right {
-        padding: 69px 0 32px 140px;
-        margin-left: 18px;
     }
 
     .card.card-right.highlight {
@@ -212,12 +206,6 @@
     .home-portfolio .feature-image {
         min-height: 196px;
         margin-bottom: 60px;
-    }
-    .grid-container-large{
-        max-width: 1462px;
-    }
-    .grid-container-huge{
-        max-width: 1590px;
     }
     .page-header {
         margin-top: 84px;

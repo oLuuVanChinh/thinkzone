@@ -165,7 +165,7 @@ ul {
 }
 
 header .logo img {
-    max-height: 64px;
+    max-height: 40px;
 }
 
 .mobile-nav-button {
@@ -1119,7 +1119,7 @@ header .logo img {
 }
 
 .jcarousel-wrapper {
-    margin-top: 75px
+    margin-top: 25px
 }
 
 .owl-prev,
@@ -1537,7 +1537,7 @@ footer .menu.infomation .phone {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    border: rgba(63, 170, 97, 0.1) solid 20px;
+    border: rgba(63, 170, 97, 0.1) solid 10px;
 }
 
 .self-advert .button-apply {
