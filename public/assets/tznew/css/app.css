@@ -100,7 +100,7 @@ ul {
 
 .bold,
 .strong {
-    font-weight: 600
+    font-weight: bold;
 }
 
 /* style Header */
@@ -362,7 +362,7 @@ header .logo img {
 
 .card-title {
     font-size: 1.875rem;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 0;
 }
 
@@ -394,6 +394,10 @@ header .logo img {
 
 .card-right .card-body .cell {
     margin-bottom: 48px
+}
+
+.card-right .ico-circle{
+    background-color: #EDF0FF;
 }
 
 .card-left .card-body .cell:nth-child(n+3) {
@@ -442,7 +446,7 @@ header .logo img {
 
 .ico-circle {
     padding: 24px;
-    background-color: rgba(19, 39, 75, 0.1);
+    background-color: rgba(18, 39, 74, 0.1);
 }
 
 .ico-dolar {
@@ -526,7 +530,7 @@ header .logo img {
     text-align: center;
     height: 5px;
     margin-top: 308px;
-    margin-bottom: 130px;
+    margin-bottom: 305px;
     /*     background:#EDF0FF; */
     border-radius: 5px;
     /*     background-image:url('images/timeline-bar-full.png');
@@ -799,7 +803,8 @@ header .logo img {
     z-index: 9
 }
 
-.journey-step li.is-active .node {
+.journey-step li.is-active .node,
+.journey-step li:hover .node{
     background: url('images/circle-bg-new.png') no-repeat 50% 0;
     width: 37px;
     height: 37px;
@@ -864,16 +869,22 @@ header .logo img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -55px;
-    display: none;
+    bottom: -100px;
+    opacity: 0;
+    visibility: hidden;
     z-index: 9;
 }
 
+.journey-step li.is-active::after,
 .journey-step li:hover::after {
-    display: block
+    opacity: 1;
+    visibility: visible;
 }
 
-.journey-step li.is-active, .journey-step li.is-active .gray {
+.journey-step li.is-active,
+.journey-step li:hover,
+.journey-step li.is-active .gray,
+.journey-step li:hover .gray{
     color: #3FAA61
 }
 

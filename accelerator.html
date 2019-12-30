@@ -239,7 +239,7 @@
 
                     <div class="startup-journey show-for-large">
                         <ul class="journey-step menu">
-                            <li>
+                            <li class="is-active">
                                 <span class="name">
                                     <span class="gray upper">ROUND 1</span><br/>Application & Interview</span>
                                 <span class="desc text-center">This is the first round for ThinkZone to evaluate startups. Round 1 consists of 2 phases: filling out application form and 1:1 Interview meeting.</span>
@@ -927,7 +927,7 @@
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
                     <div class="icon-box text-center highlight">
-                        <span class="number">01</span>
+                        <span class="number counter">01</span>
                         <h3 class="title sky">Batch held</h3>
                     </div>
                 </div>
@@ -935,25 +935,25 @@
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12 large-3">
                     <div class="icon-box text-center">
-                        <span class="number">400</span>
+                        <span class="number counter">400</span>
                         <h3 class="title sky">Startups applied</h3>
                     </div>
                 </div>
                 <div class="cell small-12 large-3">
                     <div class="icon-box text-center">
-                        <span class="number">50</span>
+                        <span class="number counter">50</span>
                         <h3 class="title sky">Startups got trained</h3>
                     </div>
                 </div>
                 <div class="cell small-12 large-3">
                     <div class="icon-box text-center">
-                        <span class="number">100</span>
+                        <span class="number counter">100</span>
                         <h3 class="title sky">mentors, investors and<br /> partners in our network.</h3>
                     </div>
                 </div>
                 <div class="cell small-12 large-3">
                     <div class="icon-box text-center">
-                        <span class="number">$4.1M</span>
+                        <span class="number">$<span class="counter">4.1</span>M</span>
                         <h3 class="title sky">the amount of capital that<br /> ThinkZone have supported<br /> startups to raise.</h3>
                     </div>
                 </div>
@@ -964,7 +964,7 @@
     <!-- Begin .home-supported -->
     <section class="home-part home-supported" id="home-supported">
         <div class="grid-container grid-container-large">
-            <h2 class="part-title text-center">Startups we supported</h2>
+            <h2 class="part-title text-center">Startup & Corporation we supported</h2>
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
                     <div class="feature-image">
@@ -1105,11 +1105,13 @@
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/what-input.js"></script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/foundation.js"></script>
 <script type="text/javascript">var baseUrl = 'http://thinkzone.vn/';</script>
-<script src="http://thinkzone.vn/public/assets/tznew/js/app.js"></script>
+<script src="public/assets/tznew/js/app.js"></script>
 
 
 <script src="public/assets/tznew//js/owlCarousel/owl.carousel.min.js"></script>
 <script src="public/assets/tznew//js/jquery.countdown/jquery.countdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="public/assets/tznew/js/jquery.counterup/jquery.counterup.js"></script>
 <script>
     var owl = $('.owl-carousel');
     owl.owlCarousel({
@@ -1143,6 +1145,18 @@
             });
         })
     }
+
+    // CounterUp
+    function padZeros(str, len){
+        return Array(len-String(str).length+1).join('0')+str;
+    }
+    $('.counter').each(function () {
+       $(this).counterUp({
+           delay: 10,
+           time: 1000,
+           padLength: $(this).text().length
+       });
+    });
 </script>
 <script type="text/javascript">
     var videoPlay = $('button.btn-play')
