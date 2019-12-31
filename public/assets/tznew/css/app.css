@@ -838,14 +838,16 @@ header .logo img {
     line-height: 1.15;
 }
 
-.journey-step li:hover .desc {
+.journey-step li:hover .desc,
+.journey-step li.is-active .desc{
     visibility: visible;
     padding-bottom: 0px;
     padding-top: 6px;
     height: auto;
 }
 
-.journey-step li:hover .desc:after {
+.journey-step li:hover .desc:after,
+.journey-step li.is-active .desc:after{
     content: "";
     width: 100%;
     height: 27px;
@@ -854,7 +856,8 @@ header .logo img {
     background: url(images/verticle-line.png) no-repeat center center;
 }
 
-.journey-step li:hover {
+.journey-step li:hover,
+.journey-step li.is-active{
     background: none;
     padding-bottom: 0
 }

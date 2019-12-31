@@ -9,6 +9,16 @@ a, .startup-journey .title{
     transition: all 0.1s linear 0.1s;
   }
 }
+
+.grid-col-auto{
+  .cell{
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
 .mt-3 {
   margin-top: 1.84rem;
 }
@@ -606,8 +616,9 @@ a, .startup-journey .title{
 }
 
 /* Partner */
-#home-partner {
+#home-partner, #home-achievements {
   background: url("images/bg-partner.png") no-repeat 0 0;
+  background-size: cover;
   padding: 64px 0 100px 0;
 }
 
@@ -650,13 +661,15 @@ a, .startup-journey .title{
 
 /* Image Spiner */
 .image-spiner {
+  z-index: 1;
   font-size: 1.3rem;
+  margin-top: 1.4em;
 
   .outside-round, .inside-round {
     &:after {
       width: 100%;
       height: 100%;
-      border: 1px dashed #13274B;
+      border: 2px dashed #DFE7F4;
       content: "";
       border-radius: 50%;
       display: block;
@@ -664,13 +677,13 @@ a, .startup-journey .title{
   }
 
   .outside-round {
-    width: 14.56em;
-    height: 14.56em;
+    width: 11em;
+    height: 11em;
   }
 
   .inside-round {
-    width: 10em;
-    height: 10em;
+    width: 7em;
+    height: 7em;
   }
 
   .inside-round, .main-round {
@@ -681,6 +694,7 @@ a, .startup-journey .title{
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    z-index: -1;
   }
 
   .item-round {
@@ -691,28 +705,25 @@ a, .startup-journey .title{
     justify-content: center;
     padding: 10px;
     background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
-
-    &:after {
-      width: calc(100% + 0.45em);
-      height: calc(100% + 0.45em);
-      border: 2px dashed $accent-color;
-      content: "";
-      position: absolute;
-      top: -0.225em;
-      left: -0.225em;
-      border-radius: 50%;
-    }
 
     img {
       max-width: 100%;
       max-height: 100%;
+      position: relative;
+      z-index: 1;
     }
   }
 
+  .main-round{
+    z-index: 10;
+    box-shadow: 0px 22px 28px -11px rgba(0, 0, 0, 0.2);
+  }
+
   .main-round {
-    width: 4.5em;
-    height: 4.5em;
+    width: 4em;
+    height: 4em;
     padding: 0.4em 0.26em;
 
     &:after {
@@ -721,32 +732,27 @@ a, .startup-journey .title{
   }
 
   .size-1 {
-    width: 3.14em;
-    height: 3.14em;
+    width: 2em;
+    height: 2em;
   }
 
   .size-2 {
-    width: 2.7em;
-    height: 2.7em;
+    width: 1.5em;
+    height: 1.5em;
   }
 
   .size-3 {
-    width: 2.24em;
-    height: 2.24em;
+    width: 1.2em;
+    height: 1.2em;
   }
 
   .size-4 {
-    width: 1.8em;
-    height: 1.8em;
-  }
-
-  .size-5 {
-    width: 1.35em;
-    height: 1.35em;
+    width: 1em;
+    height: 1em;
   }
 
   .item-1 {
-    top: -1.355em;
+    top: -1em;
     left: 50%;
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -756,17 +762,17 @@ a, .startup-journey .title{
   }
 
   .item-2 {
-    top: 3.645em;
-    right: -0.235em;
+    top: 2.12em;
+    right: -0.34em;
   }
 
   .item-3 {
-    bottom: 3.405em;
-    right: -0.615em;
+    bottom: 2.82em;
+    right: -0.16em;
   }
 
   .item-4 {
-    bottom: -1.395em;
+    bottom: -0.94em;
     left: 50%;
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -776,51 +782,54 @@ a, .startup-journey .title{
   }
 
   .item-5 {
-    bottom: 4.845em;
-    left: -0.675em;
+    bottom: 3.7em;
+    left: -0.62em;
   }
 
   .item-6 {
-    top: 2.01em;
-    left: 0.245em;
+    top: 1.88em;
+    left: 0.4em;
   }
 
   .item-7 {
-    top: -0.24em;
-    right: 0.345em;
+    top: -0.22em;
+    right: 0.26em;
   }
 
   .item-8 {
-    top: 4.35em;
-    right: -0.57em;
+    top: 3.2em;
+    right: -0.4em;
   }
 
   .item-9 {
     bottom: 0em;
-    right: 0.57em;
+    right: 0.76em;
   }
 
   .item-10 {
-    bottom: -0.06em;
-    left: -0.12em;
+    bottom: 0em;
+    left: 0.4em;
   }
 
   .item-11 {
-    top: 3.495em;
-    left: -0.57em;
+    top: 2.44em;
+    left: -0.5em;
   }
 
   .item-12 {
-    left: 1.35em;
+    left: 0.98em;
+    top: -0.22em;
   }
 
-  .item-round:after,
   .outside-round:after,
   .inside-round:after {
     animation-name: spin-border;
     animation-duration: 50000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+  }
+  .inside-round:after{
+    animation-name: spin-border-reverse;
   }
 
   .item-round:after {
@@ -837,6 +846,15 @@ a, .startup-journey .title{
   }
 }
 
+@keyframes spin-border-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 /* Content */
 .home-journey{
   .part-desc{
@@ -844,7 +862,7 @@ a, .startup-journey .title{
   }
 }
 .home-partnerships{
-  margin-top: 00px;
+  margin-top: 0px;
   margin-bottom: 40px;
   + .home-portfolio{
     padding-top: 0px;
@@ -875,7 +893,10 @@ a, .startup-journey .title{
 
 .home-supported{
   .part-title{
-    margin-bottom: 110px;
+    margin-bottom: 65px;
+  }
+  .feature-image{
+    margin-bottom: 20px;
   }
 }
 
@@ -915,15 +936,16 @@ a, .startup-journey .title{
     }
   }
   .home-partnerships{
-    margin-top: 20px;
-    margin-bottom: 70px;
+    margin-top: -15px;
+    margin-bottom: 115px;
     + .home-portfolio{
-      padding-top: 30px;
+      padding-top: 0;
+      margin-top: -62px;
     }
   }
   .home-blog{
-    margin-top: 105px;
-    margin-bottom: 102px;
+    margin-top: 70px;
+    margin-bottom: 56px;
   }
   .home-offer{
     margin-bottom: 0;
@@ -942,11 +964,12 @@ a, .startup-journey .title{
     }
   }
   .home-supported{
-    margin-bottom: 80px;
+    margin-bottom: -33px;
+    margin-top: 50px;
   }
   .home-countdown{
-    margin-top: 26px;
-    margin-bottom: 130px;
+    margin-top: 48px;
+    margin-bottom: 105px;
   }
   .sub-part{
     padding: 53px 0;
@@ -1060,11 +1083,13 @@ footer {
 .icon-box {
   line-height: 1;
   font-size: 0.8em;
+  margin-top: 40px;
 
   .title {
     font-size: 1.6em;
     margin: 10px 0 0;
     line-height: 2rem;
+    color: #fff;
   }
 
   .number {
@@ -1376,7 +1401,7 @@ blockquote{
 @media all and (min-width: 1660px) {
   .image-spiner {
     font-size: 3.125rem;
-    margin-left: 2.84em;
+    margin-left: 4.36em;
   }
   .section-slider {
     .owl-theme {
