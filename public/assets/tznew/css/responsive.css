@@ -54,7 +54,7 @@
         font-size: 0.8em;
     }
     .slider-info .title {
-        font-size: 4.5em;
+        font-size: 3.75em;
     }
     .slider-info .sub-title {
         font-size: 1.5rem;
@@ -233,6 +233,12 @@
     }
     .header-primary .menu a{
         font-size: 1.125rem;
+    }
+}
+
+@media all and (min-width: 1660px) {
+    .slider-info .title {
+        font-size: 4.5em;
     }
 }
 
