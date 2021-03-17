@@ -1,0 +1,255 @@
+$accent-color: #3aa25b !default;
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+@media all and (min-width: 320px) {
+    .home-banner .banner-title {
+        font-size: 2.1em
+    }
+
+    .home-banner {
+        background-image: unset;
+        background-size: 100% auto;
+    }
+
+    .home-part,
+    footer {
+        padding: 40px 0;
+    }
+
+    .list-mentor {
+        margin-top: 40px
+    }
+}
+
+@media all and (min-width: 768px) {
+    .home-banner {
+        background: url('images/header-bg.jpg') no-repeat 50% 0 transparent;
+        background-size: 100% auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .home-banner .btn-play {
+        cursor: pointer
+    }
+
+    .home-banner.has-video {
+        background: url('images/header-bg-video.jpg') no-repeat 50% 0 transparent;
+        background-size: 100% auto;
+    }
+
+    .home-part {
+        width: 100%;
+    }
+    .slider-info .title {
+        font-size: 2.5em;
+    }
+    .slider-info .sub-title {
+        font-size: 1rem;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .header-primary .menu a{
+        font-size: 0.8em;
+    }
+    .slider-info .title {
+        font-size: 3.75em;
+    }
+    .slider-info .sub-title {
+        font-size: 1.5rem;
+    }
+}
+@media all and (min-width: 1080px) {
+    body {
+        background-size: 100% auto
+    }
+
+    body.home-body .content{
+        background: url('images/bg-page.png') no-repeat 50% 50%;
+    }
+
+    body.home-accelerator .content {
+        background: url('images/bg-accelerator.png') no-repeat 50% 253%;
+    }
+
+    body.home-partner .content,
+    body.home-mentor .content{
+        background: url('images/bg-body-partner.png') no-repeat 50% 50%;
+    }
+
+    .header-primary {
+        height: 84px;
+    }
+
+    .home-banner .banner-title {
+        font-size: 4rem;
+    }
+
+    .home-part {
+        padding: 90px 0;
+    }
+
+    #home-partner {
+        padding: 164px 0 175px 0;
+    }
+    #home-achievements{
+        padding: 160px 0 123px 0;
+    }
+
+    #home-partner .part-title {
+        line-height: 1.2;
+    }
+
+    .card.card-left {
+        position: absolute;
+        top: 50px;
+        padding: 59px 50px 67px 50px;
+    }
+
+    .card.highlight {
+        width: 98%;
+    }
+
+    .card.card-left .card-body,
+    .card.card-right .card-body {
+        padding-bottom: 0
+    }
+
+    .card.card-left.highlight {
+        top: 60px
+    }
+
+    .card.card-right.highlight {
+        margin-left: -50px
+    }
+
+    .card-right {
+        padding-left: 40px
+    }
+
+    .card-left {
+        padding-right: 40px
+    }
+
+    .part-title {
+        font-size: 3.375em
+    }
+
+    footer {
+        padding: 74px 0 40px;
+    }
+
+    .footer-new {
+        padding: 90px 0 50px;
+    }
+
+    .list-mentor {
+        margin-top: 50px
+    }
+
+    .page-header {
+        padding: 74px 0;
+    }
+
+    .page-title {
+        font-size: 4rem
+    }
+
+    .page-title.post-title {
+        font-size: 2rem
+    }
+
+    .list-parter .media-item .media-title {
+        font-size: 1.25em;
+    }
+
+    .mentor-group .media-object .thumbnail {
+        width: 200px;
+        height: 200px
+    }
+
+    .post-entry {
+        padding: 20px 100px
+    }
+
+    .large-padding-100 {
+        padding-left: 100px;
+        padding-right: 100px
+    }
+
+    .author-intro {
+        margin-bottom: 80px
+    }
+
+    .author-intro .media-object {
+        padding-bottom: 60px
+    }
+
+    .app-banner {
+        padding: 50px 0;
+        font-size: 1.25rem;
+        margin-top: 125px
+    }
+
+    .app-banner .button:first-child {
+        margin-right: 15px
+    }
+
+    .app-banner .title {
+        font-size: 2.25rem;
+        font-weight: 600
+    }
+    .mt-2{
+        margin-top: 2.37rem;
+    }
+    .mt-3{
+        margin-top: 5.84rem;
+    }
+    .home-portfolio .feature-image {
+        min-height: 196px;
+        margin-bottom: 60px;
+    }
+    .page-header {
+        margin-top: 84px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .header-primary .menu a{
+        font-size: 1em;
+    }
+}
+@media all and (min-width: 1492px) {
+    /* About */
+    .home-about .cell-left{
+        padding-right: 0.8rem;
+    }
+    .home-about .cell-right{
+        padding-right: 5rem;
+    }
+    .dropdown.menu > li {
+        margin-right: 0px;
+    }
+    .header-primary .menu a{
+        font-size: rem(23px);
+    }
+}
+
+@media all and (min-width: 1660px) {
+    .slider-info .title {
+        font-size: 4.5em;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .small-bg-gray {
+        background-color: #F7F9FE
+    }
+
+    .small-box-radius {
+        border-radius: 20px;
+        -webkit-border-radius: 20px
+    }
+}

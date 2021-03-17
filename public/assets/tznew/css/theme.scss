@@ -1,4 +1,13 @@
-$accent-color: #3FAA61 !default;
+$accent-color: #3aa25b !default;
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
+/* Second Font */
+.header-primary .menu a{
+  font-family: 'Barlow Condensed' !important;
+}
+
 a, .startup-journey .title{
   -webkit-transition: all 0.15s ease 0s; /* For Safari 3.1 to 6.0 */
   transition: all 0.15s ease 0s;
@@ -62,7 +71,7 @@ a, .startup-journey .title{
 }
 
 .header-container {
-  background-color: #12274A;
+  background-color: #fff;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -110,9 +119,8 @@ a, .startup-journey .title{
   justify-content: space-between;
 
   .menu a {
-    color: #fff;
+    color: #12274a;
     font-size: 1rem;
-    font-weight: 600;
   }
 }
 
