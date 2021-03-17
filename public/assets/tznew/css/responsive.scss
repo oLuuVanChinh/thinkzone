@@ -42,23 +42,11 @@ $accent-color: #3aa25b !default;
     .home-part {
         width: 100%;
     }
-    .slider-info .title {
-        font-size: 2.5em;
-    }
-    .slider-info .sub-title {
-        font-size: 1rem;
-    }
 }
 
 @media all and (min-width: 1024px) {
     .header-primary .menu a{
         font-size: 0.8em;
-    }
-    .slider-info .title {
-        font-size: 3.75em;
-    }
-    .slider-info .sub-title {
-        font-size: 1.5rem;
     }
 }
 @media all and (min-width: 1080px) {
@@ -234,12 +222,6 @@ $accent-color: #3aa25b !default;
     }
     .header-primary .menu a{
         font-size: rem(23px);
-    }
-}
-
-@media all and (min-width: 1660px) {
-    .slider-info .title {
-        font-size: 4.5em;
     }
 }
 

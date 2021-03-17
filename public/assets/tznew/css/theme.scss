@@ -217,46 +217,10 @@ a, .startup-journey .title{
 /* Slider */
 .section-slider {
   position: relative;
+  margin-top: 100px;
   .owl-carousel:not(.owl-loaded){
     opacity: 0;
     visibility: hidden;
-  }
-}
-
-.section-slider {
-  .owl-theme {
-    .owl-dots {
-      position: absolute;
-      top: 50%;
-      right: 15px;
-      display: flex;
-      flex-direction: column;
-      margin-top: 0 !important;
-      -moz-transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      .owl-dot {
-        outline: none;
-        button{
-          outline: none;
-        }
-        span {
-          background-color: transparent;
-          border: 2px solid #C4C4C4;
-          width: 12px;
-          height: 12px;
-          margin: 10px 0;
-        }
-        &.active {
-          span {
-            background-color: $accent-color;
-            border-color: $accent-color;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -275,21 +239,13 @@ a, .startup-journey .title{
   }
 }
 
-.slider-image {
-  height: 100vh;
-  display: flex;
-  align-items: stretch;
+.slider-item{
+  position: relative;
 }
 
-.slider-image:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+.slider-image {
+  display: flex;
+  align-items: stretch;
 }
 
 .slider-image img {
@@ -1435,9 +1391,6 @@ blockquote{
 @media all and (min-width: 1492px) {
   .image-spiner {
     font-size: 3.125rem;
-  }
-  .grid-container-large{
-    max-width: 1462px;
   }
   .icon-box{
     font-size: 1em;
