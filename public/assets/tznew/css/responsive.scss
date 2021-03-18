@@ -12,7 +12,6 @@ $accent-color: #3aa25b !default;
         background-size: 100% auto;
     }
 
-    .home-part,
     footer {
         padding: 40px 0;
     }
@@ -68,15 +67,17 @@ $accent-color: #3aa25b !default;
     }
 
     .header-primary {
-        height: 84px;
+        height: 94px;
+    }
+
+    .header-container{
+      + * {
+        margin-top: 94px;
+      }
     }
 
     .home-banner .banner-title {
         font-size: 4rem;
-    }
-
-    .home-part {
-        padding: 90px 0;
     }
 
     #home-partner {
@@ -212,10 +213,7 @@ $accent-color: #3aa25b !default;
 @media all and (min-width: 1492px) {
     /* About */
     .home-about .cell-left{
-        padding-right: 0.8rem;
-    }
-    .home-about .cell-right{
-        padding-right: 5rem;
+        flex: 0 0 62%;
     }
     .dropdown.menu > li {
         margin-right: 0px;

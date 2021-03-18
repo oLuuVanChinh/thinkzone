@@ -1,10 +1,13 @@
 $accent-color: #3aa25b !default;
+$second-color: #12274a !default;
 @function rem($size) {
   @return $size / 16px * 1rem;
 }
 
 /* Second Font */
-.header-primary .menu a{
+.header-primary .menu a,
+.part-desc,
+.button--special{
   font-family: 'Barlow Condensed' !important;
 }
 
@@ -16,6 +19,72 @@ a, .startup-journey .title{
   .node-expand, li:after{
     -webkit-transition: all 0.1s linear 0.1s; /* For Safari 3.1 to 6.0 */
     transition: all 0.1s linear 0.1s;
+  }
+}
+
+.color-accent{
+  color: $accent-color;
+}
+.color-second{
+  color: $second-color;
+}
+
+.part{
+  &-title{
+    margin-bottom: 30px;
+    &--divider{
+      width: 94px;
+      height: 6px;
+      background-color: $accent-color;
+      display: block;
+      margin-bottom: 20px;
+      &.text-center{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      + .part-title{
+        margin-top: -13px;
+      }
+    }
+    &--small{
+      color: $second-color;
+      font-size: rem(44px);
+      font-weight: 500;
+      margin-bottom: -3px;
+    }
+    &--xsmall {
+      font-size: rem(40px);
+      font-weight: 500;
+    }
+    + .part-title--divider {
+      margin-top: -19px;
+    }
+  }
+  &-desc{
+    color: $second-color;
+    font-size: rem(25px);
+    line-height: rem(32px);
+    margin-bottom: 0;
+  }
+  &-box{
+    width: 100%;
+    height: 100%;
+    max-height: 305px;
+    border: 2px solid $accent-color;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    &:before{
+      width: 77px;
+      height: 77px;
+      content: "";
+      position: absolute;
+      border-right: 15px solid $accent-color;
+      border-bottom: 15px solid $accent-color;
+      z-index: -1;
+      bottom: -15px;
+      right: -15px;
+    }
   }
 }
 
@@ -49,29 +118,55 @@ a, .startup-journey .title{
   line-height: 1.8125rem;
 }
 
-.part-desc {
-  font-size: 1.125rem;
-}
-
 .absolute {
   position: absolute;
 }
 
-.button-large {
-  font-size: 16px;
-  padding: 0.85em 2em;
-  min-width: 10em;
-  line-height: normal;
-  border: none;
-  font-weight: bold;
+.button{
+  background-color: $accent-color;
+  font-size: rem(27px);
+  &--gradient{
+    background: linear-gradient(90deg, rgba(63,170,97,1) 0%, rgba(39,140,71,1) 100%);
+  }
+  &--stroke{
+    background-color: #fff;
+    border: 4px solid $accent-color;
+    color: $second-color;
+  }
+  &-large {
+    padding: 14px 33px;
+    line-height: normal;
+    font-weight: bold;
+  }
+  &--special{
+    font-weight: 500;
+    padding: 16px 30px 17px;
+  }
 }
 
 .shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.img{
+  &-list{
+    margin: 80px 0;
+  }
+  &-shadow{
+    box-shadow: 0px 0px 21px rgb(0 0 0 / 30%);
+  }
+  &--circle {
+    border-radius: 50%;
+  }
+}
+
+.button-row {
+  .button{
+    margin: 0 25px;
+  }
+}
+
 .header-container {
-  background-color: #fff;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -856,11 +951,9 @@ a, .startup-journey .title{
 }
 
 .home-supported{
-  .part-title{
-    margin-bottom: 65px;
-  }
   .feature-image{
-    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-bottom: 90px;
   }
 }
 
@@ -926,10 +1019,6 @@ a, .startup-journey .title{
     + .home-achievements{
       padding-top: 50px;
     }
-  }
-  .home-supported{
-    margin-bottom: -33px;
-    margin-top: 50px;
   }
   .home-countdown{
     margin-top: 48px;
@@ -1048,6 +1137,17 @@ footer {
   line-height: 1;
   font-size: 0.8em;
   margin-top: 40px;
+  .home-about & {
+    margin-top: 80px;
+  }
+
+  &__image{
+    height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
 
   .title {
     font-size: 1.6em;
@@ -1278,6 +1378,40 @@ blockquote{
   }
 }
 
+/* Home Slogan */
+#home-slogan{
+  background: url("images/banner-slogan.jpg") no-repeat;
+  background-size: cover;
+  padding: 83px 0;
+}
+
+/* Home Testimonial */
+#home-testimonial{
+  background: url("images/banner-testimonial.jpg") no-repeat;
+  background-size: cover;
+  padding: 74px 0;
+}
+
+.testimonial{
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  position: relative;
+  background: url("images/blockquote-light.png") no-repeat 0px 5px;
+  padding: 40px 0;
+  &__title{
+    font-size: rem(38px);
+    font-weight: 500;
+  }
+  &__notes{
+    display: block;
+    font-size: rem(19px);
+    font-weight: normal;
+    text-align: right;
+    margin-top: 10px;
+  }
+}
+
 /* Mobile */
 .mobile-nav{
   .search-form{
@@ -1394,9 +1528,6 @@ blockquote{
   }
   .icon-box{
     font-size: 1em;
-  }
-  .button-large{
-    font-size: 20px;
   }
   .card.card-right{
     padding-left: 120px;

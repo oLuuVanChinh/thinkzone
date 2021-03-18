@@ -25,7 +25,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
     <link rel="dns-prefetch" href="https://code.jquery.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;800&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/css/foundation.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="public/assets/tznew/css/app.css">
@@ -58,7 +58,7 @@
         </div>
         <div class="header-center show-for-large">
             <ul class="dropdown menu" data-dropdown-menu>
-              <li><a href="#">Home</a></li>
+              <li><a href="#" class="active">Home</a></li>
               <li><a href="#">ThinkZone Venture</a></li>
               <li><a href="#">Supporting activities</a></li>
               <li><a href="#">Investment updates</a></li>
@@ -106,7 +106,13 @@
     </div>
 </header>
 <!-- End header -->
-
+<!-- Banner Top -->
+<div class="section-banner">
+  <div class="grid-container grid-container-large">
+    <img class="img-shadow" src="public/assets/tznew/css/images/banner-top.jpg" alt="Banner"/>
+  </div>
+</div>
+<!-- /Banner Top -->
 <!-- Slider -->
 <div class="section-slider">
   <div class="grid-container grid-container-large">
@@ -115,7 +121,15 @@
           <div class="slider-image">
               <img src="public/assets/tznew/css/images/img-slider-1.jpg" alt="Slider"/>
           </div>
-          <div class="slider-info grid-container-large">
+          <div class="slider-info">
+              <h3 class="title">ThinkZone Ventures</h3>
+          </div>
+      </div>
+      <div class="slider-item">
+          <div class="slider-image">
+              <img src="public/assets/tznew/css/images/img-slider-2.jpg" alt="Slider"/>
+          </div>
+          <div class="slider-info">
               <h3 class="title">ThinkZone Ventures</h3>
           </div>
       </div>
@@ -123,23 +137,15 @@
           <div class="slider-image">
               <img src="public/assets/tznew/css/images/img-slider-1.jpg" alt="Slider"/>
           </div>
-          <div class="slider-info grid-container-large">
+          <div class="slider-info">
               <h3 class="title">ThinkZone Ventures</h3>
           </div>
       </div>
       <div class="slider-item">
           <div class="slider-image">
-              <img src="public/assets/tznew/css/images/img-slider-1.jpg" alt="Slider"/>
+              <img src="public/assets/tznew/css/images/img-slider-2.jpg" alt="Slider"/>
           </div>
-          <div class="slider-info grid-container-large">
-              <h3 class="title">ThinkZone Ventures</h3>
-          </div>
-      </div>
-      <div class="slider-item">
-          <div class="slider-image">
-              <img src="public/assets/tznew/css/images/img-slider-1.jpg" alt="Slider"/>
-          </div>
-          <div class="slider-info grid-container-large">
+          <div class="slider-info">
               <h3 class="title">ThinkZone Ventures</h3>
           </div>
       </div>
@@ -157,10 +163,10 @@
         <div class="grid-container grid-container-large">
             <!-- About us -->
             <div class="grid-x grid-margin-x">
-                <div class="large-7 cell-left cell small-12">
+                <div class="cell-left cell auto">
                     <span class="part-title--divider"></span>
                     <h5 class="part-title--small">Introduction of</h5>
-                    <h3 class="part-title">About us</h3>
+                    <h3 class="part-title color-accent">ThinkZone Venture</h3>
                     <p class="part-desc sky">ThinkZone is an ecosystem that supports entrepreneurship and innovation with 3 divisions.
 The first division is ThinkZone Innovation Lab including Startup Academy - to equip startups
 with a comprehensive set of expertise and skills, and Corporate Innovation - to elevate
@@ -171,7 +177,7 @@ businesses.
                     </p>
                 </div>
 
-                <div class="large-4 cell-right cell small-12 large-offset-1 small-offset-0">
+                <div class="cell auto grid-x d-flex align-bottom">
                     <div class="part-box"></div>
                 </div>
             </div>
@@ -179,8 +185,10 @@ businesses.
             <!-- Our Vision -->
             <div class="grid-x grid-margin-x">
                 <div class="large-6 cell small-12">
-                  <div class="icon-box">
-                    <img src="public/assets/tznew//css/images/avatar.jpg" alt="">
+                  <div class="icon-box text-center">
+                    <div class="icon-box__image">
+                      <img src="public/assets/tznew//css/images/vision.png" alt="">
+                    </div>
                     <h3 class="part-title">Our Vision</h3>
                     <p class="part-desc">
                       ThinkZone mission is to nurture a generation of resilient, skillful
@@ -190,8 +198,10 @@ economic inclusion.
                   </div>
                 </div>
                 <div class="large-6 cell small-12">
-                  <div class="icon-box">
-                    <img src="public/assets/tznew//css/images/avatar.jpg" alt="">
+                  <div class="icon-box text-center">
+                    <div class="icon-box__image">
+                        <img src="public/assets/tznew//css/images/mission.png" alt="">
+                    </div>
                     <h3 class="part-title">Our Vision</h3>
                     <p class="part-desc">
                       ThinkZone mission is to nurture a generation of resilient, skillful
@@ -208,8 +218,8 @@ economic inclusion.
     <!-- Begin .home-value -->
     <section class="home-part home-value" id="home-value">
         <div class="grid-container grid-container-large">
+            <h3 class="part-title">Our Values</h3>
             <span class="part-title--divider"></span>
-            <h3 class="part-title color-accent">Our Vision</h3>
             <!-- About us -->
             <div class="grid-x grid-margin-x">
                 <div class="large-6 cell small-12">
@@ -268,11 +278,11 @@ economic inclusion.
     </section>
     <!-- End .home-about -->
     <!-- Begin .home-slogan -->
-    <section class="home-part bg-navy home-slogan" id="home-slogan">
+    <section class="home-part home-slogan" id="home-slogan">
         <div class="grid-container grid-container-large">
             <div class="grid-x grid-margin-x">
                 <div class="cell">
-                    <h2 class="part-title text-center white">All progress takes place outside the comfort zone.</h2>
+                    <h2 class="part-title--xsmall text-center white"><i>All progress takes place outside the comfort zone.</i></h2>
                 </div>
             </div>
         </div>
@@ -281,39 +291,39 @@ economic inclusion.
     <!-- Begin .home-portfolio -->
     <section class="home-part home-portfolio" id="home-portfolio">
         <div class="grid-container grid-container-large">
-            <h3 class="part-title color-accent text-center">Portfolio</h3>
+            <h3 class="part-title text-center">Portfolio</h3>
             <span class="part-title--divider text-center"></span>
-            <div class="grid-x grid-margin-x">
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
+            <div class="grid-x grid-margin-x img-list">
+              <div class="cell large-3 small-6 text-center">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-emdi.png"/>
+              </div>
+              <div class="cell large-3 small-6">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-food-hub.png"/>
+              </div>
+              <div class="cell large-3 small-6">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-smilee.png"/>
+              </div>
+              <div class="cell large-3 small-6">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-gimo.png"/>
+              </div>
             </div>
-            <div class="grid-x grid-margin-x">
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
-                <div class="cell large-3 small-6">
-                    <img class="img-shadow" src="public/assets/tznew/css/images/logo-topcv.png"/>
-                </div>
+            <div class="grid-x grid-margin-x img-list">
+              <div class="cell large-3 small-6 text-center">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-emdi.png"/>
+              </div>
+              <div class="cell large-3 small-6">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-food-hub.png"/>
+              </div>
+              <div class="cell large-3 small-6">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-smilee.png"/>
+              </div>
+              <div class="cell large-3 small-6">
+                  <img class="img-shadow img--circle" src="public/assets/tznew/css/images/logo-gimo.png"/>
+              </div>
             </div>
-            <div class="button-group grid-x grid-padding-x align-center">
-              <a href="#" class="bg-gradient-green button-large button rounded">View All</a>
-              <a href="#" class="bg-gradient-green button-large button rounded">View All</a>
+            <div class="button-row grid-x grid-padding-x align-center align-middle">
+              <a href="#" class="button-large button button--stroke">View all</a>
+              <a href="#" class="button-large button button--gradient button--special rounded">BE OUR PORTFOLIO NOW!</a>
             </div>
         </div>
     </section>
@@ -321,7 +331,7 @@ economic inclusion.
     <!-- Begin .home-supported -->
     <section class="home-part home-supported" id="home-supported">
         <div class="grid-container grid-container-large">
-            <h3 class="part-title color-accent text-center">Partner</h3>
+            <h3 class="part-title text-center">Partner</h3>
             <span class="part-title--divider text-center"></span>
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
@@ -330,24 +340,20 @@ economic inclusion.
                     </div>
                 </div>
             </div>
-            <div class="button-group grid-x grid-padding-x align-center">
-              <a href="#" class="bg-gradient-green button-large button rounded">View All</a>
-              <a href="#" class="bg-gradient-green button-large button rounded">View All</a>
+            <div class="button-row grid-x grid-padding-x align-center align-middle">
+              <a href="#" class="button-large button button--stroke">View all</a>
+              <a href="#" class="button-large button button--gradient button--special rounded">BE OUR PORTFOLIO NOW!</a>
             </div>
         </div>
     </section>
     <!-- End .home-supported -->
     <!-- Begin .home-mentor -->
     <section class="home-part home-mentor" id="home-mentor">
-        <div class="grid-container fluid">
+        <div class="grid-container grid-container-large">
             <div class="grid-x grid-padding-x">
                 <div class="cell medium-12 small-12">
-                    <h2 class="part-title text-center">Mentor Network</h2>
-                    <p class="part-desc sky text-center">We believe in the power of great mentorship, of sharing
-                        knowledge and experience generously, openly and altruistically.<br/>
-                        The breadth of support we provide to our start-ups is unique. This spans from fundraising to
-                        hiring, marketing, market<br/>
-                        expansion, product, growth and legal.</p>
+                  <span class="part-title--divider"></span>
+                    <h2 class="part-title">Mentor Network</h2>
                     <div class="list-mentor">
                         <div class="grid-container grid-container-large">
                             <div class="grid-x grid-margin-x text-center">
@@ -520,9 +526,9 @@ economic inclusion.
                     </div>
                 </div>
             </div>
-            <div class="button-group grid-x grid-padding-x align-center">
-              <a href="#" class="bg-gradient-green button-large button rounded">View All</a>
-              <a href="#" class="bg-gradient-green button-large button rounded">View All</a>
+            <div class="button-row grid-x grid-padding-x align-center align-middle">
+              <a href="#" class="button-large button button--stroke">View all</a>
+              <a href="#" class="button-large button button--gradient button--special rounded">BE OUR PORTFOLIO NOW!</a>
             </div>
         </div>
     </section>
@@ -533,8 +539,7 @@ economic inclusion.
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
                     <div class="testimonial">
-                        <h3 class="testimonial__title">ThinkZone has a professional team, support startup with practical knowledge.</h3>
-                        <span class="testimonial__notes">Mr. Vinh Nguyen - Founder of FoodHub</span>
+                        <h3 class="testimonial__title"><i>ThinkZone has a professional team,<br /> support startup with practical knowledge.</i><span class="testimonial__notes">Mr. Vinh Nguyen - Founder of FoodHub</span></h3>
                     </div>
                 </div>
             </div>
@@ -545,48 +550,80 @@ economic inclusion.
     <section class="home-part home-activities" id="home-activities">
         <div class="grid-container grid-container-large">
             <span class="part-title--divider text-center"></span>
-            <h3 class="part-title text-center">activities</h3>
+            <h3 class="part-title text-center">Activities</h3>
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
-                    <div class="list-post list-post--alt">
-                        <ul class="list-unstyled grid-x grid-margin-x">
-                            <li class="cell small-12 medium-6 large-4">
+                    <div class="list-post list-post--alt list-post--slider">
+                        <ul class="list-unstyled" id="slider-post-center">
+                            <li class="post-item">
                                 <a href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te"
                                    class="thumbnail"
                                    title="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
                                     <img src="http://thinkzone.vn/uploads/2019_12/367x206_78777661-2578267988955151-7074267524031840256-o-1576485379.jpg"
                                          alt="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
                                 </a>
-                                <h3 class="post-title"><a
-                                        href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te">Bạn
-                                    có đang khởi nghiệp quá sớm? Góc nhìn từ Accelerator</a>
-                                </h3>
+                                <p class="post__desc">
+                                  Lorem ipsum dolor sit amet, consectet ur adipiscing elit. Duis est sapien
+                                </p>
                             </li>
-                            <li class="cell small-12 medium-6 large-4">
+                            <li class="post-item">
                                 <a href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019"
                                    class="thumbnail"
                                    title="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
                                     <img src="http://thinkzone.vn/uploads/2019_12/367x206_78906947-2566917190090231-5310959857321377792-o-1575974985.jpg"
                                          alt="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
                                 </a>
-                                <h3 class="post-title"><a
-                                        href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019">Làm
-                                    thế nào để định giá cho sản phẩm một cách chính xác?</a></h3>
+                                <p class="post__desc">
+                                  Lorem ipsum dolor sit amet, consectet ur adipiscing elit. Duis est sapien
+                                </p>
                             </li>
-                            <li class="cell small-12 medium-6 large-4">
+                            <li class="post-item">
                                 <a href="http://thinkzone.vn/case-study-cua-sendo-thuong-mai-dien-tu-viet-nam-canh-tranh-the-nao-voi-ke-khong-lo-ngoai-quoc"
                                    class="thumbnail"
                                    title="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
                                     <img src="http://thinkzone.vn/uploads/2019_12/367x206_2-1575541837.jpg"
                                          alt="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
                                 </a>
-                                <h3 class="post-title"><a
-                                        href="http://thinkzone.vn/case-study-cua-sendo-thuong-mai-dien-tu-viet-nam-canh-tranh-the-nao-voi-ke-khong-lo-ngoai-quoc">Overfitting
-                                    – Sai lầm khi Founder cũng là người dùng</a></h3>
+                                <p class="post__desc">
+                                  Lorem ipsum dolor sit amet, consectet ur adipiscing elit. Duis est sapien
+                                </p>
+                            </li>
+                            <li class="post-item">
+                                <a href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te"
+                                   class="thumbnail"
+                                   title="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_78777661-2578267988955151-7074267524031840256-o-1576485379.jpg"
+                                         alt="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
+                                </a>
+                                <p class="post__desc">
+                                  Lorem ipsum dolor sit amet, consectet ur adipiscing elit. Duis est sapien
+                                </p>
+                            </li>
+                            <li class="post-item">
+                                <a href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019"
+                                   class="thumbnail"
+                                   title="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_78906947-2566917190090231-5310959857321377792-o-1575974985.jpg"
+                                         alt="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
+                                </a>
+                                <p class="post__desc">
+                                  Lorem ipsum dolor sit amet, consectet ur adipiscing elit. Duis est sapien
+                                </p>
+                            </li>
+                            <li class="post-item">
+                                <a href="http://thinkzone.vn/case-study-cua-sendo-thuong-mai-dien-tu-viet-nam-canh-tranh-the-nao-voi-ke-khong-lo-ngoai-quoc"
+                                   class="thumbnail"
+                                   title="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_2-1575541837.jpg"
+                                         alt="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
+                                </a>
+                                <p class="post__desc">
+                                  Lorem ipsum dolor sit amet, consectet ur adipiscing elit. Duis est sapien
+                                </p>
                             </li>
                         </ul>
                         <div class="text-center mt-2">
-                            <a href="http://thinkzone.vn/blog" class="button-stroke button rounded button-large">View More</a>
+                            <a href="http://thinkzone.vn/blog" class="button--stroke button button-large">View More</a>
                         </div>
                     </div>
                 </div>
@@ -830,29 +867,8 @@ economic inclusion.
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/what-input.js"></script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/foundation.js"></script>
 <script type="text/javascript">var baseUrl = 'http://thinkzone.vn/';</script>
-<script src="http://thinkzone.vn/public/assets/tznew/js/app.js"></script>
-
-
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-    var slick = $('#section-partner'),
-        slickSlider = $('#slider-top');
-    slick.slick();
-    slickSlider.slick({
-      centerMode: true,
-      slidesToShow: 1,
-      infinite: true,
-      centerPadding: '160px',
-    });
-</script>
-<script type="text/javascript">
-    var videoPlay = $('button.btn-play')
-    videoPlay.on('click', function () {
-        $(this).addClass('hide');
-        let src = $('#video-ifr').attr('src').split('?');
-        $('#video-ifr').attr('src', src[0] + '?autoplay=1&rel=0&controls=0');
-        $('#video-modal').removeClass('hide');
-    });
-</script>
+<script src="http://thinkzone.vn/public/assets/tznew/js/app.js"></script>
+<script src="public/assets/tznew/js/theme.js"></script>
 </body>
 </html>
