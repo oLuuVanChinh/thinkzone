@@ -12,7 +12,10 @@
           var slick = $('#section-partner'),
               slickSlider = $('#slider-top'),
               sliderPostCenter = $('#slider-post-center');
-          slick.slick();
+          slick.slick({
+            slidesToShow: 5,
+            infinite: true,
+          });
           slickSlider.slick({
             centerMode: true,
             slidesToShow: 1,
@@ -24,6 +27,7 @@
             slidesToShow: 3,
             infinite: true,
             centerPadding: '0',
+            dots: true,
           });
 
           // Video Player
