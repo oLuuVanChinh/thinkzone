@@ -49,30 +49,23 @@ $accent-color: #3aa25b !default;
     }
 }
 @media all and (min-width: 1080px) {
-    body {
-        background-size: 100% auto
-    }
-
-    body.home-body .content{
-        background: url('images/bg-page.png') no-repeat 50% 50%;
-    }
-
-    body.home-accelerator .content {
-        background: url('images/bg-accelerator.png') no-repeat 50% 253%;
-    }
-
-    body.home-partner .content,
-    body.home-mentor .content{
-        background: url('images/bg-body-partner.png') no-repeat 50% 50%;
-    }
-
-    .header-primary {
-        height: 94px;
-    }
 
     .header-container{
       + * {
-        margin-top: 94px;
+        margin-top: 84px;
+      }
+    }
+
+    .header-transparent {
+      + *{
+        margin-top: 0;
+      }
+      + #content{
+        padding-top: 145px;
+      }
+      .header-primary{
+        padding-top: 28px;
+        padding-bottom: 28px;
       }
     }
 
@@ -192,9 +185,6 @@ $accent-color: #3aa25b !default;
     }
     .mt-2{
         margin-top: 2.37rem;
-    }
-    .mt-3{
-        margin-top: 5.84rem;
     }
     .home-portfolio .feature-image {
         min-height: 196px;

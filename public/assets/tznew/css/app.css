@@ -6,11 +6,7 @@
 html {
     font-size: 100%;
     max-width: 100%;
-    overflow-x: hidden
-}
-
-* {
-    font-family: 'Barlow', sans-serif !important;
+    overflow-x: hidden;
 }
 
 body {
@@ -77,7 +73,8 @@ ul {
 }
 
 .bg-gradient-green {
-    background: linear-gradient(90.43deg, #3FAA61 0.4%, #3FAF61 39.59%, #3FBD61 84.45%, #3FC361 99.66%);
+  background: rgb(63,170,97);
+  background: linear-gradient(90deg, rgba(63,170,97,1) 0%, rgba(39,140,71,1) 100%);
 }
 
 .border-radius {
@@ -1263,7 +1260,7 @@ footer .menu.infomation .phone {
 }
 
 .list-parter .media {
-    margin-bottom: 60px
+    margin-bottom: 40px
 }
 
 /* breadcrumbs */
