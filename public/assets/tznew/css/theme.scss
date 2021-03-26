@@ -44,6 +44,27 @@ $sizes: (
   @return $size / 16px * 1rem;
 }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: 'Barlow', sans-serif;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
+.ico-support{
+  background-image: url("images/icon-pin.png");
+}
+.ico-legal{
+  background-image: url("images/icon-legal.png");
+}
+.ico-design{
+  background-image: url("images/icon-design1.png");
+}
+.ico-sales{
+  background-image: url("images/icon-sale.png");
+}
+
 /* Second Font */
 .header-primary .menu a,
 .part-desc,
@@ -51,6 +72,10 @@ $sizes: (
 .second-font,
 .part--link{
   font-family: 'Barlow Condensed' !important;
+}
+
+.primary-font{
+  font-family: 'Barlow', sans-serif !important;
 }
 
 a, .startup-journey .title{
@@ -91,6 +116,9 @@ a:hover, a:focus{
         margin-left: auto;
         margin-right: auto;
       }
+      &.text-right{
+        margin-left: auto;
+      }
       + .part-title{
         margin-top: -13px;
       }
@@ -100,6 +128,10 @@ a:hover, a:focus{
       &-medium{
         width: 79px;
         height: 11px;
+      }
+      &-tiny{
+        width: 23px;
+        height: 5px;
       }
     }
     &--small{
@@ -111,6 +143,10 @@ a:hover, a:focus{
     &--xsmall {
       font-size: rem(40px);
       font-weight: 500;
+    }
+    &--tiny {
+      font-size: rem(27px);
+      font-weight: bold;
     }
     + .part-title--divider {
       margin-top: -19px;
@@ -127,6 +163,11 @@ a:hover, a:focus{
     &--medium{
       font-size: rem(22px);
       line-height: 1.27;
+    }
+    &--small{
+      font-size: rem(18px);
+      line-height: 1.27;
+      font-weight: 500;
     }
   }
   &-box{
@@ -300,6 +341,10 @@ a:hover, a:focus{
 .button{
   background-color: $accent-color;
   font-size: rem(27px);
+  &:hover{
+    background-color: $accent-color;
+    color: #fff;
+  }
   &--gradient{
     background: linear-gradient(90deg, rgba(63,170,97,1) 0%, rgba(39,140,71,1) 100%);
   }
@@ -312,6 +357,13 @@ a:hover, a:focus{
     padding: 9px 33px 13px;
     line-height: normal;
     font-weight: bold;
+  }
+  &--medium {
+    padding: 6px 16px 8px;
+    line-height: normal;
+    font-weight: bold;
+    border-width: 2px;
+    font-size: rem(16px);
   }
   &--special{
     font-weight: 500;
@@ -330,10 +382,17 @@ a:hover, a:focus{
     line-height: normal;
     font-weight: bold;
   }
+  &--italic{
+    font-size: rem(17px);
+    font-style: italic;
+  }
 }
 
 .images-box{
   padding: 28px 37px;
+  &--medium{
+    padding: 28px 25px;
+  }
   h3{
     font-size: rem(19px);
     font-weight: bold;
@@ -721,6 +780,13 @@ a:hover, a:focus{
   .button{
     height: inherit;
   }
+}
+
+.home-innovationlab{
+  background: url(images/bg-innovationlab.png) no-repeat top center;
+}
+.home-accelerator{
+  background: url(images/bg-accelerator.jpg) no-repeat top center;
 }
 
 /* Contact */
@@ -1126,6 +1192,24 @@ a:hover, a:focus{
   .item-round:after {
     animation-duration: 15000ms;
   }
+  &--minimal{
+    margin-top: 0;
+    .inside-round{
+      width: 6.46em;
+      height: 6.46em;
+      &:after{
+        z-index: 12;
+        position: absolute;
+        border-color: $accent-color;
+      }
+    }
+    .main-round{
+      padding: 0;
+      box-shadow: none;
+      width: inherit;
+      height: inherit;
+    }
+  }
 }
 
 @keyframes spin-border {
@@ -1164,7 +1248,7 @@ a:hover, a:focus{
   margin-bottom: 72px;
 }
 .home-offer{
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 .home-portfolio{
@@ -1289,7 +1373,7 @@ a:hover, a:focus{
       font-size: 12px;
       font-weight: 500;
       line-height: 1;
-      width: calc(100% - 30px);
+      width: calc(100% - 16px);
       padding: 0 10px 0 20px;
     }
     &__large{
@@ -1304,6 +1388,69 @@ a:hover, a:focus{
           display: block;
           text-align: right;
           margin: 10px 0 10px;
+        }
+      }
+    }
+    &-alt{
+      .post-item{
+        box-shadow: 0 5px 16px rgba(0,0,0,0.46);
+        &:not(.list-post--magazine__large){
+          margin-bottom: 20px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        .post__desc{
+          font-weight: bold;
+          i{
+            display: block;
+            text-align: right;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  &--list{
+    .post-item{
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      margin-bottom: 30px;
+      img{
+        width: 240px;
+        height: 166px;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 6px;
+      }
+    }
+    .thumbnail{
+      flex: 0 0 auto;
+      border-radius: 4px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.46);
+      margin: 0;
+    }
+    .post{
+      &__desc{
+        flex-grow: 1;
+        background-color: $accent-color;
+        margin: 0;
+        padding: 10px 30px;
+        color: #fff;
+        font-size: rem(25px);
+        font-weight: bold;
+        line-height: 1;
+        i{
+          font-size: rem(14px);
+          font-weight: 600;
+          font-style: italic;
+          display: block;
+          margin: 10px 0 0;
+        }
+        small{
+          font-size: rem(16px);
+          font-weight: 500;
         }
       }
     }
@@ -1384,6 +1531,8 @@ a:hover, a:focus{
     > .cell {
       padding-left: calc(4.125rem - 0.9375rem);
       padding-right: calc(4.125rem - 0.9375rem);
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   .page-header {
@@ -1414,7 +1563,7 @@ a:hover, a:focus{
     margin-bottom: 56px;
   }
   .home-offer{
-    margin-bottom: 0;
+    margin-bottom: 150px;
     + .home-journey{
       margin-top: 0;
       padding-top: 35px;
@@ -1518,6 +1667,7 @@ footer {
   .card-heading {
     p {
       color: rgba(18, 39, 74, 0.6);
+      margin-bottom: 0;
     }
   }
 
@@ -1583,6 +1733,55 @@ footer {
     .number {
       font-weight: bold;
       font-size: 144px;
+    }
+  }
+  &--alt {
+    padding: 52px 32px;
+    box-shadow: 0 12px 16px rgba(0,0,0,0.46);
+    border-radius: 40px;
+    background-color: #fff;
+    .part{
+      &-title{
+        font-size: rem(41px);
+        font-weight: 600;
+        display: flex;
+        margin-bottom: 60px;
+        img {
+          margin-right: 48px;
+        }
+      }
+      &-desc{
+        font-size: rem(25px);
+        line-height: 1.72;
+      }
+    }
+  }
+  &--horizontal {
+    display: flex;
+    align-items: center;
+    .icon-box{
+      &--image{
+        flex: 0 0 323px;
+        + .icon-box--content{
+          margin-left: 130px;
+        }
+      }
+      &--content {
+        + .icon-box--image {
+          margin-left: 130px;
+        }
+      }
+    }
+    .part{
+      &-title{
+        font-size: rem(45px);
+        font-weight: bold;
+      }
+      &-desc{
+        font-size: rem(27px);
+        line-height: 1.74;
+        margin-top: 36px;
+      }
     }
   }
 }
@@ -1667,11 +1866,20 @@ footer {
 }
 
 .post-meta{
- margin: 15px 0 20px;
+ padding: 15px 0 20px;
+ display: block;
   .menu{
     .meta-time{
       margin-right: 35px;
     }
+  }
+}
+
+.single-post{
+  padding: 25px;
+  &--date{
+    font-size: rem(22px);
+    color: $second-color;
   }
 }
 
@@ -1871,8 +2079,12 @@ blockquote{
     }
   }
   .card.card-right {
-    padding: 69px 0 5px 90px;
-    margin-left: 18px;
+    padding: 40px 50px 40px 50px;
+    margin-left: 15px;
+    .ico{
+      width: 33px;
+      height: 33px;
+    }
   }
   .home-offer {
     + .home-journey {
@@ -1924,9 +2136,6 @@ blockquote{
   }
   .icon-box{
     font-size: 1em;
-  }
-  .card.card-right{
-    padding-left: 120px;
   }
 }
 @media all and (min-width: 1620px) {

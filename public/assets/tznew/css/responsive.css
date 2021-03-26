@@ -75,13 +75,7 @@
   }
 
   .card.card-left {
-    position: absolute;
-    top: 50px;
-    padding: 59px 50px 67px 50px;
-  }
-
-  .card.highlight {
-    width: 98%;
+    padding: 40px 30px 70px 30px;
   }
 
   .card.card-left .card-body,
@@ -109,6 +103,10 @@
     font-size: 3.375em;
   }
 
+  .part-title--tiny {
+    font-size: 1.6875rem;
+  }
+
   footer {
     padding: 74px 0 40px;
   }
@@ -126,7 +124,7 @@
   }
 
   .page-title {
-    font-size: 4rem;
+    font-size: 2.7343rem;
   }
 
   .page-title.post-title {
@@ -143,7 +141,7 @@
   }
 
   .post-entry {
-    padding: 20px 100px;
+    padding: 20px 0;
   }
 
   .large-padding-100 {

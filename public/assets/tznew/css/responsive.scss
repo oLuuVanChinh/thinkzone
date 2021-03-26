@@ -85,13 +85,7 @@ $accent-color: #3aa25b !default;
     }
 
     .card.card-left {
-        position: absolute;
-        top: 50px;
-        padding: 59px 50px 67px 50px;
-    }
-
-    .card.highlight {
-        width: 98%;
+        padding: 40px 30px 70px 30px;
     }
 
     .card.card-left .card-body,
@@ -118,6 +112,9 @@ $accent-color: #3aa25b !default;
     .part-title {
         font-size: 3.375em
     }
+    .part-title--tiny{
+      font-size: rem(27px);
+    }
 
     footer {
         padding: 74px 0 40px;
@@ -136,7 +133,7 @@ $accent-color: #3aa25b !default;
     }
 
     .page-title {
-        font-size: 4rem
+        font-size: 2.7343rem;
     }
 
     .page-title.post-title {
@@ -153,7 +150,7 @@ $accent-color: #3aa25b !default;
     }
 
     .post-entry {
-        padding: 20px 100px
+        padding: 20px 0;
     }
 
     .large-padding-100 {
