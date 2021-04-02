@@ -178,9 +178,6 @@ header .logo img {
     transition: all 0s;
 }
 
-.header-primary .mobile-nav-button{
-    background-image: url("images/nav-bg-mobile-w.png");
-}
 
 .mobile-nav-button.is-open {
     background-image: url('images/nav-close.png');
@@ -262,7 +259,7 @@ header .logo img {
 }
 
 .home-part {
-    margin: 45px 0 75px;
+    margin: 25px 0 35px;
 }
 
 /* home-banner */
@@ -294,7 +291,7 @@ header .logo img {
 }
 
 .part-title {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600;
     margin-bottom: 15px;
     line-height: 1.2;
@@ -1435,6 +1432,7 @@ footer .menu.infomation .phone {
   line-height: 1.125;
   padding: 4px 11px;
   margin-right: 10px !important;
+  background-image: none;
 }
 
 .post-meta a {

@@ -2,24 +2,6 @@ $accent-color: #3aa25b !default;
 @function rem($size) {
   @return $size / 16px * 1rem;
 }
-@media all and (min-width: 320px) {
-    .home-banner .banner-title {
-        font-size: 2.1em
-    }
-
-    .home-banner {
-        background-image: unset;
-        background-size: 100% auto;
-    }
-
-    footer {
-        padding: 40px 0;
-    }
-
-    .list-mentor {
-        margin-top: 40px
-    }
-}
 
 @media all and (min-width: 768px) {
     .home-banner {
@@ -41,14 +23,49 @@ $accent-color: #3aa25b !default;
     .home-part {
         width: 100%;
     }
-}
-
-@media all and (min-width: 1024px) {
-    .header-primary .menu a{
-        font-size: 0.8em;
+    .slider-info{
+      position: absolute;
+      width: 303px;
+    }
+    .slick-center {
+      .slider-image{
+        padding-right: 88px;
+        padding-left: 30px;
+      }
+      .slider-info{
+        width: 304px;
+      }
+    }
+    .section-slider {
+      .slick-track{
+        padding-top: 65px;
+        padding-bottom: 200px;
+      }
+      .slick-list{
+        background: url(images/bg-banner-top.png) no-repeat;
+        background-position: -13px calc(100% - 25px);
+        background-size: calc(100% + 16px);
+      }
+    }
+    .slider-scroll {
+      a{
+        font-size: rem(42px);
+      }
+    }
+    .part{
+      &-title{
+        &--divider{
+          width: 94px;
+        }
+      }
+    }
+    .home-investment {
+      .cell-left{
+        flex: 0 0 60%;
+      }
     }
 }
-@media all and (min-width: 1080px) {
+@media all and (min-width: 992px) {
 
     .header-container{
       + * {
@@ -59,13 +76,6 @@ $accent-color: #3aa25b !default;
     .header-transparent {
       + *{
         margin-top: 0;
-      }
-      + #content{
-        padding-top: 145px;
-      }
-      .header-primary{
-        padding-top: 28px;
-        padding-bottom: 28px;
       }
     }
 
@@ -109,9 +119,6 @@ $accent-color: #3aa25b !default;
         padding-right: 40px
     }
 
-    .part-title {
-        font-size: 3.375em
-    }
     .part-title--tiny{
       font-size: rem(27px);
     }
@@ -190,14 +197,35 @@ $accent-color: #3aa25b !default;
     .page-header {
         margin-top: 84px;
     }
+    .slider-image{
+      height: 403px;
+    }
+    .slider-info{
+      width: 403px;
+      top: 159px;
+      height: 85px;
+      right: -123px;
+      .title{
+        font-size: rem(42px);
+      }
+    }
+    .slick-center {
+      + .slider-item {
+        .slider-info{
+          left: -123px;
+        }
+      }
+      .slider-info{
+        height: 534px;
+        padding: 40px;
+      }
+      .slider-image{
+        padding-left: 45px;
+      }
+    }
 }
 
 @media all and (min-width: 1200px) {
-    .header-primary .menu a{
-        font-size: 1em;
-    }
-}
-@media all and (min-width: 1492px) {
     /* About */
     .home-about .cell-left{
         flex: 0 0 62%;
@@ -208,15 +236,216 @@ $accent-color: #3aa25b !default;
     .header-primary .menu a{
         font-size: rem(23px);
     }
+    .slider-info{
+      right: -24px;
+    }
+    .slick-center {
+      + .slider-item {
+        .slider-info{
+          left: -24px;
+        }
+      }
+    }
+    .part{
+      &-desc{
+        font-size: rem(25px);
+      }
+      &-title {
+        font-size: rem(54px);
+        &--small{
+          font-size: rem(44px);
+        }
+      }
+    }
+    .home-investment{
+      > .grid-container{
+        padding-left: 98px;
+        padding-right: 98px;
+      }
+      .cell-left{
+        margin-right: 50px;
+        flex: 0 0 54%;
+      }
+    }
+    .images-box{
+      &__info{
+        margin-left: 40px;
+      }
+    }
+    .tabs-title {
+      > a{
+        font-size: rem(27px);
+      }
+    }
+    .home-part{
+      padding: 45px 0 75px;
+    }
 }
 
-@media all and (max-width: 768px) {
-    .small-bg-gray {
-        background-color: #F7F9FE
-    }
+@media all and (max-width: 767px) {
+  .small-bg-gray {
+      background-color: #F7F9FE
+  }
 
-    .small-box-radius {
-        border-radius: 20px;
-        -webkit-border-radius: 20px
+  .small-box-radius {
+      border-radius: 20px;
+      -webkit-border-radius: 20px
+  }
+
+  .part-box{
+    margin-top: 30px;
+  }
+  .image-spiner{
+    font-size: rem(40px);
+  }
+  .part{
+    &-title{
+      &--xsmall{
+        font-size: rem(24px);
+      }
     }
+  }
+  #home-slogan{
+    padding: 50px 0;
+  }
+  .img-list{
+    margin: 0;
+    img{
+      margin: 10px 0;
+    }
+  }
+  .button-row{
+    margin-top: 20px;
+    .button{
+      margin: 10px 0;
+    }
+  }
+  .home-supported {
+    .feature-image{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  #home-testimonial{
+    padding: 40px 0 0;
+  }
+  .testimonial{
+    background-size: 70px auto;
+    &__title{
+      font-size: rem(20px);
+    }
+  }
+  .list{
+    &-post{
+      &--magazine{
+        &__large {
+          .post{
+            &__desc{
+              font-size: rem(18px);
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #home-partner, #home-achievements{
+    padding: 40px 0 40px 0;
+  }
+  .section-partner {
+    .partner-item{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .post-meta{
+    padding: 15px 0 0;
+  }
+  .list-post {
+    .cell{
+      margin-bottom: 15px;
+    }
+  }
+  .card{
+    &.card-right{
+      margin-top: 30px;
+    }
+  }
+  .icon{
+    &-box{
+      &--alt{
+        padding: 40px 20px;
+        .part{
+          &-title {
+            font-size: rem(28px);
+            margin-bottom: 30px;
+            align-items: flex-start;
+            img{
+              margin-right: 15px;
+              max-width: 80px;
+              flex: 0 0 auto;
+              flex-grow: 1
+            }
+          }
+          &-desc{
+            font-size: rem(18px);
+          }
+        }
+      }
+      &--horizontal{
+        flex-direction: column;
+        .part-title--divider{
+          &.text-right{
+            margin-left: 0;
+          }
+        }
+        .icon-box{
+          &--image {
+            + .icon-box{
+              &--content{
+                margin-left: 0;
+              }
+            }
+          }
+          &--content {
+            &.text-right{
+              text-align: left;
+            }
+            + .icon-box{
+              &--image{
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .list-post{
+    &--list {
+      .post-item{
+        flex-direction: column;
+        img{
+          width: 100%;
+          height: 200px;
+          border-radius: 0;
+        }
+      }
+      .thumbnail{
+        flex: 0 0 100%;
+      }
+    }
+  }
+  .page-header{
+    margin-top: 76px;
+  }
+  .part-tabs{
+    flex-direction: column;
+  }
+  .single-post{
+    padding: 10px;
+  }
+  .button{
+    font-size: rem(18px);
+  }
 }
