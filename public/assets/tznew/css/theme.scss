@@ -71,7 +71,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .button--special,
 .second-font,
 .part--link{
-  font-family: 'Barlow Condensed' !important;
+  //font-family: 'Barlow Condensed' !important;
+  font-family: 'Barlow', sans-serif !important;
 }
 
 .primary-font{
@@ -301,6 +302,7 @@ a:hover, a:focus{
   }
   &-content{
     border: none;
+    overflow: auto;
   }
 }
 
@@ -413,6 +415,7 @@ a:hover, a:focus{
   &__item{
     display: flex;
     padding: 20px 0;
+    align-items: center;
     span{
       display: flex;
       align-items: center;
@@ -517,6 +520,26 @@ a:hover, a:focus{
     }
     .is-sticky.header-transparent & {
       color: #12274a;
+    }
+  }
+  .dropdown{
+    &.menu {
+      > li {
+        position: relative;
+        > a{
+          &.active{
+            &:after{
+              width: 30px;
+              height: 4px;
+              background-color: $accent-color;
+              content: "";
+              position: absolute;
+              left: 16px;
+              bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -725,10 +748,13 @@ a:hover, a:focus{
     top: 0;
     height: 100%;
     right: 0;
-    width: 85px;
+    width: 110px;
     transform: none;
     background-image: none;
     z-index: 1;
+    &:focus{
+      outline: none;
+    }
   }
   .slick-prev{
     left: 0;
@@ -1388,7 +1414,7 @@ a:hover, a:focus{
       color: #fff;
       font-size: 12px;
       font-weight: 500;
-      line-height: 1;
+      line-height: 1.4;
       width: calc(100% - 16px);
       padding: 0 10px 0 20px;
     }
