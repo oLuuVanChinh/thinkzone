@@ -61,8 +61,6 @@
     padding-left: 40px; }
   .card-left {
     padding-right: 40px; }
-  .part-title--tiny {
-    font-size: 1.6875rem; }
   footer {
     padding: 74px 0 40px; }
   .footer-new {
@@ -113,7 +111,7 @@
     height: 85px;
     right: -123px; }
     .slider-info .title {
-      font-size: 2.625rem; }
+      font-size: 2.25rem; }
   .slick-center + .slider-item .slider-info {
     left: -123px; }
   .slick-center .slider-info {
@@ -131,7 +129,7 @@
   .dropdown.menu > li {
     margin-right: 0px; }
   .header-primary .menu a {
-    font-size: 1.4375rem; }
+    font-size: 1.125rem; }
   .slider-info {
     right: -24px; }
   .slick-center + .slider-item .slider-info {
@@ -139,9 +137,11 @@
   .part-desc {
     font-size: 1.5625rem; }
   .part-title {
-    font-size: 3.375rem; }
+    font-size: 3rem; }
     .part-title--small {
-      font-size: 2.75rem; }
+      font-size: 2.5rem; }
+    .part-title--tiny {
+      font-size: 1.6875rem; }
   .home-investment > .grid-container {
     padding-left: 98px;
     padding-right: 98px; }
@@ -155,7 +155,9 @@
   .tabs-title > a {
     font-size: 1.6875rem; }
   .home-part {
-    padding: 45px 0 75px; } }
+    padding: 45px 0 75px; }
+  #slider-top .slick-arrow {
+    width: 210px; } }
 
 @media all and (max-width: 767px) {
   .small-bg-gray {
@@ -178,7 +180,7 @@
   .button-row {
     margin-top: 20px; }
     .button-row .button {
-      margin: 10px 0; }
+      margin: 10px; }
   .home-supported .feature-image {
     margin-top: 30px;
     margin-bottom: 30px; }
@@ -257,4 +259,27 @@
   .single-post {
     padding: 10px; }
   .button {
-    font-size: 1.125rem; } }
+    font-size: 1.125rem; }
+  .part-tabs .tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    padding: 10px; }
+    .part-tabs .tabs-title {
+      margin-right: 10px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto; }
+      .part-tabs .tabs-title > a {
+        margin-bottom: 0;
+        height: inherit;
+        padding: 10px 15px;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+        .part-tabs .tabs-title > a[aria-selected='true'] {
+          -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.28);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.28);
+          border-left-width: 6px; }
+          .part-tabs .tabs-title > a[aria-selected='true']:after {
+            display: none; } }

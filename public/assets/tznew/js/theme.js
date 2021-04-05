@@ -95,6 +95,15 @@
               $('#video-ifr').attr('src', src[0] + '?autoplay=1&rel=0&controls=0');
               $('#video-modal').removeClass('hide');
           });
+
+          // tabs
+          if($('.part-tabs .tabs').length){
+            var tabsHeight = $('.part-tabs .tabs').outerHeight(),
+                tabsContentheight = $('.part-tabs .tabs-content').outerHeight();
+            if(tabsContentheight > tabsHeight){
+              $('.part-tabs .tabs-content').css("height", tabsHeight);
+            }
+          }
         },
     }
     window.dgtTheme = dgtTheme;
