@@ -358,6 +358,15 @@ a:hover, a:focus{
     background-color: #fff;
     border: 4px solid $accent-color;
     color: $second-color;
+    &-light{
+      min-width: 172px;
+      height: 55px;
+      background-color: #fff;
+      color: $second-color;
+      box-shadow: 0 3px 9px rgba(0,0,0,0.4);
+      border-radius: 15px;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
   }
   &-large {
     padding: 9px 33px 13px;
@@ -452,13 +461,15 @@ a:hover, a:focus{
 .header-container {
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 13;
+  background-color: $second-color;
   + * {
     margin-top: 76px;
   }
 }
 
 .header-transparent {
+  background-color: transparent;
   + *{
     margin-top: 0;
   }
@@ -513,7 +524,7 @@ a:hover, a:focus{
   justify-content: space-between;
 
   .menu a {
-    color: #12274a;
+    color: #fff;
     font-size: 1rem;
     .header-transparent & {
       color: #fff;
@@ -528,7 +539,7 @@ a:hover, a:focus{
         position: relative;
         > a{
           &.active{
-            &:after{
+            &:before{
               width: 30px;
               height: 4px;
               background-color: $accent-color;
@@ -536,6 +547,7 @@ a:hover, a:focus{
               position: absolute;
               left: 16px;
               bottom: 0;
+              top: auto;
             }
           }
         }
@@ -1100,6 +1112,15 @@ a:hover, a:focus{
   padding: 64px 0 100px 0;
 }
 
+#home-about{
+  margin-bottom: 15px;
+}
+
+#home-value{
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .section-partner {
   .partner-item {
     padding-left: 53px;
@@ -1133,6 +1154,14 @@ a:hover, a:focus{
 
   .button {
     padding: 17px 31px;
+  }
+}
+
+.partner-list{
+  .cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1272,6 +1301,183 @@ a:hover, a:focus{
   }
 }
 
+.image-spiner--large {
+  z-index: 1;
+  font-size: 1.3rem;
+  margin-top: 0.5em;
+
+  .outside-round, .inside-round {
+    &:after {
+      width: 100%;
+      height: 100%;
+      border: 2px dashed #DFE7F4;
+      content: "";
+      border-radius: 50%;
+      display: block;
+    }
+  }
+
+  .outside-round {
+    width: 11em;
+    height: 11em;
+  }
+
+  .inside-round {
+    width: 7em;
+    height: 7em;
+  }
+
+  .inside-round, .main-round {
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .item-round {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .main-round{
+    z-index: 10;
+    box-shadow: 0px 22px 28px -11px rgba(0, 0, 0, 0.2);
+  }
+
+  .main-round {
+    width: 4em;
+    height: 4em;
+    padding: 0.4em 0.26em;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .size-1 {
+    width: 2em;
+    height: 2em;
+  }
+
+  .size-2 {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .size-3 {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .size-4 {
+    width: 1em;
+    height: 1em;
+  }
+
+  .item-1 {
+    top: -1em;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .item-2 {
+    top: 2.12em;
+    right: -0.34em;
+  }
+
+  .item-3 {
+    bottom: 2.82em;
+    right: -0.16em;
+  }
+
+  .item-4 {
+    bottom: -0.94em;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .item-5 {
+    bottom: 3.7em;
+    left: -0.62em;
+  }
+
+  .item-6 {
+    top: 1.88em;
+    left: 0.4em;
+  }
+
+  .item-7 {
+    top: -0.22em;
+    right: 0.26em;
+  }
+
+  .item-8 {
+    top: 3.2em;
+    right: -0.4em;
+  }
+
+  .item-9 {
+    bottom: 0em;
+    right: 0.76em;
+  }
+
+  .item-10 {
+    bottom: 0em;
+    left: 0.4em;
+  }
+
+  .item-11 {
+    top: 2.44em;
+    left: -0.5em;
+  }
+
+  .item-12 {
+    left: 0.98em;
+    top: -0.22em;
+  }
+
+  .outside-round:after,
+  .inside-round:after {
+    animation-name: spin-border;
+    animation-duration: 50000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .inside-round:after{
+    animation-name: spin-border-reverse;
+  }
+
+  .item-round:after {
+    animation-duration: 15000ms;
+  }
+}
+
 /* Content */
 .home-journey{
   .part-desc{
@@ -1284,10 +1490,6 @@ a:hover, a:focus{
   + .home-portfolio{
     padding-top: 0px;
   }
-}
-.home-blog{
-  margin-top: 75px;
-  margin-bottom: 72px;
 }
 .home-offer{
   margin-bottom: 50px;
@@ -1454,14 +1656,19 @@ a:hover, a:focus{
     }
   }
   &--list{
+    background-color: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.46);
+    padding: 14px;
     .post-item{
       display: flex;
       align-items: center;
       flex-grow: 1;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #beb9b9;
       img{
-        width: 240px;
-        height: 166px;
+        width: 210px;
+        height: 140px;
         object-fit: cover;
         object-position: top center;
         border-radius: 6px;
@@ -1476,26 +1683,46 @@ a:hover, a:focus{
     .post{
       &__desc{
         flex-grow: 1;
-        background-color: $accent-color;
         margin: 0;
-        padding: 10px 30px;
-        color: #fff;
+        padding: 10px 20px;
         font-size: rem(25px);
         font-weight: bold;
-        line-height: 1;
+        line-height: 17px;
+        color: rgba(0,0,0,0.75);
+        a{
+          color: $second-color;
+          line-height: 1.1;
+        }
         i{
           font-size: rem(14px);
           font-weight: 600;
           font-style: italic;
           display: block;
-          margin: 10px 0 0;
+          margin: 5px 0 10px;
         }
         small{
           font-size: rem(16px);
           font-weight: 500;
+          display: block;
         }
       }
     }
+  }
+}
+
+.loadmore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,0.5);
+  }
+  svg{
+    margin-left: 10px;
+    margin-top: 3px;
   }
 }
 
@@ -1672,18 +1899,15 @@ footer {
   }
 
   &__image{
-    height: 108px;
-    display: flex;
+    display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-  }
-
-  .title {
-    font-size: 1.6em;
-    margin: 10px 0 0;
-    line-height: 2rem;
-    color: #fff;
+    .feature-image{
+      height: 108px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 11px;
+    }
   }
 
   .number {
@@ -1722,7 +1946,7 @@ footer {
         }
       }
       &-desc{
-        font-size: rem(25px);
+        font-size: rem(19px);
         line-height: 1.72;
       }
     }
@@ -1839,6 +2063,7 @@ footer {
 .post-meta{
  padding: 15px 0 20px;
  display: block;
+ margin-bottom: 0;
   .menu{
     .meta-time{
       margin-right: 35px;
@@ -1971,6 +2196,7 @@ blockquote{
   background: url("images/banner-slogan.jpg") no-repeat;
   background-size: cover;
   padding: 83px 0;
+  margin: 35px 0;
 }
 
 /* Home Testimonial */
@@ -1978,6 +2204,11 @@ blockquote{
   background: url("images/banner-testimonial.jpg") no-repeat;
   background-size: cover;
   padding: 74px 0;
+  margin: 20px 0 40px;
+}
+
+.partner-lists{
+  margin: 40px 0 70px;
 }
 
 .testimonial{
@@ -2031,6 +2262,9 @@ blockquote{
 @media all and (min-width: 1024px) {
   .image-spiner{
     font-size: 2.125rem;
+    &--large{
+      margin-left: 1em
+    }
   }
   .mt-3 {
     margin-top: 3.84rem;
@@ -2083,6 +2317,9 @@ blockquote{
   }
   .image-spiner {
     font-size: 3.125rem;
+    &--large{
+      font-size: 3rem;
+    }
   }
   .icon-box{
     font-size: 1em;
@@ -2132,6 +2369,9 @@ blockquote{
   .image-spiner {
     margin-top: 50px;
     margin-bottom: 20px;
+    &--large{
+      margin-top: 100px;
+    }
   }
   .section-partner {
     .owl-stage{

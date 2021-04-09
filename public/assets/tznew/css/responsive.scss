@@ -56,6 +56,9 @@ $accent-color: #3aa25b !default;
       &-title{
         &--divider{
           width: 94px;
+          &-tiny{
+            width: 23px;
+          }
         }
       }
     }
@@ -84,7 +87,7 @@ $accent-color: #3aa25b !default;
     }
 
     #home-partner {
-        padding: 164px 0 175px 0;
+        padding: 124px 0 135px 0;
     }
     #home-achievements{
         padding: 160px 0 123px 0;
@@ -92,6 +95,7 @@ $accent-color: #3aa25b !default;
 
     #home-partner .part-title {
         line-height: 1.2;
+        margin-bottom: 60px;
     }
 
     .card.card-left {
@@ -202,7 +206,7 @@ $accent-color: #3aa25b !default;
       height: 85px;
       right: -123px;
       .title{
-        font-size: rem(36px);
+        font-size: rem(30px);
       }
     }
     .slick-center {
@@ -244,10 +248,10 @@ $accent-color: #3aa25b !default;
     }
     .part{
       &-desc{
-        font-size: rem(25px);
+        font-size: rem(19px);
       }
       &-title {
-        font-size: rem(48px);
+        font-size: rem(45px);
         &--small{
           font-size: rem(40px);
         }
@@ -277,7 +281,7 @@ $accent-color: #3aa25b !default;
       }
     }
     .home-part{
-      padding: 45px 0 75px;
+      padding: 45px 0;
     }
     #slider-top {
       .slick-arrow{
@@ -301,6 +305,9 @@ $accent-color: #3aa25b !default;
   }
   .image-spiner{
     font-size: rem(40px);
+    &--large{
+      font-size: rem(30px);
+    }
   }
   .part{
     &-title{
