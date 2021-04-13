@@ -439,4 +439,20 @@
   .part-tabs .tabs-title > a[aria-selected=true]:after {
     display: none;
   }
+
+  .home-part .pl-6 {
+    padding-left: 0 !important;
+  }
+
+  .partner-lists img {
+    margin: 10px 0;
+  }
+  .partner-lists .partner-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-lists {
+    margin: 40px 0 30px;
+  }
 }

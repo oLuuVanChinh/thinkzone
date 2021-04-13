@@ -665,7 +665,6 @@ a:hover, a:focus {
 }
 .button--stroke-light {
   min-width: 172px;
-  height: 55px;
   background-color: #fff;
   color: #12274a;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
@@ -924,9 +923,10 @@ a:hover, a:focus {
 .slider-scroll {
   position: absolute;
   bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   z-index: 1;
+  text-align: center;
+  width: 100%;
 }
 .slider-scroll a {
   display: flex;
@@ -1331,6 +1331,10 @@ a:hover, a:focus {
   padding-left: 53px;
   padding-right: 53px;
 }
+.section-partner .slick-track {
+  display: flex;
+  align-items: center;
+}
 .section-partner .owl-stage {
   display: flex;
 }
@@ -1615,6 +1619,10 @@ a:hover, a:focus {
 }
 
 /* Content */
+.home-part {
+  padding: 30px 0;
+}
+
 .home-journey .part-desc {
   margin-bottom: 16px;
 }

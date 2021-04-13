@@ -110,7 +110,7 @@
 
     $(document).ready(function () {
         dgtTheme.init();
-        getScroll();
+        // getScroll();
     });
     // $(window).scroll(function () {
     //   getScroll();
