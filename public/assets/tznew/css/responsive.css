@@ -1,4 +1,8 @@
 @media all and (min-width: 768px) {
+  .partner-list .cell {
+    width: calc(33.3333333% - 1.875rem);
+  }
+
   .home-banner {
     background: url("images/header-bg.jpg") no-repeat 50% 0 transparent;
     background-size: 100% auto;
@@ -217,6 +221,10 @@
     flex: 0 0 62%;
   }
 
+  .home-value .grid-x .cell:first-child .icon-box {
+    padding-left: 3em;
+  }
+
   .dropdown.menu > li {
     margin-right: 0px;
   }
@@ -260,7 +268,7 @@
   }
 
   .tabs-title > a {
-    font-size: 1.6875rem;
+    font-size: 1.2875rem;
   }
 
   .home-part {
@@ -270,8 +278,19 @@
   #slider-top .slick-arrow {
     width: 210px;
   }
+
+  .partner-list .cell {
+    width: calc(20% - 1.875rem);
+  }
 }
 @media all and (max-width: 767px) {
+  .home-about .icon-box {
+    margin-top: 50px;
+  }
+  .home-about .part-title {
+    margin-bottom: 20px;
+  }
+
   .small-bg-gray {
     background-color: #F7F9FE;
   }
@@ -446,10 +465,6 @@
 
   .partner-lists img {
     margin: 10px 0;
-  }
-  .partner-lists .partner-list {
-    flex-direction: column;
-    align-items: center;
   }
 
   .partner-lists {

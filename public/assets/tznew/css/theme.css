@@ -466,7 +466,7 @@ a:hover, a:focus {
 }
 .part-desc {
   color: #12274a;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 0;
 }
@@ -505,7 +505,7 @@ a:hover, a:focus {
   padding: 0;
 }
 .part--link li {
-  font-size: 1.9375rem;
+  font-size: 1.5rem;
   color: #3aa25b;
   font-weight: 500;
   display: flex;
@@ -521,7 +521,7 @@ a:hover, a:focus {
   margin-right: 28px;
 }
 .part-tabs .tabs {
-  flex: 0 0 29.5%;
+  flex: 0 0 25%;
 }
 .part-tabs .part-desc {
   font-size: 0.875rem;
@@ -580,7 +580,7 @@ a:hover, a:focus {
   font-weight: bold;
   color: #12274a;
   text-align: center;
-  height: 74px;
+  height: 55px;
   background-color: #fff;
   margin-bottom: 8px;
   border-radius: 8px;
@@ -1095,14 +1095,6 @@ a:hover, a:focus {
   height: inherit;
 }
 
-.home-innovationlab {
-  background: url(images/bg-innovationlab.png) no-repeat top center;
-}
-
-.home-accelerator {
-  background: url(images/bg-accelerator.jpg) no-repeat top center;
-}
-
 /* Contact */
 .home-contact .content {
   background: url(images/bg-contact.jpg) no-repeat;
@@ -1371,7 +1363,7 @@ a:hover, a:focus {
 .image-spiner {
   z-index: 1;
   font-size: 1.3rem;
-  margin-top: 1.16em;
+  margin-top: 1em;
 }
 .image-spiner .outside-round:after, .image-spiner .inside-round:after {
   width: 100%;
@@ -1386,8 +1378,8 @@ a:hover, a:focus {
   height: 11em;
 }
 .image-spiner .inside-round {
-  width: 7em;
-  height: 7em;
+  width: 6.5625em;
+  height: 6.5625em;
 }
 .image-spiner .main-round {
   left: 50%;
@@ -2256,7 +2248,13 @@ blockquote:before {
 }
 
 .partner-lists {
-  margin: 40px 0 70px;
+  margin: 40px 0 50px;
+}
+.partner-lists .cell {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(50% - 1.875rem);
+  flex: 0 0 auto;
 }
 
 .testimonial {
@@ -2366,7 +2364,7 @@ blockquote:before {
   }
 
   .image-spiner {
-    font-size: 3.125rem;
+    font-size: 3rem;
   }
   .image-spiner--large {
     font-size: 3rem;
@@ -2374,10 +2372,6 @@ blockquote:before {
 
   .icon-box {
     font-size: 1em;
-  }
-
-  .image-spiner {
-    font-size: 3.125rem;
   }
 
   .section-slider .owl-theme .owl-dots {
