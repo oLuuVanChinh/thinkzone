@@ -97,7 +97,7 @@
           });
 
           // tabs
-          if($('.part-tabs .tabs').length){
+          if($('.part-tabs .tabs').length && windowWidth > 768){
             var tabsHeight = $('.part-tabs .tabs').outerHeight(),
                 tabsContentheight = $('.part-tabs .tabs-content').outerHeight();
             if(tabsContentheight > tabsHeight){

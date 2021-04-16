@@ -4,6 +4,9 @@ $accent-color: #3aa25b !default;
 }
 
 @media all and (min-width: 768px) {
+  .partner-list .cell{
+    width: calc(33.3333333% - 1.875rem);
+  }
     .home-banner {
         background: url('images/header-bg.jpg') no-repeat 50% 0 transparent;
         background-size: 100% auto;
@@ -230,6 +233,15 @@ $accent-color: #3aa25b !default;
     .home-about .cell-left{
         flex: 0 0 62%;
     }
+    .home-value{
+      .grid-x{
+        .cell:first-child{
+          .icon-box{
+            padding-left: 3em;
+          }
+        }
+      }
+    }
     .dropdown.menu > li {
         margin-right: 0px;
     }
@@ -277,7 +289,7 @@ $accent-color: #3aa25b !default;
     }
     .tabs-title {
       > a{
-        font-size: rem(27px);
+        font-size: 1.2875rem;
       }
     }
     .home-part{
@@ -288,9 +300,20 @@ $accent-color: #3aa25b !default;
         width: 210px;
       }
     }
+    .partner-list .cell{
+      width: calc(20% - 1.875rem);
+    }
 }
 
 @media all and (max-width: 767px) {
+  .home-about {
+    .icon-box{
+      margin-top: 50px;
+    }
+    .part-title{
+      margin-bottom: 20px;
+    }
+  }
   .small-bg-gray {
       background-color: #F7F9FE
   }
@@ -491,10 +514,6 @@ $accent-color: #3aa25b !default;
   .partner-lists{
     img{
       margin: 10px 0;
-    }
-    .partner-list{
-      flex-direction: column;
-      align-items: center;
     }
   }
   .partner-lists{

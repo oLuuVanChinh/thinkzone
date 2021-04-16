@@ -158,7 +158,7 @@ a:hover, a:focus{
   }
   &-desc{
     color: $second-color;
-    font-size: rem(20px);
+    font-size: rem(16px);
     line-height: rem(32px);
     margin-bottom: 0;
     &--medium{
@@ -196,7 +196,7 @@ a:hover, a:focus{
     margin: 15px 0 0;
     padding: 0;
     li{
-      font-size: rem(31px);
+      font-size: rem(24px);
       color: $accent-color;
       font-weight: 500;
       display: flex;
@@ -214,7 +214,7 @@ a:hover, a:focus{
   }
   &-tabs{
     .tabs{
-      flex: 0 0 29.5%;
+      flex: 0 0 25%;
     }
     .part-desc{
       font-size: rem(14px);
@@ -272,7 +272,7 @@ a:hover, a:focus{
       font-weight: bold;
       color: $second-color;
       text-align: center;
-      height: 74px;
+      height: 55px;
       background-color: #fff;
       margin-bottom: 8px;
       border-radius: 8px;
@@ -842,13 +842,6 @@ a:hover, a:focus{
   }
 }
 
-.home-innovationlab{
-  background: url(images/bg-innovationlab.png) no-repeat top center;
-}
-.home-accelerator{
-  background: url(images/bg-accelerator.jpg) no-repeat top center;
-}
-
 /* Contact */
 .home-contact .content{
   background: url(images/bg-contact.jpg) no-repeat;
@@ -1171,7 +1164,7 @@ a:hover, a:focus{
 .image-spiner {
   z-index: 1;
   font-size: 1.3rem;
-  margin-top: 1.16em;
+  margin-top: 1em;
 
   .outside-round, .inside-round {
     &:after {
@@ -1190,8 +1183,8 @@ a:hover, a:focus{
   }
 
   .inside-round {
-    width: 7em;
-    height: 7em;
+    width: 6.5625em;
+    height: 6.5625em;
   }
 
   .main-round {
@@ -2212,7 +2205,13 @@ blockquote{
 }
 
 .partner-lists{
-  margin: 40px 0 70px;
+  margin: 40px 0 50px;
+  .cell {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: calc(50% - 1.875rem);
+    flex: 0 0 auto;
+  }
 }
 
 .testimonial{
@@ -2320,16 +2319,13 @@ blockquote{
     margin-top: 0;
   }
   .image-spiner {
-    font-size: 3.125rem;
+    font-size: 3rem;
     &--large{
       font-size: 3rem;
     }
   }
   .icon-box{
     font-size: 1em;
-  }
-  .image-spiner {
-    font-size: 3.125rem;
   }
   .section-slider {
     .owl-theme {
