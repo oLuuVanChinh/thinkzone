@@ -187,7 +187,7 @@
   }
 
   .page-header {
-    margin-top: 84px;
+    margin-top: 76px;
   }
 
   .slider-image {
@@ -216,6 +216,26 @@
   }
 }
 @media all and (min-width: 1200px) {
+  .mentor-group .large-4 .media-object h4 {
+    font-size: 1rem;
+  }
+  .mentor-group .large-4 .media-object .job-title {
+    font-size: 0.875rem;
+  }
+  .mentor-group .large-4 .media-object-section {
+    padding-right: 1.25rem;
+  }
+  .mentor-group .large-4 .media-object .thumbnail {
+    width: 150px;
+    height: 150px;
+  }
+  .mentor-group .large-4 .media-object .thumbnail img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
   /* About */
   .home-about .cell-left {
     flex: 0 0 62%;
@@ -264,7 +284,7 @@
   }
 
   .images-box__info {
-    margin-left: 40px;
+    margin-left: 35px;
   }
 
   .tabs-title > a {

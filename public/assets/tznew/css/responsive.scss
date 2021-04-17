@@ -198,7 +198,7 @@ $accent-color: #3aa25b !default;
         margin-bottom: 60px;
     }
     .page-header {
-        margin-top: 84px;
+        margin-top: 76px;
     }
     .slider-image{
       height: 403px;
@@ -229,6 +229,31 @@ $accent-color: #3aa25b !default;
 }
 
 @media all and (min-width: 1200px) {
+  .mentor-group{
+      .large-4{
+        .media-object {
+          h4{
+            font-size: rem(16px);
+          }
+          .job-title{
+            font-size: rem(14px);
+          }
+          &-section{
+            padding-right: rem(20px);
+          }
+          .thumbnail {
+            width: 150px;
+            height: 150px;
+            img{
+              width: 150px;
+              height: 150px;
+              object-fit: cover;
+              object-position: top center;
+            }
+          }
+        }
+      }
+  }
     /* About */
     .home-about .cell-left{
         flex: 0 0 62%;
@@ -284,7 +309,7 @@ $accent-color: #3aa25b !default;
     }
     .images-box{
       &__info{
-        margin-left: 40px;
+        margin-left: 35px;
       }
     }
     .tabs-title {

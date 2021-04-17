@@ -712,7 +712,7 @@ a:hover, a:focus {
   padding: 28px 25px;
 }
 .images-box h3 {
-  font-size: 1.1875rem;
+  font-size: 1.125rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -726,7 +726,7 @@ a:hover, a:focus {
 }
 .images-box__item {
   display: flex;
-  padding: 20px 0;
+  padding: 19px 0;
   align-items: center;
 }
 .images-box__item span {
