@@ -540,6 +540,7 @@ a:hover, a:focus {
   border: none;
   margin: 0;
   border-bottom: 2px solid #ffffff;
+  color: #fff;
 }
 .form-control input:focus {
   background-color: transparent;
