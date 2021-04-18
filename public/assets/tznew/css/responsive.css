@@ -63,7 +63,7 @@
 }
 @media all and (min-width: 992px) {
   .header-container + * {
-    margin-top: 84px;
+    margin-top: 76px;
   }
 
   .header-transparent + * {
@@ -242,7 +242,7 @@
   }
 
   .home-value .grid-x .cell:first-child .icon-box {
-    padding-left: 3em;
+    padding-left: 5em;
   }
 
   .dropdown.menu > li {
@@ -304,6 +304,10 @@
   }
 }
 @media all and (max-width: 767px) {
+  .slick-center .slider-info {
+    height: inherit;
+  }
+
   .home-about .icon-box {
     margin-top: 50px;
   }

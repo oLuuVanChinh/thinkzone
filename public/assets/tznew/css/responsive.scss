@@ -75,7 +75,7 @@ $accent-color: #3aa25b !default;
 
     .header-container{
       + * {
-        margin-top: 84px;
+        margin-top: 76px;
       }
     }
 
@@ -262,7 +262,7 @@ $accent-color: #3aa25b !default;
       .grid-x{
         .cell:first-child{
           .icon-box{
-            padding-left: 3em;
+            padding-left: 5em;
           }
         }
       }
@@ -331,6 +331,11 @@ $accent-color: #3aa25b !default;
 }
 
 @media all and (max-width: 767px) {
+  .slick-center {
+    .slider-info{
+      height: inherit;
+    }
+  }
   .home-about {
     .icon-box{
       margin-top: 50px;
