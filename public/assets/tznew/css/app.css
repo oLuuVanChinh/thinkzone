@@ -297,7 +297,7 @@ header .logo img {
 
 .part-title {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.2;
 }
@@ -531,10 +531,6 @@ header .logo img {
 
 .ico-website {
     background-image: url('images/website.png')
-}
-
-.text-center {
-    text-align: center
 }
 
 /* style journey */

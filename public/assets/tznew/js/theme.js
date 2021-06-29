@@ -25,11 +25,11 @@
     var dgtTheme = {
         init: function () {
           // Slick Slider
-          var slick = $('#section-partner'),
+          var slick = $('.slick-slider'),
               sliderPostCenter = $('#slider-post-center');
           if(slick.length){
             slick.slick({
-              slidesToShow: 5,
+              slidesToShow: 1,
               infinite: true,
               responsive: [
                 {

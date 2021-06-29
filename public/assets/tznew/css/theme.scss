@@ -1,6 +1,7 @@
 @import "icomoon/style.css";
 $accent-color: #3FAA61 !default;
 $second-color: #12274a !default;
+$white-color: #ffffff !default;
 $sizes: (
   0: 0,
   1: 0.25rem,
@@ -72,6 +73,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .grid-container{
   max-width: 70.625rem;
+  &-small {
+    max-width: 45rem;
+  }
 }
 
 /* Second Font */
@@ -102,12 +106,19 @@ a, .startup-journey .title{
 .color-accent{
   color: $accent-color;
 }
+.color-white{
+  color: $white-color;
+}
 .color-second{
   color: $second-color;
 }
 
 a:hover, a:focus{
   color: $accent-color;
+}
+
+.d-block{
+  display: block;
 }
 
 .part{
@@ -118,7 +129,7 @@ a:hover, a:focus{
     }
     &--divider{
       width: 64px;
-      height: 6px;
+      height: 5px;
       background-color: $accent-color;
       display: block;
       margin-bottom: 20px;
@@ -159,7 +170,7 @@ a:hover, a:focus{
       font-weight: bold;
     }
     + .part-title--divider {
-      margin-top: -19px;
+      margin-top: -27px;
     }
     + .part-title--divider-medium{
       margin-top: -16px
@@ -348,6 +359,11 @@ a:hover, a:focus{
 .text-medium {
   font-size: 1.5rem;
   line-height: 1.8125rem;
+}
+
+.text-xsmall {
+  font-size: rem(20px);
+  line-height: rem(40px);
 }
 
 .absolute {
@@ -1055,7 +1071,7 @@ a:hover, a:focus{
 }
 
 /* Partner */
-#home-partner, #home-achievements {
+#home-achievements {
   background: url("images/bg-partner.png") no-repeat 0 0;
   background-size: cover;
   padding: 64px 0 100px 0;
@@ -2157,12 +2173,18 @@ blockquote{
   padding: 83px 0;
   margin: 35px 0;
 }
+/* Home Mission */
+.home-mission{
+  background: url("images/banner-mission.jpg") no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+  margin: 35px 0;
+}
 
 /* Home Testimonial */
 #home-testimonial{
   background: url("images/banner-testimonial.jpg") no-repeat;
   background-size: cover;
-  padding: 74px 0;
   margin: 20px 0 40px;
 }
 
@@ -2181,8 +2203,6 @@ blockquote{
   color: #fff;
   display: flex;
   position: relative;
-  background: url("images/blockquote-light.png") no-repeat 0px 5px;
-  padding: 40px 0;
   &__title{
     font-size: rem(38px);
     font-weight: 500;

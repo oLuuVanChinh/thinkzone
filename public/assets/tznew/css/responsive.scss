@@ -58,7 +58,7 @@ $accent-color: #3aa25b !default;
     .part{
       &-title{
         &--divider{
-          width: 94px;
+          width: 89px;
           &-tiny{
             width: 23px;
           }
@@ -87,10 +87,6 @@ $accent-color: #3aa25b !default;
 
     .home-banner .banner-title {
         font-size: 4rem;
-    }
-
-    #home-partner {
-        padding: 124px 0 135px 0;
     }
     #home-achievements{
         padding: 160px 0 123px 0;
@@ -285,7 +281,7 @@ $accent-color: #3aa25b !default;
         font-size: rem(19px);
       }
       &-title {
-        font-size: rem(45px);
+        font-size: rem(36px);
         &--small{
           font-size: rem(40px);
         }
@@ -295,10 +291,6 @@ $accent-color: #3aa25b !default;
       }
     }
     .home-investment{
-      > .grid-container{
-        padding-left: 98px;
-        padding-right: 98px;
-      }
       .cell-left{
         margin-right: 50px;
         flex: 0 0 54%;
