@@ -26,7 +26,6 @@
         init: function () {
           // Slick Slider
           var slick = $('#section-partner'),
-              slickSlider = $('#slider-top'),
               sliderPostCenter = $('#slider-post-center');
           if(slick.length){
             slick.slick({
@@ -40,32 +39,6 @@
                   }
                 }
               ]
-            });
-          }
-          if(slickSlider.length){
-            slickSlider.slick({
-              centerMode: true,
-              slidesToShow: 1,
-              arrows: true,
-              autoplay: false,
-              centerPadding: '220px',
-              responsive: [
-                {
-                  breakpoint: 1200,
-                  settings: {
-                    centerPadding: '120px'
-                  }
-                },
-                {
-                  breakpoint: 640,
-                  settings: {
-                    centerPadding: '0'
-                  }
-                }
-              ]
-            });
-            slickSlider.on('afterChange', function(e, slick, currentSlide, nextSlide) {
-              $('.slick-clone-current').removeClass('slick-clone-current');
             });
           }
           if(sliderPostCenter.length){

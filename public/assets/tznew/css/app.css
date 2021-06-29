@@ -149,11 +149,20 @@ ul {
     font-size: inherit
 }
 
+.dropdown.menu > li.is-dropdown-submenu-parent > a{
+  display: flex;
+  align-items: center;
+}
+
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-    width: 12px;
-    height: 12px;
+    font-family: 'icomoon';
+    content: "\e900";
     border: none;
-    background: url('images/arrow-down.png') no-repeat 50% 50%;
+    position: static;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    margin-left: 4px;
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent.is-active > a:after {

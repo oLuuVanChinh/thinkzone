@@ -242,7 +242,7 @@ textarea {
 .grid-container {
     padding-right: 0.625rem;
     padding-left: 0.625rem;
-    max-width: 75rem;
+    max-width: 70.625rem;
     margin: 0 auto; }
 @media print, screen and (min-width: 40em) {
     .grid-container {
@@ -3878,7 +3878,7 @@ select[multiple] {
     outline: 0; }
 
 .dropdown.menu > li > a {
-    padding: 0.7rem 1rem; }
+    padding: 0.7rem 0.75rem; }
 
 .dropdown.menu > li.is-active > a {
     background: transparent;

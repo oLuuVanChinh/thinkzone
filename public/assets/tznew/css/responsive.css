@@ -249,10 +249,6 @@
     margin-right: 0px;
   }
 
-  .header-primary .menu a {
-    font-size: 1.125rem;
-  }
-
   .slider-info {
     right: -24px;
   }
@@ -293,10 +289,6 @@
 
   .home-part {
     padding: 45px 0;
-  }
-
-  #slider-top .slick-arrow {
-    width: 210px;
   }
 
   .partner-list .cell {
