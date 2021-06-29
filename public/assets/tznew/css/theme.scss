@@ -1,4 +1,5 @@
-$accent-color: #3aa25b !default;
+@import "icomoon/style.css";
+$accent-color: #3FAA61 !default;
 $second-color: #12274a !default;
 $sizes: (
   0: 0,
@@ -67,6 +68,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .ico-sales{
   background-image: url("images/icon-sale.png");
+}
+
+.grid-container{
+  max-width: 70.625rem;
 }
 
 /* Second Font */
@@ -351,7 +356,20 @@ a:hover, a:focus{
 
 .button{
   background-color: $accent-color;
-  font-size: rem(27px);
+  font-size: rem(16px);
+  height: 40px;
+  min-width: 140px;
+  padding: 0 1.625rem;
+  font-weight: bold;
+  color: $accent-color;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i{
+    font-size: rem(12px);
+    transform: translateX(8px);
+  }
   &:hover{
     background-color: $accent-color;
     color: #fff;
@@ -360,50 +378,8 @@ a:hover, a:focus{
     background: linear-gradient(90deg, rgba(63,170,97,1) 0%, rgba(39,140,71,1) 100%);
   }
   &--stroke{
-    background-color: #fff;
-    border: 4px solid $accent-color;
-    color: $second-color;
-    &-light{
-      min-width: 172px;
-      background-color: #fff;
-      color: $second-color;
-      box-shadow: 0 3px 9px rgba(0,0,0,0.4);
-      border-radius: 15px;
-      font-family: 'Barlow Condensed', sans-serif;
-    }
-  }
-  &-large {
-    padding: 9px 33px 13px;
-    line-height: normal;
-    font-weight: bold;
-  }
-  &--medium {
-    padding: 6px 16px 8px;
-    line-height: normal;
-    font-weight: bold;
-    border-width: 2px;
-    font-size: rem(16px);
-  }
-  &--special{
-    font-weight: 500;
-    padding: 10px 26px 13px;
-    &-white{
-      background-color: #fff;
-      box-shadow: 0 8px 13px rgba(0,0,0,0.3);
-      color: $second-color;
-      padding: 7px 12px 8px;
-      font-size: rem(15px);
-    }
-  }
-  &--equal{
-    min-width: 233px;
-    padding: 7px 33px 11px;
-    line-height: normal;
-    font-weight: bold;
-  }
-  &--italic{
-    font-size: rem(17px);
-    font-style: italic;
+    background-color: #F6F6F6;
+    border: 1px solid $accent-color;
   }
 }
 
@@ -456,17 +432,12 @@ a:hover, a:focus{
   }
 }
 
-.button-row {
-  .button{
-    margin: 0 25px;
-  }
-}
-
 .header-container {
   position: fixed;
   width: 100%;
   z-index: 13;
-  background-color: $second-color;
+  background-color: #fff;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
   + * {
     margin-top: 76px;
   }
@@ -521,15 +492,16 @@ a:hover, a:focus{
 }
 
 .header-primary {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   .menu a {
-    color: #fff;
+    color: #12274A;
     font-size: 1rem;
+    font-weight: 500;
     .header-transparent & {
       color: #fff;
     }
@@ -542,6 +514,7 @@ a:hover, a:focus{
       > li {
         position: relative;
         > a{
+          padding: 0.7rem 0.75rem;
           &.active{
             &:before{
               width: 30px;
@@ -753,25 +726,6 @@ a:hover, a:focus{
   }
   .button{
     margin-top: 16px;
-  }
-}
-
-#slider-top{
-  position: relative;
-  .slick-arrow{
-    top: 0;
-    height: 100%;
-    right: 0;
-    width: 110px;
-    transform: none;
-    background-image: none;
-    z-index: 1;
-    &:focus{
-      outline: none;
-    }
-  }
-  .slick-prev{
-    left: 0;
   }
 }
 

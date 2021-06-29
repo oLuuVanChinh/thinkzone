@@ -270,9 +270,6 @@ $accent-color: #3aa25b !default;
     .dropdown.menu > li {
         margin-right: 0px;
     }
-    .header-primary .menu a{
-        font-size: rem(18px);
-    }
     .slider-info{
       right: -24px;
     }
@@ -319,11 +316,6 @@ $accent-color: #3aa25b !default;
     }
     .home-part{
       padding: 45px 0;
-    }
-    #slider-top {
-      .slick-arrow{
-        width: 210px;
-      }
     }
     .partner-list .cell{
       width: calc(20% - 1.875rem);
