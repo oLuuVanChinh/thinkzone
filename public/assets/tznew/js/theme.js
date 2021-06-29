@@ -25,11 +25,11 @@
     var dgtTheme = {
         init: function () {
           // Slick Slider
-          var slick = $('#section-partner'),
+          var slick = $('.slick-slider'),
               sliderPostCenter = $('#slider-post-center');
           if(slick.length){
             slick.slick({
-              slidesToShow: 5,
+              slidesToShow: 1,
               infinite: true,
               responsive: [
                 {
@@ -78,14 +78,54 @@
             }
           }
         },
+
+        emptySpace: function(){
+          if($('.empty-space').length){
+            $('.empty-space').each(function(){
+              var screenWidth = $(window).width(),
+                  spaceHeight = $(this).data('height'),
+                  spaceHeightSm = $(this).data('height-sm'),
+                  spaceHeightMd = $(this).data('height-md'),
+                  spaceHeightLg = $(this).data('height-lg'),
+                  spaceHeightXl = $(this).data('height-xl'),
+                  spaceHeightXxl = $(this).data('height-xxl');
+              $(this).css('height', spaceHeight);
+              if(typeof spaceHeightSm !== 'undefined'){
+                if(screenWidth >= 576){
+                    $(this).css('height', spaceHeightSm);
+                }
+              }
+              if(typeof spaceHeightMd !== 'undefined'){
+                  if(screenWidth >= 768){
+                    $(this).css('height', spaceHeightMd);
+                  }
+              }
+              if(typeof spaceHeightLg !== 'undefined'){
+                  if(screenWidth >= 992){
+                    $(this).css('height', spaceHeightLg);
+                  }
+              }
+              if(typeof spaceHeightXl !== 'undefined'){
+                  if(screenWidth >= 1200){
+                    $(this).css('height', spaceHeightXl);
+                  }
+              }
+              if(typeof spaceHeightXxl !== 'undefined'){
+                  if(screenWidth >= 1400){
+                    $(this).css('height', spaceHeightXxl);
+                  }
+              }
+            });
+          }
+        }
     }
     window.dgtTheme = dgtTheme;
 
     $(document).ready(function () {
         dgtTheme.init();
-        // getScroll();
+        dgtTheme.emptySpace();
     });
-    // $(window).scroll(function () {
-    //   getScroll();
-    // });
+    $(window).resize(function () {
+      dgtTheme.emptySpace();
+    });
 })(window.jQuery);

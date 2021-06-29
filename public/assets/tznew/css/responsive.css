@@ -51,10 +51,13 @@
   }
 
   .part-title--divider {
-    width: 94px;
+    width: 89px;
   }
   .part-title--divider-tiny {
     width: 23px;
+  }
+  .part-title--divider-small {
+    width: 72px;
   }
 
   .home-investment .cell-left {
@@ -63,7 +66,7 @@
 }
 @media all and (min-width: 992px) {
   .header-container + * {
-    margin-top: 76px;
+    margin-top: 58px;
   }
 
   .header-transparent + * {
@@ -74,17 +77,13 @@
     font-size: 4rem;
   }
 
-  #home-partner {
-    padding: 124px 0 135px 0;
-  }
-
   #home-achievements {
     padding: 160px 0 123px 0;
   }
 
   #home-partner .part-title {
     line-height: 1.2;
-    margin-bottom: 60px;
+    margin-bottom: 38px;
   }
 
   .card.card-left {
@@ -238,11 +237,7 @@
 
   /* About */
   .home-about .cell-left {
-    flex: 0 0 62%;
-  }
-
-  .home-value .grid-x .cell:first-child .icon-box {
-    padding-left: 5em;
+    flex: 0 0 35.9%;
   }
 
   .dropdown.menu > li {
@@ -257,30 +252,23 @@
     left: -24px;
   }
 
-  .part-desc {
-    font-size: 1.1875rem;
-  }
   .part-title {
-    font-size: 2.8125rem;
-  }
-  .part-title--small {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .part-title--tiny {
     font-size: 1.6875rem;
   }
-
-  .home-investment > .grid-container {
-    padding-left: 98px;
-    padding-right: 98px;
+  .part-title--negative {
+    margin-left: -71px;
   }
+
   .home-investment .cell-left {
-    margin-right: 50px;
-    flex: 0 0 54%;
+    margin-right: 5px;
+    flex: 0 0 66%;
   }
 
   .images-box__info {
-    margin-left: 35px;
+    margin-left: 20px;
   }
 
   .tabs-title > a {

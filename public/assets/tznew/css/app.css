@@ -297,7 +297,7 @@ header .logo img {
 
 .part-title {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.2;
 }
@@ -531,10 +531,6 @@ header .logo img {
 
 .ico-website {
     background-image: url('images/website.png')
-}
-
-.text-center {
-    text-align: center
 }
 
 /* style journey */
@@ -1380,16 +1376,17 @@ footer .menu.infomation .phone {
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
-    margin-bottom: 28px;
+    margin-bottom: 7px;
     display: block;
 }
 
 .list-post img{
     width: 100%;
+    border-radius: 5px;
 }
 
 .list-post .cell {
-    margin-bottom: 30px
+    margin-bottom: 6px
 }
 
 .list-post .post-title {
@@ -1398,10 +1395,10 @@ footer .menu.infomation .phone {
 }
 
 .list-post .post-title a {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #13274B;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 .post-meta {
