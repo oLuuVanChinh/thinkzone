@@ -17,6 +17,18 @@ $sizes: (
 );
 
 @each $name, $value in $sizes {
+  .mt-n#{$name}, .my-n#{$name}, .m-n#{$name} {
+    margin-top: -$value !important;
+  }
+  .mb-n#{$name}, .my-n#{$name}, .m-n#{$name} {
+    margin-bottom: -$value !important;
+  }
+  .ml-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
+    margin-left: -$value !important;
+  }
+  .mr-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
+    margin-right: -$value !important;
+  }
   .mt-#{$name}, .my-#{$name}, .m-#{$name} {
     margin-top: $value !important;
   }
@@ -76,6 +88,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   &-small {
     max-width: 45rem;
   }
+  &-medium {
+    max-width: 62rem;
+  }
 }
 
 /* Second Font */
@@ -83,7 +98,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .part-desc,
 .button--special,
 .second-font,
-.part--link{
+.part--link,
+.button{
   //font-family: 'Barlow Condensed' !important;
   font-family: 'Barlow', sans-serif !important;
 }
@@ -124,9 +140,6 @@ a:hover, a:focus{
 .part{
   &-title{
     margin-bottom: 30px;
-    &--white{
-      color: #fff;
-    }
     &--divider{
       width: 64px;
       height: 5px;
@@ -150,16 +163,30 @@ a:hover, a:focus{
         width: 79px;
         height: 11px;
       }
+      &-small{
+        width: 72px;
+        height: 5px;
+      }
       &-tiny{
         width: 23px;
         height: 5px;
       }
     }
-    &--small{
-      color: $second-color;
-      font-size: rem(34px);
+    &--medium{
+      font-size: rem(45px);
+      font-weight: bold;
+    }
+    &--xmedium{
+      font-size: rem(44px);
       font-weight: 500;
-      margin-bottom: -3px;
+    }
+    &--large{
+      font-size: rem(56px);
+      font-weight: bold;
+    }
+    &--small{
+      font-size: rem(34px);
+      font-weight: bold;
     }
     &--xsmall {
       font-size: rem(40px);
@@ -179,7 +206,7 @@ a:hover, a:focus{
   &-desc{
     color: $second-color;
     font-size: rem(16px);
-    line-height: rem(32px);
+    line-height: rem(30px);
     margin-bottom: 0;
     &--medium{
       font-size: rem(22px);
@@ -194,41 +221,46 @@ a:hover, a:focus{
   &-box{
     width: 100%;
     height: 100%;
-    min-height: 305px;
-    border: 2px solid $accent-color;
     position: relative;
     z-index: 1;
-    background-color: #fff;
-    &:before{
-      width: 77px;
-      height: 77px;
-      content: "";
-      position: absolute;
-      border-right: 15px solid $accent-color;
-      border-bottom: 15px solid $accent-color;
-      z-index: -1;
-      bottom: -15px;
-      right: -15px;
+    &__img{
+      position: relative;
+      margin-left: 40px;
+      &:before{
+        content: "";
+        background-color: rgba(229, 229, 229, 0.6);
+        width: 100%;
+        height: calc(100% + 11px);
+        position: absolute;
+        z-index: -1;
+        right: 30px;
+        top: 26px;
+        border-radius: 32px;
+      }
+      img{
+        border-radius: 40px;
+      }
     }
   }
   &--link{
     list-style: none;
-    margin: 15px 0 0;
+    margin: 10px 0 0;
     padding: 0;
     li{
-      font-size: rem(24px);
+      font-size: rem(17px);
       color: $accent-color;
-      font-weight: 500;
+      font-weight: bold;
       display: flex;
       align-items: center;
       line-height: 1.5;
+      margin: 8px 0;
       &:before{
         content: "";
-        width: 16px;
-        height: 16px;
-        border: 3px solid $accent-color;
+        width: 12px;
+        height: 12px;
+        border: 1.5px solid $accent-color;
         border-radius: 50%;
-        margin-right: 28px;
+        margin-right: 17px;
       }
     }
   }
@@ -370,6 +402,17 @@ a:hover, a:focus{
   position: absolute;
 }
 
+.link{
+  color: rgba(18, 39, 74, 0.7);
+  span{
+    text-decoration: underline;
+  }
+  i{
+    font-size: rem(10px);
+    margin-left: 6px;
+  }
+}
+
 .button{
   background-color: $accent-color;
   font-size: rem(16px);
@@ -379,7 +422,7 @@ a:hover, a:focus{
   font-weight: bold;
   color: $accent-color;
   border-radius: 10px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   i{
@@ -400,33 +443,46 @@ a:hover, a:focus{
 }
 
 .images-box{
-  padding: 28px 37px;
+  padding: 9px 36px 10px 36px;
   &--medium{
     padding: 28px 25px;
   }
   h3{
-    font-size: rem(18px);
+    font-size: rem(16px);
     font-weight: bold;
     display: flex;
     align-items: center;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     img{
       margin-left: 6px;
     }
   }
   &__info{
     margin-left: 15px;
+    img{
+      max-height: 11px;
+    }
   }
   &__item{
     display: flex;
-    padding: 19px 0;
+    padding: 16px 0;
     align-items: center;
+    font-size: rem(12px);
+    > img{
+      width: 62px;
+      height: 62px;
+      object-fit: cover;
+      object-position: top center;
+    }
     span{
       display: flex;
       align-items: center;
+      line-height: 1;
+      margin: 5px 0;
       img{
         margin-right: 7px;
         text-align: center;
+
       }
     }
   }
@@ -438,7 +494,32 @@ a:hover, a:focus{
 
 .img{
   &-list{
-    margin: 80px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+    > .cell {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__item{
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      display: flex;
+      padding: 15px 13px;
+      margin: 10px 0;
+      p{
+        color: rgba(18, 39, 74, 0.5);
+      }
+      img{
+        width: 76px;
+        height: 76px;
+        border-radius: 5px;
+        object-fit: cover;
+        object-position: top center;
+        margin-right: 11px;
+      }
+    }
   }
   &-shadow{
     box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.3);
@@ -1077,19 +1158,18 @@ a:hover, a:focus{
   padding: 64px 0 100px 0;
 }
 
-#home-about{
-  margin-bottom: 15px;
-}
-
 #home-value{
   padding-top: 0;
-  margin-top: 0;
+  padding-bottom: 0;
 }
 
 .section-partner {
   .partner-item {
-    padding-left: 53px;
-    padding-right: 53px;
+    padding-left: 29px;
+    padding-right: 29px;
+    img{
+      margin: 0 auto;
+    }
   }
 
   .slick-track{
@@ -1504,43 +1584,46 @@ a:hover, a:focus{
 .list-post{
   &--slider{
     .slick-list{
-      margin-left: -27px;
-      margin-right: -27px;
+      margin-left: 0;
+      margin-right: 0;
     }
     .slick-track{
-      padding-top: 70px;
+      padding-top: 52px;
       padding-bottom: 0px;
     }
-    .slick-slide{
-      padding-left: 27px;
-      padding-right: 27px;
+    .post-item{
+      padding-left: 25px;
+      padding-right: 25px;
     }
     .slick-center{
+      .post-item{
+        padding-left: 3px;
+        padding-right: 3px;
+      }
       .post-item__inner{
-          box-shadow: 0 0 0 4px $accent-color, 0 0 27px rgba(0,0,0,0.34);
-          transform: translateY(-43px);
+          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+          transform: translateY(-32px);
           border-radius: 1px;
       }
       .thumbnail{
         img{
-          height: 255px;
+          height: 168px;
         }
       }
       .post__desc{
-        background-color: $second-color;
-        font-size: rem(17px);
-        color: #fff;
-        padding: 25px 13px;
-        line-height: rem(21px);
+        background-color: $accent-color;
+        font-size: rem(16px);
+        padding: 9px 13px 13px 13px;
+        line-height: rem(19px);
         margin-bottom: 0;
       }
     }
     .thumbnail{
       img{
-        width: 100%;
-        height: 218px;
+        height: 136px;
         object-fit: cover;
         object-position: top center;
+        border-radius: 5px 5px 0px 0px;
       }
     }
   }
@@ -1549,13 +1632,15 @@ a:hover, a:focus{
       margin-bottom: 0;
     }
     .post__desc{
-      background-color: #e3e3e3;
+      background-color: $second-color;
       font-weight: bold;
-      font-size: rem(16px);
-      color: #8a8d92;
-      padding: 20px 13px;
-      line-height: rem(19px);
+      font-size: rem(12px);
+      color: $white-color;
+      padding: 14px;
+      line-height: rem(14px);
       margin-bottom: 0;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 0px 0px 5px 5px;
     }
   }
   &--magazine{
@@ -1578,7 +1663,7 @@ a:hover, a:focus{
     img{
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       border-radius: 4px;
-      height: 179px;
+      height: 138px;
       width: 100%;
       object-fit: cover;
       object-position: top center;
@@ -1594,8 +1679,9 @@ a:hover, a:focus{
       padding: 0 10px 0 20px;
     }
     &__large{
+      padding-right: 9px;
       img{
-        height: 378px;
+        height: 289px;
       }
       .post__desc{
         font-size: rem(24px);
@@ -1610,9 +1696,8 @@ a:hover, a:focus{
     }
     &-alt{
       .post-item{
-        box-shadow: 0 5px 16px rgba(0,0,0,0.46);
         &:not(.list-post--magazine__large){
-          margin-bottom: 20px;
+          margin-bottom: 13px;
           &:last-child{
             margin-bottom: 0;
           }
@@ -1630,53 +1715,53 @@ a:hover, a:focus{
   }
   &--list{
     background-color: #fff;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.46);
-    padding: 14px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 12px;
     .post-item{
       display: flex;
       align-items: center;
       flex-grow: 1;
       margin-bottom: 15px;
       padding-bottom: 15px;
-      border-bottom: 1px solid #beb9b9;
+      border-bottom: 1px solid #C4C4C4;
+      &:last-child{
+        margin-bottom: 9px;
+      }
       img{
-        width: 210px;
-        height: 140px;
+        width: 156px;
+        height: 104px;
         object-fit: cover;
         object-position: top center;
-        border-radius: 6px;
       }
     }
     .thumbnail{
       flex: 0 0 auto;
-      border-radius: 4px;
-      box-shadow: 0 5px 16px rgba(0,0,0,0.46);
       margin: 0;
     }
     .post{
       &__desc{
         flex-grow: 1;
         margin: 0;
-        padding: 10px 20px;
-        font-size: rem(25px);
-        font-weight: bold;
-        line-height: 17px;
+        padding: 0 17px;
+        font-size: rem(16px);
         color: rgba(0,0,0,0.75);
         a{
           color: $second-color;
-          line-height: 1.1;
+          line-height: 1.2;
+          font-weight: bold;
+          display: block;
         }
         i{
-          font-size: rem(14px);
-          font-weight: 600;
+          font-size: rem(12px);
           font-style: italic;
           display: block;
-          margin: 5px 0 10px;
+          margin: 2px 0 9px;
         }
         small{
-          font-size: rem(16px);
-          font-weight: 500;
+          font-size: rem(12px);
           display: block;
+          line-height: 1.2;
         }
       }
     }
@@ -1685,14 +1770,8 @@ a:hover, a:focus{
 
 .loadmore{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(0,0,0,0.5);
-  }
   svg{
     margin-left: 10px;
     margin-top: 3px;
@@ -1709,18 +1788,25 @@ a:hover, a:focus{
   .slick-arrow{
     position: absolute;
     top: 50%;
-    right: -84px;
+    right: -18px;
     transform: translateY(-50%);
-    width: 43px;
-    height: 37px;
     font-size: 0;
-    background: url("images/arrow-right-double.png") no-repeat;
     cursor: pointer;
+    &:before{
+      font-family: 'icomoon';
+      font-size: rem(18px);
+      content: "\e906";
+      .home-testimonial & {
+        color: $white-color;
+      }
+    }
   }
   .slick-prev{
-    left: -84px;
+    left: -18px;
     right: auto;
-    background: url("images/arrow-left-double.png") no-repeat;
+    &:before{
+      content: "\e907";
+    }
   }
 }
 
@@ -1732,21 +1818,32 @@ a:hover, a:focus{
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -9px;
+  bottom: -60px;
+  .testimonial & {
+    bottom: 30px;
+  }
+  li{
+    list-style: none;
+  }
   button{
     font-size: 0;
-    width: 14px;
-    height: 14px;
-    border: 2px solid $accent-color;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: #fff;
-    margin: 0 7px;
+    margin: 0 3px;
+    background-color: $second-color;
+    border: 1px solid $second-color;
+    box-sizing: border-box;
+    .testimonial & {
+      width: 11px;
+      height: 11px;
+      border-color: transparent;
+    }
   }
   .slick-active{
     button{
-      background-color: $second-color;
-      width: 18px;
-      height: 18px;
+      background-color: $accent-color;
+      border-color: $white-color;
     }
   }
 }
@@ -1757,7 +1854,8 @@ a:hover, a:focus{
     padding-right: 15px;
   }
   .box-shadow{
-    margin-bottom: 30px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
 }
 
@@ -1866,7 +1964,7 @@ footer {
 .icon-box {
   line-height: 1;
   font-size: 0.8em;
-  margin-top: 40px;
+  margin-top: 45px;
   .home-about & {
     margin-top: 80px;
   }
@@ -2178,18 +2276,18 @@ blockquote{
   background: url("images/banner-mission.jpg") no-repeat;
   background-size: cover;
   padding: 20px 0;
-  margin: 35px 0;
+  margin: 20px 0;
 }
 
 /* Home Testimonial */
 #home-testimonial{
   background: url("images/banner-testimonial.jpg") no-repeat;
   background-size: cover;
-  margin: 20px 0 40px;
+  margin: 20px 0 56px;
 }
 
 .partner-lists{
-  margin: 40px 0 50px;
+  margin: 40px 0 0;
   .cell {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -2204,15 +2302,35 @@ blockquote{
   display: flex;
   position: relative;
   &__title{
-    font-size: rem(38px);
-    font-weight: 500;
+    font-size: rem(26px);
+    line-height: rem(31px);
   }
   &__notes{
     display: block;
     font-size: rem(19px);
     font-weight: normal;
     text-align: right;
-    margin-top: 10px;
+    font-style: italic;
+    margin: 10px 30px 25px 0;
+  }
+  &__item, &__img{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
+    padding: 0 65px;
+  }
+  &__img{
+    flex: 0 0 auto;
+  }
+  .logo{
+    width: 83px;
+    height: 83px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    object-position: top center;
+    margin-left: -45px;
   }
 }
 

@@ -62,6 +62,9 @@ $accent-color: #3aa25b !default;
           &-tiny{
             width: 23px;
           }
+          &-small{
+            width: 72px;
+          }
         }
       }
     }
@@ -75,7 +78,7 @@ $accent-color: #3aa25b !default;
 
     .header-container{
       + * {
-        margin-top: 76px;
+        margin-top: 58px;
       }
     }
 
@@ -94,7 +97,7 @@ $accent-color: #3aa25b !default;
 
     #home-partner .part-title {
         line-height: 1.2;
-        margin-bottom: 60px;
+        margin-bottom: 38px;
     }
 
     .card.card-left {
@@ -252,16 +255,7 @@ $accent-color: #3aa25b !default;
   }
     /* About */
     .home-about .cell-left{
-        flex: 0 0 62%;
-    }
-    .home-value{
-      .grid-x{
-        .cell:first-child{
-          .icon-box{
-            padding-left: 5em;
-          }
-        }
-      }
+        flex: 0 0 35.9%;
     }
     .dropdown.menu > li {
         margin-right: 0px;
@@ -277,28 +271,25 @@ $accent-color: #3aa25b !default;
       }
     }
     .part{
-      &-desc{
-        font-size: rem(19px);
-      }
       &-title {
         font-size: rem(36px);
-        &--small{
-          font-size: rem(40px);
-        }
         &--tiny{
           font-size: rem(27px);
+        }
+        &--negative {
+          margin-left: -71px;
         }
       }
     }
     .home-investment{
       .cell-left{
-        margin-right: 50px;
-        flex: 0 0 54%;
+        margin-right: 5px;
+        flex: 0 0 66%;
       }
     }
     .images-box{
       &__info{
-        margin-left: 35px;
+        margin-left: 20px;
       }
     }
     .tabs-title {
