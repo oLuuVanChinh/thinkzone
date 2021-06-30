@@ -307,22 +307,14 @@ header .logo img {
 }
 
 .card {
-    border-radius: 20px;
-    padding: 30px;
+    padding: 41px 16px;
     background-color: #fff;
     border: none;
     transition: all 0.2s ease;
     max-width: 100%;
     margin: 0;
-    box-shadow: 0 5px 16px rgba(0,0,0,0.48);
-}
-
-.card.card-left {
-    z-index: 9;
-}
-
-.card.card-right {
-    z-index: 8;
+    box-shadow: 0px 2px 7px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
 }
 
 .card.highlight .ico.ico-cloud {
@@ -377,11 +369,11 @@ header .logo img {
 }
 
 .card-body {
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 .card-right .card-body{
-  padding: 20px 0;
+  padding: 0;
 }
 
 .card-body .cell {
@@ -528,7 +520,7 @@ header .logo img {
 .startup-journey {
     text-align: center;
     height: 5px;
-    margin-top: 308px;
+    margin-top: 253px;
     margin-bottom: 420px;
     /*     background:#EDF0FF; */
     border-radius: 5px;
@@ -1070,7 +1062,7 @@ header .logo img {
 
 .list-mentor .cell span {
     display: block;
-    font-size: 1rem
+    font-size: 0.9375rem
 }
 
 .list-mentor .cell span.strong {

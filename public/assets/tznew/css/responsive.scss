@@ -60,7 +60,7 @@ $accent-color: #3aa25b !default;
         &--divider{
           width: 89px;
           &-tiny{
-            width: 23px;
+            width: 51px;
           }
           &-small{
             width: 72px;
@@ -115,10 +115,6 @@ $accent-color: #3aa25b !default;
 
     .card.card-right.highlight {
         margin-left: -50px
-    }
-
-    .card-right {
-        padding-left: 40px
     }
 
     .card-left {
@@ -318,6 +314,10 @@ $accent-color: #3aa25b !default;
     .card-left{
       padding-left: 200px;
       padding-right: 200px;
+    }
+    .card-right{
+      margin-left: 56px;
+      margin-right: 56px;
     }
     .card-slider{
       padding-left: 125px;
