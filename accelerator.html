@@ -26,10 +26,10 @@
     <link rel="dns-prefetch" href="https://code.jquery.com/">
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/css/foundation.css">
-    <!-- <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/js/jcarousel/jcarousel.responsive.css"> -->
-    <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/js/owlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet"
           href="http://thinkzone.vn/public/assets/tznew/js/owlCarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="public/assets/tznew/js/jquery-custom-scrollbar/jquery.custom-scrollbar.css">
     <link rel="stylesheet" href="public/assets/tznew/css/app.css">
     <link rel="stylesheet" href="public/assets/tznew/css/theme.css">
     <link rel="stylesheet" href="public/assets/tznew/css/responsive.css">
@@ -53,7 +53,7 @@
         <div class="header-left">
             <div class="logo">
                 <a href="http://thinkzone.vn/">
-                    <img src="public/assets/tznew/css/images/logo-white.png" alt="">
+                    <img src="public/assets/tznew/css/images/logo-full.png" alt="">
                 </a>
             </div>
             <a href="#mobile-nav" class="mobile-nav-button hide-for-large"></a>
@@ -110,18 +110,16 @@
 <!-- End header -->
 <!-- Content -->
 <div id="content" class="content">
+  <div class="empty-space" data-height="10px"></div>
   <!-- Begin .home-about -->
-  <section class="home-part home-countdown mt-0" id="home-countdown">
-      <div class="grid-container grid-container-large">
-          <div class="grid-x grid-margin-x align-middle">
+  <section class="home-part home-countdown" id="home-countdown">
+      <div class="grid-container">
+          <div class="grid-x grid-margin-x">
               <div class="medium-5 cell-left cell small-12">
-                  <div class="box-countdown px-7 text-center">
-                      <p class="part-desc part-desc--small text-center">
-                        ThinkZone Accelerator focuses on tech startups<br />from Seed to Pre-Series A, in the stage of<br /> product-market validation or scale-up.
-                      </p>
-                      <span class="part-title--divider text-center mt-3"></span>
-                      <a href="#" rel="nofollow" class="bg-gradient-green button--italic button rounded mt-2">APPLY FOR <strong>THINKZONE ACCELERATOR</strong></a>
-                  </div>
+                <h5 class="part-title--xmedium mb-n2 mt-1">THINKZONE</h5>
+                <h3 class="part-title--large color-accent mb-2 pb-2">ACCELERATOR</h3>
+                <p class="part-desc mb-5 pb-6">ThinkZone Accelerator focuses on tech startups from Seed to Pre-Series A, in the stage of product-market validation or scale-up.</p>
+                <a href="#" class="button button--stroke button--medium mb-2">Apply for ThinkZone Accelerator <i class="icon-angle-right"></i></a>
               </div>
 
               <div class="medium-7 cell-right cell small-12">
@@ -143,130 +141,506 @@
   </section>
   <!-- End .home-about -->
   <!-- Begin .home-offer -->
-  <section class="home-part home-offer" id="home-offer">
-      <div class="grid-container grid-container-large">
-          <div class="medium-12 small-12">
-              <h2 class="part-title text-center">What we offer</h2>
-              <span class="part-title--divider text-center"></span>
-              <div class="grid-x small-bg-gray small-box-radius mt-8">
-                  <div class="cell large-5 small-12 relative">
-                      <div class="card card-offer card-left highlight">
-                          <div class="card-heading">
-                              <h3 class="card-title">COMPREHENSIVE INVESTMENT & SUPPORT PACKAGES</h3>
-                              <p>Including</p>
-                          </div>
-                          <div class="card-body">
-                              <div class="grid-x grid-margin-x">
-                                  <div class="cell medium-6 small-12">
-                                      <span class="ico ico-circle ico-dolar"></span>
-                                      <p class="strong">$50,000 - $500,000<br /> DIRECT INVESTMENT</p>
-                                  </div>
-                                  <div class="cell medium-6 small-12">
-                                      <span class="ico ico-circle ico-customer"></span>
-                                      <p class="strong">$50,000+<br />SUPPORT PACKAGES<br  /><small>(AWS, Goldsun, VietnamBiz,<br />FPT Play, Toong...)</small></p>
-                                  </div>
-                                  <div class="cell medium-6 small-12">
-                                      <span class="ico ico-circle ico-workspace"></span>
-                                      <p class="strong">3 MONTHS<br />COACHING & MENTORING<br /><small>(Lean Startup & Design Thinking)</small></p>
-                                  </div>
-                                  <div class="cell medium-6 small-12">
-                                      <span class="ico ico-circle ico-network"></span>
-                                      <p class="strong">NETOWKR OF 50+<br /><small>VCs & CORPORATES<br />Fundraiging & Partnership</small></p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="cell large-7 small-12 relative">
-                      <div class="card card-offer card-right">
-                          <div class="card-heading">
-                              <h3 class="card-title">$50,000+ support packages from our Partners</h3>
-                              <p>Including</p>
-                          </div>
-                          <div class="card-body">
-                              <div class="grid-x grid-margin-x">
-                                  <div class="cell medium-4 small-12 text-center">
-                                      <span class="ico ico-circle ico-cloud"></span>
-                                      <p class="strong">Cloud Services</p>
-                                      <p>
-                                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
-                                      </p>
-                                  </div>
-                                  <div class="cell medium-4 small-12 text-center">
-                                      <span class="ico ico-circle ico-marketing"></span>
-                                      <p class="strong">Accounting Services</p>
-                                      <p>
-                                          <img src="public/assets/tznew/css/images/logo-misa.png"
-                                               alt="">
-                                      </p>
-                                  </div>
-                                  <div class="cell medium-4 small-12 text-center">
-                                      <span class="ico ico-circle ico-operator"></span>
-                                      <p class="strong">Brand Consulting</p>
-                                      <p>
-                                        <img src="public/assets/tznew/css/images/logo-bambu.png"
-                                             alt="">
-                                      </p>
-                                  </div>
-                                  <div class="cell medium-4 small-12 text-center">
-                                      <span class="ico ico-circle ico-support"></span>
-                                      <p class="strong">Workspace Support</p>
-                                      <p>
-                                        <img src="public/assets/tznew/css/images/logo-toong.png"
-                                             alt="">
-                                      </p>
-                                  </div>
-                                  <div class="cell medium-4 small-12 text-center">
-                                      <span class="ico ico-circle ico-legal"></span>
-                                      <p class="strong">Legal Support</p>
-                                      <p>
-                                        <img src="public/assets/tznew/css/images/logo-luatvn.png"
-                                             alt="">
-                                      </p>
-                                  </div>
-                                  <div class="cell medium-4 small-12 text-center">
-                                      <span class="ico ico-circle ico-design"></span>
-                                      <p class="strong">Pitchdeck Design</p>
-                                      <p>
-                                        <img src="public/assets/tznew/css/images/logo-foundation.png"
-                                             alt="">
-                                      </p>
-                                  </div>
-                                  <div class="cell text-center mb-0">
-                                      <span class="ico ico-circle ico-sales"></span>
-                                      <p class="strong">Sales & Marketing Support</p>
-                                      <p>
-                                        <img src="public/assets/tznew/css/images/logo-collection.png"
-                                             alt="">
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+  <section class="home-offer" id="home-offer">
+      <div class="grid-container">
+        <h2 class="part-title text-center">What we offer</h2>
+        <span class="part-title--divider text-center mt-n4"></span>
+        <p class="part-title--sub text-center mb-0 mt-n3">
+          From <strong class="color-accent">ThinkZone</strong> and <strong class="color-accent">Our Partners</strong>
+        </p>
+        <div class="grid-x mt-3 card-left">
+          <div class="cell large-6 relative">
+            <div class="card card-offer highlight">
+                <div class="card-body">
+                  <span class="ico ico-circle ico-dolar"></span>
+                  <p class="strong">$50,000 - $500,000<br /> DIRECT INVESTMENT</p>
+                </div>
+            </div>
+          </div>
+          <div class="cell large-6 relative">
+            <div class="card card-offer highlight">
+                <div class="card-body">
+                  <span class="ico ico-circle ico-customer"></span>
+                  <p class="strong">$50,000+ SUPPORT PACKAGES<br  /><small>(AWS, Goldsun, VietnamBiz, FPT Play, Toong...)</small></p>
+                </div>
+            </div>
+          </div>
+          <div class="cell large-6 relative">
+            <div class="card card-offer highlight">
+                <div class="card-body">
+                  <span class="ico ico-circle ico-workspace"></span>
+                  <p class="strong">3 MONTHS<br />COACHING & MENTORING<br /><small>(Lean Startup & Design Thinking)</small></p>
+                </div>
+            </div>
+          </div>
+          <div class="cell large-6 relative">
+              <div class="card card-offer highlight">
+                  <div class="card-body">
+                    <span class="ico ico-circle ico-network"></span>
+                    <p class="strong">NETOWKR OF<br />50+ VCs & CORPORATES<br /><small>Fundraiging & Partnership</small></p>
                   </div>
               </div>
           </div>
+        </div>
+        <div class="card-slider mt-8">
+          <div class="card-heading">
+              <h3 class="card-title text-center">$50,000+ support packages from our Partners</h3>
+              <span class="part-title--divider text-center mt-3"></span>
+          </div>
+          <div class="card-body">
+            <div class="card-slider__link">
+              <a href="#">View all</a>
+            </div>
+            <div class="card-slider__items">
+              <div class="slick-slider" data-slick='{"slidesToShow": 7}'>
+                <div class="card-slider__item">
+                    <span class="ico ico-cloud"></span>
+                    <p class="strong">Cloud<br />Services</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-marketing"></span>
+                    <p class="strong">Accounting<br />Services</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-operator"></span>
+                    <p class="strong">Brand<br />Consulting</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-support"></span>
+                    <p class="strong">Workspace<br />Support</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-legal"></span>
+                    <p class="strong">Legal<br />Support</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-design"></span>
+                    <p class="strong">Pitchdeck<br />Design</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-sales"></span>
+                    <p class="strong">Sales & Marketing Support</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-support"></span>
+                    <p class="strong">Workspace Support</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-legal"></span>
+                    <p class="strong">Legal Support</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-design"></span>
+                    <p class="strong">Pitchdeck Design</p>
+                </div>
+                <div class="card-slider__item">
+                    <span class="ico ico-sales"></span>
+                    <p class="strong">Sales & Marketing Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-right mt-4">
+          <div class="scrollbar-container">
+              <div class="card-body">
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                    </div>
+                    <div class="card__item-info">
+                      <span class="card__item-tag">Cloud service</span>
+                      <h4 class="card__item-title">Amazon web services<i class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
+                      <p>
+                        <strong>$25,000</strong> cloud service for 2 years
+                      </p>
+                    </div>
+                    <div class="card__item-window">
+                      <div class="card__item-img">
+                        <img src="public/assets/tznew/css/images/logo-amazon.png" alt="">
+                      </div>
+                      <div class="card__item-info">
+                        <h4 class="card__item-title">Amazon web services</h4>
+                        <span class="card__item-tag">Cloud service</span>
+                        <span class="part-title--divider part-title--divider-tiny part-title--divider-gray"></span>
+                        <p>
+                          <strong>$25,000 CREDIT</strong> Startups can use 70+ AWS services such as computing, storage, database, analytics, IoT, AI, messaging, ... In addition, AWS also supports access 24 / 7 to Cloud Support Engineers for startups via email, chat, and phone, with free online instructions during use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
   </section>
   <!-- End .home-offer -->
   <!-- Begin .home-partnerships -->
-    <section class="home-part home-partnerships" id="home-partnerships">
-        <div class="grid-container grid-container-large">
+    <section class="home-partnerships pt-4" id="home-partnerships">
+        <div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12 large-6">
                     <div class="partner-info">
                         <h3 class="part-title">Corporate
                             Partnerships</h3>
-                        <p class="part-desc sky">ThinkZone has a global partner network, including incubator, coaching
-                            organization, accelerator credits, domestic and global venture capitals.</p>
-                        <p class="part-desc sky">Our commitment to authentic mentorship, collaboration and support is
-                            like no other company we have encountered. It is what makes the impossible, possible.</p>
-                        <p class="part-desc sky">ThinkZone add powerful industry expertise by offering hands-on
-                            mentorship, business development opportunities, and access to resources to help accelerate
-                            startups.</p>
+                        <p class="part-desc">ThinkZone has a global partner network, including incubator, coaching organization, accelerator credits, domestic and global venture capitals.</p>
+                        <p class="part-desc">Our commitment to authentic mentorship, collaboration and support is like no other company we have encountered. It is what makes the impossible, possible.</p>
+                        <p class="part-desc">ThinkZone add powerful industry expertise by offering hands-on mentorship, business development opportunities, and access to resources to help accelerate startups.</p>
                         <div class="flex-container align-center partner-button">
-                            <a href="#" rel="nofollow" class="bg-gradient-green button-large button rounded mt-2">Partner
-                                with us</a>
+                            <a href="#" rel="nofollow" class="button--large button mt-3">Partner with us</a>
                         </div>
                     </div>
                 </div>
@@ -321,15 +695,244 @@
         </div>
     </section>
     <!-- End .home-Partnerships -->
+    <!-- Begin .home-mentor -->
+    <section class="home-part home-mentor" id="home-mentor">
+        <div class="grid-container grid-container-large">
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-12 small-12">
+                    <h2 class="part-title text-center">Coach & Mentor</h2>
+                    <span class="part-title--divider text-center mt-n2"></span>
+                    <div class="list-mentor">
+                        <div class="grid-container grid-container-large">
+                            <div class="grid-x grid-margin-x text-center">
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_6d-22948110-1555385590.jpg"
+                                            alt=""></a>
+                                    <p>
+                                        <span class="strong">Angelia Le</span>
+                                        <span class="green">Vice President of Investment</span>
+                                        <small class="">ThinkZone</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_minh-21-yttq-1554891512.png"
+                                            alt=""></a>
+                                    <p>
+                                        <span class="strong">Hoang Duc Minh</span>
+                                        <span class="green">Head of Donation</span>
+                                        <small class="">Momo</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_0-1-1554892731.jpg" alt=""></a>
+                                    <p>
+                                        <span class="strong">Nguyen Trong Huan</span>
+                                        <span class="green">President</span>
+                                        <small class="">Five9 Vietnam</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_0-1554892630.jpg"
+                                            alt=""></a>
+                                    <p>
+                                        <span class="strong">Nhan The Luan</span>
+                                        <span class="green">CEO</span>
+                                        <small class="">NCT Corp</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_6d-22948110-1555385590.jpg"
+                                            alt=""></a>
+                                    <p>
+                                        <span class="strong">Angelia Le</span>
+                                        <span class="green">Vice President of Investment</span>
+                                        <small class="">ThinkZone</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_minh-21-yttq-1554891512.png"
+                                            alt=""></a>
+                                    <p>
+                                        <span class="strong">Hoang Duc Minh</span>
+                                        <span class="green">Head of Donation</span>
+                                        <small class="">Momo</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item large-offset-1">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_0-1-1554892731.jpg" alt=""></a>
+                                    <p>
+                                        <span class="strong">Nguyen Trong Huan</span>
+                                        <span class="green">President</span>
+                                        <small class="">Five9 Vietnam</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_0-1554892630.jpg"
+                                            alt=""></a>
+                                    <p>
+                                        <span class="strong">Nhan The Luan</span>
+                                        <span class="green">CEO</span>
+                                        <small class="">NCT Corp</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_04/200x200_1-1555986986.jpg"
+                                            alt=""></a>
+                                    <p>
+                                        <span class="strong">Pham Duy Hieu</span>
+                                        <span class="green">CEO</span>
+                                        <small class="">ABBANK</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="javascript:;"><img
+                                            src="http://thinkzone.vn/uploads/2019_05/200x200_1-5-1557472654.jpg" alt=""></a>
+                                    <p>
+                                        <span class="strong">Vu Duy Thuc</span>
+                                        <span class="green">Co-Founder/ CEO</span>
+                                        <small class="">OHMNILABS</small>
+                                    </p>
+                                </div>
+                                <div class="cell medium-3 small-6 large-2 mentor-item">
+                                    <a href="http://thinkzone.vn/ecosystem/mentor" class="bg-green mentor-viewmore">
+                                        <img src="public/assets/tznew//css/images/ico-plus.png" alt="">
+                                    </a>
+                                    <p>
+                                        <span class="green strong">View More</span>
+                                        <span class="green">Mentor Network</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End .home-mentor -->
+    <!-- Begin .home-supported -->
+    <section class="home-supported" id="home-supported">
+        <div class="grid-container grid-container-medium">
+            <h3 class="part-title text-center">Venture Capital</h3>
+            <span class="part-title--divider text-center mt-n2"></span>
+            <div class="partner-lists">
+              <div class="grid-x grid-margin-x partner-list">
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-03.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-05.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-03.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-05.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-03.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-05.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-03.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-05.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-03.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-05.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-03.png"/>
+                </div>
+                <div class="cell small-6 medium-auto text-center">
+                    <img src="public/assets/tznew/css/images/partner-05.png"/>
+                </div>
+              </div>
+            </div>
+            <div class="grid-x align-center mt-4">
+              <a href="#" class="button button--stroke mb-2">View more</a>
+            </div>
+        </div>
+    </section>
+    <!-- End .home-supported -->
   <!-- Begin .home-journey -->
     <section class="home-part home-journey" id="home-journey">
         <div class="grid-container grid-container-large">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
-                    <h2 class="part-title text-center">Startup Journey at ThinkZone</h2>
-                    <p class="part-desc sky text-center">We focus on growing verticals with a high density of technology<br/>
+                    <h2 class="part-title text-center mb-3">Startup Journey at ThinkZone</h2>
+                    <p class="part-desc text-center mb-5">We focus on growing verticals with a high density of technology
                         such as: fintech, adtech, marktech, foodtech, traveltech, retail, e-commerce</p>
-                    <p class="text-center show-for-large"><a href="#" class="bg-gradient-green button button-large rounded button-apply">Apply
+                    <p class="text-center show-for-large"><a href="#" class="button button--large button-apply">Apply
                         Now</a></p>
 
                     <div class="startup-journey show-for-large">
@@ -725,6 +1328,123 @@
         </div>
     </section>
     <!-- End .home-journey -->
+    <!-- Begin .home-blog -->
+    <section class="home-part home-blog" id="home-blog">
+        <div class="grid-container grid-container-medium">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <h2 class="part-title text-center">Our blog</h2>
+                    <span class="part-title--divider text-center"></span>
+                    <div class="list-post mt-8">
+                        <ul class="list-unstyled grid-x grid-margin-x">
+                            <li class="cell small-12 medium-4">
+                                <a href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te"
+                                   class="thumbnail"
+                                   title="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_78777661-2578267988955151-7074267524031840256-o-1576485379.jpg"
+                                         alt="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
+                                </a>
+                                <h3 class="post-title"><a
+                                        href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te">Bạn
+                                    có đang khởi nghiệp quá sớm? Góc nhìn từ Accelerator</a>
+                                </h3>
+                                <p class="post-meta">
+                                    <span class="meta-item meta-time">16/12/2019 15:31</span>
+                                    <a href="http://thinkzone.vn/category/startup"
+                                       class="meta-item meta-category green">Startup</a>
+                                </p>
+                            </li>
+                            <li class="cell small-12 medium-4">
+                                <a href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019"
+                                   class="thumbnail"
+                                   title="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_78906947-2566917190090231-5310959857321377792-o-1575974985.jpg"
+                                         alt="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
+                                </a>
+                                <h3 class="post-title"><a
+                                        href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019">Làm
+                                    thế nào để định giá cho sản phẩm một cách chính xác?</a></h3>
+                                <p class="post-meta">
+                                    <span class="meta-item meta-time">10/12/2019 17:50</span>
+                                    <a href="http://thinkzone.vn/category/event"
+                                       class="meta-item meta-category green">Event</a>
+                                </p>
+                            </li>
+                            <li class="cell small-12 medium-4">
+                                <a href="http://thinkzone.vn/case-study-cua-sendo-thuong-mai-dien-tu-viet-nam-canh-tranh-the-nao-voi-ke-khong-lo-ngoai-quoc"
+                                   class="thumbnail"
+                                   title="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_2-1575541837.jpg"
+                                         alt="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
+                                </a>
+                                <h3 class="post-title"><a
+                                        href="http://thinkzone.vn/case-study-cua-sendo-thuong-mai-dien-tu-viet-nam-canh-tranh-the-nao-voi-ke-khong-lo-ngoai-quoc">Overfitting
+                                    – Sai lầm khi Founder cũng là người dùng</a></h3>
+                                <p class="post-meta">
+                                    <span class="meta-item meta-time">05/12/2019 17:30</span>
+                                    <a href="http://thinkzone.vn/category/startup"
+                                       class="meta-item meta-category green">Startup</a>
+                                </p>
+                            </li>
+                            <li class="cell small-12 medium-4">
+                                <a href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te"
+                                   class="thumbnail"
+                                   title="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_78777661-2578267988955151-7074267524031840256-o-1576485379.jpg"
+                                         alt="THINKZONE ACCELERATOR TRỞ LẠI VỚI BATCH 02, ĐƯA STARTUP VIỆT VƯƠN RA THỊ TRƯỜNG QUỐC TẾ">
+                                </a>
+                                <h3 class="post-title"><a
+                                        href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te">Bạn
+                                    có đang khởi nghiệp quá sớm? Góc nhìn từ Accelerator</a>
+                                </h3>
+                                <p class="post-meta">
+                                    <span class="meta-item meta-time">16/12/2019 15:31</span>
+                                    <a href="http://thinkzone.vn/category/startup"
+                                       class="meta-item meta-category green">Startup</a>
+                                </p>
+                            </li>
+                            <li class="cell small-12 medium-4">
+                                <a href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019"
+                                   class="thumbnail"
+                                   title="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_78906947-2566917190090231-5310959857321377792-o-1575974985.jpg"
+                                         alt="THINKZONE THAM GIA HỘI THẢO VÀ KẾT NỐI ĐẦU TƯ TẠI TECHFEST 2019">
+                                </a>
+                                <h3 class="post-title"><a
+                                        href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019">Làm
+                                    thế nào để định giá cho sản phẩm một cách chính xác?</a></h3>
+                                <p class="post-meta">
+                                    <span class="meta-item meta-time">10/12/2019 17:50</span>
+                                    <a href="http://thinkzone.vn/category/event"
+                                       class="meta-item meta-category green">Event</a>
+                                </p>
+                            </li>
+                            <li class="cell small-12 medium-4">
+                                <a href="http://thinkzone.vn/case-study-cua-sendo-thuong-mai-dien-tu-viet-nam-canh-tranh-the-nao-voi-ke-khong-lo-ngoai-quoc"
+                                   class="thumbnail"
+                                   title="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
+                                    <img src="http://thinkzone.vn/uploads/2019_12/367x206_2-1575541837.jpg"
+                                         alt="CASE STUDY CỦA SENDO - THƯƠNG MẠI ĐIỆN TỬ VIỆT NAM CẠNH TRANH THẾ NÀO VỚI KẺ KHỔNG LỒ NGOẠI QUỐC?">
+                                </a>
+                                <h3 class="post-title"><a
+                                        href="http://thinkzone.vn/case-study-cua-sendo-thuong-mai-dien-tu-viet-nam-canh-tranh-the-nao-voi-ke-khong-lo-ngoai-quoc">Overfitting
+                                    – Sai lầm khi Founder cũng là người dùng</a></h3>
+                                <p class="post-meta">
+                                    <span class="meta-item meta-time">05/12/2019 17:30</span>
+                                    <a href="http://thinkzone.vn/category/startup"
+                                       class="meta-item meta-category green">Startup</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid-x align-center">
+                      <a href="#" class="button button--stroke">View all</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End .home-blog -->
 </div>
 <!-- Footer -->
 <footer class="bg-gray footer-new">
@@ -784,11 +1504,8 @@
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/what-input.js"></script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/foundation.js"></script>
 <script type="text/javascript">var baseUrl = 'http://thinkzone.vn/';</script>
-
-
-<script src="public/assets/tznew//js/owlCarousel/owl.carousel.min.js"></script>
-<script src="public/assets/tznew//js/jquery.countdown/jquery.countdown.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="public/assets/tznew/js/jquery-custom-scrollbar/jquery.custom-scrollbar.min.js"></script>
 <script src="public/assets/tznew/js/app.js"></script>
 <script src="public/assets/tznew/js/theme.js"></script>
 <script type="text/javascript">
