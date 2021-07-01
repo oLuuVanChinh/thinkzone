@@ -163,6 +163,7 @@ ul {
     height: auto;
     font-size: 12px;
     margin-left: 4px;
+    margin-top: 3px;
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent.is-active > a:after {

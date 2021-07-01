@@ -82,6 +82,20 @@
           if($('.scrollbar-container').length){
             $('.scrollbar-container').customScrollbar();
           }
+
+          // Select popup
+          if($('.form-group--select').length){
+            $('.form-group--select .form-control-select').each(function(){
+              $(this).on('click', function(){
+                var selectPopup = $(this).closest('.form-group--select').find('.form-control-popup');
+                $('.form-control-popup').removeClass('open');
+                selectPopup.toggleClass('open');
+              });
+            });
+            $('.form-control-popup .close').on('click', function(){
+              $(this).closest('.form-control-popup').removeClass('open');
+            })
+          }
         },
 
         cardWindow: function(){

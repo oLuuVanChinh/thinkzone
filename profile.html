@@ -27,9 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/css/foundation.css">
     <!-- <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/js/jcarousel/jcarousel.responsive.css"> -->
-    <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/js/owlCarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-          href="http://thinkzone.vn/public/assets/tznew/js/owlCarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="public/assets/tznew/js/jquery-custom-scrollbar/jquery.custom-scrollbar.css">
     <link rel="stylesheet" href="public/assets/tznew/css/app.css">
     <link rel="stylesheet" href="public/assets/tznew/css/theme.css">
     <link rel="stylesheet" href="public/assets/tznew/css/responsive.css">
@@ -131,30 +129,30 @@
                         </div>
                       </div>
                       <div class="profile__head-right">
-                        <i>>> <strong>Interested</strong> in our startup? </i>
+                        <i class="my-1">>> <strong>Interested</strong> in our startup? </i>
                         <a href="#" class="button">Contact us <i class="icon-angle-right"></i></a>
                       </div>
                     </div>
-                    <div class="profile__desc">
+                    <div class="profile__desc mt-2">
                       <p>
                         FoodHub is an online platform for fresh food delivery including clean raw food, pre-made food packages, synthetic food combos to families, and consultancy on daily nutrition diets for family members.
                       </p>
-                      <h6><strong>VISION & MISSION</strong></h6>
+                      <h6 class="mb-0"><strong>VISION & MISSION</strong></h6>
                       <p>
                         “With farmers, the greatest challenge is to sell their products. And FoodHub’s mission is to help farmers commercialize their fresh foods!”
                       </p>
-                      <h6><strong>KEY TRACTION</strong></h6>
+                      <h6 class="mb-0"><strong>KEY TRACTION</strong></h6>
                       <p>
-                        - 140% growth rate after 2 months of launching.
+                        - 140% growth rate after 2 months of launching.<br />
                         - 300% user growth during Covid-19.
                       </p>
                       <div class="grid-x">
                         <div class="cell medium-6">
-                          <h6><strong>YEAR OF FOUNDATION</strong></h6>
+                          <h6 class="mb-0"><strong>YEAR OF FOUNDATION</strong></h6>
                           <span>2019</span>
                         </div>
                         <div class="cell medium-6">
-                          <h6><strong>FOUNDER</strong></h6>
+                          <h6 class="mb-0"><strong>FOUNDER</strong></h6>
                           <span>Mr. Vinh Nguyen</span>
                         </div>
                       </div>
@@ -162,8 +160,8 @@
                   </div>
               </div>
 
-              <div class="cell medium-auto grid-x d-flex align-bottom">
-                  <div class="part-box">
+              <div class="cell medium-auto grid-x align-bottom align-right">
+                  <div class="part-box grid-x align-top align-right">
                     <div class="part-box__img">
                       <img src="public/assets/tznew/css/images/profile-thinkzone.jpg" alt="">
                     </div>
@@ -178,99 +176,219 @@
     <section class="profile-filter">
         <div class="grid-container">
           <!-- Filter -->
-          <div class="grid-x grid-margin-x">
+          <div class="grid-x grid-margin-x align-middle">
               <div class="cell medium-4">
-                <h5 class="part-title--xmedium my-n2">ZONE FOR</h5>
-                <h3 class="part-title--large color-accent mb-5 pb-3">GREAT MINDS</h3>
+                <h5 class="part-title--xmedium my-n1 white">ZONE FOR</h5>
+                <h3 class="part-title--large color-accent">GREAT MINDS</h3>
               </div>
               <div class="cell medium-8">
-                  <div class="filter-form">
+                  <div class="filter-form grid-x">
                     <form id="formFilter">
-                      <div class="form-group">
-                        <span class="form-control-select">Batch</span>
+                      <div class="grid-x align-middle">
+                        <div class="form-group form-group--select">
+                          <span class="form-control-select">Batch<i class="icon-angle-down"></i></span>
+                          <input type="hidden" id="batch-value" />
+                          <div class="form-control-popup">
+                            <span class="close"><i class="icon-times"></i></span>
+                            <div class="select-value">
+                              <label class="checkbox-custom">Transportation
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Production material
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Beauty services
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Househole services
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Edtech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Fintech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Social Commerce
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Foodtech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Fintech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Social Commerce
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Foodtech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                            <div class="select-button">
+                              <button type="button" class="button button--white">Reset</button>
+                              <button type="button" class="button">Apply</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group form-group--select">
+                          <span class="form-control-select">Vertical<i class="icon-angle-down"></i></span>
+                          <input type="hidden" id="vertical-value" />
+                          <div class="form-control-popup">
+                            <span class="close"><i class="icon-times"></i></span>
+                            <div class="select-value">
+                              <label class="checkbox-custom">Transportation
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Production material
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Beauty services
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Househole services
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Edtech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Fintech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Social Commerce
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Foodtech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Fintech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Social Commerce
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="checkbox-custom">Foodtech
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                            <div class="select-button">
+                              <button type="button" class="button button--white">Reset</button>
+                              <button type="button" class="button">Apply</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <span class="form-control-prepend"><i class="icon-search"></i></span>
+                          <input class="form-control" type="text" placeholder="Search" value="FoodHub" />
+                        </div>
+                        <button type="submit" class="button mb-0 ml-2">Search</button>
                       </div>
                     </form>
-                    <i><strong>Great startups</strong> founded by <strong>great founders</strong>, with <strong>great minds</strong> and <strong>great vision</strong>!</i>
+                    <i class="white my-2"><strong>Great startups</strong> founded by <strong>great founders</strong>, with <strong>great minds</strong> and <strong>great vision</strong>!</i>
                   </div>
               </div>
           </div>
           <!-- End Filter -->
-          <div class="grid-x img-list">
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item active">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>FOODHUB</strong></h6>
-                  <p>Batch 1</p>
-                  <p>E-commerce</p>
+          <div class="scrollbar-profile">
+            <div class="grid-x img-list img-list-nowrap">
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item active">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>FOODHUB</strong></h6>
+                    <p>Batch 1</p>
+                    <p>E-commerce</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                  <p>Batch 3</p>
-                  <p>Transportation</p>
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                    <p>Batch 3</p>
+                    <p>Transportation</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                  <p>Batch 3</p>
-                  <p>Transportation</p>
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                    <p>Batch 3</p>
+                    <p>Transportation</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                  <p>Transportation</p>
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                    <p>Transportation</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                  <p>Batch 3</p>
-                  <p>Transportation</p>
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                    <p>Batch 3</p>
+                    <p>Transportation</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                  <p>Transportation</p>
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                    <p>Transportation</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                  <p>Batch 3</p>
-                  <p>Transportation</p>
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                    <p>Batch 3</p>
+                    <p>Transportation</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cell small-6 medium-3">
-              <div class="img-list__item">
-                <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                <div class="image-list__info">
-                  <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                  <p>Batch 3</p>
-                  <p>Transportation</p>
+              <div class="cell small-6 medium-3">
+                <div class="img-list__item">
+                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                  <div class="image-list__info">
+                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                    <p>Batch 3</p>
+                    <p>Transportation</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -337,50 +455,8 @@
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/what-input.js"></script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/foundation.js"></script>
 <script type="text/javascript">var baseUrl = 'http://thinkzone.vn/';</script>
+<script src="public/assets/tznew/js/jquery-custom-scrollbar/jquery.custom-scrollbar.min.js"></script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/app.js"></script>
 <script src="public/assets/tznew/js/theme.js"></script>
-
-
-<script src="public/assets/tznew//js/owlCarousel/owl.carousel.min.js"></script>
-<script src="public/assets/tznew//js/jquery.countdown/jquery.countdown.min.js"></script>
-<script>
-    var owl = $('.owl-carousel');
-    owl.owlCarousel({
-        margin: 0,
-        loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 5
-            }
-        }
-    });
-    // Countdown
-    if ($('.item-countdown').length) {
-        $('.item-countdown').each(function () {
-            var time = $(this).data('time');
-            $(this).countdown(time, function (event) {
-                $(this).html(event.strftime('<p><span>%D</span>Days</p><p><span>%H</span>Hours</p><p><span>%M</span>Minute</p><p><span>%S</span>Sec</p>'));
-            });
-        })
-    }
-</script>
-<script type="text/javascript">
-    var videoPlay = $('button.btn-play')
-    videoPlay.on('click', function () {
-        $(this).addClass('hide');
-        let src = $('#video-ifr').attr('src').split('?');
-        $('#video-ifr').attr('src', src[0] + '?autoplay=1&rel=0&controls=0');
-        $('#video-modal').removeClass('hide');
-    });
-</script>
 </body>
 </html>
