@@ -594,7 +594,8 @@ a:hover, a:focus{
     font-size: rem(12px);
     transform: translateX(8px);
   }
-  &:hover{
+  &:hover,
+  &:focus{
     background-color: $accent-color;
     color: #fff;
   }

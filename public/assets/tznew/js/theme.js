@@ -92,9 +92,12 @@
                 selectPopup.toggleClass('open');
               });
             });
-            $('.form-control-popup .close').on('click', function(){
+            $('.form-control-popup .close, .form-control-popup .apply-select').on('click', function(){
               $(this).closest('.form-control-popup').removeClass('open');
-            })
+            });
+            $('.form-control-popup .reset-select').on('click', function(){
+              $(this).closest('.form-control-popup').find('input[type="checkbox"]').prop( "checked", false );
+            });
           }
         },
 
