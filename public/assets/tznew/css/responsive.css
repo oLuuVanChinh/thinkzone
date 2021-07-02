@@ -36,6 +36,9 @@
       width: 51px; }
     .part-title--divider-small {
       width: 72px; }
+    .part-title--divider-xsmall {
+      width: 48px;
+      height: 5px; }
   .home-investment .cell-left {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 60%;
@@ -71,13 +74,13 @@
   footer {
     padding: 74px 0 40px; }
   .footer-new {
-    padding: 90px 0 50px; }
+    padding: 63px 0 10px; }
   .list-mentor {
     margin-top: 50px; }
   .page-header {
     padding: 74px 0; }
   .page-title {
-    font-size: 2.7343rem; }
+    font-size: 2.5rem; }
   .page-title.post-title {
     font-size: 2rem; }
   .list-parter .media-item .media-title {
@@ -90,8 +93,6 @@
   .large-padding-100 {
     padding-left: 100px;
     padding-right: 100px; }
-  .author-intro {
-    margin-bottom: 80px; }
   .author-intro .media-object {
     padding-bottom: 60px; }
   .app-banner {
@@ -109,7 +110,7 @@
     min-height: 196px;
     margin-bottom: 60px; }
   .page-header {
-    margin-top: 76px; }
+    margin-top: 58px; }
   .slider-image {
     height: 403px; }
   .slider-info {
@@ -178,7 +179,7 @@
   .images-box__info {
     margin-left: 20px; }
   .tabs-title > a {
-    font-size: 1.2875rem; }
+    font-size: 1.375rem; }
   .home-part {
     padding: 45px 0; }
   .partner-list .cell {

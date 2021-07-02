@@ -1386,7 +1386,7 @@ footer .menu.infomation .phone {
 }
 
 .post-meta {
-    font-size: 0.875rem;
+    font-size: 0.675rem;
     color: #8993A5
 }
 
@@ -1409,16 +1409,17 @@ footer .menu.infomation .phone {
     background-image: url('images/ico-folder.png')
 }
 
-.single-post .post-meta .meta-category {
+.single-post .post-meta .menu .meta-category {
   padding: 0;
   background-color: #3faa61;
   color: #fff;
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
-  line-height: 1.125;
-  padding: 4px 11px;
+  line-height: 1;
+  padding: 4px 14px;
   margin-right: 10px !important;
   background-image: none;
+  border-radius: 2px;
 }
 
 .post-meta a {
@@ -1566,7 +1567,7 @@ footer .menu.infomation .phone {
 }
 
 .detail-relation {
-    margin-top: 90px
+    margin-top: 35px
 }
 
 .box .box-title {
