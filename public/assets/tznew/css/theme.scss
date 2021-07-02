@@ -221,6 +221,10 @@ a:hover, a:focus{
         font-size: rem(15px);
       }
     }
+    &--large{
+      font-size: rem(60px);
+      font-weight: bold;
+    }
     &--medium{
       font-size: rem(45px);
       font-weight: bold;
@@ -2644,6 +2648,11 @@ footer {
   background: url("images/page-cover.jpg") no-repeat top center;
   background-size: cover;
 }
+#page-cover-team {
+  background: url("images/bg-team.jpg") no-repeat top center;
+  background-size: cover;
+  padding: 51px 0 94px;
+}
 
 .page-header {
   margin-top: 60px;
@@ -2818,6 +2827,11 @@ blockquote{
   background-size: cover;
   padding: 83px 0;
   margin: 35px 0;
+}
+.slogan{
+  font-size: rem(15px);
+  line-height: 1.4;
+  display: block;
 }
 /* Home Mission */
 .home-mission{
@@ -3023,6 +3037,94 @@ blockquote{
   .slider-special {
     .slider-info{
       bottom: 30px;
+    }
+  }
+}
+
+.team{
+  &-item{
+    $teamItem: &;
+    &:not(#{$teamItem}--highlight){
+      background: #FFFFFF;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+    &s{
+      padding: 0 83px;
+      #{$teamItem}{
+        margin-left: 4px;
+        margin-right: 4px;
+        padding: 21px 15px 33px;
+        text-align: center;
+        margin-bottom: 47px;
+        &__avatar{
+          img{
+            height: 193px;
+            border-radius: 7px;
+          }
+        }
+        &__name{
+          font-size: rem(20px);
+          margin: 19px 0 5px;
+        }
+        &__pos{
+          font-size: rem(13px);
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__name{
+      font-weight: bold;
+    }
+    &__pos{
+      line-height: 1;
+      color: $accent-color;
+      display: block;
+    }
+    &__desc{
+      line-height: 1.2;
+      display: block;
+      font-size: rem(15px);
+      margin-bottom: 12px;
+    }
+    &__avatar{
+      img{
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+    &--highlight{
+      display: flex;
+      #{$teamItem}__avatar{
+        flex: 0 0 240px;
+        margin-right: 26px;
+        transform: translateY(-78px);
+        img{
+          height: 294px;
+          border-radius: 18px;
+        }
+        + #{$teamItem}__info{
+          text-align: left;
+        }
+      }
+      #{$teamItem}__info{
+        text-align: right;
+        + #{$teamItem}__avatar{
+          margin-left: 26px;
+          margin-right: 0;
+        }
+      }
+      #{$teamItem}__name{
+        font-size: rem(35px);
+        margin-bottom: 3px;
+        margin-top: 8px;
+      }
+      #{$teamItem}__pos{
+        font-size: rem(18px);
+        text-transform: uppercase;
+        margin-bottom: 23px;
+        font-weight: 500;
+      }
     }
   }
 }
