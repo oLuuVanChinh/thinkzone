@@ -801,21 +801,30 @@ a:hover, a:focus {
 }
 .part-box__img {
   position: relative;
-  margin-left: 40px;
 }
-.part-box__img:before {
-  content: "";
-  background-color: rgba(229, 229, 229, 0.6);
-  width: 100%;
-  height: calc(100% + 11px);
-  position: absolute;
-  z-index: -1;
-  right: 30px;
-  top: 26px;
-  border-radius: 32px;
+@media (min-width: 640px) {
+  .part-box__img {
+    margin-left: 40px;
+  }
+  .part-box__img:before {
+    content: "";
+    background-color: rgba(229, 229, 229, 0.6);
+    width: 100%;
+    height: calc(100% + 11px);
+    position: absolute;
+    z-index: -1;
+    right: 30px;
+    top: 26px;
+    border-radius: 32px;
+  }
 }
 .part-box__img img {
-  border-radius: 40px;
+  border-radius: 5px;
+}
+@media (min-width: 640px) {
+  .part-box__img img {
+    border-radius: 40px;
+  }
 }
 .part--link {
   list-style: none;
