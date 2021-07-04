@@ -178,11 +178,12 @@ header .logo img {
 .mobile-nav-button {
     display: inline-block;
     position: absolute;
-    top: calc(50% - 25px);
-    right: 0;
+    top: 0;
+    right: 14px;
     width: 50px;
-    height: 50px;
+    height: 65px;
     background: url('images/nav-bg-mobile-w.png') no-repeat 50% 50% transparent;
+    background-size: 30px;
     display: block;
     z-index: 99;
     transition: all 0s;
@@ -191,6 +192,7 @@ header .logo img {
 
 .mobile-nav-button.is-open {
     background-image: url('images/nav-close.png');
+    background-size: auto;
 }
 
 .mobile-nav {
@@ -1386,7 +1388,7 @@ footer .menu.infomation .phone {
 }
 
 .post-meta {
-    font-size: 0.875rem;
+    font-size: 0.675rem;
     color: #8993A5
 }
 
@@ -1409,16 +1411,17 @@ footer .menu.infomation .phone {
     background-image: url('images/ico-folder.png')
 }
 
-.single-post .post-meta .meta-category {
+.single-post .post-meta .menu .meta-category {
   padding: 0;
   background-color: #3faa61;
   color: #fff;
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
-  line-height: 1.125;
-  padding: 4px 11px;
+  line-height: 1;
+  padding: 4px 14px;
   margin-right: 10px !important;
   background-image: none;
+  border-radius: 2px;
 }
 
 .post-meta a {
@@ -1566,7 +1569,7 @@ footer .menu.infomation .phone {
 }
 
 .detail-relation {
-    margin-top: 90px
+    margin-top: 35px
 }
 
 .box .box-title {

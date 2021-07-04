@@ -59,6 +59,10 @@
   .part-title--divider-small {
     width: 72px;
   }
+  .part-title--divider-xsmall {
+    width: 48px;
+    height: 5px;
+  }
 
   .home-investment .cell-left {
     flex: 0 0 60%;
@@ -117,7 +121,7 @@
   }
 
   .footer-new {
-    padding: 90px 0 50px;
+    padding: 63px 0 10px;
   }
 
   .list-mentor {
@@ -129,7 +133,7 @@
   }
 
   .page-title {
-    font-size: 2.7343rem;
+    font-size: 2.5rem;
   }
 
   .page-title.post-title {
@@ -152,10 +156,6 @@
   .large-padding-100 {
     padding-left: 100px;
     padding-right: 100px;
-  }
-
-  .author-intro {
-    margin-bottom: 80px;
   }
 
   .author-intro .media-object {
@@ -282,7 +282,7 @@
   }
 
   .tabs-title > a {
-    font-size: 1.2875rem;
+    font-size: 1.375rem;
   }
 
   .home-part {

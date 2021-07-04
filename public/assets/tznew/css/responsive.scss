@@ -65,6 +65,10 @@ $accent-color: #3aa25b !default;
           &-small{
             width: 72px;
           }
+          &-xsmall{
+            width: 48px;
+            height: 5px;
+          }
         }
       }
     }
@@ -131,7 +135,7 @@ $accent-color: #3aa25b !default;
     }
 
     .footer-new {
-        padding: 90px 0 50px;
+        padding: 63px 0 10px;
     }
 
     .list-mentor {
@@ -143,7 +147,7 @@ $accent-color: #3aa25b !default;
     }
 
     .page-title {
-        font-size: 2.7343rem;
+        font-size: rem(40px);
     }
 
     .page-title.post-title {
@@ -166,10 +170,6 @@ $accent-color: #3aa25b !default;
     .large-padding-100 {
         padding-left: 100px;
         padding-right: 100px
-    }
-
-    .author-intro {
-        margin-bottom: 80px
     }
 
     .author-intro .media-object {
@@ -302,7 +302,7 @@ $accent-color: #3aa25b !default;
     }
     .tabs-title {
       > a{
-        font-size: 1.2875rem;
+        font-size: rem(22px);
       }
     }
     .home-part{

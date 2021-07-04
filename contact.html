@@ -48,12 +48,12 @@
 </head>
 <body class="home-contact">
   <!-- Begin header -->
-  <header class="header-container header-transparent">
+  <header class="header-container">
       <div class="header-primary grid-container grid-container-large">
           <div class="header-left">
               <div class="logo">
                   <a href="http://thinkzone.vn/">
-                      <img src="public/assets/tznew/css/images/logo-white.png" alt="">
+                      <img src="public/assets/tznew/css/images/logo-full.png" alt="">
                   </a>
               </div>
               <a href="#mobile-nav" class="mobile-nav-button hide-for-large"></a>
@@ -113,31 +113,46 @@
     <!-- Begin .home-banner -->
     <section class="pt-0 sub-part home-partner">
         <div class="grid-container grid-container-large">
-          <div class="part-contact">
-            <h3 class="part-title part-title--white">Send us a message</h3>
+          <div class="part-contact pt-6 pb-2">
+            <h3 class="part-title white">Send us a message</h3>
             <div class="part-title--divider part-title--divider-medium part-title--divider-white"></div>
-            <form id="contactForm" class="mt-8">
+            <form id="contactForm" class="contact-form mt-8">
               <div class="grid-x">
                 <div class="cell medium-7">
                   <div class="grid-x grid-margin-x">
                     <div class="medium-6 cell">
-                      <label class="form-control">NAME
+                      <label class="form-control">NAME*
                         <input type="text">
                       </label>
                     </div>
                     <div class="medium-6 cell">
-                      <label class="form-control">EMAIL
+                      <label class="form-control">EMAIL*
                         <input type="email">
                       </label>
                     </div>
                     <div class="medium-6 cell">
-                      <label class="form-control">PHONE
+                      <label class="form-control">PHONE*
                         <input type="tel">
                       </label>
                     </div>
                     <div class="medium-6 cell">
-                      <label class="form-control">COMPANY
+                      <label class="form-control">COMPANY*
                         <input type="text">
+                      </label>
+                    </div>
+                    <div class="medium-6 cell">
+                      <label class="form-control mb-4">
+                        <span class="text-nowrap">STARTUP YOU’RE INTERESTED IN:</span>
+                        <div class="custom-select">
+                          <select>
+                            <option></option>
+                            <option>Startup 1</option>
+                            <option>Startup 1</option>
+                            <option>Startup 1</option>
+                            <option>Startup 1</option>
+                            <option>Startup 1</option>
+                          </select>
+                        </div>
                       </label>
                     </div>
                     <div class="cell">
@@ -146,12 +161,20 @@
                       </label>
                     </div>
                     <div class="cell">
-                      <label class="form-control">Attach file
-                        <input type="file" id="myfile" name="myfile">
-                      </label>
-                    </div>
-                    <div class="cell grid-x">
-                      <button type="submit" class="button button-large">Submit</button>
+                      <div class="grid-x align-middle align-justify">
+                        <div class="d-flex">
+                          <div class="input-file-custom">
+                            <label>Attach file</label>
+                            <div class="form-control-file">
+                              <input type="file" id="myfile" />
+                              <label for="myfile">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex">
+                          <button type="submit">Submit</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -221,48 +244,5 @@
 <script type="text/javascript">var baseUrl = 'http://thinkzone.vn/';</script>
 <script src="http://thinkzone.vn/public/assets/tznew/js/app.js"></script>
 <script src="public/assets/tznew/js/theme.js"></script>
-
-
-<script src="public/assets/tznew//js/owlCarousel/owl.carousel.min.js"></script>
-<script src="public/assets/tznew//js/jquery.countdown/jquery.countdown.min.js"></script>
-<script>
-    var owl = $('.owl-carousel');
-    owl.owlCarousel({
-        margin: 0,
-        loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 5
-            }
-        }
-    });
-    // Countdown
-    if ($('.item-countdown').length) {
-        $('.item-countdown').each(function () {
-            var time = $(this).data('time');
-            $(this).countdown(time, function (event) {
-                $(this).html(event.strftime('<p><span>%D</span>Days</p><p><span>%H</span>Hours</p><p><span>%M</span>Minute</p><p><span>%S</span>Sec</p>'));
-            });
-        })
-    }
-</script>
-<script type="text/javascript">
-    var videoPlay = $('button.btn-play')
-    videoPlay.on('click', function () {
-        $(this).addClass('hide');
-        let src = $('#video-ifr').attr('src').split('?');
-        $('#video-ifr').attr('src', src[0] + '?autoplay=1&rel=0&controls=0');
-        $('#video-modal').removeClass('hide');
-    });
-</script>
 </body>
 </html>
