@@ -2,62 +2,6 @@
 $accent-color: #3FAA61 !default;
 $second-color: #12274a !default;
 $white-color: #ffffff !default;
-$sizes: (
-  0: 0,
-  1: 0.25rem,
-  2: 0.5rem,
-  3: 1rem,
-  4: 1.25rem,
-  5: 1.5rem,
-  6: 2rem,
-  7: 2.5rem,
-  8: 3rem,
-  9: 3.5rem,
-  10: 4rem
-);
-
-@each $name, $value in $sizes {
-  .mt-n#{$name}, .my-n#{$name}, .m-n#{$name} {
-    margin-top: -$value !important;
-  }
-  .mb-n#{$name}, .my-n#{$name}, .m-n#{$name} {
-    margin-bottom: -$value !important;
-  }
-  .ml-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
-    margin-left: -$value !important;
-  }
-  .mr-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
-    margin-right: -$value !important;
-  }
-  .mt-#{$name}, .my-#{$name}, .m-#{$name} {
-    margin-top: $value !important;
-  }
-  .mb-#{$name}, .my-#{$name}, .m-#{$name} {
-    margin-bottom: $value !important;
-  }
-  .ml-#{$name}, .mx-#{$name}, .m-#{$name} {
-    margin-left: $value !important;
-  }
-  .mr-#{$name}, .mx-#{$name}, .m-#{$name} {
-    margin-right: $value !important;
-  }
-  .pt-#{$name}, .py-#{$name}, .p-#{$name} {
-    padding-top: $value !important;
-  }
-  .pb-#{$name}, .py-#{$name}, .p-#{$name} {
-    padding-bottom: $value !important;
-  }
-  .pl-#{$name}, .px-#{$name}, .p-#{$name} {
-    padding-left: $value !important;
-  }
-  .pr-#{$name}, .px-#{$name}, .p-#{$name} {
-    padding-right: $value !important;
-  }
-}
-@function rem($size) {
-  @return $size / 16px * 1rem;
-}
-
 $breakpoints: (
   'sm'      : (max-width: 639px),
   'md'      : (max-width: 767px),
@@ -124,6 +68,100 @@ $breakpoints-up: (
   }
 }
 
+$sizes: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.25rem,
+  5: 1.5rem,
+  6: 2rem,
+  7: 2.5rem,
+  8: 3rem,
+  9: 3.5rem,
+  10: 4rem
+);
+
+@each $name, $value in $sizes {
+  .mt-n#{$name}, .my-n#{$name}, .m-n#{$name} {
+    margin-top: -$value !important;
+  }
+  .mb-n#{$name}, .my-n#{$name}, .m-n#{$name} {
+    margin-bottom: -$value !important;
+  }
+  .ml-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
+    margin-left: -$value !important;
+  }
+  .mr-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
+    margin-right: -$value !important;
+  }
+  .mt-#{$name}, .my-#{$name}, .m-#{$name} {
+    margin-top: $value !important;
+  }
+  .mb-#{$name}, .my-#{$name}, .m-#{$name} {
+    margin-bottom: $value !important;
+  }
+  .ml-#{$name}, .mx-#{$name}, .m-#{$name} {
+    margin-left: $value !important;
+  }
+  .mr-#{$name}, .mx-#{$name}, .m-#{$name} {
+    margin-right: $value !important;
+  }
+  .pt-#{$name}, .py-#{$name}, .p-#{$name} {
+    padding-top: $value !important;
+  }
+  .pb-#{$name}, .py-#{$name}, .p-#{$name} {
+    padding-bottom: $value !important;
+  }
+  .pl-#{$name}, .px-#{$name}, .p-#{$name} {
+    padding-left: $value !important;
+  }
+  .pr-#{$name}, .px-#{$name}, .p-#{$name} {
+    padding-right: $value !important;
+  }
+  @include breakpoint-up(sm){
+    .mt-medium-n#{$name}, .my-medium-n#{$name}, .m-medium-n#{$name} {
+      margin-top: -$value !important;
+    }
+    .mb-medium-n#{$name}, .my-medium-n#{$name}, .m-medium-n#{$name} {
+      margin-bottom: -$value !important;
+    }
+    .ml-medium-n#{$name}, .mx-medium-n#{$name}, .m-medium-n#{$name} {
+      margin-left: -$value !important;
+    }
+    .mr-medium-n#{$name}, .mx-medium-n#{$name}, .m-medium-n#{$name} {
+      margin-right: -$value !important;
+    }
+    .mt-medium-#{$name}, .my-medium-#{$name}, .m-medium-#{$name} {
+      margin-top: $value !important;
+    }
+    .mb-medium-#{$name}, .my-medium-#{$name}, .m-medium-#{$name} {
+      margin-bottom: $value !important;
+    }
+    .ml-medium-#{$name}, .mx-medium-#{$name}, .m-medium-#{$name} {
+      margin-left: $value !important;
+    }
+    .mr-medium-#{$name}, .mx-medium-#{$name}, .m-medium-#{$name} {
+      margin-right: $value !important;
+    }
+    .pt-medium-#{$name}, .py-medium-#{$name}, .p-medium-#{$name} {
+      padding-top: $value !important;
+    }
+    .pb-medium-#{$name}, .py-medium-#{$name}, .p-medium-#{$name} {
+      padding-bottom: $value !important;
+    }
+    .pl-medium-#{$name}, .px-medium-#{$name}, .p-medium-#{$name} {
+      padding-left: $value !important;
+    }
+    .pr-medium-#{$name}, .px-medium-#{$name}, .p-medium-#{$name} {
+      padding-right: $value !important;
+    }
+  }
+}
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: 'Barlow', sans-serif;
 }
@@ -134,6 +172,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.w-100{
+  width: 100%;
 }
 
 .ico-support{
@@ -255,7 +297,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .button--special,
 .second-font,
 .part--link,
-.button{
+.button,
+.icon-box--tabs{
   //font-family: 'Barlow Condensed' !important;
   font-family: 'Barlow', sans-serif !important;
 }
@@ -293,15 +336,28 @@ a:hover, a:focus{
   display: block;
 }
 
+@include breakpoint-down(sm){
+  .d-xs-none{
+    display: none;
+  }
+}
+
 .part{
   &-title{
     margin-bottom: 30px;
+    @include breakpoint-down(sm){
+      font-size: rem(30px);
+    }
     &--divider{
-      width: 64px;
-      height: 5px;
+      width: 50px;
+      height: 4px;
       background-color: $accent-color;
       display: block;
       margin-bottom: 20px;
+      @include breakpoint-up(sm){
+        width: 64px;
+        height: 5px;
+      }
       &.text-center{
         margin-left: auto;
         margin-right: auto;
@@ -343,8 +399,11 @@ a:hover, a:focus{
       font-weight: bold;
     }
     &--medium{
-      font-size: rem(45px);
+      font-size: rem(30px);
       font-weight: bold;
+      @include breakpoint-up(sm){
+        font-size: rem(45px);
+      }
     }
     &--xmedium{
       font-size: rem(44px);
@@ -363,8 +422,11 @@ a:hover, a:focus{
       font-weight: 500;
     }
     &--tiny {
-      font-size: rem(27px);
+      font-size: rem(20px);
       font-weight: bold;
+      @include breakpoint-up(sm){
+        font-size: rem(27px);
+      }
     }
     + .part-title--divider {
       margin-top: -27px;
@@ -395,20 +457,28 @@ a:hover, a:focus{
     z-index: 1;
     &__img{
       position: relative;
-      margin-left: 40px;
-      &:before{
-        content: "";
-        background-color: rgba(229, 229, 229, 0.6);
-        width: 100%;
-        height: calc(100% + 11px);
-        position: absolute;
-        z-index: -1;
-        right: 30px;
-        top: 26px;
-        border-radius: 32px;
+      @include breakpoint-up(sm){
+        margin-left: 40px;
+        &:before{
+          content: "";
+          background-color: rgba(229, 229, 229, 0.6);
+          width: 100%;
+          height: calc(100% + 11px);
+          position: absolute;
+          z-index: -1;
+          right: 30px;
+          top: 26px;
+          border-radius: 32px;
+        }
       }
       img{
-        border-radius: 40px;
+        border-radius: 5px;
+        @include breakpoint-up(sm){
+          border-radius: 40px;
+        }
+        @include breakpoint-down(sm){
+          box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+        }
       }
     }
   }
@@ -706,8 +776,12 @@ a:hover, a:focus{
 }
 
 .text-xsmall {
-  font-size: rem(20px);
-  line-height: rem(40px);
+  line-height: rem(25px);
+  @include breakpoint-up(sm){
+    font-size: rem(20px);
+    line-height: rem(40px);
+    font-weight: bold;
+  }
 }
 
 .absolute {
@@ -780,6 +854,16 @@ a:hover, a:focus{
     font-size: rem(20px);
     border-radius: 32.5px;
   }
+  &--light{
+    background-color: #fff;
+    color: rgba(18, 39, 74, 1);
+  }
+  &--simple{
+    background-color: transparent;
+    padding: 0 5px;
+    color: $accent-color;
+    min-width: inherit;
+  }
 }
 
 .images-box{
@@ -834,10 +918,14 @@ a:hover, a:focus{
 
 .img{
   &-list{
-    margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -3px;
+    margin-right: -3px;
+    @include breakpoint-up(sm){
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-top: 20px;
+    }
     &-nowrap{
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -861,16 +949,24 @@ a:hover, a:focus{
       }
     }
     > .cell {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 3px;
+      padding-right: 3px;
+      @include breakpoint-up(sm){
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
     &__item{
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
       border-radius: 5px;
       display: flex;
-      padding: 15px 13px;
-      margin: 10px 0;
+      padding: 10px;
+      margin: 6px 0;
       background-color: #fff;
+      @include breakpoint-up(sm){
+        padding: 15px 13px;
+        margin: 10px 0;
+      }
       &.active{
         background-color: $accent-color;
         color: #fff;
@@ -881,20 +977,34 @@ a:hover, a:focus{
       .profile-filter & {
         padding: 9px 16px;
       }
+      @include breakpoint-down(sm){
+        h6{
+          line-height: 1.2;
+        }
+      }
       p{
         color: rgba(18, 39, 74, 0.5);
         margin-bottom: 0;
+        @include breakpoint-down(sm){
+          line-height: 1.2;
+        }
         .profile-filter & {
           line-height: 1.2;
         }
       }
       img{
-        width: 76px;
-        height: 76px;
-        border-radius: 10px;
+        width: 49px;
+        height: 49px;
+        border-radius: 5px;
         object-fit: cover;
         object-position: top center;
-        margin-right: 11px;
+        margin-right: 8px;
+        @include breakpoint-up(sm){
+          width: 76px;
+          height: 76px;
+          border-radius: 10px;
+          margin-right: 11px;
+        }
         .profile-filter & {
           width: 66px;
           height: 66px;
@@ -917,7 +1027,7 @@ a:hover, a:focus{
   background-color: #fff;
   box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
   + * {
-    margin-top: 76px;
+    margin-top: 65px;
   }
 }
 
@@ -1380,6 +1490,58 @@ a:hover, a:focus{
 .home-about {
   .part-video {
     margin-top: 30px;
+  }
+  @include breakpoint-down(sm){
+    .cell-left{
+      background-color: $accent-color;
+      border-radius: 0px 10px 10px 10px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-top: 43px;
+      position: relative;
+      padding: 15px 20px 20px 20px;
+      .part-title--divider{
+        width: 80px;
+        height: 3px;
+        background-color: #fff;
+        margin: 13px 0 10px;
+      }
+      .link{
+        position: absolute;
+        width: calc(100% - 133px);
+        right: 0;
+        line-height: rem(32px);
+        top: -32px;
+        text-align: center;
+        color: rgba(18, 39, 74, 0.7);
+        span{
+          text-decoration: none;
+        }
+        i{
+          display: none;
+        }
+      }
+      [class*="part-"]{
+        color: #fff;
+      }
+      &:before,
+      &:after{
+        content: "";
+        position: absolute;
+        height: 33px;
+        top: -32px;
+        width: 126px;
+        left: 0;
+      }
+      &:before{
+        border-radius: 10px 10px 0 0;
+        background-image: url(images/tab-cell-mobile.svg)
+      }
+      &:after{
+        background-image: url(images/tab-cell-mobile-after.svg);
+        left: 7px;
+        z-index: -1;
+      }
+    }
   }
 }
 
@@ -2009,7 +2171,10 @@ a:hover, a:focus{
 
 /* Content */
 .home-part{
-  padding: 30px 0;
+  padding: 18px 0;
+  @include breakpoint-up(sm){
+    padding: 30px 0;
+  }
 }
 .home-journey{
   .part-desc{
@@ -2021,6 +2186,11 @@ a:hover, a:focus{
   margin-bottom: 40px;
   + .home-portfolio{
     padding-top: 0px;
+  }
+}
+@include breakpoint-down(sm){
+  .home-partner .part-title{
+    text-align: left;
   }
 }
 .home-offer{
@@ -2062,39 +2232,46 @@ a:hover, a:focus{
 /* List post */
 .list-post{
   &--slider{
+    @include breakpoint-down(sm){
+      margin-top: 12px;
+    }
     .slick-list{
       margin-left: 0;
       margin-right: 0;
     }
     .slick-track{
-      padding-top: 52px;
       padding-bottom: 0px;
+      @include breakpoint-up(sm){
+        padding-top: 52px;
+      }
     }
     .post-item{
       padding-left: 25px;
       padding-right: 25px;
     }
-    .slick-center{
-      .post-item{
-        padding-left: 3px;
-        padding-right: 3px;
-      }
-      .post-item__inner{
-          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
-          transform: translateY(-32px);
-          border-radius: 1px;
-      }
-      .thumbnail{
-        img{
-          height: 168px;
+    @include breakpoint-up(sm){
+      .slick-center{
+        .post-item{
+          padding-left: 3px;
+          padding-right: 3px;
         }
-      }
-      .post__desc{
-        background-color: $accent-color;
-        font-size: rem(16px);
-        padding: 9px 13px 13px 13px;
-        line-height: rem(19px);
-        margin-bottom: 0;
+        .post-item__inner{
+            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+            transform: translateY(-32px);
+            border-radius: 1px;
+        }
+        .thumbnail{
+          img{
+            height: 168px;
+          }
+        }
+        .post__desc{
+          background-color: $accent-color;
+          font-size: rem(16px);
+          padding: 9px 13px 13px 13px;
+          line-height: rem(19px);
+          margin-bottom: 0;
+        }
       }
     }
     .thumbnail{
@@ -2111,18 +2288,29 @@ a:hover, a:focus{
       margin-bottom: 0;
     }
     .post__desc{
-      background-color: $second-color;
+      background-color: $accent-color;
       font-weight: bold;
-      font-size: rem(12px);
+      font-size: rem(16px);
       color: $white-color;
-      padding: 14px;
-      line-height: rem(14px);
+      padding: 12px;
+      line-height: 1.2;
       margin-bottom: 0;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 0px 0px 5px 5px;
+      @include breakpoint-up(sm){
+        background-color: $second-color;
+        font-size: rem(12px);
+        line-height: rem(14px);
+        padding: 14px;
+      }
     }
   }
   &--magazine{
+    @include breakpoint-down(sm){
+      &.list-post .cell{
+        margin-bottom: 9px;
+      }
+    }
     .post-item{
       position: relative;
     }
@@ -2142,29 +2330,50 @@ a:hover, a:focus{
     img{
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       border-radius: 4px;
-      height: 138px;
+      height: 169px;
       width: 100%;
       object-fit: cover;
       object-position: top center;
+      @include breakpoint-up(sm){
+        height: 138px;
+      }
     }
     .post__desc{
       position: absolute;
       bottom: 0;
       color: #fff;
-      font-size: 12px;
+      font-size: rem(16px);
       font-weight: 500;
       line-height: 1.4;
       width: calc(100% - 16px);
       padding: 0 10px 0 20px;
+      @include breakpoint-up(sm){
+        font-size: rem(12px);
+      }
+      @include breakpoint-down(sm){
+        margin-bottom: 0;
+        i{
+          margin: 10px 0 10px;
+        }
+      }
     }
     &__large{
-      padding-right: 9px;
+      @include breakpoint-up(sm){
+        padding-right: 9px;
+      }
       img{
-        height: 289px;
+        height: 247px;
+        @include breakpoint-up(sm){
+          height: 289px;
+        }
       }
       .post__desc{
-        font-size: rem(24px);
-        padding: 0 10px 0 40px;
+        font-size: rem(16px);
+        padding: 0 10px 0 27px;
+        @include breakpoint-up(sm){
+          font-size: rem(24px);
+          padding: 0 10px 0 40px;
+        }
         i{
           font-size: rem(13px);
           display: block;
@@ -2176,7 +2385,10 @@ a:hover, a:focus{
     &-alt{
       .post-item{
         &:not(.list-post--magazine__large){
-          margin-bottom: 13px;
+          margin-bottom: 9px;
+          @include breakpoint-up(sm){
+            margin-bottom: 13px;
+          }
           &:last-child{
             margin-bottom: 0;
           }
@@ -2274,12 +2486,20 @@ a:hover, a:focus{
     .card-slider & {
       right: -2px;
     }
+    @include breakpoint-down(sm){
+      .list-post--slider &, .home-partner & {
+        right: -12px;
+      }
+    }
     &:before{
       font-family: 'icomoon';
       font-size: rem(18px);
       content: "\e906";
       .home-testimonial & {
         color: $white-color;
+        @include breakpoint-down(sm){
+          font-size: rem(10px);
+        }
       }
       .list-post--slider & {
         color: $accent-color;
@@ -2295,6 +2515,11 @@ a:hover, a:focus{
     right: auto;
     .card-slider & {
       left: 0;
+    }
+    @include breakpoint-down(sm){
+      .list-post--slider &, .home-partner & {
+        left: -12px;
+      }
     }
     &:before{
       content: "\e907";
@@ -2313,26 +2538,40 @@ a:hover, a:focus{
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -60px;
+  bottom: -30px;
+  @include breakpoint-up(sm){
+    bottom: -60px;
+  }
   .testimonial & {
-    bottom: 30px;
+    bottom: 10px;
+    @include breakpoint-up(sm){
+      bottom: 30px;
+    }
   }
   li{
     list-style: none;
   }
   button{
     font-size: 0;
-    width: 16px;
-    height: 16px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     margin: 0 3px;
     background-color: $second-color;
     border: 1px solid $second-color;
     box-sizing: border-box;
+    @include breakpoint-up(sm){
+      width: 16px;
+      height: 16px;
+    }
     .testimonial & {
-      width: 11px;
-      height: 11px;
+      width: 6px;
+      height: 6px;
       border-color: transparent;
+      @include breakpoint-up(sm){
+        width: 11px;
+        height: 11px;
+      }
     }
   }
   .slick-active{
@@ -2344,10 +2583,6 @@ a:hover, a:focus{
 }
 
 .home-investment{
-  > .grid-container{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   .box-shadow{
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -2357,6 +2592,7 @@ a:hover, a:focus{
 /* Footer */
 footer {
   font-size: 0.875rem;
+  padding-top: 30px;
 }
 
 .footer-new {
@@ -2675,7 +2911,36 @@ footer {
 .icon-box {
   line-height: 1;
   font-size: 0.8em;
-  margin-top: 45px;
+  margin-top: 23px;
+  @include breakpoint-up(sm){
+    margin-top: 45px;
+  }
+  @include breakpoint-down(sm){
+    text-align: center;
+    > img{
+      max-height: 136px;
+    }
+    .part-desc{
+      text-align: left;
+    }
+  }
+  &--tabs{
+    display: flex;
+    justify-content: center;
+    a{
+      color: $accent-color;
+      font-weight: bold;
+      padding: 5px 10px 7px;
+      border-radius: 25px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+      &.active{
+        background-color: $accent-color;
+        color: $white-color;
+      }
+    }
+  }
   .home-about & {
     margin-top: 80px;
   }
@@ -3014,19 +3279,28 @@ blockquote{
 .home-mission{
   background: url("images/banner-mission.jpg") no-repeat;
   background-size: cover;
-  padding: 20px 0;
-  margin: 20px 0;
+  padding: 10px 0;
+  margin: 4px 0 0;
+  @include breakpoint-up(sm){
+    padding: 20px 0;
+    margin: 20px 0;
+  }
 }
 
 /* Home Testimonial */
 #home-testimonial{
   background: url("images/banner-testimonial.jpg") no-repeat;
   background-size: cover;
-  margin: 20px 0 56px;
+  margin: 20px 0 10px;
+  @include breakpoint-up(sm){
+    margin: 20px 0 56px;
+  }
 }
 
 .partner-lists{
-  margin: 40px 0 0;
+  @include breakpoint-up(sm){
+    margin: 40px 0 0;
+  }
   .cell {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -3041,35 +3315,57 @@ blockquote{
   display: flex;
   position: relative;
   &__title{
-    font-size: rem(26px);
-    line-height: rem(31px);
+    font-size: rem(10px);
+    line-height: normal;
+    @include breakpoint-up(sm){
+      font-size: rem(26px);
+      line-height: rem(31px);
+    }
   }
   &__notes{
     display: block;
-    font-size: rem(19px);
+    font-size: rem(10px);
     font-weight: normal;
     text-align: right;
     font-style: italic;
-    margin: 10px 30px 25px 0;
+    margin: 5px 15px 10px 0;
+    @include breakpoint-up(sm){
+      font-size: rem(19px);
+      margin: 10px 30px 25px 0;
+    }
   }
   &__item, &__img{
     display: flex;
     align-items: center;
   }
   &__item{
-    padding: 0 65px;
+    padding: 0 15px;
+    @include breakpoint-up(sm){
+      padding: 0 65px;
+    }
   }
   &__img{
     flex: 0 0 auto;
+    @include breakpoint-down(sm){
+      img:not(.logo){
+        max-height: 90px;
+      }
+    }
   }
   .logo{
-    width: 83px;
-    height: 83px;
-    border-radius: 18px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     object-fit: cover;
     object-position: top center;
-    margin-left: -45px;
+    margin-left: -20px;
+    @include breakpoint-up(sm){
+      width: 83px;
+      height: 83px;
+      border-radius: 18px;
+      margin-left: -45px;
+    }
   }
 }
 

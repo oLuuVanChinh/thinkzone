@@ -99,6 +99,19 @@
               $(this).closest('.form-control-popup').find('input[type="checkbox"]').prop( "checked", false );
             });
           }
+
+          // Tab
+          if($('.icon-box--tabs').length){
+            $('.icon-box--tabs a').on('click', function(e){
+              e.preventDefault();
+              var dataOpen = $(this).data('open'),
+                  dataClose = $(this).data('close');
+              $(this).closest('.icon-box--tabs').find('a').removeClass('active');
+              $(this).addClass('active');
+              $('#' + dataClose).slideDown('fast');
+              $('#' + dataOpen).slideUp('fast');
+            });
+          }
         },
 
         cardWindow: function(){

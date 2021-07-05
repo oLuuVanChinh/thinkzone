@@ -347,10 +347,6 @@ $accent-color: #3aa25b !default;
       border-radius: 20px;
       -webkit-border-radius: 20px
   }
-
-  .part-box{
-    margin-top: 30px;
-  }
   .image-spiner{
     font-size: rem(40px);
     &--large{
@@ -367,12 +363,6 @@ $accent-color: #3aa25b !default;
   #home-slogan{
     padding: 50px 0;
   }
-  .img-list{
-    margin: 0;
-    img{
-      margin: 10px 0;
-    }
-  }
   .button-row{
     margin-top: 20px;
     .button{
@@ -385,31 +375,8 @@ $accent-color: #3aa25b !default;
       margin-bottom: 30px;
     }
   }
-  #home-testimonial{
-    padding: 40px 0 0;
-  }
-  .testimonial{
-    background-size: 70px auto;
-    &__title{
-      font-size: rem(20px);
-    }
-  }
-  .list{
-    &-post{
-      &--magazine{
-        &__large {
-          .post{
-            &__desc{
-              font-size: rem(18px);
-              padding: 0 10px;
-            }
-          }
-        }
-      }
-    }
-  }
   #home-partner, #home-achievements{
-    padding: 40px 0 40px 0;
+    padding: 20px 0 0 0;
   }
   .section-partner {
     .partner-item{
@@ -504,9 +471,6 @@ $accent-color: #3aa25b !default;
   .single-post{
     padding: 10px;
   }
-  .button{
-    font-size: rem(18px);
-  }
   .part{
     &-tabs{
       .tabs{
@@ -540,8 +504,5 @@ $accent-color: #3aa25b !default;
     img{
       margin: 10px 0;
     }
-  }
-  .partner-lists{
-    margin: 40px 0 30px;
   }
 }
