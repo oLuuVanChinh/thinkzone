@@ -122,8 +122,12 @@
                   <h5 class="part-title--xmedium my-n2 hide-for-small-only">ZONE FOR</h5>
                   <h3 class="part-title--large color-accent mb-5 pb-3 hide-for-small-only">GREAT MINDS</h3>
                   <h3 class="part-title--medium">ThinkZone Ventures</h3>
-                  <p class="part-desc mb-5 pb-4">ThinkZone Ventures is a venture capital firm focusing on tech startups from Seed to Pre-Series A. We invest in startups in various verticals including fintech, edtech, logistics, transportation,...</p>
-                  <a href="#" class="button button--stroke mb-2">Send pitch deck <i class="icon-angle-right"></i></a>
+                  <span class="part-title--divider show-for-small-only"></span>
+                  <p class="part-desc mb-1 mb-medium-5 pb-4">ThinkZone Ventures is a venture capital firm focusing on tech startups from Seed to Pre-Series A. We invest in startups in various verticals including fintech, edtech, logistics, transportation,...</p>
+                  <a href="#" class="button button--stroke mb-2 hide-for-small-only">Send pitch deck <i class="icon-angle-right"></i></a>
+                  <div class="grid-x align-right show-for-small-only">
+                    <a href="#" class="button button--light mb-0">View more <i class="icon-angle-right"></i></a>
+                  </div>
                   <a href="#" class="link d-block"><span>ThinkZone Accelerator</span><i class="icon-angle-right"></i></a>
               </div>
             </div>
@@ -134,14 +138,14 @@
     <!-- Begin Our mission -->
     <section class="home-mission">
       <div class="grid-container grid-container-small">
-        <strong class="color-white text-xsmall text-center d-block">
+        <span class="color-white text-xsmall text-center d-block">
           <i>Our mission is to nurture a generation of resilient, skillful and passionate entrepreneurs for Vietnam in the time of global economic inclusion.</i>
-        </strong>
+        </span>
       </div>
     </section>
     <!-- End Our mission -->
     <!-- Begin .home-value -->
-    <div class="empty-space" data-height="30px" data-height-xl="40px"></div>
+    <div class="empty-space" data-height="20px" data-height-xl="40px"></div>
     <section class="home-part home-value" id="home-value">
         <div class="grid-container grid-container-medium">
             <div class="part-title--negative">
@@ -149,21 +153,25 @@
               <span class="part-title--divider"></span>
             </div>
             <!-- About us -->
+            <div class="icon-box--tabs show-for-small-only">
+              <a href="#" class="active" data-open="box-non-cash" data-close="box-cash">Cash Investment</a>
+              <a href="#" data-open="box-cash" data-close="box-non-cash">Non - cash Investment</a>
+            </div>
             <div class="grid-x grid-margin-x">
-                <div class="medium-6 cell small-12">
+                <div class="medium-6 cell small-12" id="box-cash">
                   <div class="icon-box">
                     <img src="public/assets/tznew/css/images/cash-flow.png" alt="">
-                    <h3 class="part-title--small color-accent second-font mt-7 mb-3">Cash Investment</h3>
-                    <p class="part-desc mb-8">ThinkZone Ventures focuses on Seed to<br />
+                    <h3 class="part-title--small color-accent second-font mt-7 mb-3 hide-for-small-only">Cash Investment</h3>
+                    <p class="part-desc mt-4 mt-medium-0 mb-5 mb-medium-8">ThinkZone Ventures focuses on Seed to<br />
                       Pre-series A tech startups, with investments size<br />
                       ranging from $300,000 to $1,500,000.</p>
                     <a href="#" class="button button--stroke">Send pitch deck <i class="icon-angle-right"></i></a>
                   </div>
                 </div>
 
-                <div class="medium-6 cell small-12 grid-x align-right">
+                <div class="medium-6 cell small-12 grid-x align-right d-xs-none" id="box-non-cash">
                   <div class="icon-box">
-                    <h3 class="part-title color-accent second-font mb-3 mt-n4">Non - cash Investment</h3>
+                    <h3 class="part-title color-accent second-font mb-3 mt-n4 hide-for-small-only">Non - cash Investment</h3>
                     <p class="part-desc">We also provide non-cash investment to our portfolio<br />with training, mentoring, and connecting startups<br />with various support packages from our Partners.</p>
                     <ul class="part--link">
                       <li>
@@ -201,7 +209,7 @@
               <h3 class="part-title">Our Portfolio</h3>
               <span class="part-title--divider"></span>
             </div>
-            <a href="#" class="button button--stroke">View all</a>
+            <a href="#" class="button button--stroke hide-for-small-only">View all</a>
           </div>
 
             <div class="grid-x img-list">
@@ -278,18 +286,21 @@
                 </div>
               </div>
             </div>
+            <div class="grid-x show-for-small-only align-center">
+              <a href="#" class="button button--stroke">View all</a>
+            </div>
         </div>
     </section>
     <!-- End .home-portfolio -->
     <!-- Begin .home-supported -->
-    <section class="home-part home-supported pt-6" id="home-supported">
+    <section class="home-part home-supported pt-medium-6" id="home-supported">
         <div class="grid-container grid-container-medium">
           <div class="grid-x align-justify align-middle">
             <div class="part-title-wrap part-title--negative">
               <h3 class="part-title">Our Partners</h3>
               <span class="part-title--divider"></span>
             </div>
-            <a href="#" class="button button--stroke">View all</a>
+            <a href="#" class="button button--stroke hide-for-small-only">View all</a>
           </div>
             <div class="partner-lists">
               <div class="grid-x grid-margin-x partner-list">
@@ -385,13 +396,16 @@
                 </div>
               </div>
             </div>
+            <div class="grid-x show-for-small-only align-center">
+              <a href="#" class="button button--stroke mb-0">View all</a>
+            </div>
         </div>
     </section>
     <!-- End .home-supported -->
     <!-- Begin .home-testimonial -->
     <section class="home-testimonial" id="home-testimonial">
         <div class="grid-container grid-container-medium">
-            <div class="testimonial slick-slider" data-slick='{"dots": true}'>
+            <div class="testimonial slick-slider" data-slick='{"dots": true, "responsive": [{"breakpoint":640,"settings":{"slidesToShow": 1}}]}'>
               <div class="testimonial__slide">
                 <div class="testimonial__item">
                   <h3 class="testimonial__title"><i>ThinkZone has a professional team who has supported startups with practical knowledge.</i><span class="testimonial__notes">Mr. Vinh Nguyen - Founder & CEO, FoodHub</span></h3>
@@ -431,7 +445,7 @@
                 <h3 class="part-title">Our Activities</h3>
                 <span class="part-title--divider"></span>
               </div>
-              <a href="#" class="button button--stroke">View all</a>
+              <a href="#" class="button button--stroke hide-for-small-only">View all</a>
             </div>
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12">
@@ -531,6 +545,9 @@
                     </div>
                 </div>
             </div>
+            <div class="grid-x show-for-small-only align-center mt-8">
+              <a href="#" class="button button--stroke mb-0">View all</a>
+            </div>
         </div>
     </section>
     <!-- End .home-activities -->
@@ -544,9 +561,9 @@
                       <h2 class="part-title">Blog</h2>
                       <span class="part-title--divider part-title--divider-small mt-n4"></span>
                     </div>
-                    <a href="#" class="button button--stroke">View all</a>
+                    <a href="#" class="button button--stroke hide-for-small-only">View all</a>
                   </div>
-                    <div class="list-post mt-8">
+                    <div class="list-post mt-4 mt-medium-8 px-6 px-medium-0">
                         <ul class="list-unstyled grid-x grid-margin-x">
                             <li class="cell small-12 medium-4">
                                 <a href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te"
@@ -648,6 +665,9 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="grid-x show-for-small-only align-center mt-4">
+                      <a href="#" class="button button--stroke mb-0">View all</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -660,6 +680,7 @@
             <div class="grid-x grid-margin-x">
                 <div class="cell">
                     <h2 class="part-title text-center">ThinkZone on media</h2>
+                    <span class="part-title--divider part-title--divider-small mt-n4 show-for-small-only"></span>
                     <div class="jcarousel-wrapper">
                         <div id="section-partner" class="section-partner slick-slider" data-slick='{"slidesToShow": 6}'>
                             <div class="partner-item">
@@ -704,7 +725,7 @@
         </div>
     </section>
     <!-- End .home-partner -->
-    <div class="empty-space" data-height="45px" data-height-xl="93px"></div>
+    <div class="empty-space" data-height="0" data-height-xl="93px"></div>
     <!-- Begin .home-investment -->
     <section class="home-part home-investment" id="home-investment">
         <div class="grid-container grid-container-medium">
@@ -712,7 +733,7 @@
               <h3 class="part-title ">Investment Updates</h3>
               <span class="part-title--divider mt-n4"></span>
             </div>
-            <div class="grid-x grid-margin-x mt-7">
+            <div class="grid-x grid-margin-x mt--medium-7">
                 <div class="cell cell-left small-12">
                   <div class="list-post list-post--magazine list-post--magazine-alt">
                       <ul class="list-unstyled grid-x">
@@ -728,7 +749,7 @@
                                 <i>- 01/02/2021 -</i>
                               </p>
                           </li>
-                          <div class="cell medium-4 pl-3">
+                          <div class="cell medium-4 pl-medium-3">
                             <li class="post-item">
                                 <a href="http://thinkzone.vn/thinkzone-tham-gia-hoi-thao-va-ket-noi-dau-tu-tai-techfest-2019"
                                    class="thumbnail"
@@ -755,8 +776,11 @@
                             </li>
                           </div>
                       </ul>
+                      <div class="grid-x align-right show-for-small-only">
+                        <a href="#" class="button button--simple mb-2">View more articles<i class="icon-angle-right"></i></a>
+                      </div>
                   </div>
-                  <div class="list-post list-post--list mt-5">
+                  <div class="list-post list-post--list mt-5 hide-for-small-only">
                       <ul class="list-unstyled">
                           <li class="post-item">
                               <a href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te"
@@ -791,6 +815,7 @@
                   </div>
                 </div>
                 <div class="cell cell-right small-12 grid-x medium-auto align-stretch">
+                  <h4 class="part-title--tiny mb-2">Our Investor network</h4>
                   <div class="cell box-shadow">
                     <div class="images-box">
                       <div class="images-box__item">
@@ -841,10 +866,13 @@
                           <span><img src="public/assets/tznew/css/images/ico-money.png" alt="">$ 1,000,000</span>
                         </div>
                       </div>
-                      <div class="text-center mt-3">
+                      <div class="text-center mt-3 hide-for-small-only">
                             <a href="#" class="button button--stroke mb-0">View all</a>
                         </div>
                     </div>
+                  </div>
+                  <div class="grid-x align-right show-for-small-only w-100">
+                    <a href="#" class="button button--simple mb-2">View all<i class="icon-angle-right"></i></a>
                   </div>
                 </div>
             </div>
@@ -859,7 +887,7 @@
         <div class="grid-x grid-margin-x">
             <div class="cell small-12 large-3">
                 <div class="logo-footer">
-                    <a href="#"><img src="public/assets/tznew/css/images/" alt=""></a>
+                    <a href="#"><img src="public/assets/tznew/css/images/logo.png" alt=""></a>
                 </div>
                 <div class="social">
                     <ul class="menu flex-container">
