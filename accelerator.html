@@ -51,7 +51,8 @@
         <div class="header-left">
             <div class="logo">
                 <a href="http://thinkzone.vn/">
-                    <img src="public/assets/tznew/css/images/logo-full.png" alt="">
+                    <img class="show-for-medium" src="public/assets/tznew/css/images/logo-full.png" alt="">
+                    <img class="hide-for-small" src="public/assets/tznew/css/images/logo-white.png" alt="">
                 </a>
             </div>
             <a href="#mobile-nav" class="mobile-nav-button hide-for-large"></a>
@@ -75,7 +76,7 @@
               <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div class="mobile-nav is-close hide bg-green" id="mobile-nav">
+        <div class="mobile-nav is-close hide" id="mobile-nav">
             <ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true">
                 <li>
                     <a href="#">Accelerator</a>
@@ -98,29 +99,18 @@
                 <li><a href="//academy.thinkzone.vn/">Academy</a></li>
                 <li><a href="http://thinkzone.vn/blog">Blog</a></li>
             </ul>
-            <form class="search-form">
-                <input type="text" name="value"/>
-                <button type="submit">Search</button>
-            </form>
         </div>
     </div>
 </header>
 <!-- End header -->
 <!-- Content -->
 <div id="content" class="content">
-  <div class="empty-space" data-height="10px"></div>
+  <div class="empty-space" data-height="0px" data-height-lg="10px"></div>
   <!-- Begin .home-about -->
   <section class="home-part home-countdown" id="home-countdown">
       <div class="grid-container">
           <div class="grid-x grid-margin-x">
-              <div class="medium-5 cell-left cell small-12">
-                <h5 class="part-title--xmedium mb-n2 mt-1">THINKZONE</h5>
-                <h3 class="part-title--large color-accent mb-2 pb-2">ACCELERATOR</h3>
-                <p class="part-desc mb-5 pb-6">ThinkZone Accelerator focuses on tech startups from Seed to Pre-Series A, in the stage of product-market validation or scale-up.</p>
-                <a href="#" class="button button--stroke button--medium mb-2">Apply for ThinkZone Accelerator <i class="icon-angle-right"></i></a>
-              </div>
-
-              <div class="medium-7 cell-right cell small-12">
+              <div class="medium-7 cell-right cell small-12 medium-order-2">
                   <div class="part-video">
                       <div class="hide" id="video-modal">
                           <div class="responsive-embed widescreen">
@@ -133,6 +123,12 @@
                       <button class="btn-play">
                           <img src="public/assets/tznew//css/images/header-video.png"></button>
                   </div>
+              </div>
+              <div class="medium-5 cell-left cell small-12">
+                <h5 class="part-title--xmedium mb-n2 mt-3 mt-medium-1">THINKZONE</h5>
+                <h3 class="part-title--large color-accent mb-0 mb-medium-2 pb-2">ACCELERATOR</h3>
+                <p class="part-desc mb-medium-5 pb-medium-6">ThinkZone Accelerator focuses on tech startups from Seed to Pre-Series A, in the stage of product-market validation or scale-up.</p>
+                <a href="#" class="button button--stroke button--medium mb-2 hide-for-small-only">Apply for ThinkZone Accelerator <i class="icon-angle-right"></i></a>
               </div>
           </div>
       </div>
@@ -180,17 +176,14 @@
               </div>
           </div>
         </div>
-        <div class="card-slider mt-8">
+        <div class="card-slider mt-5 mt-medium-8">
           <div class="card-heading">
               <h3 class="card-title text-center">$50,000+ support packages from our Partners</h3>
               <span class="part-title--divider text-center mt-3"></span>
           </div>
           <div class="card-body">
-            <div class="card-slider__link">
-              <a href="#">View all</a>
-            </div>
-            <div class="card-slider__items">
-              <div class="slick-slider" data-slick='{"slidesToShow": 7}'>
+            <div class="card-slider__items medium-order-2">
+              <div class="slick-slider" data-slick='{"slidesToShow": 7, "responsive": [{"breakpoint":640,"settings":{"slidesToShow": 3}}]}'>
                 <div class="card-slider__item">
                     <span class="ico ico-cloud"></span>
                     <p class="strong">Cloud<br />Services</p>
@@ -237,11 +230,13 @@
                 </div>
               </div>
             </div>
+            <div class="card-slider__link mt-3 mt-medium-0">
+              <a href="#">View all</a>
+            </div>
           </div>
         </div>
         <div class="card card-right mt-4">
-          <div class="scrollbar-container">
-              <div class="card-body">
+          <div class="card-body">
                 <div class="col">
                   <div class="card__item">
                     <div class="card__item-img">
@@ -634,7 +629,6 @@
                   </div>
                 </div>
               </div>
-            </div>
         </div>
       </div>
   </section>

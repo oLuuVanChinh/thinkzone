@@ -430,6 +430,7 @@ header .logo img {
     padding: 0;
     background-position: left center;
     border-radius: 0;
+    background-size: contain;
 }
 
 .card-offer .card-body img {

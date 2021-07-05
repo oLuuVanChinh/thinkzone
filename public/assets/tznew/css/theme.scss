@@ -81,7 +81,6 @@ $sizes: (
   9: 3.5rem,
   10: 4rem
 );
-
 @each $name, $value in $sizes {
   .mt-n#{$name}, .my-n#{$name}, .m-n#{$name} {
     margin-top: -$value !important;
@@ -119,7 +118,9 @@ $sizes: (
   .pr-#{$name}, .px-#{$name}, .p-#{$name} {
     padding-right: $value !important;
   }
-  @include breakpoint-up(sm){
+}
+@include breakpoint-up(sm){
+  @each $name, $value in $sizes {
     .mt-medium-n#{$name}, .my-medium-n#{$name}, .m-medium-n#{$name} {
       margin-top: -$value !important;
     }
@@ -406,12 +407,18 @@ a:hover, a:focus{
       }
     }
     &--xmedium{
-      font-size: rem(44px);
-      font-weight: 500;
+      font-size: rem(34px);
+      @include breakpoint-up(sm){
+        font-weight: 500;
+        font-size: rem(44px);
+      }
     }
     &--large{
-      font-size: rem(56px);
+      font-size: rem(46px);
       font-weight: bold;
+      @include breakpoint-up(sm){
+        font-size: rem(56px);
+      }
     }
     &--small{
       font-size: rem(34px);
@@ -2684,16 +2691,27 @@ footer {
   }
   &-left{
     .card{
-      min-height: 240px;
+      min-height: 155px;
       display: flex;
       justify-content: center;
       border-radius: 40px;
-      padding: 20px 30px;
-      margin-top: 22px;
-      margin-bottom: 22px;
+      padding: 20px 10px 20px 30px;
+      margin-top: 9px;
+      margin-bottom: 9px;
+      @include breakpoint-up(sm){
+        min-height: 240px;
+        padding: 20px 30px;
+        margin-top: 22px;
+        margin-bottom: 22px;
+      }
       &-body{
         padding: 0;
         text-align: center;
+        @include breakpoint-down(sm){
+          display: flex;
+          align-items: center;
+          text-align: left;
+        }
         p{
           font-size: rem(18px);
           line-height: 1.7;
@@ -2706,6 +2724,14 @@ footer {
       &-offer {
         .ico{
           margin-bottom: 10px;
+          @include breakpoint-down(sm){
+            width: 84px;
+            height: 84px;
+            flex: 0 0 84px;
+            background-position: top center;
+            background-size: auto;
+            margin-right: 24px;
+          }
         }
       }
     }
@@ -2713,11 +2739,21 @@ footer {
   &-slider{
     .card{
       &-title{
-        font-size: rem(38px);
+        font-size: rem(34px);
+        @include breakpoint-up(sm){
+          font-size: rem(38px);
+        }
+        @include breakpoint-down(sm){
+          font-weight: 600;
+        }
       }
       &-body{
         display: flex;
         align-items: center;
+        @include breakpoint-down(sm){
+          flex-direction: column;
+          padding: 6px 0 0;
+        }
         p{
           font-size: rem(9px);
           font-weight: 600;
@@ -2725,8 +2761,11 @@ footer {
       }
     }
     &__items{
-      max-width: calc(100% - 88px);
-      margin-left: auto;
+      max-width: 100%;
+      @include breakpoint-up(sm){
+        max-width: calc(100% - 88px);
+        margin-left: auto;
+      }
     }
     &__item{
       background-color: rgba(237, 240, 255, 1);
@@ -2756,20 +2795,43 @@ footer {
     }
   }
   &-right{
+    @include breakpoint-down(sm){
+      padding: 24px 16px;
+    }
     .card-body{
       display: flex;
       flex-wrap: wrap;
-      margin-left: -17px;
-      margin-right: -17px;
       margin-top: -18px;
       margin-bottom: -18px;
+      padding-left: 43px;
+      padding-right: 43px;
+      height: 382px;
+      overflow: auto;
+      &::-webkit-scrollbar-track{
+        border-radius: 10px;
+        margin: 18px 10px;
+      }
+      &::-webkit-scrollbar{
+        width: 7px;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb{
+        border-radius: 5px;
+        background-color: rgba(237, 240, 255, 1);
+      }
       > .col{
-        flex: 0 0 calc(100% / 3);
-        max-width: calc(100% / 3);
+        flex: 0 0 100%;
+        max-width: 100%;
         padding-left: 17px;
         padding-right: 17px;
-        padding-top: 18px;
-        padding-bottom: 18px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        @include breakpoint-up(sm){
+          flex: 0 0 calc(100% / 3);
+          max-width: calc(100% / 3);
+          padding-top: 18px;
+          padding-bottom: 18px;
+        }
       }
     }
   }
@@ -2873,26 +2935,6 @@ footer {
         }
       }
     }
-  }
-}
-
-.scrollbar-container{
-  width: 100%;
-  height: 383px;
-  .viewport{
-    padding-bottom: 10px;
-  }
-  .overview{
-    padding: 4px 50px 0 50px;
-  }
-}
-.scroll-bar.vertical{
-  width: 7px;
-  z-index: 1;
-  cursor: pointer;
-  .thumb{
-    background: #EDF0FF;
-    border-radius: 5px;
   }
 }
 
@@ -3034,6 +3076,17 @@ footer {
 .bg-countdown {
   background: url(images/bg-countdown.png) no-repeat 50px top;
   padding: 104px 0 40px;
+}
+
+@include breakpoint-down(sm){
+  .home-countdown{
+    .part-video{
+      margin: -17px -24px 0 -24px;
+    }
+    .cell-left{
+      text-align: center;
+    }
+  }
 }
 
 .item-countdown {

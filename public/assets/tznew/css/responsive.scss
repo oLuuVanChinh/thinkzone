@@ -108,19 +108,6 @@ $accent-color: #3aa25b !default;
         padding: 40px 30px 70px 30px;
     }
 
-    .card.card-left .card-body,
-    .card.card-right .card-body {
-        padding-bottom: 0
-    }
-
-    .card.card-left.highlight {
-        top: 60px
-    }
-
-    .card.card-right.highlight {
-        margin-left: -50px
-    }
-
     .card-left {
         margin-left: -25px;
         margin-right: -25px;
@@ -390,11 +377,6 @@ $accent-color: #3aa25b !default;
   .list-post {
     .cell{
       margin-bottom: 15px;
-    }
-  }
-  .card{
-    &.card-right{
-      margin-top: 30px;
     }
   }
   .icon{

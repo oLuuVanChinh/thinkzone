@@ -78,11 +78,6 @@
             }
           }
 
-          // scrollbar
-          if($('.scrollbar-container').length){
-            $('.scrollbar-container').customScrollbar();
-          }
-
           // Select popup
           if($('.form-group--select').length){
             $('.form-group--select .form-control-select').each(function(){
