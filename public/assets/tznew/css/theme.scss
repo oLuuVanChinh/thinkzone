@@ -3142,12 +3142,16 @@ footer {
 #page-cover-team {
   background: url("images/bg-team.jpg") no-repeat top center;
   background-size: cover;
-  padding: 51px 0 94px;
+  padding: 40px 0 143px;
+  @include breakpoint-down(sm){
+    margin-bottom: -130px;
+  }
+  @include breakpoint-up(sm){
+    padding: 51px 0 94px;
+  }
 }
 
 .page-header {
-  margin-top: 60px;
-
   .page-title {
     color: #fff;
   }
@@ -3585,13 +3589,19 @@ blockquote{
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
     &s{
-      padding: 0 83px;
+      padding: 0 38px;
+      @include breakpoint-up(sm){
+        padding: 0 83px;
+      }
       #{$teamItem}{
         margin-left: 4px;
         margin-right: 4px;
         padding: 21px 15px 33px;
         text-align: center;
-        margin-bottom: 47px;
+        margin-bottom: 40px;
+        @include breakpoint-up(sm){
+          margin-bottom: 47px;
+        }
         &__avatar{
           img{
             height: 193px;
@@ -3630,21 +3640,40 @@ blockquote{
       }
     }
     &--highlight{
-      display: flex;
+      @include breakpoint-down(sm){
+        text-align: center;
+        margin-bottom: 30px;
+        #{$teamItem}__company{
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      @include breakpoint-up(sm){
+        display: flex;
+      }
       #{$teamItem}__avatar{
         flex: 0 0 240px;
-        margin-right: 26px;
-        transform: translateY(-78px);
+        @include breakpoint-up(sm){
+          margin-right: 26px;
+          transform: translateY(-78px);
+        }
         img{
           height: 294px;
           border-radius: 18px;
+          @include breakpoint-down(sm){
+            max-width: 240px;
+          }
         }
-        + #{$teamItem}__info{
-          text-align: left;
+        @include breakpoint-up(sm){
+          + #{$teamItem}__info{
+            text-align: left;
+          }
         }
       }
       #{$teamItem}__info{
-        text-align: right;
+        @include breakpoint-up(sm){
+          text-align: right;
+        }
         + #{$teamItem}__avatar{
           margin-left: 26px;
           margin-right: 0;

@@ -51,7 +51,8 @@
         <div class="header-left">
             <div class="logo">
                 <a href="http://thinkzone.vn/">
-                    <img src="public/assets/tznew/css/images/logo-full.png" alt="">
+                    <img class="show-for-medium" src="public/assets/tznew/css/images/logo-full.png" alt="">
+                    <img class="hide-for-small" src="public/assets/tznew/css/images/logo-white.png" alt="">
                 </a>
             </div>
             <a href="#mobile-nav" class="mobile-nav-button hide-for-large"></a>
@@ -75,7 +76,7 @@
               <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div class="mobile-nav is-close hide bg-green" id="mobile-nav">
+        <div class="mobile-nav is-close hide" id="mobile-nav">
             <ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true">
                 <li>
                     <a href="#">Accelerator</a>
@@ -98,10 +99,6 @@
                 <li><a href="//academy.thinkzone.vn/">Academy</a></li>
                 <li><a href="http://thinkzone.vn/blog">Blog</a></li>
             </ul>
-            <form class="search-form">
-                <input type="text" name="value"/>
-                <button type="submit">Search</button>
-            </form>
         </div>
     </div>
 </header>
@@ -124,15 +121,15 @@
         <div class="grid-x grid-margin-x">
           <div class="cell medium-6">
             <div class="team-item team-item--highlight">
+              <div class="team-item__avatar medium-order-2">
+                <img src="http://thinkzone.vn/uploads/2019_04/200x200_minh-21-yttq-1554891512.png" />
+              </div>
               <div class="team-item__info">
                 <h3 class="team-item__name">Bui Thanh Do</h3>
                 <span class="team-item__pos">FOUNDING PARTNER</span>
                 <span class="team-item__desc">Over 11 years as serial entrepreneurs​</span>
                 <img class="team-item__company" src="public/assets/tznew/css/images/team-company-1.jpg" />
                 <img class="team-item__company" src="public/assets/tznew/css/images/team-company-2.jpg" />
-              </div>
-              <div class="team-item__avatar">
-                <img src="http://thinkzone.vn/uploads/2019_04/200x200_minh-21-yttq-1554891512.png" />
               </div>
             </div>
           </div>
@@ -345,7 +342,7 @@
     <!-- Begin .home-testimonial -->
     <section class="home-testimonial" id="home-testimonial">
         <div class="grid-container grid-container-medium">
-            <div class="testimonial slick-slider" data-slick='{"dots": true}'>
+            <div class="testimonial slick-slider" data-slick='{"dots": true, "responsive": [{"breakpoint":640,"settings":{"slidesToShow": 1}}]}'>
               <div class="testimonial__slide">
                 <div class="testimonial__item">
                   <h3 class="testimonial__title"><i>ThinkZone has a professional team who has supported startups with practical knowledge.</i><span class="testimonial__notes">Mr. Vinh Nguyen - Founder & CEO, FoodHub</span></h3>
@@ -376,11 +373,12 @@
             </div>
         </div>
     </section>
+    <div class="empty-space" data-height="42px" data-height-lg="0px"></div>
     <!-- End .home-testimonial -->
     <!-- Begin Team Group -->
     <section class="home-team">
         <div class="grid-container">
-          <h3 class="part-title text-center mb-8">Board of Advisor</h3>
+          <h3 class="part-title text-center mb-6 mb-medium-8">Board of Advisor</h3>
           <div class="grid-x grid-margin-x team-items align-center">
             <div class="cell medium-4">
               <div class="team-item">
@@ -536,7 +534,7 @@
         <div class="grid-x grid-margin-x">
             <div class="cell small-12 large-3">
                 <div class="logo-footer">
-                    <a href="#"><img src="public/assets/tznew/css/images/" alt=""></a>
+                    <a href="#"><img src="public/assets/tznew/css/images/logo.png" alt=""></a>
                 </div>
                 <div class="social">
                     <ul class="menu flex-container">
@@ -560,13 +558,6 @@
                         <span>Floor 2, Indochina Plaza<br/> 241 Xuan Thuy, Cau Giay, Ha Noi.</span>
                     </p>
                     <p class="flex-container">
-<<<<<<< HEAD
-                        <span class="icon"><img src="public/assets/tznew/css/images/icon-map-pin.png"></span>
-                        <span>Toong Vista Verde, Faifo Lane<br/> 02 Phan Van Dang, Dist 2, HCM City.</span>
-                    </p>
-                    <p class="flex-container">
-=======
->>>>>>> 908637e0b054c89eeb130aeea7e44a99c53e1afd
                         <span class="icon"><img src="public/assets/tznew/css/images/icon-email.png"></span>
                         <span><a href="mailto:contact@thinkzone.vn">contact@thinkzone.vn</a></span>
                     </p>
