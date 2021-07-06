@@ -51,7 +51,8 @@
         <div class="header-left">
             <div class="logo">
                 <a href="http://thinkzone.vn/">
-                    <img src="public/assets/tznew/css/images/logo-full.png" alt="">
+                    <img class="show-for-medium" src="public/assets/tznew/css/images/logo-full.png" alt="">
+                    <img class="hide-for-small" src="public/assets/tznew/css/images/logo-white.png" alt="">
                 </a>
             </div>
             <a href="#mobile-nav" class="mobile-nav-button hide-for-large"></a>
@@ -75,7 +76,7 @@
               <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div class="mobile-nav is-close hide bg-green" id="mobile-nav">
+        <div class="mobile-nav is-close hide" id="mobile-nav">
             <ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true">
                 <li>
                     <a href="#">Accelerator</a>
@@ -98,29 +99,18 @@
                 <li><a href="//academy.thinkzone.vn/">Academy</a></li>
                 <li><a href="http://thinkzone.vn/blog">Blog</a></li>
             </ul>
-            <form class="search-form">
-                <input type="text" name="value"/>
-                <button type="submit">Search</button>
-            </form>
         </div>
     </div>
 </header>
 <!-- End header -->
 <!-- Content -->
 <div id="content" class="content">
-  <div class="empty-space" data-height="10px"></div>
+  <div class="empty-space" data-height="0px" data-height-lg="10px"></div>
   <!-- Begin .home-about -->
   <section class="home-part home-countdown" id="home-countdown">
       <div class="grid-container">
           <div class="grid-x grid-margin-x">
-              <div class="medium-5 cell-left cell small-12">
-                <h5 class="part-title--xmedium mb-n2 mt-1">THINKZONE</h5>
-                <h3 class="part-title--large color-accent mb-2 pb-2">ACCELERATOR</h3>
-                <p class="part-desc mb-5 pb-6">ThinkZone Accelerator focuses on tech startups from Seed to Pre-Series A, in the stage of product-market validation or scale-up.</p>
-                <a href="#" class="button button--stroke button--medium mb-2">Apply for ThinkZone Accelerator <i class="icon-angle-right"></i></a>
-              </div>
-
-              <div class="medium-7 cell-right cell small-12">
+              <div class="medium-7 cell-right cell small-12 medium-order-2">
                   <div class="part-video">
                       <div class="hide" id="video-modal">
                           <div class="responsive-embed widescreen">
@@ -133,6 +123,12 @@
                       <button class="btn-play">
                           <img src="public/assets/tznew//css/images/header-video.png"></button>
                   </div>
+              </div>
+              <div class="medium-5 cell-left cell small-12">
+                <h5 class="part-title--xmedium mb-n2 mt-3 mt-medium-1">THINKZONE</h5>
+                <h3 class="part-title--large color-accent mb-0 mb-medium-2 pb-2">ACCELERATOR</h3>
+                <p class="part-desc mb-medium-5 pb-medium-6">ThinkZone Accelerator focuses on tech startups from Seed to Pre-Series A, in the stage of product-market validation or scale-up.</p>
+                <a href="#" class="button button--stroke button--medium mb-2 hide-for-small-only">Apply for ThinkZone Accelerator <i class="icon-angle-right"></i></a>
               </div>
           </div>
       </div>
@@ -180,17 +176,14 @@
               </div>
           </div>
         </div>
-        <div class="card-slider mt-8">
+        <div class="card-slider mt-5 mt-medium-8">
           <div class="card-heading">
               <h3 class="card-title text-center">$50,000+ support packages from our Partners</h3>
               <span class="part-title--divider text-center mt-3"></span>
           </div>
           <div class="card-body">
-            <div class="card-slider__link">
-              <a href="#">View all</a>
-            </div>
-            <div class="card-slider__items">
-              <div class="slick-slider" data-slick='{"slidesToShow": 7}'>
+            <div class="card-slider__items medium-order-2">
+              <div class="slick-slider" data-slick='{"slidesToShow": 7, "responsive": [{"breakpoint":640,"settings":{"slidesToShow": 3}}]}'>
                 <div class="card-slider__item">
                     <span class="ico ico-cloud"></span>
                     <p class="strong">Cloud<br />Services</p>
@@ -237,11 +230,13 @@
                 </div>
               </div>
             </div>
+            <div class="card-slider__link mt-3 mt-medium-0">
+              <a href="#">View all</a>
+            </div>
           </div>
         </div>
         <div class="card card-right mt-4">
-          <div class="scrollbar-container">
-              <div class="card-body">
+          <div class="card-body">
                 <div class="col">
                   <div class="card__item">
                     <div class="card__item-img">
@@ -634,7 +629,6 @@
                   </div>
                 </div>
               </div>
-            </div>
         </div>
       </div>
   </section>
@@ -643,65 +637,65 @@
     <section class="home-partnerships pt-4" id="home-partnerships">
         <div class="grid-container">
             <div class="grid-x grid-margin-x">
-                <div class="cell small-12 large-6">
-                    <div class="partner-info">
-                        <h3 class="part-title">Corporate
-                            Partnerships</h3>
-                        <p class="part-desc">ThinkZone has a global partner network, including incubator, coaching organization, accelerator credits, domestic and global venture capitals.</p>
-                        <p class="part-desc">Our commitment to authentic mentorship, collaboration and support is like no other company we have encountered. It is what makes the impossible, possible.</p>
-                        <p class="part-desc">ThinkZone add powerful industry expertise by offering hands-on mentorship, business development opportunities, and access to resources to help accelerate startups.</p>
-                        <div class="flex-container align-center partner-button">
-                            <a href="#" rel="nofollow" class="button--large button mt-3">Partner with us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cell small-12 large-6">
-                    <div class="image-spiner image-spiner--large">
-                        <div class="outside-round relative">
-                            <div class="inside-round absolute">
-                                <div class="item-round main-round flex-container align-center">
-                                    <img src="public/assets/tznew/css/images/logo-vertical.png"/>
-                                </div>
-                                <div class="item-round item-7 size-1 flex-container align-center">
-                                    <img src="public/assets/tznew/css/images/song-han-incubator.jpg"/>
-                                </div>
-                                <div class="item-round item-8 size-4 flex-container align-center">
-                                    <img src="public/assets/tznew/css/images/G_H.jpg"/>
-                                </div>
-                                <div class="item-round item-9 size-2 flex-container align-center">
-                                    <img src="public/assets/tznew/css/images/startup-vietnam.jpg"/>
-                                </div>
-                                <div class="item-round item-10 size-1 flex-container align-center">
-                                    <img src="public/assets/tznew/css/images/sequoia.jpg"/>
-                                </div>
-                                <div class="item-round item-11 size-4 flex-container align-center">
-                                    <img src="public/assets/tznew/css/images/school-labs.jpg"/>
-                                </div>
-                                <div class="item-round item-12 size-2 flex-container align-center">
-                                    <img src="public/assets/tznew/css/images/500startups.jpg"/>
-                                </div>
-                            </div>
-                            <div class="item-round item-1 size-1 flex-container align-center">
-                                <img src="public/assets/tznew/css/images/song-han-incubator.jpg"/>
-                            </div>
-                            <div class="item-round item-2 size-2 flex-container align-center">
-                                <img src="public/assets/tznew/css/images/G_H.jpg"/>
-                            </div>
-                            <div class="item-round item-3 size-4 flex-container align-center">
-                                <img src="public/assets/tznew/css/images/startup-vietnam.jpg"/>
-                            </div>
-                            <div class="item-round item-4 size-1 flex-container align-center">
-                                <img src="public/assets/tznew/css/images/sequoia.jpg"/>
-                            </div>
-                            <div class="item-round item-5 size-3 flex-container align-center">
-                                <img src="public/assets/tznew/css/images/school-labs.jpg"/>
-                            </div>
-                            <div class="item-round item-6 size-4 flex-container align-center">
-                                <img src="public/assets/tznew/css/images/500startups.jpg"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <div class="cell small-12 large-6 medium-order-6">
+                  <div class="image-spiner image-spiner--large">
+                      <div class="outside-round relative">
+                          <div class="inside-round absolute">
+                              <div class="item-round main-round flex-container align-center">
+                                  <img src="public/assets/tznew/css/images/logo-vertical.png"/>
+                              </div>
+                              <div class="item-round item-7 size-1 flex-container align-center">
+                                  <img src="public/assets/tznew/css/images/song-han-incubator.jpg"/>
+                              </div>
+                              <div class="item-round item-8 size-4 flex-container align-center">
+                                  <img src="public/assets/tznew/css/images/G_H.jpg"/>
+                              </div>
+                              <div class="item-round item-9 size-2 flex-container align-center">
+                                  <img src="public/assets/tznew/css/images/startup-vietnam.jpg"/>
+                              </div>
+                              <div class="item-round item-10 size-1 flex-container align-center">
+                                  <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                              </div>
+                              <div class="item-round item-11 size-4 flex-container align-center">
+                                  <img src="public/assets/tznew/css/images/school-labs.jpg"/>
+                              </div>
+                              <div class="item-round item-12 size-2 flex-container align-center">
+                                  <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                              </div>
+                          </div>
+                          <div class="item-round item-1 size-1 flex-container align-center">
+                              <img src="public/assets/tznew/css/images/song-han-incubator.jpg"/>
+                          </div>
+                          <div class="item-round item-2 size-2 flex-container align-center">
+                              <img src="public/assets/tznew/css/images/G_H.jpg"/>
+                          </div>
+                          <div class="item-round item-3 size-4 flex-container align-center">
+                              <img src="public/assets/tznew/css/images/startup-vietnam.jpg"/>
+                          </div>
+                          <div class="item-round item-4 size-1 flex-container align-center">
+                              <img src="public/assets/tznew/css/images/sequoia.jpg"/>
+                          </div>
+                          <div class="item-round item-5 size-3 flex-container align-center">
+                              <img src="public/assets/tznew/css/images/school-labs.jpg"/>
+                          </div>
+                          <div class="item-round item-6 size-4 flex-container align-center">
+                              <img src="public/assets/tznew/css/images/500startups.jpg"/>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="cell small-12 large-6">
+                  <div class="partner-info">
+                      <h3 class="part-title">Corporate
+                          Partnerships</h3>
+                      <p class="part-desc">ThinkZone has a global partner network, including incubator, coaching organization, accelerator credits, domestic and global venture capitals.</p>
+                      <p class="part-desc">Our commitment to authentic mentorship, collaboration and support is like no other company we have encountered. It is what makes the impossible, possible.</p>
+                      <p class="part-desc">ThinkZone add powerful industry expertise by offering hands-on mentorship, business development opportunities, and access to resources to help accelerate startups.</p>
+                      <div class="flex-container align-center partner-button">
+                          <a href="#" rel="nofollow" class="button--large button mt-medium-3">Partner with us</a>
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
     </section>
@@ -715,7 +709,7 @@
                     <span class="part-title--divider text-center mt-n2"></span>
                     <div class="list-mentor">
                         <div class="grid-container grid-container-large">
-                            <div class="grid-x grid-margin-x text-center">
+                            <div class="grid-x grid-margin-x text-center align-center">
                                 <div class="cell medium-3 small-6 large-2 mentor-item">
                                     <a href="javascript:;"><img
                                             src="http://thinkzone.vn/uploads/2019_04/200x200_6d-22948110-1555385590.jpg"
@@ -837,94 +831,94 @@
             <span class="part-title--divider text-center mt-n2"></span>
             <div class="partner-lists">
               <div class="grid-x grid-margin-x partner-list">
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/sequoia.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/500startups.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-03.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-05.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/sequoia.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/500startups.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-03.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-05.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/sequoia.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/500startups.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-03.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-05.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/sequoia.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/500startups.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-03.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-05.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/sequoia.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/500startups.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-03.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-05.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/sequoia.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/startup-foundation-logo.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/500startups.jpg"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-03.png"/>
                 </div>
-                <div class="cell small-6 medium-auto text-center">
+                <div class="cell small-4 medium-auto text-center">
                     <img src="public/assets/tznew/css/images/partner-05.png"/>
                 </div>
               </div>
@@ -1346,7 +1340,7 @@
                 <div class="cell small-12">
                     <h2 class="part-title text-center">Our blog</h2>
                     <span class="part-title--divider text-center"></span>
-                    <div class="list-post mt-8">
+                    <div class="list-post mt-4 mt-medium-8 px-6 px-medium-0">
                         <ul class="list-unstyled grid-x grid-margin-x">
                             <li class="cell small-12 medium-4">
                                 <a href="http://thinkzone.vn/thinkzone-accelerator-tro-lai-voi-batch-02-dua-startup-viet-vuon-ra-thi-truong-quoc-te"
@@ -1448,7 +1442,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid-x align-center">
+                    <div class="grid-x align-center mt-4 mt-medium-0">
                       <a href="#" class="button button--stroke">View all</a>
                     </div>
                 </div>
@@ -1463,7 +1457,7 @@
         <div class="grid-x grid-margin-x">
             <div class="cell small-12 large-3">
                 <div class="logo-footer">
-                    <a href="#"><img src="public/assets/tznew/css/images/" alt=""></a>
+                    <a href="#"><img src="public/assets/tznew/css/images/logo.png" alt=""></a>
                 </div>
                 <div class="social">
                     <ul class="menu flex-container">
@@ -1485,10 +1479,6 @@
                     <p class="flex-container">
                         <span class="icon"><img src="public/assets/tznew/css/images/icon-map-pin.png"></span>
                         <span>Floor 2, Indochina Plaza<br/> 241 Xuan Thuy, Cau Giay, Ha Noi.</span>
-                    </p>
-                    <p class="flex-container">
-                        <span class="icon"><img src="public/assets/tznew/css/images/icon-map-pin.png"></span>
-                        <span>Toong Vista Verde, Faifo Lane<br/> 02 Phan Van Dang, Dist 2, HCM City.</span>
                     </p>
                     <p class="flex-container">
                         <span class="icon"><img src="public/assets/tznew/css/images/icon-email.png"></span>
