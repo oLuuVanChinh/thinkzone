@@ -1832,8 +1832,17 @@ a:hover, a:focus{
 .partner-info {
   background: #FFFFFF;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 52px;
-  padding: 35px 15px 35px 15px;
+  border-radius: 30px;
+  padding: 11px 15px 14px 15px;
+
+  @include breakpoint-up(sm){
+    padding: 35px 15px 35px 15px;
+    border-radius: 52px;
+  }
+
+  @include breakpoint-down(sm){
+    text-align: center;
+  }
 
   .part-desc {
     margin-bottom: 25px;
@@ -1848,10 +1857,8 @@ a:hover, a:focus{
 }
 
 .partner-button {
-  margin-top: 10px;
-
-  .button {
-    padding: 17px 31px;
+  @include breakpoint-up(sm){
+    margin-top: 10px;
   }
 }
 
@@ -2201,7 +2208,9 @@ a:hover, a:focus{
   }
 }
 .home-offer{
-  margin-bottom: 50px;
+  @include breakpoint-up(sm){
+    margin-bottom: 50px;
+  }
 }
 
 .home-portfolio{
@@ -2796,20 +2805,25 @@ footer {
   }
   &-right{
     @include breakpoint-down(sm){
-      padding: 24px 16px;
+      padding: 34px 16px;
     }
     .card-body{
       display: flex;
       flex-wrap: wrap;
       margin-top: -18px;
       margin-bottom: -18px;
-      padding-left: 43px;
-      padding-right: 43px;
-      height: 382px;
+      padding-left: 14px;
+      padding-right: 14px;
+      height: 492px;
       overflow: auto;
+      @include breakpoint-up(sm){
+        padding-left: 43px;
+        padding-right: 43px;
+        height: 382px;
+      }
       &::-webkit-scrollbar-track{
         border-radius: 10px;
-        margin: 18px 10px;
+        margin: 10px 10px;
       }
       &::-webkit-scrollbar{
         width: 7px;
@@ -3357,7 +3371,6 @@ blockquote{
   .cell {
     margin-top: 10px;
     margin-bottom: 10px;
-    width: calc(50% - 1.875rem);
     flex: 0 0 auto;
   }
 }
@@ -3547,11 +3560,8 @@ blockquote{
 }
 @media all and (max-width: 640px) {
   .image-spiner {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    &--large{
-      margin-top: 100px;
-    }
+    margin-top: 35px;
+    margin-bottom: 51px;
   }
   .section-partner {
     .owl-stage{
