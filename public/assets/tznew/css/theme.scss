@@ -592,7 +592,17 @@ a:hover, a:focus{
       position: relative;
       padding: 0;
     }
-    margin-right: 11px;
+    margin-right: 7px;
+    @include breakpoint-up(sm){
+      margin-right: 11px;
+    }
+    @include breakpoint-down(sm){
+      &:not(.form-group--select){
+        flex-grow: 1;
+        margin-right: 0;
+        margin-top: 5px;
+      }
+    }
   }
   .form-control{
     margin: 0;
@@ -620,7 +630,12 @@ a:hover, a:focus{
   .button{
     font-size: rem(17px);
     border-radius: 5px;
-    min-width: 158px;
+    @include breakpoint-down(sm){
+      flex-grow: 1;
+    }
+    @include breakpoint-up(sm){
+      min-width: 158px;
+    }
   }
 }
 
@@ -649,11 +664,17 @@ a:hover, a:focus{
   &-select{
     display: flex;
     align-items: center;
-    padding: 0 14px 0 23px;
+    padding: 0 14px 0 18px;
+    @include breakpoint-up(sm){
+      padding: 0 14px 0 23px;
+    }
     i{
       font-size: rem(11px);
-      margin-left: 15px;
+      margin-left: 11px;
       margin-top: 3px;
+      @include breakpoint-up(sm){
+        margin-left: 15px;
+      }
     }
   }
   input{
@@ -938,16 +959,25 @@ a:hover, a:focus{
       overflow-x: auto;
       transform: rotateX(180deg);
       margin-top: 11px;
+      @include breakpoint-down(sm){
+        margin-bottom: 10px;
+      }
       > .cell{
         transform: rotateX(-180deg);
       }
       &::-webkit-scrollbar-track{
       	border-radius: 10px;
-        margin: 0 10px;
+        margin: 0 3px;
+        @include breakpoint-up(sm){
+          margin: 0 10px;
+        }
       }
       &::-webkit-scrollbar{
-      	height: 7px;
+      	height: 5px;
       	background-color: transparent;
+        @include breakpoint-up(sm){
+          height: 7px;
+        }
       }
       &::-webkit-scrollbar-thumb{
       	border-radius: 10px;
@@ -982,11 +1012,17 @@ a:hover, a:focus{
         }
       }
       .profile-filter & {
-        padding: 9px 16px;
+        padding: 9px 8px;
+        @include breakpoint-up(sm){
+          padding: 9px 16px;
+        }
       }
       @include breakpoint-down(sm){
         h6{
           line-height: 1.2;
+          .profile-filter & {
+            margin-top: -2px;
+          }
         }
       }
       p{
@@ -997,6 +1033,9 @@ a:hover, a:focus{
         }
         .profile-filter & {
           line-height: 1.2;
+          @include breakpoint-down(sm){
+            font-size: rem(14px);
+          }
         }
       }
       img{
@@ -1013,8 +1052,12 @@ a:hover, a:focus{
           margin-right: 11px;
         }
         .profile-filter & {
-          width: 66px;
-          height: 66px;
+          width: 49px;
+          height: 49px;
+          @include breakpoint-up(sm){
+            width: 66px;
+            height: 66px;
+          }
         }
       }
     }
@@ -1416,8 +1459,11 @@ a:hover, a:focus{
 .profile-part{
   background: url(images/bg-profile.jpg) no-repeat;
   background-size: cover;
-  padding: 31px 0 34px;
+  padding: 16px 0 9px;
   color: #E5E5E5;
+  @include breakpoint-up(sm){
+    padding: 31px 0 34px;
+  }
   .part-box__img{
     &:before{
       background-color: rgba(229, 229, 229, 0.25);
@@ -1430,12 +1476,30 @@ a:hover, a:focus{
 }
 .profile-filter{
   background-color: #12274A;
-  padding: 10px 0 10px;
+  padding: 20px 0;
+  @include breakpoint-up(sm){
+    padding: 10px 0 10px;
+  }
   .part-title--xmedium {
-    font-size: rem(31px);
+    font-size: rem(24px);
+    @include breakpoint-up(sm){
+      font-size: rem(31px);
+    }
   }
   .part-title--large {
-    font-size: rem(43px);
+    font-size: rem(35px);
+    @include breakpoint-up(sm){
+      font-size: rem(31px);
+    }
+    @include breakpoint-down(sm){
+      margin-bottom: 0;
+    }
+  }
+  @include breakpoint-down(sm){
+    .grid-container{
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }
 .profile{
@@ -1454,6 +1518,11 @@ a:hover, a:focus{
       }
       .button{
         padding: 0 27px;
+        @include breakpoint-down(sm){
+          height: 33px;
+          min-width: inherit;
+          padding: 0 15px;
+        }
       }
     }
   }
@@ -1464,10 +1533,17 @@ a:hover, a:focus{
   }
   &__info{
     .title{
-      font-size: rem(24px);
+      font-size: rem(16px);
       font-weight: bold;
       line-height: rem(30px);
-      margin-bottom: 4px;
+      margin-bottom: 0;
+      @include breakpoint-up(sm){
+        font-size: rem(24px);
+        margin-bottom: 4px;
+      }
+      @include breakpoint-down(sm){
+        margin-top: -6px;
+      }
     }
   }
   &__tag{
@@ -1483,13 +1559,20 @@ a:hover, a:focus{
     }
   }
   &__logo{
-    margin-right: 20px;
+    margin-right: 11px;
+    @include breakpoint-up(sm){
+      margin-right: 20px;
+    }
     img{
-      width: 76px;
-      height: 76px;
+      width: 65px;
+      height: 65px;
       border-radius: 10px;
       object-fit: cover;
       object-position: top center;
+      @include breakpoint-up(sm){
+        width: 76px;
+        height: 76px;
+      }
     }
   }
 }
@@ -3223,7 +3306,9 @@ footer {
 }
 
 .entry-content{
-  padding: 0 50px;
+  @include breakpoint-up(sm){
+    padding: 0 50px;
+  }
 }
 
 /* Seach Box */

@@ -51,7 +51,8 @@
           <div class="header-left">
               <div class="logo">
                   <a href="http://thinkzone.vn/">
-                      <img src="public/assets/tznew/css/images/logo-full.png" alt="">
+                      <img class="show-for-medium" src="public/assets/tznew/css/images/logo-full.png" alt="">
+                      <img class="hide-for-small" src="public/assets/tznew/css/images/logo-white.png" alt="">
                   </a>
               </div>
               <a href="#mobile-nav" class="mobile-nav-button hide-for-large"></a>
@@ -75,7 +76,7 @@
                 <li><a href="#">Contact</a></li>
               </ul>
           </div>
-          <div class="mobile-nav is-close hide bg-green" id="mobile-nav">
+          <div class="mobile-nav is-close hide" id="mobile-nav">
               <ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true">
                   <li>
                       <a href="#">Accelerator</a>
@@ -98,10 +99,6 @@
                   <li><a href="//academy.thinkzone.vn/">Academy</a></li>
                   <li><a href="http://thinkzone.vn/blog">Blog</a></li>
               </ul>
-              <form class="search-form">
-                  <input type="text" name="value"/>
-                  <button type="submit">Search</button>
-              </form>
           </div>
       </div>
   </header>
@@ -162,7 +159,7 @@
 
               <div class="cell medium-auto grid-x align-bottom align-right">
                   <div class="part-box grid-x align-top align-right">
-                    <div class="part-box__img">
+                    <div class="part-box__img mt-3 mt-medium-0">
                       <img src="public/assets/tznew/css/images/profile-thinkzone.jpg" alt="">
                     </div>
                   </div>
@@ -180,6 +177,90 @@
               <div class="cell medium-4">
                 <h5 class="part-title--xmedium my-n1 white">ZONE FOR</h5>
                 <h3 class="part-title--large color-accent">GREAT MINDS</h3>
+              </div>
+              <div class="cell medium-12 medium-order-2">
+                <div class="scrollbar-profile">
+                  <div class="grid-x img-list img-list-nowrap">
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item active">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>FOODHUB</strong></h6>
+                          <p>Batch 1</p>
+                          <p>E-commerce</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                          <p>Batch 3</p>
+                          <p>Transportation</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                          <p>Batch 3</p>
+                          <p>Transportation</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                          <p>Transportation</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                          <p>Batch 3</p>
+                          <p>Transportation</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                          <p>Transportation</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                          <p>Batch 3</p>
+                          <p>Transportation</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell small-6 medium-3">
+                      <div class="img-list__item">
+                        <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
+                        <div class="image-list__info">
+                          <h6 class="mb-0"><strong>EMDDI</strong></h6>
+                          <p>Batch 3</p>
+                          <p>Transportation</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="cell medium-8">
                   <div class="filter-form grid-x align-right">
@@ -297,100 +378,18 @@
                             </div>
                           </div>
                         </div>
+                        <button type="submit" class="button mb-0 ml-1 ml-medium-2 medium-order-2">Search</button>
                         <div class="form-group">
                           <span class="form-control-prepend"><i class="icon-search"></i></span>
                           <input class="form-control" type="text" placeholder="Search" value="FoodHub" />
                         </div>
-                        <button type="submit" class="button mb-0 ml-2">Search</button>
                       </div>
                     </form>
-                    <i class="white my-2"><strong>Great startups</strong> founded by <strong>great founders</strong>, with <strong>great minds</strong> and <strong>great vision</strong>!</i>
+                    <i class="white my-2 hide-for-small-only"><strong>Great startups</strong> founded by <strong>great founders</strong>, with <strong>great minds</strong> and <strong>great vision</strong>!</i>
                   </div>
               </div>
           </div>
           <!-- End Filter -->
-          <div class="scrollbar-profile">
-            <div class="grid-x img-list img-list-nowrap">
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item active">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>FOODHUB</strong></h6>
-                    <p>Batch 1</p>
-                    <p>E-commerce</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                    <p>Batch 3</p>
-                    <p>Transportation</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                    <p>Batch 3</p>
-                    <p>Transportation</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                    <p>Transportation</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                    <p>Batch 3</p>
-                    <p>Transportation</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                    <p>Transportation</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                    <p>Batch 3</p>
-                    <p>Transportation</p>
-                  </div>
-                </div>
-              </div>
-              <div class="cell small-6 medium-3">
-                <div class="img-list__item">
-                  <img class="img-rounder" src="public/assets/tznew/css/images/logo-emdi.png"/>
-                  <div class="image-list__info">
-                    <h6 class="mb-0"><strong>EMDDI</strong></h6>
-                    <p>Batch 3</p>
-                    <p>Transportation</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
     </section>
     <!-- End home-profile filter -->
@@ -401,7 +400,7 @@
         <div class="grid-x grid-margin-x">
             <div class="cell small-12 large-3">
                 <div class="logo-footer">
-                    <a href="#"><img src="public/assets/tznew/css/images/" alt=""></a>
+                    <a href="#"><img src="public/assets/tznew/css/images/logo.png" alt=""></a>
                 </div>
                 <div class="social">
                     <ul class="menu flex-container">
@@ -423,10 +422,6 @@
                     <p class="flex-container">
                         <span class="icon"><img src="public/assets/tznew/css/images/icon-map-pin.png"></span>
                         <span>Floor 2, Indochina Plaza<br/> 241 Xuan Thuy, Cau Giay, Ha Noi.</span>
-                    </p>
-                    <p class="flex-container">
-                        <span class="icon"><img src="public/assets/tznew/css/images/icon-map-pin.png"></span>
-                        <span>Toong Vista Verde, Faifo Lane<br/> 02 Phan Van Dang, Dist 2, HCM City.</span>
                     </p>
                     <p class="flex-container">
                         <span class="icon"><img src="public/assets/tznew/css/images/icon-email.png"></span>
