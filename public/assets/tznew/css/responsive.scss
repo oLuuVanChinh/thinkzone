@@ -219,14 +219,14 @@ $accent-color: #3aa25b !default;
   .mentor-group{
       .large-4{
         .media-object {
-          h4{
-            font-size: rem(16px);
-          }
-          .job-title{
-            font-size: rem(14px);
-          }
           &-section{
             padding-right: rem(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &:last-child{
+              padding-right: 0;
+            }
           }
           .thumbnail {
             width: 150px;

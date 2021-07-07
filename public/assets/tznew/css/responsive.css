@@ -122,12 +122,20 @@
     padding-left: 45px; } }
 
 @media all and (min-width: 1200px) {
-  .mentor-group .large-4 .media-object h4 {
-    font-size: 1rem; }
-  .mentor-group .large-4 .media-object .job-title {
-    font-size: 0.875rem; }
   .mentor-group .large-4 .media-object-section {
-    padding-right: 1.25rem; }
+    padding-right: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .mentor-group .large-4 .media-object-section:last-child {
+      padding-right: 0; }
   .mentor-group .large-4 .media-object .thumbnail {
     width: 150px;
     height: 150px; }
