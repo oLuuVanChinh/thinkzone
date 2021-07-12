@@ -281,8 +281,6 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .single-post {
-    padding: 10px; }
   .part-tabs .tabs {
     display: -webkit-box;
     display: -ms-flexbox;

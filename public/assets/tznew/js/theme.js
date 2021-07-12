@@ -107,6 +107,16 @@
               $('#' + dataOpen).slideUp('fast');
             });
           }
+
+          // Part tabs
+          if($('.tabs-switcher').length){
+            $('.tabs-switcher').on('click', function(e){
+              e.preventDefault();
+              var target = $(this).data('target');
+              $(this).closest('.tabs-wrapper').find('.tabs-wrapper__item').removeClass('active');
+              $(target).addClass('active');
+            });
+          }
         },
 
         cardWindow: function(){
