@@ -3,7 +3,8 @@ $accent-color: #3FAA61 !default;
 $second-color: #12274a !default;
 $white-color: #ffffff !default;
 $breakpoints: (
-  'xs'      : (max-width: 414px),
+  'ls'      : (max-width: 414px),
+  'xs'      : (max-width: 375px),
   'sm'      : (max-width: 639px),
   'md'      : (max-width: 767px),
   'lg'      : (max-width: 991px),
@@ -285,6 +286,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  @include breakpoint-down(ls){
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   &-small {
     max-width: 47rem;
   }
@@ -558,6 +563,9 @@ a:hover, a:focus{
   z-index: 1;
   opacity: 0;
   visibility: hidden;
+  @include breakpoint-down(lg){
+    min-width: 200px;
+  }
   &.open{
     opacity: 1;
     visibility: visible;
@@ -662,6 +670,16 @@ a:hover, a:focus{
     @include breakpoint-up(sm){
       min-width: 158px;
     }
+    @include breakpoint-down(ls){
+      width: 88px;
+    }
+  }
+  @include breakpoint-down(ls){
+    .select-button{
+      .button{
+        width: inherit;
+      }
+    }
   }
 }
 
@@ -693,6 +711,9 @@ a:hover, a:focus{
     padding: 0 14px 0 18px;
     @include breakpoint-up(sm){
       padding: 0 14px 0 23px;
+    }
+    @include breakpoint-down(ls){
+      padding: 0 10px 0 10px;
     }
     i{
       font-size: rem(11px);
@@ -1073,6 +1094,9 @@ a:hover, a:focus{
           @include breakpoint-down(sm){
             font-size: rem(14px);
           }
+          @include breakpoint-down(ls){
+            font-size: rem(12px);
+          }
         }
       }
       img{
@@ -1098,6 +1122,10 @@ a:hover, a:focus{
           @include breakpoint-up(sm){
             width: 66px;
             height: 66px;
+          }
+          @include breakpoint-down(ls){
+            width: 40px;
+            height: 40px;
           }
         }
       }
@@ -1532,6 +1560,9 @@ a:hover, a:focus{
     @include breakpoint-up(sm){
       font-size: rem(31px);
     }
+    @include breakpoint-down(ls){
+      display: none;
+    }
   }
   .part-title--large {
     font-size: rem(35px);
@@ -1540,6 +1571,9 @@ a:hover, a:focus{
     }
     @include breakpoint-down(sm){
       margin-bottom: 0;
+    }
+    @include breakpoint-down(ls){
+      display: none;
     }
   }
   @include breakpoint-down(sm){
@@ -1567,6 +1601,9 @@ a:hover, a:focus{
       flex-direction: column;
       i{
         font-size: rem(12px);
+        @include breakpoint-down(ls){
+          font-size: rem(10px);
+        }
       }
       .button{
         padding: 0 27px;
@@ -1587,6 +1624,10 @@ a:hover, a:focus{
       .part-box{
         height: auto;
       }
+    }
+    @include breakpoint-down(ls){
+      height: calc(100vh - 386px);
+      margin-top: 70px !important;
     }
     p{
       line-height: 1.25;
@@ -1617,6 +1658,10 @@ a:hover, a:focus{
       border-radius: 3px;
       margin-bottom: 8px;
       padding: 0 6px;
+      @include breakpoint-down(ls){
+        font-size: rem(10px);
+        padding: 0 3px;
+      }
     }
   }
   &__logo{
@@ -1633,6 +1678,10 @@ a:hover, a:focus{
       @include breakpoint-up(sm){
         width: 76px;
         height: 76px;
+      }
+      @include breakpoint-down(ls){
+        width: 50px;
+        height: 50px;
       }
     }
   }

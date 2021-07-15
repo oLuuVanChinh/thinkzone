@@ -902,6 +902,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     .grid-container {
       padding-left: 1.5rem;
       padding-right: 1.5rem; } }
+  @media (max-width: 414px) {
+    .grid-container {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
   .grid-container-small {
     max-width: 752px;
     max-width: 47rem; }
@@ -1145,6 +1149,9 @@ a:hover, a:focus {
   z-index: 1;
   opacity: 0;
   visibility: hidden; }
+  @media (max-width: 991px) {
+    .form-control-popup {
+      min-width: 200px; } }
   .form-control-popup.open {
     opacity: 1;
     visibility: visible; }
@@ -1266,6 +1273,13 @@ a:hover, a:focus {
   @media (min-width: 640px) {
     .filter-form .button {
       min-width: 158px; } }
+  @media (max-width: 414px) {
+    .filter-form .button {
+      width: 88px; } }
+
+@media (max-width: 414px) {
+  .filter-form .select-button .button {
+    width: inherit; } }
 
 .custom-select select {
   background-color: transparent;
@@ -1299,6 +1313,9 @@ a:hover, a:focus {
     @media (min-width: 640px) {
       .form-control-select {
         padding: 0 14px 0 23px; } }
+    @media (max-width: 414px) {
+      .form-control-select {
+        padding: 0 10px 0 10px; } }
     .form-control-select i {
       font-size: 11px;
       font-size: 0.6875rem;
@@ -1672,7 +1689,7 @@ a:hover, a:focus {
       @media (max-width: 639px) {
         .img-list__item p {
           line-height: 1.2; } }
-      @media (max-width: 414px) {
+      @media (max-width: 375px) {
         .img-list__item p {
           font-size: 0.875rem; } }
       .profile-filter .img-list__item p {
@@ -1680,6 +1697,9 @@ a:hover, a:focus {
         @media (max-width: 639px) {
           .profile-filter .img-list__item p {
             font-size: 0.875rem; } }
+        @media (max-width: 414px) {
+          .profile-filter .img-list__item p {
+            font-size: 0.75rem; } }
     .img-list__item img {
       width: 49px;
       height: 49px;
@@ -1695,7 +1715,7 @@ a:hover, a:focus {
           height: 76px;
           border-radius: 10px;
           margin-right: 11px; } }
-      @media (max-width: 414px) {
+      @media (max-width: 375px) {
         .img-list__item img {
           width: 45px;
           height: 45px; } }
@@ -1706,6 +1726,10 @@ a:hover, a:focus {
           .profile-filter .img-list__item img {
             width: 66px;
             height: 66px; } }
+        @media (max-width: 414px) {
+          .profile-filter .img-list__item img {
+            width: 40px;
+            height: 40px; } }
 
 .img-shadow {
   -webkit-box-shadow: 0px 0px 21px rgba(0, 0, 0, .3);
@@ -2087,6 +2111,9 @@ a:hover, a:focus {
     @media (min-width: 640px) {
       .profile-filter .part-title--xmedium {
         font-size: 1.9375rem; } }
+    @media (max-width: 414px) {
+      .profile-filter .part-title--xmedium {
+        display: none; } }
   .profile-filter .part-title--large {
     font-size: 35px;
     font-size: 2.1875rem; }
@@ -2096,6 +2123,9 @@ a:hover, a:focus {
     @media (max-width: 639px) {
       .profile-filter .part-title--large {
         margin-bottom: 0; } }
+    @media (max-width: 414px) {
+      .profile-filter .part-title--large {
+        display: none; } }
   @media (max-width: 639px) {
     .profile-filter .grid-container {
       display: -webkit-box;
@@ -2136,6 +2166,9 @@ a:hover, a:focus {
     .profile__head-right i {
       font-size: 12px;
       font-size: 0.75rem; }
+      @media (max-width: 414px) {
+        .profile__head-right i {
+          font-size: 0.625rem; } }
     .profile__head-right .button {
       padding: 0 27px; }
       @media (max-width: 639px) {
@@ -2152,6 +2185,11 @@ a:hover, a:focus {
     padding-bottom: 10px; }
     .profile__desc .part-box {
       height: auto; } }
+
+@media (max-width: 414px) {
+  .profile__desc {
+    height: calc(100vh - 386px);
+    margin-top: 70px !important; } }
 
 .profile__desc p {
   line-height: 1.25; }
@@ -2189,6 +2227,10 @@ a:hover, a:focus {
     border-radius: 3px;
     margin-bottom: 8px;
     padding: 0 6px; }
+    @media (max-width: 414px) {
+      .profile__tag span {
+        font-size: 0.625rem;
+        padding: 0 3px; } }
 
 .profile__logo {
   margin-right: 11px; }
@@ -2207,6 +2249,10 @@ a:hover, a:focus {
       .profile__logo img {
         width: 76px;
         height: 76px; } }
+    @media (max-width: 414px) {
+      .profile__logo img {
+        width: 50px;
+        height: 50px; } }
 
 /* About */
 .home-about .part-video {
