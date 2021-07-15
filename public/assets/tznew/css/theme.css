@@ -1672,6 +1672,9 @@ a:hover, a:focus {
       @media (max-width: 639px) {
         .img-list__item p {
           line-height: 1.2; } }
+      @media (max-width: 414px) {
+        .img-list__item p {
+          font-size: 0.875rem; } }
       .profile-filter .img-list__item p {
         line-height: 1.2; }
         @media (max-width: 639px) {
@@ -1692,6 +1695,10 @@ a:hover, a:focus {
           height: 76px;
           border-radius: 10px;
           margin-right: 11px; } }
+      @media (max-width: 414px) {
+        .img-list__item img {
+          width: 45px;
+          height: 45px; } }
       .profile-filter .img-list__item img {
         width: 49px;
         height: 49px; }

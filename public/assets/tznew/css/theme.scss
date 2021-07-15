@@ -3,6 +3,7 @@ $accent-color: #3FAA61 !default;
 $second-color: #12274a !default;
 $white-color: #ffffff !default;
 $breakpoints: (
+  'xs'      : (max-width: 414px),
   'sm'      : (max-width: 639px),
   'md'      : (max-width: 767px),
   'lg'      : (max-width: 991px),
@@ -1064,6 +1065,9 @@ a:hover, a:focus{
         @include breakpoint-down(sm){
           line-height: 1.2;
         }
+        @include breakpoint-down(xs){
+          font-size: rem(14px);
+        }
         .profile-filter & {
           line-height: 1.2;
           @include breakpoint-down(sm){
@@ -1083,6 +1087,10 @@ a:hover, a:focus{
           height: 76px;
           border-radius: 10px;
           margin-right: 11px;
+        }
+        @include breakpoint-down(xs){
+          width: 45px;
+          height: 45px;
         }
         .profile-filter & {
           width: 49px;
