@@ -1626,7 +1626,7 @@ a:hover, a:focus{
       }
     }
     @include breakpoint-down(ls){
-      height: calc(100vh - 386px);
+      height: calc(100vh - 480px);
       margin-top: 70px !important;
     }
     p{
