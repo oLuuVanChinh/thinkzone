@@ -169,6 +169,21 @@
               }
             });
           }
+        },
+
+        profilePage: function(){
+          var windowH = $(window).height(),
+              windowW = $(window).width();
+          if(windowW < 640){
+            if($('.profile__desc').length){
+              var profileFilterH = $('.profile-filter').outerHeight(),
+                  headerH = $('.header-primary').outerHeight(),
+                  profileHeadH = $('.profile__head').outerHeight();
+              $('.profile__desc').css('height', parseInt(windowHeight - profileFilterH - headerH - profileHeadH - 16));
+            }
+          } else {
+            $('.profile__desc').removeAttr('style');
+          }
         }
     }
     window.dgtTheme = dgtTheme;
@@ -177,10 +192,12 @@
         dgtTheme.init();
         dgtTheme.emptySpace();
         dgtTheme.cardWindow();
+        dgtTheme.profilePage();
     });
     $(window).resize(function () {
       dgtTheme.emptySpace();
       dgtTheme.cardWindow();
+      dgtTheme.profilePage();
     });
     $(window).scroll(function () {
       dgtTheme.cardWindow();
