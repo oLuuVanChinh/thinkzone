@@ -314,7 +314,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: 'Barlow', sans-serif !important;
 }
 
-a, .startup-journey .title, .card__item-window{
+a, .startup-journey .title{
   -webkit-transition: all 0.15s ease 0s; /* For Safari 3.1 to 6.0 */
   transition: all 0.15s ease 0s;
 }
@@ -2997,6 +2997,7 @@ footer {
       align-items: center;
       flex-direction: column;
       justify-content: center;
+      cursor: pointer;
     }
     &__link{
       flex: 0 0 auto;
@@ -3120,7 +3121,7 @@ footer {
       padding: 50px 23px 24px 30px;
       opacity: 0;
       visibility: hidden;
-      .window-open &, .card__item:hover &{
+      .window-open &{
         opacity: 1;
         visibility: visible;
       }
@@ -3158,6 +3159,18 @@ footer {
           margin-bottom: 18px;
         }
       }
+    }
+    &-close{
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 10px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
   }
 }
