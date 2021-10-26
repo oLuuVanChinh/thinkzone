@@ -26,7 +26,8 @@
     init: function () {
       // Slick Slider
       var slick = $('.slick-slider'),
-        sliderPostCenter = $('#slider-post-center');
+        sliderPostCenter = $('#slider-post-center'),
+        sliderFull = $('.slick-slider-full');
       if (slick.length) {
         slick.slick({
           slidesToShow: 1,
@@ -43,20 +44,19 @@
       }
       if (sliderPostCenter.length) {
         sliderPostCenter.slick({
-          centerMode: true,
-          slidesToShow: 3,
+          variableWidth: true,
           infinite: true,
-          centerPadding: '0',
-          dots: true,
-          responsive: [
-            {
-              breakpoint: 640,
-              settings: {
-                slidesToShow: 1,
-                centerPadding: '0'
-              }
-            }
-          ]
+        });
+      }
+      if (sliderFull.length) {
+        sliderFull.slick({
+          arrows: false,
+          variableWidth: true,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 0,
+          speed: 2000,
+          cssEase: 'linear'
         });
       }
 

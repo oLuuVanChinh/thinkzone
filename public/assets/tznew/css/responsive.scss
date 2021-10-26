@@ -243,7 +243,10 @@ $accent-color: #3aa25b !default;
   }
     /* About */
     .home-about .cell-left{
-        flex: 0 0 35.9%;
+        flex: 0 0 48.4%;
+    }
+    .home-about .cell-right{
+      margin-right: -132px;
     }
     .home-countdown .cell-left{
         flex: 0 0 35.9%;
@@ -272,7 +275,7 @@ $accent-color: #3aa25b !default;
           font-size: rem(27px);
         }
         &--negative {
-          margin-left: -71px;
+          margin-left: -41px;
         }
       }
     }

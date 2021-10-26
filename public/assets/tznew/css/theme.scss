@@ -1,27 +1,39 @@
 @import "icomoon/style.css";
-$accent-color: #3FAA61 !default;
+$accent-color: #3faa61 !default;
 $second-color: #12274a !default;
 $white-color: #ffffff !default;
 $breakpoints: (
-  'ls'      : (max-width: 414px),
-  'xs'      : (max-width: 375px),
-  'sm'      : (max-width: 639px),
-  'md'      : (max-width: 767px),
-  'lg'      : (max-width: 991px),
-  'xl'      : (max-width: 1199px),
-  'xxl'     : (max-width: 1399px),
-  'xxxl'    : (max-width: 1599px)
+  "ls": (
+    max-width: 414px,
+  ),
+  "xs": (
+    max-width: 375px,
+  ),
+  "sm": (
+    max-width: 639px,
+  ),
+  "md": (
+    max-width: 767px,
+  ),
+  "lg": (
+    max-width: 991px,
+  ),
+  "xl": (
+    max-width: 1199px,
+  ),
+  "xxl": (
+    max-width: 1399px,
+  ),
+  "xxxl": (
+    max-width: 1599px,
+  ),
 );
 
 @mixin breakpoint-down($breakpoint) {
   $raw-query: map-get($breakpoints, $breakpoint);
 
   @if $raw-query {
-    $query: if(
-      type-of($raw-query) == 'string',
-      unquote($raw-query),
-      inspect($raw-query)
-    );
+    $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
 
     @media #{$query} {
       @content;
@@ -43,24 +55,34 @@ $breakpoints: (
 //   }
 // }
 $breakpoints-up: (
-  'xs'      : (min-width: 0px),
-  'sm'      : (min-width: 640px),
-  'md'      : (min-width: 768px),
-  'lg'      : (min-width: 992px),
-  'xl'      : (min-width: 1200px),
-  'xxl'     : (min-width: 1400px),
-  'xxxl'    : (min-width: 1600px)
+  "xs": (
+    min-width: 0px,
+  ),
+  "sm": (
+    min-width: 640px,
+  ),
+  "md": (
+    min-width: 768px,
+  ),
+  "lg": (
+    min-width: 992px,
+  ),
+  "xl": (
+    min-width: 1200px,
+  ),
+  "xxl": (
+    min-width: 1400px,
+  ),
+  "xxxl": (
+    min-width: 1600px,
+  ),
 );
 
 @mixin breakpoint-up($breakpoint) {
   $raw-query: map-get($breakpoints-up, $breakpoint);
 
   @if $raw-query {
-    $query: if(
-      type-of($raw-query) == 'string',
-      unquote($raw-query),
-      inspect($raw-query)
-    );
+    $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
 
     @media #{$query} {
       @content;
@@ -81,82 +103,130 @@ $sizes: (
   7: 2.5rem,
   8: 3rem,
   9: 3.5rem,
-  10: 4rem
+  10: 4rem,
 );
 @each $name, $value in $sizes {
-  .mt-n#{$name}, .my-n#{$name}, .m-n#{$name} {
+  .mt-n#{$name},
+  .my-n#{$name},
+  .m-n#{$name} {
     margin-top: -$value !important;
   }
-  .mb-n#{$name}, .my-n#{$name}, .m-n#{$name} {
+  .mb-n#{$name},
+  .my-n#{$name},
+  .m-n#{$name} {
     margin-bottom: -$value !important;
   }
-  .ml-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
+  .ml-n#{$name},
+  .mx-n#{$name},
+  .m-n#{$name} {
     margin-left: -$value !important;
   }
-  .mr-n#{$name}, .mx-n#{$name}, .m-n#{$name} {
+  .mr-n#{$name},
+  .mx-n#{$name},
+  .m-n#{$name} {
     margin-right: -$value !important;
   }
-  .mt-#{$name}, .my-#{$name}, .m-#{$name} {
+  .mt-#{$name},
+  .my-#{$name},
+  .m-#{$name} {
     margin-top: $value !important;
   }
-  .mb-#{$name}, .my-#{$name}, .m-#{$name} {
+  .mb-#{$name},
+  .my-#{$name},
+  .m-#{$name} {
     margin-bottom: $value !important;
   }
-  .ml-#{$name}, .mx-#{$name}, .m-#{$name} {
+  .ml-#{$name},
+  .mx-#{$name},
+  .m-#{$name} {
     margin-left: $value !important;
   }
-  .mr-#{$name}, .mx-#{$name}, .m-#{$name} {
+  .mr-#{$name},
+  .mx-#{$name},
+  .m-#{$name} {
     margin-right: $value !important;
   }
-  .pt-#{$name}, .py-#{$name}, .p-#{$name} {
+  .pt-#{$name},
+  .py-#{$name},
+  .p-#{$name} {
     padding-top: $value !important;
   }
-  .pb-#{$name}, .py-#{$name}, .p-#{$name} {
+  .pb-#{$name},
+  .py-#{$name},
+  .p-#{$name} {
     padding-bottom: $value !important;
   }
-  .pl-#{$name}, .px-#{$name}, .p-#{$name} {
+  .pl-#{$name},
+  .px-#{$name},
+  .p-#{$name} {
     padding-left: $value !important;
   }
-  .pr-#{$name}, .px-#{$name}, .p-#{$name} {
+  .pr-#{$name},
+  .px-#{$name},
+  .p-#{$name} {
     padding-right: $value !important;
   }
 }
-@include breakpoint-up(sm){
+@include breakpoint-up(sm) {
   @each $name, $value in $sizes {
-    .mt-medium-n#{$name}, .my-medium-n#{$name}, .m-medium-n#{$name} {
+    .mt-medium-n#{$name},
+    .my-medium-n#{$name},
+    .m-medium-n#{$name} {
       margin-top: -$value !important;
     }
-    .mb-medium-n#{$name}, .my-medium-n#{$name}, .m-medium-n#{$name} {
+    .mb-medium-n#{$name},
+    .my-medium-n#{$name},
+    .m-medium-n#{$name} {
       margin-bottom: -$value !important;
     }
-    .ml-medium-n#{$name}, .mx-medium-n#{$name}, .m-medium-n#{$name} {
+    .ml-medium-n#{$name},
+    .mx-medium-n#{$name},
+    .m-medium-n#{$name} {
       margin-left: -$value !important;
     }
-    .mr-medium-n#{$name}, .mx-medium-n#{$name}, .m-medium-n#{$name} {
+    .mr-medium-n#{$name},
+    .mx-medium-n#{$name},
+    .m-medium-n#{$name} {
       margin-right: -$value !important;
     }
-    .mt-medium-#{$name}, .my-medium-#{$name}, .m-medium-#{$name} {
+    .mt-medium-#{$name},
+    .my-medium-#{$name},
+    .m-medium-#{$name} {
       margin-top: $value !important;
     }
-    .mb-medium-#{$name}, .my-medium-#{$name}, .m-medium-#{$name} {
+    .mb-medium-#{$name},
+    .my-medium-#{$name},
+    .m-medium-#{$name} {
       margin-bottom: $value !important;
     }
-    .ml-medium-#{$name}, .mx-medium-#{$name}, .m-medium-#{$name} {
+    .ml-medium-#{$name},
+    .mx-medium-#{$name},
+    .m-medium-#{$name} {
       margin-left: $value !important;
     }
-    .mr-medium-#{$name}, .mx-medium-#{$name}, .m-medium-#{$name} {
+    .mr-medium-#{$name},
+    .mx-medium-#{$name},
+    .m-medium-#{$name} {
       margin-right: $value !important;
     }
-    .pt-medium-#{$name}, .py-medium-#{$name}, .p-medium-#{$name} {
+    .pt-medium-#{$name},
+    .py-medium-#{$name},
+    .p-medium-#{$name} {
       padding-top: $value !important;
     }
-    .pb-medium-#{$name}, .py-medium-#{$name}, .p-medium-#{$name} {
+    .pb-medium-#{$name},
+    .py-medium-#{$name},
+    .p-medium-#{$name} {
       padding-bottom: $value !important;
     }
-    .pl-medium-#{$name}, .px-medium-#{$name}, .p-medium-#{$name} {
+    .pl-medium-#{$name},
+    .px-medium-#{$name},
+    .p-medium-#{$name} {
       padding-left: $value !important;
     }
-    .pr-medium-#{$name}, .px-medium-#{$name}, .p-medium-#{$name} {
+    .pr-medium-#{$name},
+    .px-medium-#{$name},
+    .p-medium-#{$name} {
       padding-right: $value !important;
     }
   }
@@ -165,11 +235,22 @@ $sizes: (
   @return $size / 16px * 1rem;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: 'Barlow', sans-serif;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Barlow", sans-serif;
 }
 
-.ml-auto{
+.ml-auto {
   margin-left: auto;
 }
 
@@ -177,28 +258,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: auto;
 }
 
-.w-100{
+.w-100 {
   width: 100%;
 }
 
-.ico-support{
+.ico-support {
   background-image: url("images/icon-pin.png");
 }
-.ico-legal{
+.ico-legal {
   background-image: url("images/icon-legal.png");
 }
-.ico-design{
+.ico-design {
   background-image: url("images/icon-design1.png");
 }
-.ico-sales{
+.ico-sales {
   background-image: url("images/icon-sale.png");
 }
 
-.text-nowrap{
+.text-nowrap {
   white-space: nowrap;
 }
 
-.checkbox-custom{
+.checkbox-custom {
   position: relative;
   padding-left: 31px;
   display: flex;
@@ -233,7 +314,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       content: "\e908";
       position: absolute;
       display: none;
-      font-family: 'icomoon';
+      font-family: "icomoon";
       color: #fff;
       font-size: rem(11px);
       line-height: 1;
@@ -241,36 +322,36 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 }
 
-.input-file-custom{
+.input-file-custom {
   display: flex;
   align-items: center;
-  > label{
+  > label {
     font-size: rem(25px);
     margin-right: 16px;
     color: #fff;
   }
 }
-.form-control-file{
-  input{
+.form-control-file {
+  input {
     width: 0.1px;
-  	height: 0.1px;
-  	opacity: 0;
-  	overflow: hidden;
-  	position: absolute;
-  	z-index: -1;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
     & + label {
       font-size: rem(20px);
       color: $accent-color;
       display: inline-block;
-      border: 2px solid #FFFFFF;
+      border: 2px solid #ffffff;
       padding: 3px 17px 5px 17px;
     }
   }
 }
 
-.contact-form{
-  button[type="submit"]{
-    border: 1px solid #3FAA61;
+.contact-form {
+  button[type="submit"] {
+    border: 1px solid #3faa61;
     font-size: rem(17px);
     color: $accent-color;
     background-color: #fff;
@@ -280,21 +361,27 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 }
 
-.grid-container{
+.grid-container {
   max-width: 70.625rem;
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  @include breakpoint-down(ls){
+  @include breakpoint-down(ls) {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  &-xsmall {
+    max-width: 44.5rem;
   }
   &-small {
     max-width: 47rem;
   }
   &-medium {
     max-width: 62rem;
+  }
+  &-xlarge{
+    max-width: 78.8rem;
   }
 }
 
@@ -305,128 +392,131 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .second-font,
 .part--link,
 .button,
-.icon-box--tabs{
+.icon-box--tabs {
   //font-family: 'Barlow Condensed' !important;
-  font-family: 'Barlow', sans-serif !important;
+  font-family: "Barlow", sans-serif !important;
 }
 
-.primary-font{
-  font-family: 'Barlow', sans-serif !important;
+.primary-font {
+  font-family: "Barlow", sans-serif !important;
 }
 
-a, .startup-journey .title{
+a,
+.startup-journey .title {
   -webkit-transition: all 0.15s ease 0s; /* For Safari 3.1 to 6.0 */
   transition: all 0.15s ease 0s;
 }
 .journey-step {
-  .node-expand, li:after{
+  .node-expand,
+  li:after {
     -webkit-transition: all 0.1s linear 0.1s; /* For Safari 3.1 to 6.0 */
     transition: all 0.1s linear 0.1s;
   }
 }
 
-.color-accent{
+.color-accent {
   color: $accent-color;
 }
-.color-white{
+.color-white {
   color: $white-color;
 }
-.color-second{
+.color-second {
   color: $second-color;
 }
 
-a:hover, a:focus{
+a:hover,
+a:focus {
   color: $accent-color;
 }
 
-.d-block{
+.d-block {
   display: block;
 }
 
-@include breakpoint-down(sm){
-  .d-xs-none{
+@include breakpoint-down(sm) {
+  .d-xs-none {
     display: none;
   }
 }
 
-.part{
-  &-title{
+.part {
+  &-title {
     margin-bottom: 30px;
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       font-size: rem(30px);
     }
-    &--divider{
+    &--divider {
       width: 50px;
       height: 4px;
       background-color: $accent-color;
       display: block;
       margin-bottom: 20px;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         width: 64px;
         height: 5px;
       }
-      &.text-center{
+      &.text-center {
         margin-left: auto;
         margin-right: auto;
       }
-      &.text-right{
+      &.text-right {
         margin-left: auto;
       }
-      + .part-title{
+      + .part-title {
         margin-top: -13px;
       }
-      &-white{
+      &-white {
         background-color: #fff;
       }
-      &-medium{
+      &-medium {
         width: 79px;
         height: 11px;
       }
-      &-small{
+      &-small {
         width: 72px;
         height: 5px;
       }
-      &-xsmall{
+      &-xsmall {
         width: 48px;
         height: 5px;
       }
-      &-tiny{
+      &-tiny {
         width: 51px;
         height: 3px;
       }
-      &-gray{
+      &-gray {
         background-color: rgba(237, 240, 255, 1);
       }
-      &--sub{
+      &--sub {
         font-size: rem(15px);
       }
     }
-    &--large{
+    &--large {
       font-size: rem(60px);
       font-weight: bold;
     }
-    &--medium{
+    &--medium {
       font-size: rem(30px);
       font-weight: bold;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         font-size: rem(44px);
       }
     }
-    &--xmedium{
+    &--xmedium {
       font-size: rem(34px);
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         font-weight: 500;
         font-size: rem(44px);
       }
     }
-    &--large{
+    &--large {
       font-size: rem(46px);
       font-weight: bold;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         font-size: rem(56px);
       }
     }
-    &--small{
+    &--small {
       font-size: rem(34px);
       font-weight: bold;
     }
@@ -437,43 +527,58 @@ a:hover, a:focus{
     &--tiny {
       font-size: rem(20px);
       font-weight: bold;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         font-size: rem(27px);
       }
+    }
+    &--xtiny {
+      font-size: rem(24px);
+      font-weight: bold;
+      letter-spacing: 2.4px;
+    }
+    &--xxtiny {
+      font-size: rem(30px);
+      font-weight: bold;
     }
     + .part-title--divider {
       margin-top: -27px;
     }
-    + .part-title--divider-medium{
-      margin-top: -16px
+    + .part-title--divider-medium {
+      margin-top: -16px;
     }
   }
-  &-desc{
+  &-desc {
     color: rgba(18, 39, 74, 0.7);
     font-size: rem(16px);
     line-height: rem(30px);
     margin-bottom: 0;
-    &--medium{
+    &.white {
+      color: $white-color;
+      b {
+        color: $accent-color;
+      }
+    }
+    &--medium {
       font-size: rem(22px);
       line-height: 1.27;
     }
-    &--small{
+    &--small {
       font-size: rem(18px);
       line-height: 1.27;
       font-weight: 500;
     }
   }
-  &-box{
+  &-box {
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 1;
     $partBox: &;
-    &__img{
+    &__img {
       position: relative;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         margin-left: 40px;
-        &:before{
+        &:before {
           content: "";
           background-color: rgba(229, 229, 229, 0.6);
           width: 100%;
@@ -485,26 +590,26 @@ a:hover, a:focus{
           border-radius: 32px;
         }
       }
-      img{
+      img {
         border-radius: 5px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           border-radius: 40px;
         }
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
           box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
         }
       }
     }
-    &--title{
+    &--title {
       letter-spacing: -2px;
     }
-    &--reverse{
-      #{$partBox}__img{
-        @include breakpoint-up(sm){
+    &--reverse {
+      #{$partBox}__img {
+        @include breakpoint-up(sm) {
           margin-left: 0;
           margin-right: 40px;
           margin-top: 37px;
-          &:before{
+          &:before {
             right: -42px;
             top: -37px;
           }
@@ -512,48 +617,47 @@ a:hover, a:focus{
       }
     }
   }
-  &--link{
+  &--link {
     list-style: none;
     margin: 10px 0 0;
     padding: 0;
-    li{
-      font-size: rem(17px);
+    li {
       color: $accent-color;
-      font-weight: bold;
       display: flex;
       align-items: center;
       line-height: 1.5;
       margin: 8px 0;
-      &:before{
+      &:before {
         content: "";
         width: 12px;
         height: 12px;
         border: 1.5px solid $accent-color;
         border-radius: 50%;
         margin-right: 17px;
+        background-color: #f6f6f6;
       }
     }
   }
-  &-tabs{
-    .tabs{
+  &-tabs {
+    .tabs {
       flex: 0 0 26.6%;
     }
-    .part-desc{
+    .part-desc {
       font-size: rem(14px);
       line-height: normal;
     }
   }
 }
 
-.tabs-wrapper{
-  &__item:not(.active){
+.tabs-wrapper {
+  &__item:not(.active) {
     display: none;
   }
 }
 
-.form-control-popup{
+.form-control-popup {
   position: absolute;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   padding: 11px 19px 12px;
@@ -563,29 +667,29 @@ a:hover, a:focus{
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  @include breakpoint-down(lg){
+  @include breakpoint-down(lg) {
     min-width: 200px;
   }
-  &.open{
+  &.open {
     opacity: 1;
     visibility: visible;
   }
-  .close{
+  .close {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 12px;
     cursor: pointer;
-    i{
+    i {
       font-size: rem(11px);
       line-height: 1;
     }
   }
-  .select-button{
+  .select-button {
     display: flex;
     justify-content: flex-end;
     margin-top: 11px;
   }
-  .button{
+  .button {
     height: 26px;
     min-width: inherit !important;
     padding: 0 12px;
@@ -593,26 +697,26 @@ a:hover, a:focus{
     margin-left: 8px;
     margin-bottom: 0;
   }
-  .select-value{
+  .select-value {
     height: 216px;
     overflow: auto;
-    &::-webkit-scrollbar-track{
+    &::-webkit-scrollbar-track {
       border-radius: 10px;
       margin: 0 10px;
     }
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       width: 7px;
       background-color: transparent;
     }
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb {
       border-radius: 5px;
       background-color: rgba(237, 240, 255, 1);
     }
   }
 }
 
-.filter-form{
-  .form-group{
+.filter-form {
+  .form-group {
     background-color: #fff;
     border: 1px solid rgba(18, 39, 74, 1);
     border-radius: 5px;
@@ -620,30 +724,30 @@ a:hover, a:focus{
     align-items: center;
     height: 40px;
     padding: 0 12px;
-    &--select{
+    &--select {
       position: relative;
       padding: 0;
     }
     margin-right: 7px;
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       margin-right: 11px;
     }
-    @include breakpoint-down(sm){
-      &:not(.form-group--select){
+    @include breakpoint-down(sm) {
+      &:not(.form-group--select) {
         flex-grow: 1;
         margin-right: 0;
         margin-top: 5px;
       }
     }
   }
-  .form-control{
+  .form-control {
     margin: 0;
     border: none;
     height: 38px;
     color: $second-color;
     font-size: rem(16px);
     box-shadow: none;
-    &:focus{
+    &:focus {
       box-shadow: none;
     }
     &::placeholder {
@@ -651,87 +755,89 @@ a:hover, a:focus{
       opacity: 1; /* Firefox */
     }
 
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-     color: $second-color;
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $second-color;
     }
 
-    &::-ms-input-placeholder { /* Microsoft Edge */
-     color: $second-color;
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $second-color;
     }
   }
-  .button{
+  .button {
     font-size: rem(17px);
     border-radius: 5px;
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       flex-grow: 1;
       min-width: inherit;
       width: 100px;
     }
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       min-width: 158px;
     }
-    @include breakpoint-down(ls){
+    @include breakpoint-down(ls) {
       width: 88px;
     }
   }
-  @include breakpoint-down(ls){
-    .select-button{
-      .button{
+  @include breakpoint-down(ls) {
+    .select-button {
+      .button {
         width: inherit;
       }
     }
   }
 }
 
-.custom-select{
-  select{
+.custom-select {
+  select {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #ffffff;
     color: #fff;
-    background-image: url('images/down_arrow_icon.png');
+    background-image: url("images/down_arrow_icon.png");
     height: inherit;
-    &:focus{
+    &:focus {
       box-shadow: none;
     }
   }
 }
 
-.form-control{
+.form-control {
   font-size: rem(25px);
   margin-bottom: 50px;
   color: #fff;
-  &-prepend{
+  &-prepend {
     margin-right: 8px;
     display: flex;
   }
-  &-select{
+  &-select {
     display: flex;
     align-items: center;
     padding: 0 14px 0 18px;
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       padding: 0 14px 0 23px;
     }
-    @include breakpoint-down(ls){
+    @include breakpoint-down(ls) {
       padding: 0 10px 0 10px;
     }
-    i{
+    i {
       font-size: rem(11px);
       margin-left: 11px;
       margin-top: 3px;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         margin-left: 15px;
       }
     }
   }
-  input{
+  input {
     height: 36px;
     background-color: transparent;
     border: none;
     margin: 0;
     border-bottom: 2px solid #ffffff;
     color: #fff;
-    &:focus{
+    &:focus {
       background-color: transparent;
       box-shadow: none;
       border: none;
@@ -742,29 +848,31 @@ a:hover, a:focus{
       opacity: 1; /* Firefox */
     }
 
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
       color: #fff;
     }
 
-    &::-ms-input-placeholder { /* Microsoft Edge */
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
       color: #fff;
     }
   }
-  textarea{
+  textarea {
     background-color: #fff;
     height: 184px;
     margin-top: 32px;
   }
 }
 
-.tabs{
+.tabs {
   background-color: rgba(246, 246, 246, 1);
   padding: 40px 12px 33px;
   border: none;
   border-radius: 5px;
-  &-title{
+  &-title {
     float: none;
-    > a{
+    > a {
       font-size: rem(18px);
       font-weight: bold;
       color: $second-color;
@@ -780,12 +888,12 @@ a:hover, a:focus{
       align-items: center;
       justify-content: center;
       line-height: 1;
-      &[aria-selected='true']{
+      &[aria-selected="true"] {
         color: $second-color;
         border-left-color: $accent-color;
         background-color: #fff;
         position: relative;
-        &:after{
+        &:after {
           width: 20px;
           background-color: #fff;
           height: 100%;
@@ -797,18 +905,18 @@ a:hover, a:focus{
       }
     }
   }
-  &-content{
+  &-content {
     border: none;
     overflow: auto;
-    &::-webkit-scrollbar-track{
+    &::-webkit-scrollbar-track {
       border-radius: 10px;
       margin: 0 10px;
     }
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       width: 4px;
       background-color: transparent;
     }
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb {
       border-radius: 10px;
       background-color: rgba(196, 196, 196, 1);
       margin: 0 20px;
@@ -816,8 +924,8 @@ a:hover, a:focus{
   }
 }
 
-.grid-col-auto{
-  .cell{
+.grid-col-auto {
+  .cell {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
     -ms-flex-positive: 1;
@@ -837,7 +945,7 @@ a:hover, a:focus{
   margin-top: 1.37rem;
 }
 
-.mb-4{
+.mb-4 {
   margin-bottom: 4.5rem;
 }
 
@@ -852,7 +960,7 @@ a:hover, a:focus{
 
 .text-xsmall {
   line-height: rem(25px);
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     font-size: rem(20px);
     line-height: rem(40px);
     font-weight: bold;
@@ -863,18 +971,18 @@ a:hover, a:focus{
   position: absolute;
 }
 
-.link{
+.link {
   color: rgba(18, 39, 74, 0.7);
-  span{
+  span {
     text-decoration: underline;
   }
-  i{
+  i {
     font-size: rem(10px);
     margin-left: 6px;
   }
 }
 
-.button{
+.button {
   background-color: $accent-color;
   font-size: rem(16px);
   height: 40px;
@@ -882,114 +990,120 @@ a:hover, a:focus{
   padding: 0 1.625rem;
   font-weight: bold;
   color: $white-color;
-  border-radius: 10px;
+  border-radius: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  i{
+  i {
     font-size: rem(12px);
     transform: translateX(8px);
   }
   &:hover,
-  &:focus{
+  &:focus {
     background-color: $accent-color;
     color: #fff;
   }
-  &--gradient{
-    background: linear-gradient(90deg, rgba(63,170,97,1) 0%, rgba(39,140,71,1) 100%);
+  &--gradient {
+    background: linear-gradient(90deg, rgba(63, 170, 97, 1) 0%, rgba(39, 140, 71, 1) 100%);
   }
-  &--stroke{
+  &--stroke {
     color: $accent-color;
-    background-color: #F6F6F6;
+    background-color: $white-color;
     border: 1px solid $accent-color;
   }
-  &--white{
+  &--white {
     color: $accent-color;
     background-color: #fff;
     border: 1px solid $accent-color;
     font-weight: normal;
   }
-  &--small{
+  &--small {
     height: 32px;
     padding: 0 0.875rem;
     font-size: rem(15px);
     min-width: inherit;
   }
-  &--medium{
+  &--medium {
     height: 52px;
-    padding: 0 1.375rem;
+    padding: 0 45px;
+    border-radius: 25px;
+    font-size: rem(20px);
   }
-  &--xmedium{
+  &--xmedium {
     height: 55px;
     padding: 0 1.875rem;
   }
-  &--large{
+  &--large {
     height: 63px;
     padding: 0 2.375rem;
     font-size: rem(20px);
     border-radius: 32.5px;
   }
-  &--light{
+  &--light {
     background-color: #fff;
     color: rgba(18, 39, 74, 1);
-    &-stroke{
+    &-stroke {
       background-color: transparent;
       color: $white-color;
       border: 1px solid $white-color;
     }
   }
-  &--simple{
+  &--simple {
     background-color: transparent;
     padding: 0 5px;
     color: $accent-color;
     min-width: inherit;
   }
+  &--long {
+    min-width: 226px;
+    font-size: rem(17px);
+  }
 }
 
-.images-box{
+.images-box {
   padding: 9px 36px 10px 36px;
-  &--medium{
+  &--medium {
     padding: 28px 25px;
   }
-  h3{
+  h3 {
     font-size: rem(16px);
     font-weight: bold;
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    a{
+    a {
       color: $second-color;
     }
-    img{
+    img {
       margin-left: 6px;
     }
   }
-  &__info{
+  &__info {
     margin-left: 15px;
-    img{
+    img {
       max-height: 11px;
     }
   }
-  &__item{
+  &__item {
     display: flex;
     padding: 16px 0;
     align-items: center;
     font-size: rem(12px);
-    > img, > a > img{
+    > img,
+    > a > img {
       width: 62px;
       height: 62px;
       object-fit: cover;
       object-position: top center;
     }
-    span{
+    span {
       display: flex;
       align-items: center;
       line-height: 1;
       margin: 5px 0;
-      img{
+      img {
         margin-right: 7px;
         text-align: center;
-
       }
     }
   }
@@ -999,131 +1113,135 @@ a:hover, a:focus{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.img{
-  &-list{
+.img {
+  &-list {
     margin-bottom: 20px;
     margin-left: -3px;
     margin-right: -3px;
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       margin-left: -10px;
       margin-right: -10px;
       margin-top: 20px;
     }
-    &-nowrap{
+    &-nowrap {
       flex-wrap: nowrap;
       overflow-x: auto;
       transform: rotateX(180deg);
       margin-top: 11px;
-      @include breakpoint-down(sm){
+      @include breakpoint-down(sm) {
         margin-bottom: 10px;
       }
-      > .cell{
+      > .cell {
         transform: rotateX(-180deg);
       }
-      &::-webkit-scrollbar-track{
-      	border-radius: 10px;
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
         margin: 0 3px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           margin: 0 10px;
         }
       }
-      &::-webkit-scrollbar{
-      	height: 5px;
-      	background-color: transparent;
-        @include breakpoint-up(sm){
+      &::-webkit-scrollbar {
+        height: 5px;
+        background-color: transparent;
+        @include breakpoint-up(sm) {
           height: 7px;
         }
       }
-      &::-webkit-scrollbar-thumb{
-      	border-radius: 10px;
-      	background-color: rgba(196, 196, 196, 1);
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(196, 196, 196, 1);
         margin: 0 20px;
       }
     }
     > .cell {
       padding-left: 3px;
       padding-right: 3px;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         padding-left: 10px;
         padding-right: 10px;
       }
     }
-    &__item{
+    &__item {
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
       border-radius: 5px;
       display: flex;
       padding: 10px;
       margin: 6px 0;
       background-color: #fff;
-      @include breakpoint-up(sm){
-        padding: 15px 13px;
-        margin: 10px 0;
+      @include breakpoint-up(sm) {
+        padding: 12px 10px;
+        margin: 10px 6px;
       }
-      &.active{
+      &.active {
         background-color: $accent-color;
         color: #fff;
-        p{
+        p {
           color: #fff;
         }
       }
       .profile-filter & {
         padding: 9px 8px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           padding: 9px 16px;
         }
       }
-      @include breakpoint-down(sm){
-        h6{
+      @include breakpoint-down(sm) {
+        h6 {
           line-height: 1.2;
           .profile-filter & {
             margin-top: -2px;
           }
         }
       }
-      p{
+      h6 {
+        font-size: rem(12px);
+      }
+      p {
         color: rgba(18, 39, 74, 0.5);
+        font-size: rem(12px);
         margin-bottom: 0;
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
           line-height: 1.2;
         }
-        @include breakpoint-down(xs){
+        @include breakpoint-down(xs) {
           font-size: rem(14px);
         }
         .profile-filter & {
           line-height: 1.2;
-          @include breakpoint-down(sm){
+          @include breakpoint-down(sm) {
             font-size: rem(14px);
           }
-          @include breakpoint-down(ls){
+          @include breakpoint-down(ls) {
             font-size: rem(12px);
           }
         }
       }
-      img{
+      img {
         width: 49px;
         height: 49px;
         border-radius: 5px;
         object-fit: cover;
         object-position: top center;
         margin-right: 8px;
-        @include breakpoint-up(sm){
-          width: 76px;
-          height: 76px;
-          border-radius: 10px;
-          margin-right: 11px;
+        @include breakpoint-up(sm) {
+          width: 58px;
+          height: 58px;
+          border-radius: 5px;
+          margin-right: 8px;
         }
-        @include breakpoint-down(xs){
+        @include breakpoint-down(xs) {
           width: 45px;
           height: 45px;
         }
         .profile-filter & {
           width: 49px;
           height: 49px;
-          @include breakpoint-up(sm){
+          @include breakpoint-up(sm) {
             width: 66px;
             height: 66px;
           }
-          @include breakpoint-down(ls){
+          @include breakpoint-down(ls) {
             width: 40px;
             height: 40px;
           }
@@ -1131,7 +1249,7 @@ a:hover, a:focus{
       }
     }
   }
-  &-shadow{
+  &-shadow {
     box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.3);
   }
   &--circle {
@@ -1152,13 +1270,13 @@ a:hover, a:focus{
 
 .header-transparent {
   background-color: transparent;
-  + *{
+  + * {
     margin-top: 0;
   }
-  + #content{
+  + #content {
     padding-top: 145px;
   }
-  .header-primary{
+  .header-primary {
     padding-top: 28px;
     padding-bottom: 28px;
   }
@@ -1195,7 +1313,7 @@ a:hover, a:focus{
 
 .header-white {
   background-color: #fff;
-  border-bottom: 1px solid #EDF0FF;
+  border-bottom: 1px solid #edf0ff;
 }
 
 .header-primary {
@@ -1205,14 +1323,14 @@ a:hover, a:focus{
   align-items: center;
   justify-content: space-between;
 
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     background-color: $second-color;
     padding-top: 14px;
     padding-bottom: 14px;
   }
 
   .menu a {
-    color: #12274A;
+    color: #12274a;
     font-size: 1rem;
     font-weight: 500;
     .header-transparent & {
@@ -1222,19 +1340,19 @@ a:hover, a:focus{
       color: #12274a;
     }
   }
-  .dropdown{
+  .dropdown {
     &.menu {
       > li {
         position: relative;
-        &:last-child{
-          > a{
+        &:last-child {
+          > a {
             padding-right: 0;
           }
         }
-        > a{
+        > a {
           padding: 0.7rem 0.75rem;
-          &.active{
-            &:before{
+          &.active {
+            &:before {
               width: 30px;
               height: 4px;
               background-color: $accent-color;
@@ -1300,7 +1418,7 @@ a:hover, a:focus{
     .is-dropdown-submenu {
       a {
         padding: 0.6rem 1.5rem;
-        color: #12274A;
+        color: #12274a;
         font-size: 14px;
       }
     }
@@ -1318,7 +1436,8 @@ a:hover, a:focus{
   min-width: 270px;
 }
 
-.search-form input[type="text"], .search-form input[type="text"]:focus {
+.search-form input[type="text"],
+.search-form input[type="text"]:focus {
   box-shadow: none;
   background-color: transparent;
   border: none;
@@ -1345,7 +1464,7 @@ a:hover, a:focus{
 .section-slider {
   position: relative;
   margin-top: 40px;
-  .owl-carousel:not(.owl-loaded){
+  .owl-carousel:not(.owl-loaded) {
     opacity: 0;
     visibility: hidden;
   }
@@ -1358,7 +1477,7 @@ a:hover, a:focus{
   z-index: 1;
   text-align: center;
   width: 100%;
-  a{
+  a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1366,7 +1485,7 @@ a:hover, a:focus{
   }
 }
 
-.slider-item{
+.slider-item {
   position: relative;
 }
 
@@ -1375,7 +1494,7 @@ a:hover, a:focus{
   align-items: stretch;
   height: 303px;
   position: relative;
-  &:after{
+  &:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -1406,14 +1525,14 @@ a:hover, a:focus{
   align-items: center;
   justify-content: center;
   transform: rotate(-90deg);
-  &__link{
+  &__link {
     color: #fff;
     font-weight: 500;
   }
-  *:not(.title){
+  *:not(.title) {
     display: none;
   }
-  p{
+  p {
     line-height: 1.2;
   }
   .title {
@@ -1424,8 +1543,8 @@ a:hover, a:focus{
     margin: 0;
     white-space: nowrap;
   }
-  .part-title{
-    &--divider{
+  .part-title {
+    &--divider {
       width: 64px;
       height: 4px;
       margin-top: 20px;
@@ -1442,25 +1561,25 @@ a:hover, a:focus{
     text-transform: none;
     color: #fff;
   }
-  .button{
+  .button {
     margin-top: 16px;
   }
 }
 
-.section-slider{
-  .slick-track{
+.section-slider {
+  .slick-track {
     padding-bottom: 75px;
   }
 }
 
-.slick-center{
-  .slider-image{
-    &:after{
+.slick-center {
+  .slider-image {
+    &:after {
       display: none;
     }
-    img{
-        transform: scale(1.17);
-        border-radius: 8px;
+    img {
+      transform: scale(1.17);
+      border-radius: 8px;
     }
   }
   .slider-info {
@@ -1473,15 +1592,15 @@ a:hover, a:focus{
     display: inline-block;
     left: auto;
     box-shadow: 0 8px 24px rgba(18, 39, 74, 0.17);
-    *:not(.title){
+    *:not(.title) {
       display: inline-block;
     }
-    .title{
+    .title {
       margin: 20px 0 -2px;
       white-space: normal;
     }
   }
-  + .slider-item{
+  + .slider-item {
     .slider-info {
       transform: rotate(90deg);
       right: auto;
@@ -1500,14 +1619,14 @@ a:hover, a:focus{
   margin-top: 1em;
 }
 
-.slider-special{
-  .slider-image{
+.slider-special {
+  .slider-image {
     height: inherit;
-    &:before{
+    &:before {
       display: none;
     }
   }
-  .slider-info{
+  .slider-info {
     width: 37.5%;
     text-align: center;
     left: 9.479%;
@@ -1515,26 +1634,35 @@ a:hover, a:focus{
     top: auto;
     transform: inherit;
   }
-  .button{
+  .button {
     height: inherit;
   }
 }
 
+.slick-slider-full {
+  .slick-slide {
+    width: 185px;
+    .partner-lists &{
+      width: 144px;
+    }
+  }
+}
+
 /* Contact */
-.home-contact .content{
+.home-contact .content {
   background: url(images/bg-contact.jpg) no-repeat;
   background-size: cover;
 }
-.profile-part{
+.profile-part {
   background: url(images/bg-profile.jpg) no-repeat;
   background-size: cover;
   padding: 16px 0 9px;
-  color: #E5E5E5;
-  @include breakpoint-up(sm){
+  color: #e5e5e5;
+  @include breakpoint-up(sm) {
     padding: 31px 0 34px;
   }
-  .part-box__img{
-    &:before{
+  .part-box__img {
+    &:before {
       background-color: rgba(229, 229, 229, 0.25);
       width: 100%;
       height: calc(100% + 7px);
@@ -1543,71 +1671,71 @@ a:hover, a:focus{
     }
   }
 }
-.profile-filter{
-  background-color: #12274A;
+.profile-filter {
+  background-color: #12274a;
   padding: 20px 0;
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     position: fixed;
     width: 100%;
     bottom: 0;
-    z-index: 1
+    z-index: 1;
   }
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     padding: 10px 0 10px;
   }
   .part-title--xmedium {
     font-size: rem(24px);
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       font-size: rem(31px);
     }
-    @include breakpoint-down(ls){
+    @include breakpoint-down(ls) {
       display: none;
     }
   }
   .part-title--large {
     font-size: rem(35px);
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       font-size: rem(31px);
     }
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       margin-bottom: 0;
     }
-    @include breakpoint-down(ls){
+    @include breakpoint-down(ls) {
       display: none;
     }
   }
-  @include breakpoint-down(sm){
-    .grid-container{
+  @include breakpoint-down(sm) {
+    .grid-container {
       display: flex;
       flex-direction: column-reverse;
     }
   }
 }
-.profile{
-  &__head{
+.profile {
+  &__head {
     display: flex;
     justify-content: space-between;
-    @include breakpoint-down(sm){
+    @include breakpoint-down(sm) {
       position: fixed;
       width: calc(100% - 48px);
       top: 81px;
     }
-    &-left{
+    &-left {
       display: flex;
     }
-    &-right{
+    &-right {
       display: flex;
       align-items: flex-end;
       flex-direction: column;
-      i{
+      i {
         font-size: rem(12px);
-        @include breakpoint-down(ls){
+        @include breakpoint-down(ls) {
           font-size: rem(10px);
         }
       }
-      .button{
+      .button {
         padding: 0 27px;
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
           height: 33px;
           min-width: inherit;
           padding: 0 15px;
@@ -1615,71 +1743,71 @@ a:hover, a:focus{
       }
     }
   }
-  &__desc{
-    @include breakpoint-down(sm){
+  &__desc {
+    @include breakpoint-down(sm) {
       height: calc(100vh - 469px);
       margin-top: 75px !important;
       overflow: auto;
       padding-bottom: 10px;
-      .part-box{
+      .part-box {
         height: auto;
       }
     }
-    @include breakpoint-down(ls){
+    @include breakpoint-down(ls) {
       height: calc(100vh - 480px);
       margin-top: 70px !important;
     }
-    p{
+    p {
       line-height: 1.25;
     }
   }
-  &__info{
-    .title{
+  &__info {
+    .title {
       font-size: rem(16px);
       font-weight: bold;
       line-height: rem(30px);
       margin-bottom: 0;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         font-size: rem(24px);
         margin-bottom: 4px;
       }
-      @include breakpoint-down(sm){
+      @include breakpoint-down(sm) {
         margin-top: -6px;
       }
     }
   }
-  &__tag{
+  &__tag {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    span{
+    span {
       background-color: $accent-color;
       font-size: rem(11px);
       border-radius: 3px;
       margin-bottom: 8px;
       padding: 0 6px;
-      @include breakpoint-down(ls){
+      @include breakpoint-down(ls) {
         font-size: rem(10px);
         padding: 0 3px;
       }
     }
   }
-  &__logo{
+  &__logo {
     margin-right: 11px;
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       margin-right: 20px;
     }
-    img{
+    img {
       width: 65px;
       height: 65px;
       border-radius: 10px;
       object-fit: cover;
       object-position: top center;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         width: 76px;
         height: 76px;
       }
-      @include breakpoint-down(ls){
+      @include breakpoint-down(ls) {
         width: 50px;
         height: 50px;
       }
@@ -1691,21 +1819,21 @@ a:hover, a:focus{
   .part-video {
     margin-top: 30px;
   }
-  @include breakpoint-down(sm){
-    .cell-left{
+  @include breakpoint-down(sm) {
+    .cell-left {
       background-color: $accent-color;
       border-radius: 0px 10px 10px 10px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       margin-top: 43px;
       position: relative;
       padding: 15px 20px 20px 20px;
-      .part-title--divider{
+      .part-title--divider {
         width: 80px;
         height: 3px;
         background-color: #fff;
         margin: 13px 0 10px;
       }
-      .link{
+      .link {
         position: absolute;
         width: calc(100% - 133px);
         right: 0;
@@ -1713,18 +1841,18 @@ a:hover, a:focus{
         top: -32px;
         text-align: center;
         color: rgba(18, 39, 74, 0.7);
-        span{
+        span {
           text-decoration: none;
         }
-        i{
+        i {
           display: none;
         }
       }
-      [class*="part-"]{
+      [class*="part-"] {
         color: #fff;
       }
       &:before,
-      &:after{
+      &:after {
         content: "";
         position: absolute;
         height: 33px;
@@ -1732,27 +1860,27 @@ a:hover, a:focus{
         width: 126px;
         left: 0;
       }
-      &:before{
+      &:before {
         border-radius: 10px 10px 0 0;
         background-image: url(images/tab-cell-mobile.svg);
       }
-      &:after{
+      &:after {
         background-image: url(images/tab-cell-mobile-after.svg);
         left: 7px;
         z-index: -1;
       }
-      &--reverse{
+      &--reverse {
         border-radius: 10px 0px 10px 10px;
-        .link{
+        .link {
           right: auto;
           left: 0;
         }
-        &:before{
+        &:before {
           background-image: url(images/tab-cell-mobile-1.svg);
           left: auto;
           right: 0;
         }
-        &:after{
+        &:after {
           background-image: url(images/tab-cell-mobile-after-1.svg);
           left: auto;
           right: 7px;
@@ -1775,7 +1903,7 @@ a:hover, a:focus{
     &:first-child {
       margin: 0 36px;
       padding: 2px 0 11px;
-      border-bottom: 3px solid #EDF0FF;
+      border-bottom: 3px solid #edf0ff;
     }
   }
 }
@@ -1855,7 +1983,7 @@ a:hover, a:focus{
 
   .title {
     font-size: 1.3333em;
-    color: #13274B;
+    color: #13274b;
     letter-spacing: 0.02em;
     line-height: 1.4;
     font-style: normal;
@@ -1877,21 +2005,22 @@ a:hover, a:focus{
 }
 .mobile-journey {
   margin-top: 50px;
-  .step-expand{
+  .step-expand {
     margin-left: 80px;
     width: calc(100% - 80px);
   }
 }
 
-.journey-step{
-  .node-expand{
+.journey-step {
+  .node-expand {
     top: calc(100% + 100px);
   }
-  li:hover, li.is-active{
-    &:after{
+  li:hover,
+  li.is-active {
+    &:after {
       bottom: -50px;
     }
-    .node-expand{
+    .node-expand {
       top: calc(100% + 50px);
       visibility: visible;
     }
@@ -2009,21 +2138,55 @@ a:hover, a:focus{
   padding: 64px 0 100px 0;
 }
 
-#home-value{
+#home-about {
+  background: url("images/bg-about.png") no-repeat 0 0;
+  background-size: 1920px;
+  padding: 53px 0 50px 0;
+}
+
+#home-value {
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 50px;
+  background: url("images/bg-value.png") no-repeat 0 0;
+}
+#home-testimonial {
+  padding-top: 0;
+  padding-bottom: 37px;
+  background: url("images/bg-testimonial.png") no-repeat 0 0;
+  background-position: right 60px;
+}
+#home-blog{
+  background: url("images/bg-blog.png") no-repeat 0 0;
+  background-position: left bottom;
+}
+#home-partner{
+  background: url("images/bg-media.png") no-repeat 0 0;
+  background-position: top center;
+}
+.home-blog{
+  .part-desc{
+    line-height: 1.2;
+  }
+}
+
+.home-value {
+  .icon-box {
+    transform: translateX(132px);
+  }
 }
 
 .section-partner {
+  padding: 0 30px;
   .partner-item {
     padding-left: 29px;
     padding-right: 29px;
-    img{
+    img {
       margin: 0 auto;
+      max-height: 100px;
     }
   }
 
-  .slick-track{
+  .slick-track {
     display: flex;
     align-items: center;
   }
@@ -2040,17 +2203,17 @@ a:hover, a:focus{
 }
 
 .partner-info {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   padding: 11px 15px 14px 15px;
 
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     padding: 35px 15px 35px 15px;
     border-radius: 52px;
   }
 
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     text-align: center;
   }
 
@@ -2059,7 +2222,7 @@ a:hover, a:focus{
     line-height: 1.2;
   }
 
-  .part-title{
+  .part-title {
     font-size: rem(38px);
     font-weight: 600;
     margin-bottom: 24px;
@@ -2067,19 +2230,18 @@ a:hover, a:focus{
 }
 
 .partner-button {
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     margin-top: 10px;
   }
 }
 
-.partner-list{
-  .cell{
+.partner-list {
+  .cell {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-
 
 /* Image Spiner */
 .image-spiner {
@@ -2087,11 +2249,12 @@ a:hover, a:focus{
   font-size: 1.3rem;
   margin-top: 1em;
 
-  .outside-round, .inside-round {
+  .outside-round,
+  .inside-round {
     &:after {
       width: 100%;
       height: 100%;
-      border: 2px dashed #DFE7F4;
+      border: 2px dashed #dfe7f4;
       content: "";
       border-radius: 50%;
       display: block;
@@ -2140,7 +2303,7 @@ a:hover, a:focus{
     }
   }
 
-  .main-round{
+  .main-round {
     z-index: 10;
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.18);
   }
@@ -2171,25 +2334,25 @@ a:hover, a:focus{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-  .inside-round:after{
+  .inside-round:after {
     animation-name: spin-border-reverse;
   }
 
   .item-round:after {
     animation-duration: 15000ms;
   }
-  &--minimal{
+  &--minimal {
     margin-top: 0;
-    .inside-round{
+    .inside-round {
       width: 6.46em;
       height: 6.46em;
-      &:after{
+      &:after {
         z-index: 12;
         position: absolute;
         border-color: $accent-color;
       }
     }
-    .main-round{
+    .main-round {
       padding: 0;
       box-shadow: none;
       width: inherit;
@@ -2221,11 +2384,12 @@ a:hover, a:focus{
   font-size: 1.3rem;
   margin-top: 0.5em;
 
-  .outside-round, .inside-round {
+  .outside-round,
+  .inside-round {
     &:after {
       width: 100%;
       height: 100%;
-      border: 2px dashed #DFE7F4;
+      border: 2px dashed #dfe7f4;
       content: "";
       border-radius: 50%;
       display: block;
@@ -2242,7 +2406,8 @@ a:hover, a:focus{
     height: 7em;
   }
 
-  .inside-round, .main-round {
+  .inside-round,
+  .main-round {
     left: 50%;
     top: 50%;
     -moz-transform: translate(-50%, -50%);
@@ -2272,7 +2437,7 @@ a:hover, a:focus{
     }
   }
 
-  .main-round{
+  .main-round {
     z-index: 10;
     box-shadow: 0px 22px 28px -11px rgba(0, 0, 0, 0.2);
   }
@@ -2384,7 +2549,7 @@ a:hover, a:focus{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-  .inside-round:after{
+  .inside-round:after {
     animation-name: spin-border-reverse;
   }
 
@@ -2394,126 +2559,106 @@ a:hover, a:focus{
 }
 
 /* Content */
-.home-part{
+.home-part {
   padding: 18px 0;
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     padding: 30px 0;
   }
 }
-.home-journey{
-  .part-desc{
+.home-journey {
+  .part-desc {
     margin-bottom: 16px;
   }
 }
-.home-partnerships{
+.home-partnerships {
   margin-top: 0px;
   margin-bottom: 40px;
-  + .home-portfolio{
+  + .home-portfolio {
     padding-top: 0px;
   }
 }
-@include breakpoint-down(sm){
-  .home-partner .part-title{
+@include breakpoint-down(sm) {
+  .home-partner .part-title {
     text-align: left;
   }
 }
-.home-offer{
-  @include breakpoint-up(sm){
+.home-offer {
+  @include breakpoint-up(sm) {
     margin-bottom: 50px;
   }
 }
 
-.home-portfolio{
-  .part-desc{
-    margin-bottom: 80px;
+.home-portfolio {
+  .part-desc {
+    margin-bottom: 37px;
   }
-  + .home-achievements{
+  + .home-achievements {
     padding-top: 20px;
   }
 }
 
-.home-achievements{
-  + .home-supported{
+.home-achievements {
+  + .home-supported {
     padding-top: 0px;
   }
 }
 
-.home-supported{
-  .feature-image{
+.home-supported {
+  .feature-image {
     margin-top: 60px;
     margin-bottom: 90px;
   }
 }
 
-.sub-part{
+.sub-part {
   padding: 30px 0;
 }
 
-.group-part{
-  .part-title{
+.group-part {
+  .part-title {
     margin-bottom: 50px;
   }
 }
 
 /* List post */
-.list-post{
-  &--slider{
-    @include breakpoint-down(sm){
-      margin-top: 12px;
+.list-post {
+  &--slider {
+    .slick-slide {
+      width: 310px;
+      padding: 0 10px;
     }
-    .slick-list{
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .slick-track{
+    .slick-track {
       padding-bottom: 0px;
-      @include breakpoint-up(sm){
-        padding-top: 52px;
-      }
     }
-    .post-item{
-      padding-left: 25px;
-      padding-right: 25px;
+    .post-item {
+      background-color: $white-color;
+      border-radius: 10px;
+      padding: 20px 14px 33px 14px;
     }
-    @include breakpoint-up(sm){
-      .slick-center{
-        .post-item{
-          padding-left: 3px;
-          padding-right: 3px;
-        }
-        .post-item__inner{
-            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
-            transform: translateY(-32px);
-            border-radius: 1px;
-        }
-        .thumbnail{
-          img{
-            height: 168px;
-          }
-        }
-        .post__desc{
-          background-color: $accent-color;
-          font-size: rem(16px);
-          padding: 9px 13px 13px 13px;
-          line-height: rem(19px);
-          margin-bottom: 0;
-        }
-      }
-    }
-    .thumbnail{
-      img{
-        height: 136px;
+    .thumbnail {
+      img {
+        height: 141px;
         object-fit: cover;
         object-position: top center;
-        border-radius: 5px 5px 0px 0px;
+        border-radius: 5px;
       }
+    }
+    .post__title{
+      font-size: rem(16px);
+      font-weight: bold;
+      line-height: 1.2;
+      margin: 18px 0 19px;
+    }
+    .post__desc{
+      line-height: 1.2;
+      color: rgba(18, 39, 74, 0.8);
     }
   }
   &--alt {
-    .thumbnail{
+    .thumbnail {
       margin-bottom: 0;
     }
-    .post__desc{
+    .post__desc {
       background-color: $accent-color;
       font-weight: bold;
       font-size: rem(16px);
@@ -2523,7 +2668,7 @@ a:hover, a:focus{
       margin-bottom: 0;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 0px 0px 5px 5px;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         background-color: $second-color;
         font-size: rem(12px);
         line-height: rem(14px);
@@ -2531,40 +2676,40 @@ a:hover, a:focus{
       }
     }
   }
-  &--magazine{
-    @include breakpoint-down(sm){
-      &.list-post .cell{
+  &--magazine {
+    @include breakpoint-down(sm) {
+      &.list-post .cell {
         margin-bottom: 9px;
       }
     }
-    .post-item{
+    .post-item {
       position: relative;
     }
-    .thumbnail{
+    .thumbnail {
       position: relative;
       margin: 0;
-      &:before{
+      &:before {
         content: "";
         position: absolute;
-        background: linear-gradient(0deg, rgba(18,39,74,0.7) 0%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(0deg, rgba(18, 39, 74, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
         height: 50%;
         bottom: 0;
         border-radius: 4px;
         width: 100%;
       }
     }
-    img{
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    img {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
       height: 169px;
       width: 100%;
       object-fit: cover;
       object-position: top center;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         height: 138px;
       }
     }
-    .post__desc{
+    .post__desc {
       position: absolute;
       bottom: 0;
       color: #fff;
@@ -2573,34 +2718,34 @@ a:hover, a:focus{
       line-height: 1.4;
       width: calc(100% - 16px);
       padding: 0 10px 0 20px;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         font-size: rem(12px);
       }
-      @include breakpoint-down(sm){
+      @include breakpoint-down(sm) {
         margin-bottom: 0;
-        i{
+        i {
           margin: 10px 0 10px;
         }
       }
     }
-    &__large{
-      @include breakpoint-up(sm){
+    &__large {
+      @include breakpoint-up(sm) {
         padding-right: 9px;
       }
-      img{
+      img {
         height: 247px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           height: 289px;
         }
       }
-      .post__desc{
+      .post__desc {
         font-size: rem(16px);
         padding: 0 10px 0 27px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           font-size: rem(24px);
           padding: 0 10px 0 40px;
         }
-        i{
+        i {
           font-size: rem(13px);
           display: block;
           text-align: right;
@@ -2608,20 +2753,20 @@ a:hover, a:focus{
         }
       }
     }
-    &-alt{
-      .post-item{
-        &:not(.list-post--magazine__large){
+    &-alt {
+      .post-item {
+        &:not(.list-post--magazine__large) {
           margin-bottom: 9px;
-          @include breakpoint-up(sm){
+          @include breakpoint-up(sm) {
             margin-bottom: 13px;
           }
-          &:last-child{
+          &:last-child {
             margin-bottom: 0;
           }
         }
-        .post__desc{
+        .post__desc {
           font-weight: bold;
-          i{
+          i {
             display: block;
             text-align: right;
             font-size: 10px;
@@ -2630,52 +2775,52 @@ a:hover, a:focus{
       }
     }
   }
-  &--list{
+  &--list {
     background-color: #fff;
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px 12px;
-    .post-item{
+    .post-item {
       display: flex;
       align-items: center;
       flex-grow: 1;
       margin-bottom: 15px;
       padding-bottom: 15px;
-      border-bottom: 1px solid #C4C4C4;
-      &:last-child{
+      border-bottom: 1px solid #c4c4c4;
+      &:last-child {
         margin-bottom: 9px;
       }
-      img{
+      img {
         width: 156px;
         height: 104px;
         object-fit: cover;
         object-position: top center;
       }
     }
-    .thumbnail{
+    .thumbnail {
       flex: 0 0 auto;
       margin: 0;
     }
-    .post{
-      &__desc{
+    .post {
+      &__desc {
         flex-grow: 1;
         margin: 0;
         padding: 0 17px;
         font-size: rem(16px);
-        color: rgba(0,0,0,0.75);
-        a{
+        color: rgba(0, 0, 0, 0.75);
+        a {
           color: $second-color;
           line-height: 1.2;
           font-weight: bold;
           display: block;
         }
-        i{
+        i {
           font-size: rem(12px);
           font-style: italic;
           display: block;
           margin: 2px 0 9px;
         }
-        small{
+        small {
           font-size: rem(12px);
           display: block;
           line-height: 1.2;
@@ -2685,50 +2830,62 @@ a:hover, a:focus{
   }
 }
 
-.loadmore{
+.loadmore {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  svg{
+  svg {
     margin-left: 10px;
     margin-top: 3px;
   }
 }
 
-.slick-slider{
+.slick-slider {
   opacity: 0;
   visibility: hidden;
-  &.slick-initialized{
+  &.slick-initialized {
     opacity: 1;
     visibility: visible;
   }
-  .slick-arrow{
+  .slick-arrow {
     position: absolute;
     top: 50%;
-    right: -18px;
+    right: -84px;
     transform: translateY(-50%);
     font-size: 0;
     cursor: pointer;
+    width: 54px;
+    height: 54px;
+    background-color: #F6F6F6;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    .list-post--slider &{
+      right: 65px;
+      z-index: 1;
+    }
     .card-slider & {
       right: -2px;
     }
-    @include breakpoint-down(sm){
-      .list-post--slider &, .home-partner & {
+    @include breakpoint-down(sm) {
+      .list-post--slider &,
+      .home-partner & {
         right: -12px;
       }
     }
-    &:before{
-      font-family: 'icomoon';
+    @include breakpoint-up(sm) {
+      .home-partner & {
+        right: -22px;
+      }
+    }
+    &:before {
+      font-family: "icomoon";
       font-size: rem(18px);
       content: "\e906";
       .home-testimonial & {
-        color: $white-color;
-        @include breakpoint-down(sm){
+        color: $second-color;
+        @include breakpoint-down(sm) {
           font-size: rem(10px);
         }
-      }
-      .list-post--slider & {
-        color: $accent-color;
       }
       .card-slider & {
         content: "\e901";
@@ -2736,18 +2893,28 @@ a:hover, a:focus{
       }
     }
   }
-  .slick-prev{
-    left: -18px;
+  .slick-prev {
+    left: -84px;
     right: auto;
+    .list-post--slider &{
+      left: -41px;
+      z-index: 1;
+    }
     .card-slider & {
       left: 0;
     }
-    @include breakpoint-down(sm){
-      .list-post--slider &, .home-partner & {
+    @include breakpoint-down(sm) {
+      .list-post--slider &,
+      .home-partner & {
         left: -12px;
       }
     }
-    &:before{
+    @include breakpoint-up(sm) {
+      .home-partner & {
+        left: -22px;
+      }
+    }
+    &:before {
       content: "\e907";
       .card-slider & {
         content: "\e902";
@@ -2756,7 +2923,7 @@ a:hover, a:focus{
   }
 }
 
-.slick-dots{
+.slick-dots {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2764,52 +2931,30 @@ a:hover, a:focus{
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -30px;
-  @include breakpoint-up(sm){
-    bottom: -60px;
-  }
-  .testimonial & {
-    bottom: 10px;
-    @include breakpoint-up(sm){
-      bottom: 30px;
-    }
-  }
-  li{
+  bottom: -26px;
+  li {
     list-style: none;
   }
-  button{
+  button {
     font-size: 0;
-    width: 9px;
-    height: 9px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
     margin: 0 3px;
     background-color: $second-color;
-    border: 1px solid $second-color;
+    border: 1px solid $white-color;
     box-sizing: border-box;
-    @include breakpoint-up(sm){
-      width: 16px;
-      height: 16px;
-    }
-    .testimonial & {
-      width: 6px;
-      height: 6px;
-      border-color: transparent;
-      @include breakpoint-up(sm){
-        width: 11px;
-        height: 11px;
-      }
-    }
   }
-  .slick-active{
-    button{
+  .slick-active {
+    button {
       background-color: $accent-color;
-      border-color: $white-color;
+      border-color: $accent-color;
     }
   }
 }
 
-.home-investment{
-  .box-shadow{
+.home-investment {
+  .box-shadow {
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
   }
@@ -2901,15 +3046,14 @@ footer {
     .card-heading {
       p {
         color: rgba(255, 255, 255, 0.6);
-        small{
+        small {
           font-size: rem(15px);
-
         }
       }
     }
   }
-  &-left{
-    .card{
+  &-left {
+    .card {
       min-height: 155px;
       display: flex;
       justify-content: center;
@@ -2917,33 +3061,33 @@ footer {
       padding: 20px 10px 20px 30px;
       margin-top: 9px;
       margin-bottom: 9px;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         min-height: 240px;
         padding: 20px 30px;
         margin-top: 22px;
         margin-bottom: 22px;
       }
-      &-body{
+      &-body {
         padding: 0;
         text-align: center;
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
           display: flex;
           align-items: center;
           text-align: left;
         }
-        p{
+        p {
           font-size: rem(18px);
           line-height: 1.7;
-          small{
+          small {
             font-size: rem(15px);
             font-weight: normal;
           }
         }
       }
       &-offer {
-        .ico{
+        .ico {
           margin-bottom: 10px;
-          @include breakpoint-down(sm){
+          @include breakpoint-down(sm) {
             width: 84px;
             height: 84px;
             flex: 0 0 84px;
@@ -2955,38 +3099,38 @@ footer {
       }
     }
   }
-  &-slider{
-    .card{
-      &-title{
+  &-slider {
+    .card {
+      &-title {
         font-size: rem(34px);
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           font-size: rem(38px);
         }
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
           font-weight: 600;
         }
       }
-      &-body{
+      &-body {
         display: flex;
         align-items: center;
-        @include breakpoint-down(sm){
+        @include breakpoint-down(sm) {
           flex-direction: column;
           padding: 6px 0 0;
         }
-        p{
+        p {
           font-size: rem(9px);
           font-weight: 600;
         }
       }
     }
-    &__items{
+    &__items {
       max-width: 100%;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         max-width: calc(100% - 88px);
         margin-left: auto;
       }
     }
-    &__item{
+    &__item {
       background-color: rgba(237, 240, 255, 1);
       border-radius: 20px;
       text-align: center;
@@ -2999,26 +3143,26 @@ footer {
       justify-content: center;
       cursor: pointer;
     }
-    &__link{
+    &__link {
       flex: 0 0 auto;
-      a{
+      a {
         font-size: rem(20px);
         font-weight: 600;
       }
     }
-    .slick-slider{
+    .slick-slider {
       padding: 0 24px;
     }
-    .ico{
+    .ico {
       background-position: center center;
       margin-bottom: 7px;
     }
   }
-  &-right{
-    @include breakpoint-down(sm){
+  &-right {
+    @include breakpoint-down(sm) {
       padding: 34px 16px;
     }
-    .card-body{
+    .card-body {
       display: flex;
       flex-wrap: wrap;
       margin-top: -18px;
@@ -3027,31 +3171,31 @@ footer {
       padding-right: 14px;
       height: 492px;
       overflow: auto;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         padding-left: 43px;
         padding-right: 43px;
         height: 382px;
       }
-      &::-webkit-scrollbar-track{
+      &::-webkit-scrollbar-track {
         border-radius: 10px;
         margin: 10px 10px;
       }
-      &::-webkit-scrollbar{
+      &::-webkit-scrollbar {
         width: 7px;
         background-color: transparent;
       }
-      &::-webkit-scrollbar-thumb{
+      &::-webkit-scrollbar-thumb {
         border-radius: 5px;
         background-color: rgba(237, 240, 255, 1);
       }
-      > .col{
+      > .col {
         flex: 0 0 100%;
         max-width: 100%;
         padding-left: 17px;
         padding-right: 17px;
         padding-top: 9px;
         padding-bottom: 9px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           flex: 0 0 calc(100% / 3);
           max-width: calc(100% / 3);
           padding-top: 18px;
@@ -3060,60 +3204,60 @@ footer {
       }
     }
   }
-  &__item{
+  &__item {
     position: relative;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     display: flex;
     padding: 10px 12px;
-    p{
+    p {
       font-size: rem(10px);
       color: rgba(18, 39, 74, 0.6);
       margin: 0;
     }
-    &-img{
-      border-right: 1px solid #EDF0FF;
+    &-img {
+      border-right: 1px solid #edf0ff;
       display: flex;
       align-items: center;
       flex: 0 0 auto;
       padding-right: 10px;
-      img{
+      img {
         max-height: 33px;
       }
     }
-    &-info{
+    &-info {
       padding-left: 11px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
-    &-tag{
+    &-tag {
       border-radius: 9px;
-      background-color: #EDF0FF;
+      background-color: #edf0ff;
       font-size: rem(7px);
       font-weight: bold;
       padding: 2px 7px;
       color: rgba(18, 39, 74, 0.5);
       margin-bottom: 4px;
     }
-    &-title{
+    &-title {
       font-size: rem(15px);
       font-weight: bold;
       line-height: 1.2;
       margin-bottom: 5px;
-      i{
+      i {
         color: $accent-color;
         font-size: rem(8px);
         display: inline-block;
         width: 5px;
-        &:first-child{
+        &:first-child {
           margin-left: 4px;
         }
       }
     }
-    &-window{
+    &-window {
       position: fixed;
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
       top: 0;
       width: calc(100% + 22px);
@@ -3121,28 +3265,28 @@ footer {
       padding: 50px 23px 24px 30px;
       opacity: 0;
       visibility: hidden;
-      .window-open &{
+      .window-open & {
         opacity: 1;
         visibility: visible;
       }
-      .part-title--divider{
+      .part-title--divider {
         margin-bottom: 12px;
       }
-      .card__item-info{
+      .card__item-info {
         padding-left: 0;
       }
-      .card__item-img{
+      .card__item-img {
         border: none;
         margin-bottom: 20px;
-        img{
+        img {
           max-height: 43px;
         }
       }
-      .card__item-title{
+      .card__item-title {
         font-size: rem(18px);
         margin-bottom: 2px;
       }
-      .card__item-tag{
+      .card__item-tag {
         background-color: inherit;
         font-size: rem(15px);
         color: rgba(18, 39, 74, 0.5);
@@ -3150,17 +3294,17 @@ footer {
         font-weight: normal;
         margin-bottom: 6px;
       }
-      p{
+      p {
         font-size: rem(11px);
         color: rgba(18, 39, 74, 1);
-        strong{
+        strong {
           font-size: rem(17px);
           display: block;
           margin-bottom: 18px;
         }
       }
     }
-    &-close{
+    &-close {
       position: absolute;
       top: 0;
       right: 0;
@@ -3191,22 +3335,25 @@ footer {
   line-height: 1;
   font-size: 0.8em;
   margin-top: 23px;
-  @include breakpoint-up(sm){
+  .part-title--small {
+    font-size: rem(24px);
+  }
+  @include breakpoint-up(sm) {
     margin-top: 45px;
   }
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     text-align: center;
-    > img{
+    > img {
       max-height: 136px;
     }
-    .part-desc{
+    .part-desc {
       text-align: left;
     }
   }
-  &--tabs{
+  &--tabs {
     display: flex;
     justify-content: center;
-    a{
+    a {
       color: $accent-color;
       font-weight: bold;
       padding: 5px 10px 7px;
@@ -3214,7 +3361,7 @@ footer {
       flex: 0 0 50%;
       max-width: 50%;
       text-align: center;
-      &.active{
+      &.active {
         background-color: $accent-color;
         color: $white-color;
       }
@@ -3224,11 +3371,11 @@ footer {
     margin-top: 80px;
   }
 
-  &__image{
+  &__image {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    .feature-image{
+    .feature-image {
       height: 108px;
       display: flex;
       align-items: center;
@@ -3258,13 +3405,13 @@ footer {
   }
   &--alt {
     padding: 52px 32px;
-    box-shadow: 0 12px 16px rgba(0,0,0,0.46);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.46);
     border-radius: 40px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    .part{
-      &-title{
+    .part {
+      &-title {
         font-size: rem(41px);
         font-weight: 600;
         display: flex;
@@ -3273,7 +3420,7 @@ footer {
           margin-right: 48px;
         }
       }
-      &-desc{
+      &-desc {
         font-size: rem(19px);
         line-height: 1.72;
       }
@@ -3282,10 +3429,10 @@ footer {
   &--horizontal {
     display: flex;
     align-items: center;
-    .icon-box{
-      &--image{
+    .icon-box {
+      &--image {
         flex: 0 0 323px;
-        + .icon-box--content{
+        + .icon-box--content {
           margin-left: 130px;
         }
       }
@@ -3295,16 +3442,31 @@ footer {
         }
       }
     }
-    .part{
-      &-title{
+    .part {
+      &-title {
         font-size: rem(45px);
         font-weight: bold;
       }
-      &-desc{
+      &-desc {
         font-size: rem(27px);
         line-height: 1.74;
         margin-top: 36px;
       }
+    }
+  }
+  &--bg {
+    position: relative;
+    text-align: center;
+    img {
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      top: -23px;
+      transform: translateX(-50%);
+    }
+    .title {
+      font-size: rem(36px);
+      font-weight: bold;
     }
   }
 }
@@ -3315,12 +3477,12 @@ footer {
   padding: 104px 0 40px;
 }
 
-@include breakpoint-down(sm){
-  .home-countdown{
-    .part-video{
+@include breakpoint-down(sm) {
+  .home-countdown {
+    .part-video {
       margin: -17px -24px 0 -24px;
     }
-    .cell-left{
+    .cell-left {
       text-align: center;
     }
   }
@@ -3347,7 +3509,7 @@ footer {
       font-size: 3.5555em;
       width: 1.5625em;
       height: 1.5625em;
-      background-color: #13274B;
+      background-color: #13274b;
       color: #fff;
       display: flex;
       align-items: center;
@@ -3366,10 +3528,10 @@ footer {
   background: url("images/bg-team.jpg") no-repeat top center;
   background-size: cover;
   padding: 40px 0 143px;
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     margin-bottom: -130px;
   }
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     padding: 51px 0 94px;
   }
 }
@@ -3384,12 +3546,12 @@ footer {
   .page-title {
     font-weight: 600;
     font-size: 32px;
-    color: #12274A;
+    color: #12274a;
   }
 
   .breadcrumbs {
     a {
-      color: #12274A;
+      color: #12274a;
     }
   }
 
@@ -3408,36 +3570,36 @@ footer {
   }
 }
 
-.post-meta{
- padding: 15px 0 13px;
- display: block;
- margin-bottom: 0;
-  .menu{
-    .meta-time{
+.post-meta {
+  padding: 15px 0 13px;
+  display: block;
+  margin-bottom: 0;
+  .menu {
+    .meta-time {
       margin-right: 35px;
     }
   }
-  .meta-category{
-    .list-post &{
+  .meta-category {
+    .list-post & {
       display: block;
       margin-top: 5px;
     }
   }
 }
 
-.single-post{
-  &--date{
+.single-post {
+  &--date {
     font-size: rem(13px);
     font-style: italic;
     display: block;
   }
-  &--desc{
+  &--desc {
     font-size: rem(18px);
     display: block;
     line-height: 1.3;
   }
-  @include breakpoint-down(sm){
-    > .grid-container{
+  @include breakpoint-down(sm) {
+    > .grid-container {
       padding-left: 0;
       padding-right: 0;
     }
@@ -3450,14 +3612,14 @@ footer {
 }
 
 .blog-navigation {
-  a{
+  a {
     font-size: rem(12px);
     padding: 8px 34px 7px 0;
   }
 }
 
-.entry-content{
-  @include breakpoint-up(sm){
+.entry-content {
+  @include breakpoint-up(sm) {
     padding: 0 50px;
   }
 }
@@ -3465,23 +3627,25 @@ footer {
 /* Seach Box */
 .search-box {
   margin: 9px 0 55px;
-  form{
+  form {
     margin-bottom: 20px;
   }
   .search-input {
     border: none;
     min-width: 251px;
 
-    &::-webkit-input-placeholder { /* Edge */
-      color: #8993A5;
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: #8993a5;
     }
 
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: #8993A5;
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #8993a5;
     }
 
     &::placeholder {
-      color: #8993A5;
+      color: #8993a5;
     }
   }
 }
@@ -3504,7 +3668,7 @@ footer {
   font-size: 0.875rem;
   margin-bottom: 20px;
   > div {
-    border-bottom: 1px solid #EDF0FF;
+    border-bottom: 1px solid #edf0ff;
     padding-bottom: 12px;
   }
 
@@ -3517,7 +3681,7 @@ footer {
       height: calc(100% - 88px);
       width: 4px;
       content: "";
-      background-color: #3FAA61;
+      background-color: #3faa61;
       border-radius: 4px;
       position: absolute;
       top: 70px;
@@ -3533,26 +3697,44 @@ footer {
   }
 }
 
-.self-advert{
-  p{
+.self-advert {
+  p {
     margin-bottom: 0.7rem;
   }
-  .button{
+  .button {
     margin: 15px 0 20px;
+  }
+  &--alt{
+    background-color: $white-color;
+    border: none;
+    padding: 53px 20px 36px 20px;
+    strong{
+      letter-spacing: 1.6px;
+    }
+    .part-title{
+      font-size: rem(41px);
+    }
+    .link{
+      color: rgba(18, 39, 74, 0.8);
+      text-decoration: underline;
+    }
+    .button{
+      margin: 23px 0 0px;
+    }
   }
 }
 
-figcaption{
+figcaption {
   font-size: 0.875rem;
   font-style: italic;
-  color: #8993A5;
+  color: #8993a5;
   margin: 8px 0 0;
 }
 
-blockquote{
-  background-color: rgba(63,170,97,0.1);
+blockquote {
+  background-color: rgba(63, 170, 97, 0.1);
   font-size: 1rem;
-  color: #12274A;
+  color: #12274a;
   text-align: center;
   line-height: 2.25rem;
   padding: 40px 30px;
@@ -3560,7 +3742,7 @@ blockquote{
   border: none;
   border-radius: 20px;
   margin: 30px 0 20px;
-  &:before{
+  &:before {
     content: "";
     background: url("images/blockquote.png");
     width: 46px;
@@ -3571,97 +3753,136 @@ blockquote{
 }
 
 /* Home Slogan */
-#home-slogan{
+#home-slogan {
   background: url("images/banner-slogan.jpg") no-repeat;
   background-size: cover;
   padding: 83px 0;
   margin: 35px 0;
 }
-.slogan{
+.slogan {
   font-size: rem(15px);
   line-height: 1.4;
   display: block;
 }
 /* Home Mission */
-.home-mission{
+.home-mission {
   background: url("images/banner-mission.jpg") no-repeat;
   background-size: cover;
   padding: 10px 0;
   margin: 4px 0 0;
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     padding: 20px 0;
     margin: 20px 0;
   }
 }
 
-/* Home Testimonial */
-#home-testimonial{
-  background: url("images/banner-testimonial.jpg") no-repeat;
-  background-size: cover;
-  margin: 20px 0 10px;
-  @include breakpoint-up(sm){
-    margin: 20px 0 56px;
+.home-activities{
+  border-bottom: 1px solid #E5E5E5;
+  .grid-container{
+    background-color: $second-color;
+    padding: 67px 0 67px 74px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
+    position: relative;
+    &:after{
+      background-color: rgba(18, 39, 74, 0.3);
+      position: absolute;
+      width: 130px;
+      height: 100%;
+      content: "";
+      top: 0;
+      right: 0;
+      border-radius: 0 15px 15px 0;
+    }
+  }
+  .cell-left{
+    flex: 0 0 30%;
+    margin-right: 50px;
+  }
+  .part-desc{
+    line-height: 1.2;
   }
 }
 
-.partner-lists{
-  @include breakpoint-up(sm){
-    margin: 30px 0 0;
+.partner-lists {
+  img {
+    max-height: 100%;
   }
-  .cell {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex: 0 0 auto;
-  }
-  img{
-    max-height: 60px;
+}
+.partner-list{
+  &__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 40px;
+    height: 60px;
+    padding: 0 15px;
   }
 }
 
-.testimonial{
+.testimonial {
   background-color: transparent;
   color: #fff;
   display: flex;
   position: relative;
-  &__title{
-    font-size: rem(10px);
-    line-height: normal;
-    @include breakpoint-up(sm){
-      font-size: rem(26px);
-      line-height: rem(31px);
+  &__feature {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    left: 0;
+    img {
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 15px;
+      height: 100%;
+      width: 100%;
     }
   }
-  &__notes{
+  &__title {
+    font-size: rem(10px);
+    line-height: normal;
+    text-align: right;
+    margin-right: 40px;
+    @include breakpoint-up(sm) {
+      font-size: rem(20px);
+    }
+  }
+  &__notes {
     display: block;
     font-size: rem(10px);
     font-weight: normal;
     text-align: right;
     font-style: italic;
     margin: 5px 15px 10px 0;
-    @include breakpoint-up(sm){
-      font-size: rem(19px);
-      margin: 10px 30px 25px 0;
+    @include breakpoint-up(sm) {
+      font-size: rem(16px);
+      margin: 13px 30px 25px 0;
     }
   }
-  &__item, &__img{
+  &__item,
+  &__img {
     display: flex;
     align-items: center;
   }
-  &__item{
+  &__item {
     padding: 0 15px;
-    @include breakpoint-up(sm){
-      padding: 0 65px;
+    position: relative;
+    justify-content: flex-end;
+    @include breakpoint-up(sm) {
+      padding: 0 140px;
     }
   }
-  &__img{
+  &__img {
     flex: 0 0 auto;
-    @include breakpoint-down(sm){
-      img:not(.logo){
+    @include breakpoint-down(sm) {
+      img:not(.logo) {
         max-height: 90px;
       }
     }
   }
-  .logo{
+  .logo {
     width: 35px;
     height: 35px;
     border-radius: 10px;
@@ -3669,7 +3890,7 @@ blockquote{
     object-fit: cover;
     object-position: top center;
     margin-left: -20px;
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       width: 83px;
       height: 83px;
       border-radius: 18px;
@@ -3679,8 +3900,8 @@ blockquote{
 }
 
 /* Mobile */
-.mobile-nav{
-  .search-form{
+.mobile-nav {
+  .search-form {
     margin: 1rem;
     min-width: inherit;
   }
@@ -3689,7 +3910,7 @@ blockquote{
   .image-spiner {
     font-size: 2.125rem;
   }
-  .taglist{
+  .taglist {
     justify-content: flex-end;
     margin-top: 0;
   }
@@ -3707,9 +3928,9 @@ blockquote{
   }
 }
 @media all and (min-width: 1024px) {
-  .image-spiner{
+  .image-spiner {
     font-size: 2.125rem;
-    &--large{
+    &--large {
       margin-left: 1.22em;
     }
   }
@@ -3721,12 +3942,12 @@ blockquote{
       margin-top: 60px;
     }
   }
-  .partner-info{
+  .partner-info {
     padding: 45px 49px 56px 50px;
     border-radius: 40px;
   }
   .node-show {
-    .menu{
+    .menu {
       font-size: 1.125em;
     }
   }
@@ -3743,12 +3964,12 @@ blockquote{
       margin-bottom: 0;
     }
   }
-  .self-advert{
+  .self-advert {
     border-width: 20px;
   }
 }
 @media all and (min-width: 1200px) {
-  .item-countdown{
+  .item-countdown {
     font-size: 1rem;
   }
   .slider-button {
@@ -3756,19 +3977,19 @@ blockquote{
   }
   .image-spiner {
     font-size: 3rem;
-    &--large{
+    &--large {
       font-size: 3rem;
     }
   }
-  .icon-box{
+  .icon-box {
     font-size: 1em;
   }
   .section-slider {
     .owl-theme {
-      .owl-dots{
+      .owl-dots {
         right: 90px;
         .owl-dot {
-          span{
+          span {
             width: 20px;
             height: 20px;
             margin: 20px 0;
@@ -3777,25 +3998,25 @@ blockquote{
       }
     }
   }
-  .grid-container-huge{
+  .grid-container-huge {
     max-width: 1590px;
   }
 }
 
 @media all and (max-width: 1024px) {
   .home-about {
-    .part-video{
+    .part-video {
       margin-bottom: 30px;
     }
   }
-  .image-spiner{
+  .image-spiner {
     margin-top: 140px;
     margin-bottom: 100px;
     display: flex;
     justify-content: center;
   }
   .slider-special {
-    .slider-info{
+    .slider-info {
       width: 100%;
       left: 0;
     }
@@ -3807,26 +4028,26 @@ blockquote{
     margin-bottom: 51px;
   }
   .section-partner {
-    .owl-stage{
-      .owl-item{
+    .owl-stage {
+      .owl-item {
         justify-content: center;
       }
     }
   }
   .slider-special {
-    .slider-info{
+    .slider-info {
       bottom: 30px;
     }
   }
 }
 
-.team{
-  &-item{
+.team {
+  &-item {
     $teamItem: &;
-    &--wrapper{
+    &--wrapper {
       position: relative;
       z-index: 1;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         margin-top: -78px;
         margin-bottom: 70px;
         height: 294px;
@@ -3834,124 +4055,172 @@ blockquote{
         position: relative;
         z-index: 1;
       }
-      &::-webkit-scrollbar-track{
+      &::-webkit-scrollbar-track {
         border-radius: 10px;
         margin: 0 10px;
       }
-      &::-webkit-scrollbar{
+      &::-webkit-scrollbar {
         width: 7px;
         background-color: transparent;
       }
-      &::-webkit-scrollbar-thumb{
+      &::-webkit-scrollbar-thumb {
         border-radius: 5px;
         background-color: rgba(237, 240, 255, 1);
       }
     }
-    &:not(#{$teamItem}--highlight){
-      background: #FFFFFF;
+    &:not(#{$teamItem}--highlight) {
+      background: #ffffff;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
-    &s{
+    &s {
       padding: 0 38px;
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         padding: 0 83px;
       }
-      #{$teamItem}{
+      #{$teamItem} {
         margin-left: 4px;
         margin-right: 4px;
         padding: 21px 15px 33px;
         text-align: center;
         margin-bottom: 40px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           margin-bottom: 47px;
         }
-        &__avatar{
-          img{
+        &__avatar {
+          img {
             height: 193px;
             border-radius: 7px;
           }
         }
-        &__name{
+        &__name {
           font-size: rem(20px);
           margin: 19px 0 5px;
         }
-        &__pos{
+        &__pos {
           font-size: rem(13px);
           margin-bottom: 20px;
         }
       }
     }
-    &__name{
+    &__name {
       font-weight: bold;
     }
-    &__pos{
+    &__pos {
       line-height: 1;
       color: $accent-color;
       display: block;
     }
-    &__desc{
+    &__desc {
       line-height: 1.2;
       display: block;
       font-size: rem(15px);
       margin-bottom: 12px;
     }
-    &__avatar{
-      img{
+    &__avatar {
+      img {
         width: 100%;
         object-fit: cover;
         object-position: top center;
       }
     }
-    &--highlight{
-      @include breakpoint-down(sm){
+    &--highlight {
+      @include breakpoint-down(sm) {
         text-align: center;
         margin-bottom: 30px;
-        #{$teamItem}__company{
+        #{$teamItem}__company {
           display: block;
           margin: 0 auto;
         }
       }
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         display: flex;
         align-items: flex-end;
       }
-      #{$teamItem}__avatar{
+      #{$teamItem}__avatar {
         flex: 0 0 240px;
-        @include breakpoint-up(sm){
+        @include breakpoint-up(sm) {
           margin-right: 26px;
         }
-        img{
+        img {
           height: 294px;
           border-radius: 18px;
-          @include breakpoint-down(sm){
+          @include breakpoint-down(sm) {
             max-width: 240px;
           }
         }
-        @include breakpoint-up(sm){
-          + #{$teamItem}__info{
+        @include breakpoint-up(sm) {
+          + #{$teamItem}__info {
             text-align: left;
           }
         }
       }
-      #{$teamItem}__info{
-        @include breakpoint-up(sm){
+      #{$teamItem}__info {
+        @include breakpoint-up(sm) {
           text-align: right;
         }
-        + #{$teamItem}__avatar{
+        + #{$teamItem}__avatar {
           margin-left: 26px;
           margin-right: 0;
         }
       }
-      #{$teamItem}__name{
+      #{$teamItem}__name {
         font-size: rem(35px);
         margin-bottom: 3px;
         margin-top: 8px;
       }
-      #{$teamItem}__pos{
+      #{$teamItem}__pos {
         font-size: rem(18px);
         text-transform: uppercase;
         margin-bottom: 23px;
         font-weight: 500;
+      }
+    }
+  }
+}
+.list-mentor {
+  &--team {
+    width: 100%;
+    .cell {
+      padding: 0 5px;
+    }
+    .mentor-item {
+      background-color: $white-color;
+      border-radius: 10px;
+      padding: 23px 15px 4px 15px;
+      margin-bottom: 40px;
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+      p {
+        margin-top: 14px;
+      }
+      img {
+        max-width: 98px;
+        max-height: 98px;
+      }
+      a {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .cell {
+      span {
+        font-size: rem(12px);
+        margin: 5px 0;
+      }
+    }
+  }
+}
+.home-collection {
+  .grid-container {
+    max-width: 76.5rem;
+  }
+  .cell {
+    &:last-child {
+      padding-left: 20px;
+      .icon-box--bg {
+        img {
+          left: calc(50% - 20px);
+        }
       }
     }
   }
