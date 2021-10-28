@@ -380,7 +380,7 @@ h6,
   &-medium {
     max-width: 62rem;
   }
-  &-xlarge{
+  &-xlarge {
     max-width: 78.8rem;
   }
 }
@@ -532,13 +532,20 @@ a:focus {
       }
     }
     &--xtiny {
-      font-size: rem(24px);
+      font-size: rem(18px);
       font-weight: bold;
-      letter-spacing: 2.4px;
+      @include breakpoint-up(sm) {
+        font-size: rem(24px);
+        letter-spacing: 2.4px;
+      }
     }
     &--xxtiny {
       font-size: rem(30px);
       font-weight: bold;
+      @include breakpoint-down(sm) {
+        font-size: rem(24px);
+        line-height: 1.2;
+      }
     }
     + .part-title--divider {
       margin-top: -27px;
@@ -624,17 +631,18 @@ a:focus {
     li {
       color: $accent-color;
       display: flex;
-      align-items: center;
       line-height: 1.5;
       margin: 8px 0;
       &:before {
         content: "";
         width: 12px;
+        flex: 0 0 12px;
         height: 12px;
         border: 1.5px solid $accent-color;
         border-radius: 50%;
         margin-right: 17px;
         background-color: #f6f6f6;
+        margin-top: 6px;
       }
     }
   }
@@ -646,12 +654,6 @@ a:focus {
       font-size: rem(14px);
       line-height: normal;
     }
-  }
-}
-
-.tabs-wrapper {
-  &__item:not(.active) {
-    display: none;
   }
 }
 
@@ -1167,7 +1169,7 @@ a:focus {
       border-radius: 5px;
       display: flex;
       padding: 10px;
-      margin: 6px 0;
+      margin: 10px 6px;
       background-color: #fff;
       @include breakpoint-up(sm) {
         padding: 12px 10px;
@@ -1195,7 +1197,10 @@ a:focus {
         }
       }
       h6 {
-        font-size: rem(12px);
+        font-size: rem(10px);
+        @include breakpoint-up(sm) {
+          font-size: rem(12px);
+        }
       }
       p {
         color: rgba(18, 39, 74, 0.5);
@@ -1641,8 +1646,11 @@ a:focus {
 
 .slick-slider-full {
   .slick-slide {
-    width: 185px;
-    .partner-lists &{
+    width: 167px;
+    @include breakpoint-up(sm) {
+      width: 185px;
+    }
+    .partner-lists & {
       width: 144px;
     }
   }
@@ -1821,71 +1829,15 @@ a:focus {
   }
   @include breakpoint-down(sm) {
     .cell-left {
-      background-color: $accent-color;
-      border-radius: 0px 10px 10px 10px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      margin-top: 43px;
-      position: relative;
-      padding: 15px 20px 20px 20px;
-      .part-title--divider {
-        width: 80px;
-        height: 3px;
-        background-color: #fff;
-        margin: 13px 0 10px;
-      }
-      .link {
-        position: absolute;
-        width: calc(100% - 133px);
-        right: 0;
-        line-height: rem(32px);
-        top: -32px;
-        text-align: center;
-        color: rgba(18, 39, 74, 0.7);
-        span {
-          text-decoration: none;
-        }
-        i {
-          display: none;
-        }
-      }
-      [class*="part-"] {
-        color: #fff;
-      }
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        height: 33px;
-        top: -32px;
-        width: 126px;
-        left: 0;
-      }
-      &:before {
-        border-radius: 10px 10px 0 0;
-        background-image: url(images/tab-cell-mobile.svg);
-      }
-      &:after {
-        background-image: url(images/tab-cell-mobile-after.svg);
-        left: 7px;
-        z-index: -1;
-      }
-      &--reverse {
-        border-radius: 10px 0px 10px 10px;
-        .link {
-          right: auto;
-          left: 0;
-        }
-        &:before {
-          background-image: url(images/tab-cell-mobile-1.svg);
-          left: auto;
-          right: 0;
-        }
-        &:after {
-          background-image: url(images/tab-cell-mobile-after-1.svg);
-          left: auto;
-          right: 7px;
-        }
-      }
+      text-align: center;
+    }
+    .part-title--xmedium,
+    .part-title--large {
+      font-size: rem(36px);
+    }
+    .part-title--divider {
+      width: 80px;
+      height: 3px;
     }
   }
 }
@@ -2142,36 +2094,81 @@ a:focus {
   background: url("images/bg-about.png") no-repeat 0 0;
   background-size: 1920px;
   padding: 53px 0 50px 0;
+  background-position: -2px ​0px;
+  @include breakpoint-down(sm) {
+    background-image: url("images/bg-about-sp.png");
+    background-size: 1275px 797px;
+    background-position: -223px top;
+    padding: 40px 0 0px 0;
+  }
 }
 
 #home-value {
   padding-top: 0;
   padding-bottom: 50px;
   background: url("images/bg-value.png") no-repeat 0 0;
+  @include breakpoint-down(sm) {
+    background-image: url("images/bg-value-sp.png");
+    background-position: 0 71px;
+  }
 }
 #home-testimonial {
   padding-top: 0;
-  padding-bottom: 37px;
-  background: url("images/bg-testimonial.png") no-repeat 0 0;
-  background-position: right 60px;
+  padding-bottom: 7px;
+  @include breakpoint-up(sm) {
+    background: url("images/bg-testimonial.png") no-repeat 0 0;
+    background-position: right 60px;
+    padding-bottom: 37px;
+  }
 }
-#home-blog{
+#home-blog {
   background: url("images/bg-blog.png") no-repeat 0 0;
   background-position: left bottom;
+  @include breakpoint-down(sm){
+    background-image: url("images/bg-blog-sp.png");
+    background-position: -85px 129px;
+  }
 }
-#home-partner{
+#home-partner {
   background: url("images/bg-media.png") no-repeat 0 0;
   background-position: top center;
+  @include breakpoint-down(sm){
+    background-image: url("images/bg-media-sp.png");
+    background-position: top center;
+  }
 }
-.home-blog{
-  .part-desc{
+.home-partner{
+  @include breakpoint-down(sm){
+    .part-desc{
+      line-height: 1.2;
+    }
+  }
+}
+.home-blog {
+  .part-desc {
     line-height: 1.2;
+  }
+  @include breakpoint-down(sm){
+    .part-title{
+      font-size: rem(20px);
+    }
+    .flex-container{
+      align-items: center;
+    }
   }
 }
 
 .home-value {
   .icon-box {
-    transform: translateX(132px);
+    @include breakpoint-up(sm) {
+      transform: translateX(132px);
+    }
+  }
+  @include breakpoint-down(sm) {
+    .grid-container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 }
 
@@ -2577,11 +2574,6 @@ a:focus {
     padding-top: 0px;
   }
 }
-@include breakpoint-down(sm) {
-  .home-partner .part-title {
-    text-align: left;
-  }
-}
 .home-offer {
   @include breakpoint-up(sm) {
     margin-bottom: 50px;
@@ -2591,6 +2583,12 @@ a:focus {
 .home-portfolio {
   .part-desc {
     margin-bottom: 37px;
+    @include breakpoint-down(sm) {
+      line-height: 1.5;
+      padding: 0 15px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
   }
   + .home-achievements {
     padding-top: 20px;
@@ -2623,9 +2621,30 @@ a:focus {
 /* List post */
 .list-post {
   &--slider {
+    position: relative;
+    @include breakpoint-down(sm) {
+      margin-left: -10px;
+      margin-right: -15px;
+      margin-top: 55px;
+    }
+    &:after {
+      background-color: rgba(18, 39, 74, 0.3);
+      position: absolute;
+      width: 110px;
+      height: 100%;
+      content: "";
+      top: 0;
+      right: 0;
+      @include breakpoint-up(sm) {
+        width: 130px;
+      }
+    }
     .slick-slide {
-      width: 310px;
+      width: 267px;
       padding: 0 10px;
+      @include breakpoint-up(sm) {
+        width: 310px;
+      }
     }
     .slick-track {
       padding-bottom: 0px;
@@ -2633,25 +2652,37 @@ a:focus {
     .post-item {
       background-color: $white-color;
       border-radius: 10px;
-      padding: 20px 14px 33px 14px;
+      padding: 17px 11px 23px 11px;
+      @include breakpoint-up(sm) {
+        padding: 20px 14px 33px 14px;
+      }
     }
     .thumbnail {
       img {
-        height: 141px;
+        height: 120px;
         object-fit: cover;
         object-position: top center;
         border-radius: 5px;
+        @include breakpoint-up(sm) {
+          height: 141px;
+        }
       }
     }
-    .post__title{
-      font-size: rem(16px);
+    .post__title {
+      font-size: rem(14px);
       font-weight: bold;
       line-height: 1.2;
       margin: 18px 0 19px;
+      @include breakpoint-up(sm) {
+        font-size: rem(16px);
+      }
     }
-    .post__desc{
+    .post__desc {
       line-height: 1.2;
       color: rgba(18, 39, 74, 0.8);
+      @include breakpoint-down(sm) {
+        font-size: rem(14px);
+      }
     }
   }
   &--alt {
@@ -2854,33 +2885,48 @@ a:focus {
     transform: translateY(-50%);
     font-size: 0;
     cursor: pointer;
-    width: 54px;
-    height: 54px;
-    background-color: #F6F6F6;
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    .list-post--slider &{
+    @include breakpoint-up(sm) {
+      width: 54px;
+      height: 54px;
+      .home-partner & {
+        right: -22px;
+      }
+    }
+    @include breakpoint-down(sm) {
+      .home-partner & {
+        background-color: transparent;
+        color: $white-color;
+        right: -10px;
+      }
+      .list-post--slider & {
+        top: -41px;
+        left: 68px;
+      }
+    }
+    .list-post--slider & {
       right: 65px;
       z-index: 1;
     }
     .card-slider & {
       right: -2px;
     }
-    @include breakpoint-down(sm) {
-      .list-post--slider &,
-      .home-partner & {
-        right: -12px;
-      }
-    }
-    @include breakpoint-up(sm) {
-      .home-partner & {
-        right: -22px;
-      }
-    }
     &:before {
       font-family: "icomoon";
-      font-size: rem(18px);
+      font-size: rem(14px);
       content: "\e906";
+      @include breakpoint-up(sm) {
+        font-size: rem(18px);
+      }
+      @include breakpoint-down(sm){
+        .home-partner & {
+          font-size: rem(22px);
+        }
+      }
       .home-testimonial & {
         color: $second-color;
         @include breakpoint-down(sm) {
@@ -2896,7 +2942,7 @@ a:focus {
   .slick-prev {
     left: -84px;
     right: auto;
-    .list-post--slider &{
+    .list-post--slider & {
       left: -41px;
       z-index: 1;
     }
@@ -2904,9 +2950,12 @@ a:focus {
       left: 0;
     }
     @include breakpoint-down(sm) {
-      .list-post--slider &,
       .home-partner & {
         left: -12px;
+      }
+      .list-post--slider & {
+        top: -41px;
+        left: 10px;
       }
     }
     @include breakpoint-up(sm) {
@@ -2918,6 +2967,9 @@ a:focus {
       content: "\e907";
       .card-slider & {
         content: "\e902";
+      }
+      .home-partner & {
+        font-size: rem(22px);
       }
     }
   }
@@ -3333,16 +3385,18 @@ footer {
 /* Icon Box */
 .icon-box {
   line-height: 1;
-  font-size: 0.8em;
+  font-size: 1rem;
   margin-top: 23px;
   .part-title--small {
-    font-size: rem(24px);
+    font-size: rem(20px);
+    @include breakpoint-up(sm) {
+      font-size: rem(24px);
+    }
   }
   @include breakpoint-up(sm) {
     margin-top: 45px;
   }
   @include breakpoint-down(sm) {
-    text-align: center;
     > img {
       max-height: 136px;
     }
@@ -3457,16 +3511,31 @@ footer {
   &--bg {
     position: relative;
     text-align: center;
+    @include breakpoint-down(sm) {
+      font-size: rem(14px);
+      margin-bottom: 52px;
+    }
     img {
       position: absolute;
       z-index: -1;
       left: 50%;
       top: -23px;
       transform: translateX(-50%);
+      @include breakpoint-down(sm) {
+        top: -30%;
+        left: -7%;
+      }
     }
     .title {
-      font-size: rem(36px);
+      font-size: rem(30px);
       font-weight: bold;
+      @include breakpoint-up(sm) {
+        font-size: rem(36px);
+      }
+      @include breakpoint-down(sm) {
+        color: $accent-color;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -3704,22 +3773,35 @@ footer {
   .button {
     margin: 15px 0 20px;
   }
-  &--alt{
+  &--alt {
     background-color: $white-color;
     border: none;
-    padding: 53px 20px 36px 20px;
-    strong{
-      letter-spacing: 1.6px;
+    padding: 34px 20px 32px 20px;
+    @include breakpoint-up(sm){
+      padding: 53px 20px 36px 20px;
     }
-    .part-title{
-      font-size: rem(41px);
+    strong {
+      @include breakpoint-up(sm){
+        letter-spacing: 1.6px;
+      }
     }
-    .link{
+    .part-title {
+      font-size: rem(25px);
+      @include breakpoint-up(sm){
+        font-size: rem(41px);
+      }
+    }
+    .link {
       color: rgba(18, 39, 74, 0.8);
       text-decoration: underline;
     }
-    .button{
+    .button {
       margin: 23px 0 0px;
+      @include breakpoint-down(sm){
+        height: 40px;
+        font-size: rem(16px);
+        padding: 0 33px;
+      }
     }
   }
 }
@@ -3776,30 +3858,31 @@ blockquote {
   }
 }
 
-.home-activities{
-  border-bottom: 1px solid #E5E5E5;
-  .grid-container{
+.home-activities {
+  @include breakpoint-up(sm){
+    border-bottom: 1px solid #e5e5e5;
+  }
+  @include breakpoint-down(sm) {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .grid-container {
     background-color: $second-color;
-    padding: 67px 0 67px 74px;
+    padding: 31px 15px 37px 24px;
     border-radius: 15px;
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
     position: relative;
-    &:after{
-      background-color: rgba(18, 39, 74, 0.3);
-      position: absolute;
-      width: 130px;
-      height: 100%;
-      content: "";
-      top: 0;
-      right: 0;
-      border-radius: 0 15px 15px 0;
+    @include breakpoint-up(sm) {
+      padding: 67px 0 67px 74px;
     }
   }
-  .cell-left{
-    flex: 0 0 30%;
-    margin-right: 50px;
+  .cell-left {
+    @include breakpoint-up(sm) {
+      flex: 0 0 30%;
+      margin-right: 50px;
+    }
   }
-  .part-desc{
+  .part-desc {
     line-height: 1.2;
   }
 }
@@ -3809,15 +3892,19 @@ blockquote {
     max-height: 100%;
   }
 }
-.partner-list{
-  &__img{
+.partner-list {
+  &__img {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 25px 0 40px;
-    height: 60px;
+    height: 40px;
     padding: 0 15px;
+    @include breakpoint-up(sm) {
+      margin: 25px 0 40px;
+      height: 60px;
+    }
   }
 }
 
@@ -3844,8 +3931,9 @@ blockquote {
     font-size: rem(10px);
     line-height: normal;
     text-align: right;
-    margin-right: 40px;
+    margin-right: 20px;
     @include breakpoint-up(sm) {
+      margin-right: 40px;
       font-size: rem(20px);
     }
   }
@@ -4180,21 +4268,40 @@ blockquote {
 .list-mentor {
   &--team {
     width: 100%;
+    @include breakpoint-down(sm) {
+      padding: 0 10px;
+    }
     .cell {
-      padding: 0 5px;
+      @include breakpoint-up(sm) {
+        padding: 0 5px;
+      }
     }
     .mentor-item {
       background-color: $white-color;
       border-radius: 10px;
-      padding: 23px 15px 4px 15px;
-      margin-bottom: 40px;
+      padding: 13px 15px 4px 15px;
+      margin-bottom: 22px;
       box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+      @include breakpoint-up(sm) {
+        padding: 23px 15px 4px 15px;
+        margin-bottom: 40px;
+      }
       p {
-        margin-top: 14px;
+        margin-top: 10px;
+        @include breakpoint-up(sm) {
+          margin-top: 14px;
+        }
+        @include breakpoint-down(sm) {
+          margin-bottom: 0px;
+        }
       }
       img {
-        max-width: 98px;
-        max-height: 98px;
+        max-width: 55px;
+        max-height: 55px;
+        @include breakpoint-up(sm) {
+          max-width: 98px;
+          max-height: 98px;
+        }
       }
       a {
         &:after {
@@ -4204,8 +4311,11 @@ blockquote {
     }
     .cell {
       span {
-        font-size: rem(12px);
+        font-size: rem(8px);
         margin: 5px 0;
+        @include breakpoint-up(sm) {
+          font-size: rem(12px);
+        }
       }
     }
   }
@@ -4215,11 +4325,30 @@ blockquote {
     max-width: 76.5rem;
   }
   .cell {
+    @include breakpoint-down(sm) {
+      &:first-child {
+        .icon-box {
+          &--bg {
+            img {
+              left: auto;
+              right: -81%;
+              top: -248%;
+            }
+          }
+        }
+      }
+    }
     &:last-child {
       padding-left: 20px;
       .icon-box--bg {
         img {
           left: calc(50% - 20px);
+          @include breakpoint-down(sm) {
+            left: auto;
+            right: -72%;
+            top: auto;
+            bottom: -165%;
+          }
         }
       }
     }
