@@ -107,6 +107,20 @@
           $('#' + dataOpen).slideUp('fast');
         });
       }
+
+      // Newsletter
+      if($('#openNewsletter').length){
+        $('#openNewsletter').on('click', function(e){
+          e.preventDefault();
+            if($('.newsletter-form').length){
+              $('.newsletter-form').addClass('open');
+              $('.newsletter-form .close').on('click', function(e){
+                e.preventDefault();
+                $('.newsletter-form').removeClass('open');
+              });
+            }
+        });
+      }
     },
 
     cardWindow: function () {
