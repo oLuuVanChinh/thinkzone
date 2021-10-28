@@ -217,10 +217,14 @@
     height: 150px;
   }
   .mentor-group .large-4 .media-object .thumbnail img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: top center;
+  }
+  .home-mentor-detail .mentor-group .large-4 .media-object .thumbnail {
+    width: 100px;
+    height: 100px;
   }
 
   /* About */
@@ -312,7 +316,7 @@
   }
 
   .small-bg-gray {
-    background-color: #F7F9FE;
+    background-color: #f7f9fe;
   }
 
   .small-box-radius {
@@ -347,7 +351,8 @@
     margin-bottom: 30px;
   }
 
-  #home-partner, #home-achievements {
+  #home-partner,
+#home-achievements {
     padding: 20px 0 0 0;
   }
 
