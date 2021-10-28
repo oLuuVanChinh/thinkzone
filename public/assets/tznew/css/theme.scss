@@ -1841,6 +1841,32 @@ a:focus {
     }
   }
 }
+.home-mentor {
+  background: url("images/bg-network.png") no-repeat;
+  background-position: center 20px;
+  @include breakpoint-down(sm){
+    background-image: url("images/bg-network-sp.png");
+    background-position: center 40%;
+  }
+  .part-desc {
+    line-height: 1.2;
+  }
+  .list-mentor {
+    padding: 0 40px;
+    .cell span.strong {
+      font-size: rem(19px);
+    }
+  }
+}
+.part-title{
+  @include breakpoint-down(sm){
+    .home-journey &,
+    .home-mentor &{
+      font-size: rem(24px);
+    }
+  }
+}
+
 
 .home-about .btn-play {
   border-radius: 10px;
@@ -2124,7 +2150,7 @@ a:focus {
 #home-blog {
   background: url("images/bg-blog.png") no-repeat 0 0;
   background-position: left bottom;
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     background-image: url("images/bg-blog-sp.png");
     background-position: -85px 129px;
   }
@@ -2132,14 +2158,14 @@ a:focus {
 #home-partner {
   background: url("images/bg-media.png") no-repeat 0 0;
   background-position: top center;
-  @include breakpoint-down(sm){
+  @include breakpoint-down(sm) {
     background-image: url("images/bg-media-sp.png");
     background-position: top center;
   }
 }
-.home-partner{
-  @include breakpoint-down(sm){
-    .part-desc{
+.home-partner {
+  @include breakpoint-down(sm) {
+    .part-desc {
       line-height: 1.2;
     }
   }
@@ -2148,11 +2174,11 @@ a:focus {
   .part-desc {
     line-height: 1.2;
   }
-  @include breakpoint-down(sm){
-    .part-title{
+  @include breakpoint-down(sm) {
+    .part-title {
       font-size: rem(20px);
     }
-    .flex-container{
+    .flex-container {
       align-items: center;
     }
   }
@@ -2576,6 +2602,8 @@ a:focus {
 }
 .home-offer {
   @include breakpoint-up(sm) {
+    background: url("images/bg-offer.png") no-repeat;
+    background-position: center right;
     margin-bottom: 50px;
   }
 }
@@ -2913,7 +2941,9 @@ a:focus {
       z-index: 1;
     }
     .card-slider & {
-      right: -2px;
+      right: -18px;
+      background-color: transparent;
+      box-shadow: none;
     }
     &:before {
       font-family: "icomoon";
@@ -2922,7 +2952,7 @@ a:focus {
       @include breakpoint-up(sm) {
         font-size: rem(18px);
       }
-      @include breakpoint-down(sm){
+      @include breakpoint-down(sm) {
         .home-partner & {
           font-size: rem(22px);
         }
@@ -2947,7 +2977,7 @@ a:focus {
       z-index: 1;
     }
     .card-slider & {
-      left: 0;
+      left: -16px;
     }
     @include breakpoint-down(sm) {
       .home-partner & {
@@ -3546,10 +3576,27 @@ footer {
   padding: 104px 0 40px;
 }
 
+.home-accelerator .content {
+  background: url(images/bg-accelerator-pc.png) no-repeat;
+  background-position: -154px 0;
+  @include breakpoint-down(sm) {
+    background-image: url(images/bg-accelerator-sp.png);
+    background-position: -300px 0;
+  }
+}
+
+.home-countdown {
+  .button--medium {
+    font-size: rem(16px);
+    padding: 0 22px;
+  }
+}
+
 @include breakpoint-down(sm) {
   .home-countdown {
+    padding: 12px;
     .part-video {
-      margin: -17px -24px 0 -24px;
+      margin: 0 -16px 0 -16px;
     }
     .cell-left {
       text-align: center;
@@ -3777,17 +3824,17 @@ footer {
     background-color: $white-color;
     border: none;
     padding: 34px 20px 32px 20px;
-    @include breakpoint-up(sm){
+    @include breakpoint-up(sm) {
       padding: 53px 20px 36px 20px;
     }
     strong {
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         letter-spacing: 1.6px;
       }
     }
     .part-title {
       font-size: rem(25px);
-      @include breakpoint-up(sm){
+      @include breakpoint-up(sm) {
         font-size: rem(41px);
       }
     }
@@ -3797,7 +3844,7 @@ footer {
     }
     .button {
       margin: 23px 0 0px;
-      @include breakpoint-down(sm){
+      @include breakpoint-down(sm) {
         height: 40px;
         font-size: rem(16px);
         padding: 0 33px;
@@ -3859,7 +3906,7 @@ blockquote {
 }
 
 .home-activities {
-  @include breakpoint-up(sm){
+  @include breakpoint-up(sm) {
     border-bottom: 1px solid #e5e5e5;
   }
   @include breakpoint-down(sm) {
