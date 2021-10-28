@@ -4191,6 +4191,118 @@ a:focus {
   display: block;
   line-height: 1.2;
 }
+.list-post--sidebar .part-title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.list-post--sidebar .button {
+  height: 36px;
+  background-color: #f6f6f6;
+}
+@media (min-width: 992px) {
+  .list-post--sidebar {
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 15px;
+  }
+  .list-post--sidebar li {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .list-post--sidebar li img {
+    height: 63px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .list-post--sidebar li .thumbnail {
+    flex: 0 0 112px;
+    margin-right: 18px;
+  }
+  .list-post--sidebar li .post-title a {
+    font-size: 0.625rem;
+    line-height: 1.2;
+    display: block;
+  }
+}
+
+.newsletter-form {
+  padding: 21px 32px 0 32px;
+}
+.newsletter-form .part-title {
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+.newsletter-form input {
+  background: #ffffff;
+  border: 0.5px solid rgba(18, 39, 74, 0.3);
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 27px;
+  box-shadow: none;
+  margin-top: 2px;
+}
+.newsletter-form label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.newsletter-form .custom-checkbox {
+  font-size: 0.6875rem;
+  font-weight: normal;
+}
+.newsletter-form button {
+  width: 100%;
+  height: 27px;
+  font-size: 0.6875rem;
+  margin-top: 20px;
+}
+@media (max-width: 639px) {
+  .newsletter-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .newsletter-form.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .newsletter-form .overlay {
+    background: rgba(18, 39, 74, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .newsletter-form form {
+    background-color: #ffffff;
+    z-index: 1;
+    position: absolute;
+    border-radius: 32px;
+    padding: 56px 32px 25px 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 100px);
+    left: 50px;
+    max-width: 309px;
+  }
+  .newsletter-form .close {
+    font-size: 0.875rem;
+    color: #3faa61;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-blog-details .cell-right {
+    flex: 0 0 26.6%;
+  }
+}
 
 .loadmore {
   display: flex;
@@ -5011,7 +5123,7 @@ footer {
 
 @media (min-width: 640px) {
   .entry-content {
-    padding: 0 50px;
+    padding: 0 50px 0 0;
   }
 }
 
@@ -5669,4 +5781,61 @@ blockquote:before {
     top: auto;
     bottom: -165%;
   }
+}
+
+/* The container */
+.custom-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 21px;
+  margin-top: 6px;
+  cursor: pointer;
+  font-size: 0.6875rem;
+  -webkit-user-select: none;
+  user-select: none;
+  line-height: 1.2;
+}
+
+/* Hide the browser's default checkbox */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: #ffffff;
+  border: 0.5px solid rgba(18, 39, 74, 0.3);
+  border-radius: 3px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid #3faa61;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
