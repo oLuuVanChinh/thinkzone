@@ -1859,21 +1859,33 @@ a:focus {
   }
 }
 .home-mentor-detail {
-  background-image: url("images/bg-mentor-pc.png"), url("images/bg-mentor-pc-2.png");
+  background-image: url("images/bg-mentor-pc.png"), url("images/bg-mentor-pc-2.png"), url("images/bg-mentor-pc-3.png");
   background-repeat: no-repeat;
+  background-position: top left, top right, bottom left;
+  @include breakpoint-down(sm) {
+    background-image: url("images/bg-mentor-sp-1.png"), url("images/bg-mentor-sp-2.png");
+  }
   .cell-left {
-    flex: 0 0 36%;
-    margin-right: 65px;
+    @include breakpoint-up(sm) {
+      flex: 0 0 36%;
+      margin-right: 65px;
+    }
   }
   .mentor-group {
     .media-object {
       margin-bottom: 0;
-      h4{
+      h4 {
         font-size: rem(16px);
       }
-      .job-title{
+      .job-title {
         font-size: rem(15px);
       }
+    }
+  }
+  @include breakpoint-down(sm) {
+    .home-part {
+      padding-left: 45px;
+      padding-right: 45px;
     }
   }
 }
@@ -2126,18 +2138,35 @@ a:focus {
       position: relative;
     }
     > div > img {
-      width: 256px;
-      height: 256px;
+      width: 132px;
+      height: 132px;
       object-fit: cover;
       object-position: top center;
       border-radius: 50%;
+      @include breakpoint-up(sm) {
+        width: 256px;
+        height: 256px;
+      }
     }
   }
   &-share {
     position: absolute;
-    bottom: 0;
-    right: 30px;
+    bottom: 5px;
+    right: 10px;
     z-index: 1;
+    @include breakpoint-up(sm) {
+      bottom: 0;
+      right: 30px;
+    }
+    &__toggle {
+      display: block;
+      cursor: pointer;
+      @include breakpoint-down(sm) {
+        img {
+          width: 24px;
+        }
+      }
+    }
     &__social {
       position: absolute;
       background: #ffffff;
@@ -2150,6 +2179,12 @@ a:focus {
       padding: 3px 10px 8px 10px;
       top: -3px;
       left: calc(100% + 7px);
+      opacity: 0;
+      visibility: hidden;
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
     }
     ul {
       list-style: none;
@@ -2159,11 +2194,55 @@ a:focus {
       li {
         flex: 0 0 auto;
         margin: 0 6px;
+        @include breakpoint-down(sm){
+          margin: 0 13px;
+        }
+      }
+      @include breakpoint-up(sm){
+        img{
+          width: 18px;
+        }
+      }
+    }
+    @include breakpoint-down(sm) {
+      .overlay {
+        background: rgba(18, 39, 74, 0.49);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        &.show {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &__social {
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        background: #ffffff;
+        box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 14px 14px 0 0;
+        width: 100%;
+        height: 140px;
+        font-size: rem(16px);
+        padding-top: 25px;
+        img {
+          width: 53px;
+        }
+        ul{
+          margin-top: 20px;
+        }
       }
     }
   }
   &-position {
-    font-size: rem(20px);
+    font-size: rem(14px);
     font-weight: bold;
     line-height: 1.2;
   }
@@ -2171,15 +2250,26 @@ a:focus {
     .part-desc {
       line-height: 1.2;
       color: $second-color;
+      @include breakpoint-down(sm) {
+        font-size: rem(14px);
+      }
+    }
+    @include breakpoint-down(sm) {
+      .part-title {
+        font-size: rem(24px);
+      }
     }
   }
   &-support {
     &__title {
-      font-size: rem(18px);
+      font-size: rem(14px);
       font-weight: bold;
       font-style: italic;
       display: flex;
       align-items: center;
+      @include breakpoint-up(sm) {
+        font-size: rem(18px);
+      }
       &:before {
         width: 143px;
         background-color: $second-color;
@@ -2187,14 +2277,18 @@ a:focus {
         height: 1px;
         display: block;
         margin-right: 15px;
+        @include breakpoint-down(sm) {
+          width: 75px;
+          margin-right: 9px;
+        }
       }
     }
-    .partner-item{
-      img{
+    .partner-item {
+      img {
         opacity: 0.3;
       }
-      .active{
-        img{
+      .active {
+        img {
           opacity: 1;
         }
       }
@@ -2203,28 +2297,50 @@ a:focus {
   &-feedback {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 26px;
-    padding: 23px 27px 30px 20px;
-    &__img{
-      flex: 0 0 143px;
-      margin-right: 36px;
-      img{
+    padding: 15px 15px 30px 15px;
+    @include breakpoint-up(sm) {
+      padding: 23px 27px 30px 20px;
+    }
+    &__img {
+      flex: 0 0 55px;
+      margin-right: 18px;
+      @include breakpoint-up(sm) {
+        flex: 0 0 143px;
+        margin-right: 36px;
+      }
+      @include breakpoint-down(sm) {
+        margin-top: 16px;
+      }
+      img {
         max-width: 100%;
         max-height: 100%;
       }
     }
-    &__content{
-      h3{
+    &__content {
+      @include breakpoint-down(sm) {
+        flex: 0 0 calc(100% - 73px);
+      }
+      h3 {
         font-size: rem(26px);
         font-weight: bold;
         line-height: 1.2;
         margin-bottom: 19px;
+        @include breakpoint-down(sm) {
+          font-size: rem(18px);
+          margin-bottom: 15px;
+        }
       }
     }
-    .description{
+    .description {
       max-height: 178px;
       overflow: auto;
       padding-right: 30px;
-      p{
+      @include breakpoint-down(sm) {
+        padding-right: 15px;
+        font-size: rem(10px);
+        max-height: 135px;
+      }
+      p {
         line-height: 1.2;
       }
       &::-webkit-scrollbar-track {
