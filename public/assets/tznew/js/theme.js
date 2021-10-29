@@ -121,6 +121,18 @@
             }
         });
       }
+
+      // Mentor Page
+      if($('.mentor-share__toggle').length){
+        $('.mentor-share__toggle').on('click', function(e){
+          var overlay = $(this).closest('.mentor-share').find('.overlay');
+          $(this).closest('.mentor-share').find('.mentor-share__social').toggleClass('open');
+          overlay.addClass('show');
+          $(overlay).on('click', function(){
+            $(this).removeClass('show').closest('.mentor-share').find('.mentor-share__social').removeClass('open');
+          })
+        });
+      }
     },
 
     cardWindow: function () {
