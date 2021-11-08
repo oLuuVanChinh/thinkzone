@@ -1875,10 +1875,10 @@ a:focus {
     .media-object {
       margin-bottom: 0;
       h4 {
-        font-size: rem(16px);
+        font-size: rem(14px);
       }
       .job-title {
-        font-size: rem(15px);
+        font-size: rem(14px);
       }
     }
   }
@@ -1886,6 +1886,13 @@ a:focus {
     .home-part {
       padding-left: 45px;
       padding-right: 45px;
+    }
+  }
+  .mentor-group {
+    .large-4 {
+      .media-object-section{
+        padding-right: 10px;
+      }
     }
   }
 }
@@ -2438,6 +2445,13 @@ a:focus {
     }
     .flex-container {
       align-items: center;
+    }
+  }
+  .list-post {
+    img{
+      height: 170px;
+      object-fit: cover;
+      object-position: top center;
     }
   }
 }
