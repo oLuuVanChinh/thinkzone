@@ -2257,6 +2257,7 @@ a:focus {
     .part-desc {
       line-height: 1.2;
       color: $second-color;
+      text-align: justify;
       @include breakpoint-down(sm) {
         font-size: rem(14px);
       }
@@ -2342,6 +2343,7 @@ a:focus {
       max-height: 178px;
       overflow: auto;
       padding-right: 30px;
+      text-align: justify;
       @include breakpoint-down(sm) {
         padding-right: 15px;
         font-size: rem(10px);

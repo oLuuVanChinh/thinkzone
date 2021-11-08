@@ -3609,6 +3609,7 @@ a:focus {
 .mentor-detail .part-desc {
   line-height: 1.2;
   color: #12274a;
+  text-align: justify;
 }
 @media (max-width: 639px) {
   .mentor-detail .part-desc {
@@ -3702,6 +3703,7 @@ a:focus {
   max-height: 178px;
   overflow: auto;
   padding-right: 30px;
+  text-align: justify;
 }
 @media (max-width: 639px) {
   .mentor-feedback .description {
