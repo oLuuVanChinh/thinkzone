@@ -484,3 +484,46 @@ $accent-color: #3aa25b !default;
     padding-left: 0 !important;
   }
 }
+@media all and (max-width: 360px) {
+  .home-countdown{
+    .part-title--large{
+      font-size: rem(40px);
+    }
+    .button--medium{
+      font-size: rem(14px);
+    }
+  }
+  .card-left .card{
+    padding: 20px 10px 20px 20px;
+  }
+  .card-left .card-offer .ico{
+    margin-right: 18px;
+  }
+  .card-left .card-body p{
+    font-size: rem(14px);
+  }
+  .card-right{
+    padding: 34px 16px 0 0;
+  }
+  .card-right .card-body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .home-mentor .list-mentor{
+    padding: 0;
+  }
+  .home-mentor-detail .home-part{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .newsletter-form{
+    padding: 21px 15px 0 15px;
+  }
+  .newsletter-form form{
+    width: calc(100% - 30px);
+    left: 15px;
+    max-height: calc(100% - 70px);
+    top: calc(50% + 34px);
+    padding: 15px 32px 25px 32px;
+  }
+}
