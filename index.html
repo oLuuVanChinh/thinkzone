@@ -109,6 +109,20 @@
 
   <!-- Content -->
   <div id="content" class="content">
+    <!-- Countdown -->
+    <section class="home-event">
+      <div class="grid-container grid-container-large">
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-auto">
+            <h2 class="part-title color-white"><span class="color-accent">ThinkZone Fund II</span> Announcement</h2>
+            <p class="part-desc color-white"><i>The Most Significant Event of the Vietnam Startup Ecosystem in Early 2022</i></p>
+          </div>
+          <div class="cell medium-auto">
+            <div class="item-countdown item-countdown--light"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Begin .home-about -->
     <section class="home-part home-about" id="home-about">
       <div class="grid-container grid-container-large">
@@ -525,54 +539,6 @@
                   <img src="public/assets/tznew/css/images/partner-03.png" />
                 </div>
               </div>
-              <div class="partner-list__item">
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/sequoia.jpg" />
-                </div>
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/sequoia.jpg" />
-                </div>
-              </div>
-              <div class="partner-list__item">
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/500startups.jpg" />
-                </div>
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/500startups.jpg" />
-                </div>
-              </div>
-              <div class="partner-list__item">
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/partner-05.png" />
-                </div>
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/partner-05.png" />
-                </div>
-              </div>
-              <div class="partner-list__item">
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/startup-foundation-logo.png" />
-                </div>
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/startup-foundation-logo.png" />
-                </div>
-              </div>
-              <div class="partner-list__item">
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/partner-03.png" />
-                </div>
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/partner-03.png" />
-                </div>
-              </div>
-              <div class="partner-list__item">
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/sequoia.jpg" />
-                </div>
-                <div class="partner-list__img">
-                  <img src="public/assets/tznew/css/images/sequoia.jpg" />
-                </div>
-              </div>
             </div>
             <div class="flex-container align-center">
               <a href="#" rel="nofollow" class="button mt-medium-2">View all Partners</a>
@@ -977,8 +943,21 @@
   <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/foundation.js"></script>
   <script type="text/javascript">var baseUrl = 'http://thinkzone.vn/';</script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="public/assets/tznew//js/jquery.countdown/jquery.countdown.min.js"></script>
   <script src="http://thinkzone.vn/public/assets/tznew/js/app.js"></script>
   <script src="public/assets/tznew/js/theme.js"></script>
+  <script>
+    // Countdown
+    if ($('.item-countdown--light').length) {
+        $('.item-countdown--light').each(function () {
+            var time = $(this).data('time');
+            $(this).countdown('2021/02/8', function (event) {
+              console.log(event);
+                $(this).html(event.strftime('<p><span>%D</span>Days</p><p class="separate"></p><p><span>%H</span>Hours</p>'));
+            });
+        })
+    }
+</script>
 </body>
 
 </html>

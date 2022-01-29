@@ -194,6 +194,17 @@
           }
         });
       }
+      if($('[data-size-small]').length){
+        $('[data-size-small]').each(function(){
+          var screenWidth = $(window).width(),
+              dataSize = $(this).data('size-small');
+          if (screenWidth <= 576) {
+            $(this).css('font-size', dataSize);
+          } else {
+            $(this).attr('style', '');
+          }
+        });
+      }
     },
 
     profilePage: function () {
