@@ -1,0 +1,100 @@
+.psgTimer {
+  display: table;
+  margin: 0 auto 30px auto;
+  font-size: 0;
+  font-family: 'Roboto', sans-serif;
+  &_numbers,
+  &_labels {
+    &>div {
+      display: inline-block;
+      font-size: 0;
+      width: 124px;
+      text-align: center;
+    }
+  }
+  &_numbers {
+    &>div {
+      position: relative;
+      &:after {
+        content: ":";
+        line-height: 60px;
+        height: 60px;
+        display: block;
+        font-weight: bold;
+        font-size: 24px;
+        color: #21272C;
+        position: absolute;
+        top: 0;
+        right: -4px;
+      }
+      &:last-child:after {
+        content: none;
+      }
+      &>div {
+        display: inline-block;
+        vertical-align: top;
+        width: 44px;
+        height: 60px;
+        line-height: 60px;
+        background: #21272C;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        color: #FFD631;
+        &:first-child {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  &_labels {
+    &>div {
+      padding-top: 5px!important;
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #21272C;
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+  .psgTimer {
+    &_numbers,
+    &_labels {
+      &>div {
+        width: 74px;
+      }
+    }
+    &_numbers {
+      &>div {
+        position: relative;
+        &:after {
+          line-height: 40px;
+          height: 40px;
+          font-size: 16px;
+          right: -2px;
+        }
+        div {
+          width: 26px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 16px;
+          &:first-child {
+            margin-right: 2px;
+          }
+        }
+      }
+
+    }
+    &_labels {
+      &>div {
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+}
