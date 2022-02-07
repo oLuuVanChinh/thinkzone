@@ -2494,14 +2494,14 @@ a:focus {
 }
 
 #home-about {
-  background: url("images/bg-about.png") no-repeat 0 0;
-  background-size: 1920px;
+  background: url("images/bg_banner.png") no-repeat 0 0;
+  background-size: cover;
   padding: 53px 0 50px 0;
   background-position: -2px ​0px;
   @include breakpoint-down(sm) {
     background-image: url("images/bg-about-sp.png");
-    background-size: 1275px 797px;
-    background-position: -223px top;
+    background-size: 100%;
+    background-position: top left;
     padding: 40px 0 0px 0;
   }
 }
