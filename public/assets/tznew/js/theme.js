@@ -235,6 +235,23 @@
     dgtTheme.cardWindow();
     dgtTheme.profilePage();
   });
+  $(window).scroll(function(){
+    var sticky = $('.home-event'),
+        scroll = $(window).scrollTop(),
+        homeResource = $('#home-resources'),
+        titleFixed = $('.part-title--fixed');
+  
+    if (scroll >= 100) sticky.addClass('fixed');
+    else sticky.removeClass('fixed');
+
+    if(homeResource.length){
+      if((scroll + 58) > homeResource.offset().top && (scroll + 58) < homeResource.offset().top + homeResource.outerHeight()){
+        titleFixed.addClass('fixed');
+      } else {
+        titleFixed.removeClass('fixed');
+      }
+    }
+  });
   $('.card-right .card-body').scroll(function () {
     // $('.card__item').removeClass('window-open');
   });
