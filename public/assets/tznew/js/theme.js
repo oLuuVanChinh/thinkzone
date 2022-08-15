@@ -27,7 +27,8 @@
       // Slick Slider
       var slick = $('.slick-slider'),
         sliderPostCenter = $('#slider-post-center'),
-        sliderFull = $('.slick-slider-full');
+        sliderFull = $('.slick-slider-full'),
+        sliderAbout = $('#slider-about');
       if (slick.length) {
         slick.slick({
           slidesToShow: 1,
@@ -57,6 +58,15 @@
           autoplaySpeed: 0,
           speed: 4000,
           cssEase: 'linear'
+        });
+      }
+      if (sliderAbout.length) {
+        sliderAbout.slick({
+          arrows: false,
+          dots: true,
+          autoplay: false,
+          vertical: true,
+          verticalSwiping: true
         });
       }
 
