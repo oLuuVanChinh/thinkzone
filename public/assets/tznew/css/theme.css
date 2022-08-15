@@ -1659,14 +1659,14 @@ h6,
   left: 0;
   height: 17px;
   width: 17px;
-  border: 1px solid #12274a;
+  border: 1px solid rgb(18, 39, 74);
   border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .checkbox-custom .checkmark:after {
-  content: "";
+  content: "\e908";
   position: absolute;
   display: none;
   font-family: "icomoon";
@@ -1862,7 +1862,7 @@ a:focus {
   height: 3px;
 }
 .part-title--divider-gray {
-  background-color: #edf0ff;
+  background-color: rgb(237, 240, 255);
 }
 .part-title--divider--sub {
   font-size: 0.9375rem;
@@ -2127,12 +2127,12 @@ a:focus {
 }
 .form-control-popup .select-value::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #edf0ff;
+  background-color: rgb(237, 240, 255);
 }
 
 .filter-form .form-group {
   background-color: #fff;
-  border: 1px solid #12274a;
+  border: 1px solid rgb(18, 39, 74);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -2287,7 +2287,7 @@ a:focus {
 }
 
 .tabs {
-  background-color: #f6f6f6;
+  background-color: rgb(246, 246, 246);
   padding: 40px 12px 33px;
   border: none;
   border-radius: 5px;
@@ -2341,7 +2341,7 @@ a:focus {
 }
 .tabs-content::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #c4c4c4;
+  background-color: rgb(196, 196, 196);
   margin: 0 20px;
 }
 
@@ -2424,7 +2424,7 @@ a:focus {
   color: #fff;
 }
 .button--gradient {
-  background: linear-gradient(90deg, #3faa61 0%, #278c47 100%);
+  background: linear-gradient(90deg, rgb(63, 170, 97) 0%, rgb(39, 140, 71) 100%);
 }
 .button--stroke {
   color: #3faa61;
@@ -2461,7 +2461,7 @@ a:focus {
 }
 .button--light {
   background-color: #fff;
-  color: #12274a;
+  color: rgb(18, 39, 74);
 }
 .button--light-stroke {
   background-color: transparent;
@@ -2528,6 +2528,41 @@ a:focus {
   text-align: center;
 }
 
+.content-home {
+  height: 100vh;
+  background: url("images/bg-home.jpg") no-repeat top center;
+  background-size: cover;
+}
+.content-home .grid-container {
+  flex-grow: 1;
+}
+.content-home .part-title {
+  font-size: 7.5rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.content-home .part-title--sub {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0;
+}
+.content-home .part-desc {
+  font-size: 1.25rem;
+  border-left: 1px solid #fff;
+  padding-left: 25px;
+}
+.content-home .home-about {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+.content-home .button {
+  min-width: 202px;
+  height: 39px;
+  font-size: 1.25rem;
+}
+
 .shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -2578,7 +2613,7 @@ a:focus {
 }
 .img-list-nowrap::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #c4c4c4;
+  background-color: rgb(196, 196, 196);
   margin: 0 20px;
 }
 .img-list > .cell {
@@ -2713,11 +2748,6 @@ a:focus {
   position: fixed;
   width: 100%;
   z-index: 13;
-  background-color: #fff;
-  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
-}
-.header-container + * {
-  margin-top: 65px;
 }
 
 .header-transparent {
@@ -2754,11 +2784,12 @@ a:focus {
 }
 
 .header-primary {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 37px;
+  padding-bottom: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 0.5px solid #fff;
 }
 @media (max-width: 639px) {
   .header-primary {
@@ -2768,9 +2799,9 @@ a:focus {
   }
 }
 .header-primary .menu a {
-  color: #12274a;
-  font-size: 1rem;
-  font-weight: 500;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 .header-transparent .header-primary .menu a {
   color: #fff;
@@ -2785,16 +2816,17 @@ a:focus {
   padding-right: 0;
 }
 .header-primary .dropdown.menu > li > a {
-  padding: 0.7rem 0.75rem;
+  padding: 0 2.0625rem 0 2.0625rem;
 }
 .header-primary .dropdown.menu > li > a.active:before {
-  width: 30px;
-  height: 4px;
-  background-color: #3faa61;
+  width: 76px;
+  height: 3px;
+  background-color: #fff;
   content: "";
   position: absolute;
-  left: 16px;
-  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -27px;
   top: auto;
 }
 
@@ -3849,7 +3881,7 @@ a:focus {
 }
 .mentor-feedback .description::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #edf0ff;
+  background-color: rgb(237, 240, 255);
 }
 
 .mentor-group {
@@ -4810,7 +4842,7 @@ a:focus {
 .slick-slider .slick-arrow:before {
   font-family: "icomoon";
   font-size: 0.875rem;
-  content: "";
+  content: "\e908";
 }
 @media (min-width: 640px) {
   .slick-slider .slick-arrow:before {
@@ -4831,11 +4863,11 @@ a:focus {
   }
 }
 .card-slider .slick-slider .slick-arrow:before {
-  content: "";
+  content: "\e901";
   font-size: 0.75rem;
 }
 .mentor-support .slick-slider .slick-arrow:before {
-  content: "";
+  content: "\e90b";
   font-size: 1rem;
 }
 .slick-slider .slick-prev {
@@ -4867,13 +4899,13 @@ a:focus {
   }
 }
 .slick-slider .slick-prev:before {
-  content: "";
+  content: "\e909";
 }
 .card-slider .slick-slider .slick-prev:before {
-  content: "";
+  content: "\e902";
 }
 .mentor-support .slick-slider .slick-prev:before {
-  content: "";
+  content: "\e90c";
 }
 .home-partner .slick-slider .slick-prev:before {
   font-size: 1.375rem;
@@ -4919,27 +4951,18 @@ footer {
 }
 
 .footer-new {
-  background: url("images/bg-footer.png") no-repeat;
-  background-size: cover;
-  position: relative;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #fff;
-}
-.footer-new:before {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(18, 39, 74, 0.9);
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
 }
 .footer-new .grid-container {
   z-index: 1;
   position: relative;
 }
 .footer-new .social {
-  margin: 40px 0;
+  margin: 27px 0;
 }
 .footer-new .social li {
   margin-right: 20px;
@@ -4947,6 +4970,7 @@ footer {
 .footer-new p {
   margin-bottom: 0;
   line-height: 1.75;
+  margin-left: 38px;
 }
 .footer-new .google-maps {
   margin: 23px 0;
@@ -4960,13 +4984,13 @@ footer {
 }
 
 .footer-widget {
-  margin: 22px 0;
+  margin: 20px 0 10px;
 }
 .footer-widget .icon {
   width: 17px;
   flex: 0 0 auto;
   text-align: center;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 .footer-widget a {
   color: #fff;
@@ -5074,7 +5098,7 @@ footer {
   }
 }
 .card-slider__item {
-  background-color: #edf0ff;
+  background-color: rgb(237, 240, 255);
   border-radius: 20px;
   text-align: center;
   height: 84px;
@@ -5132,7 +5156,7 @@ footer {
 }
 .card-right .card-body::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #edf0ff;
+  background-color: rgb(237, 240, 255);
 }
 .card-right .card-body > .col {
   flex: 0 0 100%;
@@ -5144,8 +5168,8 @@ footer {
 }
 @media (min-width: 640px) {
   .card-right .card-body > .col {
-    flex: 0 0 calc(100% / 3);
-    max-width: calc(100% / 3);
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
     padding-top: 18px;
     padding-bottom: 18px;
   }
@@ -5244,7 +5268,7 @@ footer {
 }
 .card__item-window p {
   font-size: 0.6875rem;
-  color: #12274a;
+  color: rgb(18, 39, 74);
 }
 .card__item-window p strong {
   font-size: 1.0625rem;
@@ -6105,7 +6129,7 @@ blockquote:before {
 }
 .team-item--wrapper::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #edf0ff;
+  background-color: rgb(237, 240, 255);
 }
 .team-item:not(.team-item--highlight) {
   background: #ffffff;
@@ -6384,7 +6408,7 @@ blockquote:before {
   background: #12274a;
   box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
   border-radius: 16px 0px 0px 15px;
-  margin-right: calc(((100vw - 1100px) / 2) * -1);
+  margin-right: calc((100vw - 1100px) / 2 * -1);
   padding: 40px 0 0 33px;
   padding-bottom: 22px;
 }
@@ -6406,7 +6430,7 @@ blockquote:before {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    padding-right: calc(((100vw - 1220px) / 2));
+    padding-right: calc((100vw - 1220px) / 2);
   }
 }
 .company-item p {
@@ -6594,10 +6618,10 @@ blockquote:before {
 }
 .accordion-title:before {
   font-family: "icomoon";
-  content: "";
+  content: "\e906";
 }
 .is-active > .accordion-title:before {
-  content: "";
+  content: "\e906";
   transform: rotate(180deg);
 }
 :last-child:not(.is-active) > .accordion-title {

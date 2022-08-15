@@ -69,10 +69,6 @@
   }
 }
 @media all and (min-width: 992px) {
-  .header-container + * {
-    margin-top: 58px;
-  }
-
   .header-transparent + * {
     margin-top: 0;
   }
@@ -101,14 +97,6 @@
   .card-left > .cell {
     padding-left: 25px;
     padding-right: 25px;
-  }
-
-  footer {
-    padding: 74px 0 40px;
-  }
-
-  .footer-new {
-    padding: 63px 0 10px;
   }
 
   .list-mentor {

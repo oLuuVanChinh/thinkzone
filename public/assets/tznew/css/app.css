@@ -172,7 +172,7 @@ ul {
 }
 
 header .logo img {
-    max-height: 40px;
+    max-height: 60px;
 }
 
 .mobile-nav-button {
@@ -1180,10 +1180,6 @@ header .logo img {
 
 .owl-next {
     right: -30px;
-}
-
-footer {
-    background: #F7F9FE;
 }
 
 footer .cell {

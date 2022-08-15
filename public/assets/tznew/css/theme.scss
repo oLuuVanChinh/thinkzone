@@ -1152,6 +1152,43 @@ a:focus {
   }
 }
 
+.content-home{
+  height: 100vh;
+  background: url("images/bg-home.jpg") no-repeat top center;
+  background-size: cover;
+  .grid-container{
+    flex-grow: 1;
+  }
+  .part{
+    &-title{
+      font-size: rem(120px);
+      line-height: 1;
+      margin-bottom: 10px;
+      &--sub{
+        font-size: rem(24px);
+        color: #fff;
+        margin-bottom: 0;
+      }
+    }
+    &-desc{
+      font-size: rem(20px);
+      border-left: 1px solid #fff;
+      padding-left: 25px;
+    }
+  }
+  .home-about{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  .button{
+    min-width: 202px;
+    height: 39px;
+    font-size: rem(20px);
+  }
+}
+
 .shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1307,11 +1344,6 @@ a:focus {
   position: fixed;
   width: 100%;
   z-index: 13;
-  background-color: #fff;
-  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
-  + * {
-    margin-top: 65px;
-  }
 }
 
 .header-transparent {
@@ -1363,11 +1395,12 @@ a:focus {
 }
 
 .header-primary {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 37px;
+  padding-bottom: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 0.5px solid #fff;
 
   @include breakpoint-down(sm) {
     background-color: $second-color;
@@ -1376,9 +1409,9 @@ a:focus {
   }
 
   .menu a {
-    color: #12274a;
-    font-size: 1rem;
-    font-weight: 500;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
     .header-transparent & {
       color: #fff;
     }
@@ -1396,16 +1429,17 @@ a:focus {
           }
         }
         > a {
-          padding: 0.7rem 0.75rem;
+          padding: 0 2.0625rem 0 2.0625rem;
           &.active {
             &:before {
-              width: 30px;
-              height: 4px;
-              background-color: $accent-color;
+              width: 76px;
+              height: 3px;
+              background-color: #fff;
               content: "";
               position: absolute;
-              left: 16px;
-              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: -27px;
               top: auto;
             }
           }
@@ -3599,21 +3633,11 @@ footer {
 }
 
 .footer-new {
-  background: url("images/bg-footer.png") no-repeat;
-  background-size: cover;
-  position: relative;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #fff;
-
-  &:before {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(18, 39, 74, 0.9);
-    content: "";
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
   .grid-container {
     z-index: 1;
@@ -3621,7 +3645,7 @@ footer {
   }
 
   .social {
-    margin: 40px 0;
+    margin: 27px 0;
 
     li {
       margin-right: 20px;
@@ -3631,6 +3655,7 @@ footer {
   p {
     margin-bottom: 0;
     line-height: 1.75;
+    margin-left: 38px;
   }
 
   .google-maps {
@@ -3646,13 +3671,13 @@ footer {
 }
 
 .footer-widget {
-  margin: 22px 0;
+  margin: 20px 0 10px;
 
   .icon {
     width: 17px;
     flex: 0 0 auto;
     text-align: center;
-    margin-right: 15px;
+    margin-right: 5px;
   }
 
   a {
