@@ -594,6 +594,11 @@ a:focus {
         font-size: rem(51px);
       }
     }
+    &--shadow{
+      font-size: rem(40px);
+      font-weight: bold;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
   &-desc {
     color: rgba(18, 39, 74, 0.7);
@@ -605,6 +610,10 @@ a:focus {
       b {
         color: $accent-color;
       }
+    }
+    &--xmedium {
+      font-size: rem(20px);
+      line-height: rem(30px);
     }
     &--medium {
       font-size: rem(22px);
@@ -674,6 +683,9 @@ a:focus {
       display: flex;
       line-height: 1.5;
       margin: 8px 0;
+      &.white{
+        color: #fff;
+      }
       &:before {
         content: "";
         width: 12px;
@@ -1152,10 +1164,7 @@ a:focus {
   }
 }
 
-.content-home{
-  height: 100vh;
-  background: url("images/bg-home.jpg") no-repeat top center;
-  background-size: cover;
+.onepage-home{
   .grid-container{
     flex-grow: 1;
   }
@@ -1187,6 +1196,13 @@ a:focus {
     height: 39px;
     font-size: rem(20px);
   }
+}
+
+.content-home{
+  height: 100vh;
+  background: url("images/bg-home.jpg") no-repeat top center;
+  background-size: cover;
+  
 }
 
 .shadow {
@@ -2545,22 +2561,6 @@ a:focus {
     padding: 40px 0 0px 0;
   }
 }
-
-#home-value {
-  padding-top: 0;
-  padding-bottom: 50px;
-  background: url("images/bg-value.png") no-repeat 0 0;
-  &.part-landing {
-    background-position: 0 -15px;
-  }
-  @include breakpoint-down(sm) {
-    background-image: url("images/bg-value-sp.png");
-    background-position: 0 71px;
-    &.part-landing {
-      background-position: left 73%;
-    }
-  }
-}
 #home-testimonial,
 .home-resources {
   padding-top: 0;
@@ -3538,8 +3538,9 @@ a:focus {
         }
       }
       .card-slider & {
-        content: "\e901";
+        content: "\e903";
         font-size: rem(12px);
+        color: #fff;
       }
       .mentor-support & {
         content: "\e90b";
@@ -3577,7 +3578,8 @@ a:focus {
     &:before {
       content: "\e909";
       .card-slider & {
-        content: "\e902";
+        content: "\e904";
+        color: #fff;
       }
       .mentor-support & {
         content: "\e90c";
@@ -3803,8 +3805,11 @@ footer {
     &__link {
       flex: 0 0 auto;
       a {
-        font-size: rem(20px);
+        font-size: rem(18px);
         font-weight: 600;
+        height: 31px;
+        min-width: 100px;
+        margin-right: 15px;
       }
     }
     .slick-slider {
@@ -3829,9 +3834,9 @@ footer {
       height: 492px;
       overflow: auto;
       @include breakpoint-up(sm) {
-        padding-left: 43px;
-        padding-right: 43px;
-        height: 382px;
+        margin-left: 28px;
+        margin-right: 28px;
+        height: 278px;
       }
       &::-webkit-scrollbar-track {
         border-radius: 10px;
@@ -3843,7 +3848,7 @@ footer {
       }
       &::-webkit-scrollbar-thumb {
         border-radius: 5px;
-        background-color: rgba(237, 240, 255, 1);
+        background-color: #3FAA61;
       }
       > .col {
         flex: 0 0 100%;
@@ -3973,6 +3978,13 @@ footer {
       justify-content: center;
       cursor: pointer;
     }
+  }
+}
+
+.card-about{
+  background-color: rgba(255,255,255,0.3);
+  .card__item{
+    background-color: #fff;
   }
 }
 
@@ -5111,12 +5123,12 @@ blockquote {
 /* Company */
 .part-resources {
   .cell-left {
-    flex: 0 0 55%;
+    flex: 0 0 51.5%;
   }
 }
 .part-company {
   .cell-right {
-    flex: 0 0 54%;
+    flex: 0 0 60%;
   }
   @include breakpoint-down(sm) {
     background: url("images/bg-company-sp.png") no-repeat;
@@ -5125,12 +5137,6 @@ blockquote {
 }
 .company {
   &-list {
-    background: #12274a;
-    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 16px 0px 0px 15px;
-    margin-right: calc(((100vw - 1100px) / 2) * -1);
-    padding: 40px 0 0 33px;
-    padding-bottom: 22px;
     .link{
       position: absolute;
       width: 100%;
@@ -5141,19 +5147,19 @@ blockquote {
     transition: all 0.3s ease 0s;
     position: relative;
     @include breakpoint-up(sm) {
-      background: #f6f6f6;
+      background: rgba(246,246,246,0.3);
       box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
-      border-radius: 16px 0px 0px 15px;
+      border-radius: 20px;
       height: 135px;
       display: flex;
       align-items: center;
-      margin-bottom: 30px;
-      padding-right: calc(((100vw - 1220px) / 2));
+      margin-bottom: 28px;
+      padding-right: 90px;
     }
     p {
-      font-size: rem(15px);
       line-height: 1.2;
       margin-bottom: 0;
+      color: #fff;
     }
     &s {
       @include breakpoint-up(sm) {
@@ -5169,7 +5175,7 @@ blockquote {
       margin-bottom: 0;
     }
     &:hover{
-      background-color: #fff;
+      background-color: rgba(246,246,246,0.5);
       transform: scaleX(1.02) scaleY(1.01);
     }
   }
@@ -5271,6 +5277,38 @@ blockquote {
   }
 }
 
+.slider-about{
+  .home-part{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .grid-container{
+    width: 100%;
+  }
+  .slick-dots{
+    position: fixed;
+    right: 154px;
+    top: 50%;
+    left: auto;
+    bottom: auto;
+    width: 10px;
+    flex-direction: column;
+    transform: translateY(-50%);
+    button{
+      width: 13px;
+      height: 13px;
+      background-color: #fff;
+    }
+    .slick-active {
+      button{
+        box-shadow: 0 0 4px 4px #3FAA61;
+      }
+    }
+  }
+}
+
 /* FAQ */
 .iframe {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
@@ -5282,24 +5320,6 @@ blockquote {
     }
   }
 }
-.home-faq {
-  background: url("images/bg-faq.png") no-repeat top center;
-  background-position: 137px 0;
-  @include breakpoint-down(sm) {
-    background: none;
-    position: relative;
-    &:before {
-      background: url(images/bg-faq-sp.png) no-repeat;
-      content: "";
-      position: absolute;
-      bottom: -43%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-  }
-}
 .accordion {
   background-color: transparent;
   padding: 0 8px;
@@ -5307,17 +5327,17 @@ blockquote {
     padding: 0 64px;
   }
   &-title {
-    background: rgba(122, 235, 158, 0.25);
+    background: rgba(63, 170, 97, 0.6);
     border: none;
     border-bottom: 2px solid rgba(18, 39, 74, 0.5);
     font-size: rem(20px);
-    color: #000;
+    color: #fff;
     font-weight: bold;
     padding: 1.47rem 3.33rem 1.47rem 1.33rem;
     &:hover,
     &:focus {
-      background: rgba(122, 235, 158, 0.25);
-      color: #000;
+      background: rgba(63, 170, 97, 0.6);
+      color: #fff;
     }
     &:before {
       font-family: "icomoon";
@@ -5336,12 +5356,13 @@ blockquote {
     }
   }
   &-content {
-    background: rgba(237, 240, 255, 0.5);
+    background: rgba(237, 240, 255, 0.2);
     border: none;
     padding: 12px 74px 12px 21px;
     p {
       line-height: 1.875;
       margin-bottom: 0;
+      color: #fff;
     }
     @include breakpoint-down(sm) {
       padding: 12px 27px 17px 7px;
