@@ -1243,14 +1243,11 @@ footer .menu.infomation .phone {
 .list-unstyled li {
     list-style: none
 }
-.list-parter{
-    margin: 22px 0 0;
-}
 .list-parter .media-item img {
     display: block;
     max-height: 50px;
     width: auto;
-    margin-bottom: 27px;
+    margin-bottom: 16px;
 }
 
 .list-parter .media-item .media-title {
@@ -1270,7 +1267,7 @@ footer .menu.infomation .phone {
 }
 
 .list-parter .media {
-    margin-bottom: 40px
+    margin-bottom: 35px
 }
 
 /* breadcrumbs */
@@ -1341,21 +1338,21 @@ footer .menu.infomation .phone {
 .search-box .search-input {
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    background: url('images/ico-search.png') no-repeat #EDF0FF;
+    background: url('images/btn-search.png') no-repeat #F9F9F9;
     background-position: right 15px top 50%;
     box-shadow: unset;
     -webkit-box-shadow: unset;
-    padding: 10px 20px;
+    padding: 10px 25px 10px 34px;
     position: relative;
     height: 40px;
     line-height: 40px;
-    font-size: 0.875em;
+    font-size: 1em;
     color: #8993A5;
     margin-bottom: 0
 }
 
 .blog-navigation a {
-    color: #13274B;
+    color: #12274A;
     font-weight: 700;
     padding: 12px 25px 12px 0;
 }

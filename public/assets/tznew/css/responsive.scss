@@ -127,8 +127,28 @@ $accent-color: #3aa25b !default;
     font-size: 2rem;
   }
 
-  .list-parter .media-item .media-title {
-    font-size: 1.25em;
+  .list-parter {
+    margin-left: -41px;
+    margin-right: -41px;
+    > .cell{
+      padding-left: 41px;
+      padding-right: 41px;
+    }
+    .media-item {
+      .media-title {
+        font-size: rem(22px);
+        text-transform: uppercase;
+      }
+    }
+    .media{
+      border: 1px solid #ECECEC;
+      border-radius: 23px;
+      padding: 20px 36px 10px 27px;
+    }
+    p{
+      font-size: rem(15px);
+      color: #12274A;
+    }
   }
 
   .mentor-group .media-object .thumbnail {

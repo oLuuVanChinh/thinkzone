@@ -115,8 +115,26 @@
     font-size: 2rem;
   }
 
+  .list-parter {
+    margin-left: -41px;
+    margin-right: -41px;
+  }
+  .list-parter > .cell {
+    padding-left: 41px;
+    padding-right: 41px;
+  }
   .list-parter .media-item .media-title {
-    font-size: 1.25em;
+    font-size: 1.375rem;
+    text-transform: uppercase;
+  }
+  .list-parter .media {
+    border: 1px solid #ECECEC;
+    border-radius: 23px;
+    padding: 20px 36px 10px 27px;
+  }
+  .list-parter p {
+    font-size: 0.9375rem;
+    color: #12274A;
   }
 
   .mentor-group .media-object .thumbnail {
