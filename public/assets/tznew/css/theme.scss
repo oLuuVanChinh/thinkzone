@@ -1164,9 +1164,39 @@ a:focus {
   }
 }
 
+.list-parter{
+  max-height: 470px;
+  overflow: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    margin: 0 10px;
+  }
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #00B253;
+  }
+}
+
+.blog-part{
+  .cell-center{
+    flex: 0 0 46.5%;
+  }
+}
+
+.partner-group{
+  padding-right: 42px;
+}
+
 .onepage-home{
-  .grid-container{
-    flex-grow: 1;
+  height: 100%;
+  .grid-container, .grid-x{
+    height: 100%;
+    align-items: center;
   }
   .part{
     &-title{
@@ -1202,11 +1232,14 @@ a:focus {
   height: 100vh;
   background: url("images/bg-home.jpg") no-repeat top center;
   background-size: cover;
-  
 }
 
 .shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.scrollbar-profile{
+  padding-right: 36px;
 }
 
 .img {
@@ -1214,21 +1247,72 @@ a:focus {
     margin-bottom: 20px;
     margin-left: -3px;
     margin-right: -3px;
+    max-height: 500px;
+    padding-top: 20px;
+    overflow: auto;
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      margin: 0 10px;
+    }
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #00B253;
+    }
     @include breakpoint-up(sm) {
-      margin-left: -10px;
-      margin-right: -10px;
+      margin-left: -36px;
+      margin-right: -36px;
       margin-top: 20px;
     }
+    &__info{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      box-shadow: 2px 2px 30px 4px rgba(63, 170, 97, 0.2);
+      border-radius: 26px;
+      z-index: 1;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px 18px;
+      transition: all 0.4s ease 0s;
+      opacity: 0;
+      visibility: hidden;
+      &::before{
+        background-color: rgba(122, 235, 158, 0.25);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 26px;
+      }
+      p{
+        font-size: rem(16px);
+      }
+      .button{
+        height: 34px;
+        margin-bottom: 0;
+        margin-top: 32px;
+      }
+      a{
+        &:not(.button){
+          color: #12274A;
+          text-decoration: underline;
+        }
+      }
+    }
     &-nowrap {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      transform: rotateX(180deg);
       margin-top: 11px;
       @include breakpoint-down(sm) {
         margin-bottom: 10px;
-      }
-      > .cell {
-        transform: rotateX(-180deg);
       }
       &::-webkit-scrollbar-track {
         border-radius: 10px;
@@ -1254,21 +1338,21 @@ a:focus {
       padding-left: 3px;
       padding-right: 3px;
       @include breakpoint-up(sm) {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 36px;
+        padding-right: 36px;
       }
     }
     &__item {
-      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 5px;
-      display: flex;
-      padding: 10px;
-      margin: 10px 6px;
+      border: 1px solid #ECECEC;
+      border-radius: 23px;
       background-color: #fff;
-      @include breakpoint-up(sm) {
-        padding: 12px 10px;
-        margin: 10px 6px;
-      }
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 63px;
+      padding: 20px 0 30px;
+      position: relative;
       &.active {
         background-color: $accent-color;
         color: #fff;
@@ -1276,11 +1360,20 @@ a:focus {
           color: #fff;
         }
       }
-      .profile-filter & {
-        padding: 9px 8px;
-        @include breakpoint-up(sm) {
-          padding: 9px 16px;
+      &:hover{
+        border-color: transparent;
+        .img-list__info{
+          opacity: 1;
+          visibility: visible;
         }
+      }
+      > .button{
+        height: 25px;
+        min-width: 73px;
+        border-radius: 5px;
+        font-size: rem(14px);
+        margin-top: 13px;
+        margin-bottom: 0;
       }
       @include breakpoint-down(sm) {
         h6 {
@@ -1293,12 +1386,12 @@ a:focus {
       h6 {
         font-size: rem(10px);
         @include breakpoint-up(sm) {
-          font-size: rem(12px);
+          font-size: rem(16px);
         }
       }
       p {
-        color: rgba(18, 39, 74, 0.5);
-        font-size: rem(12px);
+        color: #000;
+        font-size: rem(16px);
         margin-bottom: 0;
         @include breakpoint-down(sm) {
           line-height: 1.2;
@@ -1417,6 +1510,9 @@ a:focus {
   align-items: center;
   justify-content: space-between;
   border-bottom: 0.5px solid #fff;
+  .header-dark &{
+    border-bottom-color: #000;
+  }
 
   @include breakpoint-down(sm) {
     background-color: $second-color;
@@ -1428,6 +1524,9 @@ a:focus {
     color: #fff;
     font-size: 1.25rem;
     font-weight: bold;
+    .header-dark &{
+      color: #000;
+    }
     .header-transparent & {
       color: #fff;
     }
@@ -1457,6 +1556,9 @@ a:focus {
               transform: translateX(-50%);
               bottom: -27px;
               top: auto;
+              .header-dark &{
+                background-color: #000;
+              }
             }
           }
         }
@@ -1846,7 +1948,6 @@ a:focus {
   }
 }
 .profile-filter {
-  background-color: #12274a;
   padding: 20px 0;
   @include breakpoint-down(sm) {
     position: fixed;
@@ -4387,8 +4488,11 @@ footer {
 
 .blog-navigation {
   a {
-    font-size: rem(12px);
-    padding: 8px 34px 7px 0;
+    font-size: rem(14px);
+    padding: 0 50px 19px 0;
+    span{
+      color: #C4C4C4;
+    }
   }
 }
 
@@ -4400,13 +4504,13 @@ footer {
 
 /* Seach Box */
 .search-box {
-  margin: 9px 0 55px;
+  margin: 9px 0 5px;
   form {
     margin-bottom: 20px;
   }
   .search-input {
     border: none;
-    min-width: 251px;
+    min-width: 369px;
 
     &::-webkit-input-placeholder {
       /* Edge */
@@ -4420,6 +4524,11 @@ footer {
 
     &::placeholder {
       color: #8993a5;
+    }
+  }
+  @include breakpoint-up(lg){
+    .cell-left{
+      flex: 0 0 62%;
     }
   }
 }
@@ -4752,7 +4861,6 @@ blockquote {
   }
   .search-box {
     form {
-      max-width: 251px;
       margin-left: auto;
       margin-bottom: 0;
     }
