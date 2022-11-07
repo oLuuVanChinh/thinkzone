@@ -2555,11 +2555,14 @@ a:focus {
 }
 .list-parter::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #00B253;
+  background-color: #00b253;
 }
 
+.blog-part .cell-left {
+  flex: 0 0 21.8%;
+}
 .blog-part .cell-center {
-  flex: 0 0 46.5%;
+  flex: 0 0 45.6%;
 }
 
 .partner-group {
@@ -2569,7 +2572,8 @@ a:focus {
 .onepage-home {
   height: 100%;
 }
-.onepage-home .grid-container, .onepage-home .grid-x {
+.onepage-home .grid-container,
+.onepage-home .grid-x {
   height: 100%;
   align-items: center;
 }
@@ -2632,7 +2636,7 @@ a:focus {
 }
 .img-list::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #00B253;
+  background-color: #00b253;
 }
 @media (min-width: 640px) {
   .img-list {
@@ -2678,7 +2682,7 @@ a:focus {
   margin-top: 32px;
 }
 .img-list__info a:not(.button) {
-  color: #12274A;
+  color: #12274a;
   text-decoration: underline;
 }
 .img-list-nowrap {
@@ -2723,7 +2727,7 @@ a:focus {
   }
 }
 .img-list__item {
-  border: 1px solid #ECECEC;
+  border: 1px solid #ececec;
   border-radius: 23px;
   background-color: #fff;
   text-align: center;
@@ -4022,21 +4026,18 @@ a:focus {
   }
 }
 
-#home-testimonial,
-.home-resources {
+#home-testimonial {
   padding-top: 0;
   padding-bottom: 7px;
 }
 @media (min-width: 640px) {
-  #home-testimonial,
-.home-resources {
+  #home-testimonial {
     background: url("images/bg-testimonial.png") no-repeat 0 0;
     background-position: right 60px;
     padding-bottom: 37px;
   }
 }
-#home-testimonial.part-landing,
-.home-resources.part-landing {
+#home-testimonial.part-landing {
   background: none;
 }
 
@@ -4452,14 +4453,6 @@ a:focus {
 }
 .home-partnerships + .home-portfolio {
   padding-top: 0px;
-}
-
-@media (min-width: 640px) {
-  .home-offer {
-    background: url("images/bg-offer.png") no-repeat;
-    background-position: center right;
-    margin-bottom: 50px;
-  }
 }
 
 .home-portfolio .part-desc {
@@ -5252,7 +5245,7 @@ footer {
 }
 .card-right .card-body::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #3FAA61;
+  background-color: #3faa61;
 }
 .card-right .card-body > .col {
   flex: 0 0 100%;
@@ -5773,7 +5766,7 @@ footer {
   padding: 0 50px 19px 0;
 }
 .blog-navigation a span {
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 
 @media (min-width: 640px) {
@@ -5800,6 +5793,20 @@ footer {
   .search-box .cell-left {
     flex: 0 0 62%;
   }
+}
+.search-box--sidebar {
+  margin: 0;
+}
+.search-box--sidebar .search-input {
+  min-width: 100%;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+.search-box--sidebar .menu {
+  flex-direction: column;
+}
+.search-box--sidebar .blog-navigation a {
+  margin-bottom: 34px;
 }
 
 /* Single Post */
@@ -6688,7 +6695,7 @@ blockquote:before {
   background-color: #fff;
 }
 .slider-about .slick-dots .slick-active button {
-  box-shadow: 0 0 4px 4px #3FAA61;
+  box-shadow: 0 0 4px 4px #3faa61;
 }
 
 /* FAQ */
@@ -6757,4 +6764,71 @@ blockquote:before {
     padding: 12px 27px 17px 7px;
     font-size: 0.875rem;
   }
+}
+
+/* Timeline */
+.timeline {
+  background: url("images/bg-timeline.png") no-repeat bottom right;
+  color: #fff;
+  font-size: 1.125rem;
+  margin-top: 50px;
+}
+.timeline:hover {
+  background-image: url(images/bg-timeline-hover.png);
+  background-position: right 98%;
+}
+.timeline span {
+  font-size: 1.5rem;
+  color: #00b253;
+  font-weight: bold;
+}
+.timeline p {
+  line-height: 1.2;
+}
+.timeline span,
+.timeline p {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+}
+.timeline h5 {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin: 9px 0 6px 0;
+}
+.timeline-grid {
+  display: flex;
+}
+.timeline-item {
+  padding-bottom: 95px;
+  position: relative;
+}
+.timeline-item:hover span,
+.timeline-item:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+.timeline-item:hover::before {
+  background-image: url(images/bg-line-timeline-hover.png);
+  background-position: bottom;
+}
+.timeline-item:after {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline-item::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 89px;
+  background: url(images/bg-line-timeline.png) no-repeat;
+  bottom: 48px;
+  left: calc(50% - 1px);
 }
