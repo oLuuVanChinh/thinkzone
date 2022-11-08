@@ -2357,6 +2357,42 @@ a:focus {
   margin: 0 20px;
 }
 
+.detail-relation .tabs-content {
+  overflow: hidden;
+}
+.detail-relation .tabs {
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  margin-bottom: 37px;
+}
+.detail-relation .tabs-title > a {
+  box-shadow: none;
+  font-size: 1.875rem;
+  color: rgba(18, 39, 74, 0.3);
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+.detail-relation .tabs-title > a::after {
+  content: "/";
+  font-size: 1.875rem;
+  color: #3FAA61;
+  margin: 0 17px 0 25px;
+  position: static;
+  width: auto;
+}
+.detail-relation li:last-child a::after {
+  display: none;
+}
+.detail-relation .tabs-title > a[aria-selected=true] {
+  color: #12274A;
+}
+.detail-relation .tabs-panel {
+  padding: 0;
+}
+
 .grid-col-auto .cell {
   flex-basis: 0;
   flex-grow: 1;
@@ -2898,6 +2934,7 @@ a:focus {
 }
 .header-dark .header-primary {
   border-bottom-color: #000;
+  background-color: #fff;
 }
 @media (max-width: 639px) {
   .header-primary {
@@ -2941,7 +2978,7 @@ a:focus {
   top: auto;
 }
 .header-dark .header-primary .dropdown.menu > li > a.active:before {
-  background-color: #000;
+  background-color: #3FAA61;
 }
 
 .is-dropdown-submenu {
@@ -4852,8 +4889,56 @@ a:focus {
 
 @media (min-width: 1200px) {
   .home-blog-details .cell-right {
-    flex: 0 0 26.6%;
+    flex: 0 0 17.6%;
   }
+}
+
+.blog-tab {
+  padding-top: 65px;
+  position: fixed;
+  max-width: 190px;
+}
+.blog-tab h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #12274A;
+  margin-bottom: 30px;
+}
+.blog-tab ul {
+  list-style: none;
+}
+.blog-tab a {
+  font-size: 1.125rem;
+  color: #12274A;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.blog-progress {
+  width: 100%;
+  height: 10px;
+  background-color: #C4C4C4;
+  position: fixed;
+  transform: translateY(-39px);
+  z-index: 111;
+}
+.blog-progress span {
+  height: 10px;
+  background-color: #3FAA61;
+  display: block;
+  width: 0;
+}
+
+.detail-relation .cell {
+  margin-bottom: 70px;
+}
+.detail-relation .post-title a {
+  font-size: 1.625rem;
+  line-height: 1.58;
+}
+.detail-relation .post-meta {
+  font-size: 0.9375rem;
+  padding: 0;
 }
 
 .loadmore {
@@ -5037,33 +5122,83 @@ footer {
 }
 
 .footer-new {
+  background: url("images/bg-footer.png") no-repeat;
+  background-size: cover;
+  position: relative;
   font-size: 1rem;
   color: #fff;
-  position: fixed;
-  bottom: 0;
+}
+.footer-new:not(.footer-minimal) {
+  padding: 50px 0 32px 0;
+}
+.footer-new:not(.footer-minimal) .cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer-new:not(.footer-minimal) .grid-container {
+  max-width: 76.25rem;
+}
+.footer-new:before {
   width: 100%;
+  height: 100%;
+  background-color: rgba(18, 39, 74, 0.9);
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 .footer-new .grid-container {
   z-index: 1;
   position: relative;
 }
 .footer-new .social {
-  margin: 27px 0;
+  margin: 32px 0;
 }
 .footer-new .social li {
-  margin-right: 20px;
+  margin: 0 29px;
 }
 .footer-new p {
   margin-bottom: 0;
   line-height: 1.75;
-  margin-left: 38px;
 }
 .footer-new .google-maps {
   margin: 23px 0;
+  flex-grow: 1;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.footer-minimal {
+  font-size: 1rem;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+}
+.footer-minimal:before {
+  display: none;
+}
+.footer-minimal .grid-container {
+  z-index: 1;
+  position: relative;
+}
+.footer-minimal .social {
+  margin: 27px 0;
+}
+.footer-minimal .social li {
+  margin-right: 20px;
+}
+.footer-minimal p {
+  margin-bottom: 0;
+  line-height: 1.75;
+  margin-left: 38px;
 }
 
 .widget-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 29px;
   margin-bottom: 0.75em;
@@ -5769,12 +5904,6 @@ footer {
   color: #c4c4c4;
 }
 
-@media (min-width: 640px) {
-  .entry-content {
-    padding: 0 50px 0 0;
-  }
-}
-
 /* Seach Box */
 .search-box {
   margin: 9px 0 5px;
@@ -5815,6 +5944,30 @@ footer {
 }
 .author .name {
   color: #3faa61;
+}
+
+.share-intro {
+  text-align: center;
+  margin: 34px 0 70px;
+}
+.share-intro h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 42px;
+}
+.share-intro li {
+  list-style: none;
+  margin: 0 32px;
+}
+.share-intro a {
+  width: 49px;
+  height: 49px;
+  background-color: #3FAA61;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .taglist {

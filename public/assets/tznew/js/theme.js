@@ -230,6 +230,27 @@
       } else {
         $('.profile__desc').removeAttr('style');
       }
+    },
+
+    blogTabs: function () {
+      if ($('.single-post').length) {
+        var blogTitle = $('.single-post .entry-content').find('h3');
+        console.log(blogTitle);
+        blogTitle.each(function (index) {
+          $(this).attr("id", "title" + index);
+          if ($('.blog-tab').length) {
+            $('.blog-tab ul').append('<li><a href="#title' + index + '">' + $(this).text() + '</a></li>')
+          }
+        })
+        if ($('.blog-tab a').length) {
+          $('.blog-tab a').on("click", function () {
+            var id = $(this).attr('href');
+            $('html, body').animate({
+              scrollTop: $(id).offset().top - 134
+            }, 2000);
+          });
+        }
+      }
     }
   }
   window.dgtTheme = dgtTheme;
@@ -239,6 +260,7 @@
     dgtTheme.emptySpace();
     dgtTheme.cardWindow();
     dgtTheme.profilePage();
+    dgtTheme.blogTabs();
   });
   $(window).resize(function () {
     dgtTheme.emptySpace();
