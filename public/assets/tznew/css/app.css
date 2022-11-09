@@ -1390,10 +1390,10 @@ footer .menu.infomation .phone {
 }
 
 .list-post .post-title a {
-    font-size: 1rem;
+    font-size: 15px;
     font-weight: 700;
     color: #13274B;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .post-meta {

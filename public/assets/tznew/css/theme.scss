@@ -1226,10 +1226,10 @@ a:focus {
 
 .blog-part {
   .cell-left {
-    flex: 0 0 21.8%;
+    flex: 0 0 19.8%;
   }
   .cell-center {
-    flex: 0 0 45.6%;
+    flex: 0 0 47.6%;
   }
 }
 
@@ -3475,6 +3475,35 @@ a:focus {
           line-height: 1.2;
         }
       }
+    }
+  }
+  &--scroll{
+    max-height: 510px;
+    overflow-y: auto;
+    padding-right: 30px;
+    .grid-margin-x{
+      margin-left: -1.5625rem;
+      margin-right: -1.5625rem;
+      > .cell{
+        margin-left: 1.5625rem;
+        margin-right: 1.5625rem;
+      }
+      > .medium-6{
+        width: calc(50% - 3.125rem)
+      }
+    }
+  }
+
+  &--large{
+    margin-bottom: 27px;
+    .post-title {
+      a{
+        font-size: rem(20px);
+      }
+    }
+    p{
+      font-size: rem(12px);
+      line-height: 1.2;
     }
   }
 

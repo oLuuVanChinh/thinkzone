@@ -2595,10 +2595,10 @@ a:focus {
 }
 
 .blog-part .cell-left {
-  flex: 0 0 21.8%;
+  flex: 0 0 19.8%;
 }
 .blog-part .cell-center {
-  flex: 0 0 45.6%;
+  flex: 0 0 47.6%;
 }
 
 .partner-group {
@@ -4778,6 +4778,32 @@ a:focus {
 .list-post--list .post__desc small {
   font-size: 0.75rem;
   display: block;
+  line-height: 1.2;
+}
+.list-post--scroll {
+  max-height: 510px;
+  overflow-y: auto;
+  padding-right: 30px;
+}
+.list-post--scroll .grid-margin-x {
+  margin-left: -1.5625rem;
+  margin-right: -1.5625rem;
+}
+.list-post--scroll .grid-margin-x > .cell {
+  margin-left: 1.5625rem;
+  margin-right: 1.5625rem;
+}
+.list-post--scroll .grid-margin-x > .medium-6 {
+  width: calc(50% - 3.125rem);
+}
+.list-post--large {
+  margin-bottom: 27px;
+}
+.list-post--large .post-title a {
+  font-size: 1.25rem;
+}
+.list-post--large p {
+  font-size: 0.75rem;
   line-height: 1.2;
 }
 .list-post--sidebar .part-title {
