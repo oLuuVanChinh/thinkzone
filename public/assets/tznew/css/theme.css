@@ -2378,7 +2378,7 @@ a:focus {
 .detail-relation .tabs-title > a::after {
   content: "/";
   font-size: 1.875rem;
-  color: #3FAA61;
+  color: #3faa61;
   margin: 0 17px 0 25px;
   position: static;
   width: auto;
@@ -2387,7 +2387,7 @@ a:focus {
   display: none;
 }
 .detail-relation .tabs-title > a[aria-selected=true] {
-  color: #12274A;
+  color: #12274a;
 }
 .detail-relation .tabs-panel {
   padding: 0;
@@ -2599,6 +2599,11 @@ a:focus {
 }
 .blog-part .cell-center {
   flex: 0 0 47.6%;
+}
+@media (min-width: 1400px) {
+  .blog-part .cell-right {
+    padding-left: 42px;
+  }
 }
 
 .partner-group {
@@ -2978,7 +2983,7 @@ a:focus {
   top: auto;
 }
 .header-dark .header-primary .dropdown.menu > li > a.active:before {
-  background-color: #3FAA61;
+  background-color: #3faa61;
 }
 
 .is-dropdown-submenu {
@@ -4840,8 +4845,164 @@ a:focus {
   }
 }
 
+.calendar {
+  border-bottom: 2px solid #C4C4C4;
+  padding-bottom: 42px;
+}
+.calendar table, .calendar thead, .calendar tbody {
+  border: none;
+}
+.calendar .filler {
+  background-color: #fff;
+}
+.calendar .event-item {
+  display: flex;
+}
+.calendar .event-image {
+  margin-right: 15px;
+}
+.calendar .event-image img {
+  width: 47px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: top center;
+}
+.calendar .event-info {
+  color: #3FAA61;
+  font-size: 0.625rem;
+  flex-grow: 1;
+}
+.calendar .event-info h4 a {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #12274A;
+  display: block;
+}
+.calendar .event-action {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.calendar .event-action img {
+  margin-right: 5px;
+}
+.calendar .event-action a {
+  display: flex;
+  align-items: center;
+}
+.calendar .event-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 45px 0 0;
+}
+.calendar .event-container .close {
+  top: 0;
+  right: 0;
+}
+.calendar .event-container .event {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+.calendar .event-container .event:not(:last-child):after {
+  width: calc(100% - 53px);
+  height: 2px;
+  background-color: #C4C4C4;
+  content: "";
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  display: block;
+}
+.calendar .event-container .event .event-hour, .calendar .event-container .event .event-date {
+  display: none;
+}
+.calendar .day.has-event:after {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid #00B253;
+  top: 0;
+  left: 0;
+}
+.calendar td {
+  padding: 3px 0.1em;
+}
+.calendar table {
+  margin: 11px 0;
+}
+.calendar thead {
+  background-color: transparent;
+}
+.calendar thead td {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+}
+.calendar tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+.calendar header {
+  text-align: left;
+}
+.calendar header .simple-calendar-btn {
+  bottom: 16px;
+  top: auto;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #3FAA61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3FAA61;
+}
+.calendar header .simple-calendar-btn:hover {
+  background-color: #3FAA61;
+}
+.calendar header .simple-calendar-btn::before {
+  top: 6px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+}
+.calendar header .month {
+  font-size: 0.5625rem;
+  font-weight: bold;
+  background-color: #3faa61;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1px 5px 0;
+}
+.calendar .day {
+  width: 29px;
+  height: 29px;
+  line-height: 29px;
+  border: none;
+  font-size: 0.875rem;
+  color: #12274A;
+}
+.calendar .day:hover, .calendar .day.disabled:hover {
+  border: none;
+}
+.calendar .day.today {
+  background-color: #00B253;
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 .newsletter-form {
-  padding: 21px 32px 0 32px;
+  padding: 21px 0 0 0;
 }
 .newsletter-form .part-title {
   font-size: 1.125rem;
@@ -4927,7 +5088,7 @@ a:focus {
 .blog-tab h3 {
   font-size: 1.125rem;
   font-weight: bold;
-  color: #12274A;
+  color: #12274a;
   margin-bottom: 30px;
 }
 .blog-tab ul {
@@ -4935,7 +5096,7 @@ a:focus {
 }
 .blog-tab a {
   font-size: 1.125rem;
-  color: #12274A;
+  color: #12274a;
   margin-bottom: 30px;
   display: block;
 }
@@ -4943,14 +5104,14 @@ a:focus {
 .blog-progress {
   width: 100%;
   height: 10px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   position: fixed;
   transform: translateY(-39px);
   z-index: 111;
 }
 .blog-progress span {
   height: 10px;
-  background-color: #3FAA61;
+  background-color: #3faa61;
   display: block;
   width: 0;
 }
@@ -5989,7 +6150,7 @@ footer {
 .share-intro a {
   width: 49px;
   height: 49px;
-  background-color: #3FAA61;
+  background-color: #3faa61;
   border-radius: 50%;
   display: flex;
   align-items: center;
