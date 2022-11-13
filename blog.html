@@ -35,17 +35,6 @@
     <link rel="stylesheet" href="public/assets/tznew/css/theme.css">
     <link rel="stylesheet" href="public/assets/tznew/css/responsive.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139042988-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'UA-139042988-1');
-    </script>
 </head>
 
 <body>
@@ -56,8 +45,7 @@
                 <div class="header-left">
                     <div class="logo">
                         <a href="http://thinkzone.vn/">
-                            <img class="show-for-medium" src="public/assets/tznew/css/images/logo-dark.png" alt="">
-                            <img class="show-for-small-only" src="public/assets/tznew/css/images/logo-white.png" alt="">
+                            <img src="public/assets/tznew/css/images/logo-dark.png" alt="">
                         </a>
                     </div>
                     <a href="#mobile-nav" class="mobile-nav-button hide-for-large"></a>
@@ -102,7 +90,7 @@
     </header>
     <!-- End header -->
     <!-- Content -->
-    <div id="content" class="content mt-10 pt-10">
+    <div id="content" class="content">
         <!-- Begin .home-banner -->
         <section class="sub-part blog-part">
             <div class="grid-container">
@@ -112,38 +100,45 @@
                             <form action="" method="get">
                                 <input type="text" name="q" placeholder="Search" class="input search-input bg-gray">
                             </form>
-                            <ul class="menu blog-navigation">
-                                <li class="is-active"><a href="http://thinkzone.vn/blog">All</a></li>
+                            <div class="menu-toggle">
+                                <div class="menu-toggle__select show-for-small-only">
+                                    <span>All</span>
+                                    <i class="icon-angle-down"></i>
+                                </div>
+                                <ul class="menu blog-navigation">
+                                    <li class="is-active"><a href="http://thinkzone.vn/blog">All</a></li>
 
-                                <li class=""><a href="http://thinkzone.vn/category/event">Case analysis (15)</a>
-                                </li>
+                                    <li class=""><a href="http://thinkzone.vn/category/event">Case analysis (15)</a>
+                                    </li>
 
-                                <li class=""><a href="http://thinkzone.vn/category/funding">Sales & Marketing
-                                        (9)</a>
-                                </li>
+                                    <li class=""><a href="http://thinkzone.vn/category/funding">Sales & Marketing
+                                            (9)</a>
+                                    </li>
 
-                                <li class=""><a href="http://thinkzone.vn/category/investor">Finance & Funding
-                                        (9)</a>
-                                </li>
+                                    <li class=""><a href="http://thinkzone.vn/category/investor">Finance & Funding
+                                            (9)</a>
+                                    </li>
 
-                                <li class=""><a href="http://thinkzone.vn/category/startup">Customer Development
-                                        (3)</a>
-                                </li>
-                                <li class=""><a href="http://thinkzone.vn/category/startup">Product Development
-                                        (11)</a>
-                                </li>
-                                <li class=""><a href="http://thinkzone.vn/category/startup">Legal Issues (1)</a>
-                                </li>
-                                <li class=""><a href="http://thinkzone.vn/category/startup">Business Strategies
-                                        (9)</a>
-                                </li>
-                                <li class=""><a href="http://thinkzone.vn/category/startup">Teams & Operation
-                                        (5)</a>
-                                </li>
-                            </ul>
+                                    <li class=""><a href="http://thinkzone.vn/category/startup">Customer Development
+                                            (3)</a>
+                                    </li>
+                                    <li class=""><a href="http://thinkzone.vn/category/startup">Product Development
+                                            (11)</a>
+                                    </li>
+                                    <li class=""><a href="http://thinkzone.vn/category/startup">Legal Issues (1)</a>
+                                    </li>
+                                    <li class=""><a href="http://thinkzone.vn/category/startup">Business Strategies
+                                            (9)</a>
+                                    </li>
+                                    <li class=""><a href="http://thinkzone.vn/category/startup">Teams & Operation
+                                            (5)</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="cell cell-center small-12 large-auto">
+                        <span id="openNewsletter" class="open-newsletter">Sign up for Newsletter</span>
                         <div class="list-post list-post--large">
                             <ul class="list-unstyled" id="list-blog">
                                 <li class="cell small-12 medium-6" id="news-template">
@@ -340,12 +335,12 @@
                         </div>
                     </div>
                     <div class="cell cell-right small-12 large-auto">
-                        
-                        <div class="container-calendar">
+
+                        <div class="container-calendar hide-for-small-only">
                             <h3 class="sidebar-title mb-0">Startup Events</h3>
                             <div id="containerCalendar"></div>
                         </div>
-                        
+
                         <div class="newsletter-form">
                             <span class="overlay"></span>
                             <form id="newsletterForm">
@@ -403,7 +398,57 @@
             </div>
         </section>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-gray footer-new">
+        <div class="grid-container grid-container-large">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 large-4">
+                    <div class="logo-footer">
+                        <a href="#"><img src="public/assets/tznew/css/images/logo-white-large.png" alt=""></a>
+                    </div>
+                    <div class="social">
+                        <ul class="menu flex-container">
+                            <li><a href="#"><img src="public/assets/tznew/css/images/icon-facebook-large.png"
+                                        alt="Facebook" /></a>
+                            </li>
+                            <li><a href="#"><img src="public/assets/tznew/css/images/icon-youtube-large.png"
+                                        alt="Youtube" /></a>
+                            </li>
+                            <li><a href="#"><img src="public/assets/tznew/css/images/icon-linkedin-large.png"
+                                        alt="LinkedIn" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cell large-3 small-12">
+                    <div class="footer-widget">
+                        <h3 class="widget-title">CONTACT US</h3>
+                        <p class="flex-container mb-3">
+                            <span class="icon"><img src="public/assets/tznew/css/images/icon-placeholder.png"></span>
+                            <span>11th Floor, Twin Tower, 265 Cau Giay, Hanoi, Vietnam</span>
+                        </p>
+                        <p class="flex-container mb-3">
+                            <span class="icon"><img src="public/assets/tznew/css/images/icon-phone-call.png"></span>
+                            <span><a href="tel:(+84) 24 7100 9999">+84 24 7100 9999</a></span>
+                        </p>
+                        <p class="flex-container mb-3">
+                            <span class="icon mt-1"><img src="public/assets/tznew/css/images/icon-letter.png"></span>
+                            <span><a href="mailto:contact@thinkzone.vn">contact@thinkzone.vn</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="cell large-5 small-12">
+                    <div class="google-maps">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9133304534007!2d105.7802455153139!3d21.036153592900927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4abcf6766d%3A0x3d53b16db55e9419!2sIndochina%20Plaza%20Hanoi%20Residences!5e0!3m2!1svi!2s!4v1577243535595!5m2!1svi!2s"
+                            width="100%" height="219" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
     <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/jquery.js"></script>
     <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/what-input.js"></script>
     <script src="http://thinkzone.vn/public/assets/tznew/js/vendor/foundation.js"></script>
@@ -414,6 +459,7 @@
     <script src="public/assets/tznew//js/owlCarousel/owl.carousel.min.js"></script>
     <script src="public/assets/tznew//js/jquery.countdown/jquery.countdown.min.js"></script>
     <script src="public/assets/tznew/js/jquery.simple-calendar.js"></script>
+    <script src="public/assets/tznew/js/theme.js"></script>
     <script>
         var owl = $('.owl-carousel');
         owl.owlCarousel({
@@ -468,13 +514,13 @@
                         summary: '<div class="event-item">' +
                             '<div class="event-image"><img src="https://plus.unsplash.com/premium_photo-1661740645196-86113ed93ddd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" /></div>' +
                             '<div class="event-info">' +
-                                '<h4><a href="#">Kawai 2022</a></h4>' +
-                                '<div class="event-action">' +
-                                    '<a href="#"><img src="public/assets/tznew/css/images/icon-pin-event.png" />Zoom meeting</a>' +
-                                    '<span><img src="public/assets/tznew/css/images/icon-clock.png" />9:00 am</span>' +
-                                '</div>' +
+                            '<h4><a href="#">Kawai 2022</a></h4>' +
+                            '<div class="event-action">' +
+                            '<a href="#"><img src="public/assets/tznew/css/images/icon-pin-event.png" />Zoom meeting</a>' +
+                            '<span><img src="public/assets/tznew/css/images/icon-clock.png" />9:00 am</span>' +
                             '</div>' +
-                        '</div>'
+                            '</div>' +
+                            '</div>'
                     },
                     {
                         startDate: new Date(new Date().setHours(new Date().getHours() - 48)).toISOString(),
@@ -482,13 +528,13 @@
                         summary: '<div class="event-item">' +
                             '<div class="event-image"><img src="https://images.unsplash.com/photo-1668028676774-1c6b4d51bd28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" /></div>' +
                             '<div class="event-info">' +
-                                '<h4><a href="#">Hakathon 2022</a></h4>' +
-                                '<div class="event-action">' +
-                                    '<a href="#"><img src="public/assets/tznew/css/images/icon-pin-event.png" />Zoom meeting</a>' +
-                                    '<span><img src="public/assets/tznew/css/images/icon-clock.png" />9:00 am</span>' +
-                                '</div>' +
+                            '<h4><a href="#">Hakathon 2022</a></h4>' +
+                            '<div class="event-action">' +
+                            '<a href="#"><img src="public/assets/tznew/css/images/icon-pin-event.png" />Zoom meeting</a>' +
+                            '<span><img src="public/assets/tznew/css/images/icon-clock.png" />9:00 am</span>' +
                             '</div>' +
-                        '</div>'
+                            '</div>' +
+                            '</div>'
                     }
                 ],
 
