@@ -591,14 +591,14 @@ a:focus {
       span {
         font-size: rem(16px);
       }
-      @include breakpoint-down(sm) {
-        font-size: rem(51px);
-      }
     }
     &--shadow {
-      font-size: rem(40px);
+      font-size: rem(26px);
       font-weight: bold;
       text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      @include breakpoint-up(lg) {
+        font-size: rem(40px);
+      }
     }
   }
   &-desc {
@@ -2860,13 +2860,6 @@ a:focus {
 .home-resources {
   background-position: right center;
 }
-@include breakpoint-down(sm) {
-  .part-resources {
-    background: url("images/bg-resource-sp.png") no-repeat 0 0;
-    background-position: center top;
-    padding-top: 20px;
-  }
-}
 .home-review {
   @include breakpoint-up(sm) {
     background: url("images/bg-blog.png") no-repeat 0 0;
@@ -4418,8 +4411,8 @@ footer {
         @include breakpoint-up(sm) {
           font-size: rem(38px);
         }
-        @include breakpoint-down(sm) {
-          font-weight: 600;
+        @include breakpoint-down(md) {
+          font-size: rem(25px);
         }
       }
       &-body {
@@ -4486,6 +4479,11 @@ footer {
       padding-right: 14px;
       height: 492px;
       overflow: auto;
+      @include breakpoint-down(md) {
+        height: 370px;
+        padding-left: 0;
+        padding-right: 0;
+      }
       @include breakpoint-up(sm) {
         margin-left: 28px;
         margin-right: 28px;
@@ -4638,6 +4636,11 @@ footer {
   background-color: rgba(255, 255, 255, 0.3);
   .card__item {
     background-color: #fff;
+  }
+}
+.card-slider {
+  @include breakpoint-down(md) {
+    margin-bottom: 20px;
   }
 }
 
@@ -4808,6 +4811,96 @@ footer {
       }
     }
   }
+  &--toggle {
+    @include breakpoint-down(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .icon-box-content {
+        margin: 60px 0;
+        display: none;
+      }
+      [class*="part-title"] {
+        background-color: #3faa61;
+        color: #fff;
+        width: 232px;
+        border-radius: 20px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(md) {
+  .part-desc-hide-mobile {
+    font-size: rem(13px);
+  }
+}
+
+.toggle-wrap {
+  &.open {
+    .part-title--shadow,
+    .part-desc-hide-mobile,
+    .note,
+    .part-title--xtiny {
+      display: none !important;
+    }
+    
+    .company-items {
+      position: relative;
+      height: 404px;
+      max-width: 316px;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 18px;
+    }
+    .company-item{
+      margin: 0 0 -70px 0;
+      &.active {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: auto;
+        left: 0;
+        .company__logo{
+          position: absolute;
+          top: -60px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .company__info {
+          background: rgba(247, 247, 247, 0.3);
+          border-radius: 22px;
+          height: 404px;
+          position: relative;
+          width: 100%;
+          display: block;
+          p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 40px;
+          }
+        }
+      }
+    }
+    .item-0 + .item-1, .item-2{
+      right: 18px;
+      left: auto;
+    }
+  }
+}
+
+.note {
+  color: #fff;
+  font-size: rem(12px);
+  font-style: italic;
+  text-align: center;
+  display: block;
 }
 
 /* Countdown */
@@ -5095,12 +5188,12 @@ footer {
     .search-input {
       min-width: 100%;
       padding-left: 10px;
-      @include breakpoint-up(lg){
+      @include breakpoint-up(lg) {
         margin-bottom: 30px;
       }
     }
     margin: 0;
-    @include breakpoint-down(md){
+    @include breakpoint-down(md) {
       position: relative;
     }
     .menu {
@@ -5114,7 +5207,7 @@ footer {
   }
 }
 
-.open-newsletter{
+.open-newsletter {
   cursor: pointer;
   text-decoration: underline;
   text-align: center;
@@ -5862,16 +5955,24 @@ blockquote {
 /* Company */
 .part-resources {
   .cell-left {
-    flex: 0 0 51.5%;
+    .iframe {
+      height: 394px;
+    }
+    @include breakpoint-up(md) {
+      flex: 0 0 51.5%;
+    }
+    @include breakpoint-down(md) {
+      .iframe {
+        height: 164px;
+      }
+    }
   }
 }
 .part-company {
   .cell-right {
-    flex: 0 0 60%;
-  }
-  @include breakpoint-down(sm) {
-    background: url("images/bg-company-sp.png") no-repeat;
-    background-position: center 28px;
+    @include breakpoint-up(md) {
+      flex: 0 0 60%;
+    }
   }
 }
 .company {
@@ -5914,8 +6015,10 @@ blockquote {
       margin-bottom: 0;
     }
     &:hover {
-      background-color: rgba(246, 246, 246, 0.5);
-      transform: scaleX(1.02) scaleY(1.01);
+      @include breakpoint-up(md) {
+        background-color: rgba(246, 246, 246, 0.5);
+        transform: scaleX(1.02) scaleY(1.01);
+      }
     }
   }
   &__logo {
@@ -5923,6 +6026,28 @@ blockquote {
     padding: 10px;
     display: flex;
     justify-content: center;
+  }
+  @include breakpoint-down(md) {
+    &-item {
+      margin: 0 21px 25px;
+      &s {
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+    }
+    &__logo {
+      background: #f6f6f6;
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      width: 106px;
+      height: 103px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__info {
+      display: none;
+    }
   }
 }
 
@@ -6022,19 +6147,26 @@ blockquote {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @include breakpoint-down(md) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
   .grid-container {
     width: 100%;
   }
   .slick-dots {
     position: fixed;
-    right: 154px;
+    right: 20px;
     top: 50%;
     left: auto;
     bottom: auto;
     width: 10px;
     flex-direction: column;
     transform: translateY(-50%);
+    @include breakpoint-up(lg) {
+      right: 154px;
+    }
     button {
       width: 13px;
       height: 13px;
@@ -6176,5 +6308,33 @@ blockquote {
       bottom: 48px;
       left: calc(50% - 1px);
     }
+  }
+}
+
+// Fix for mobile
+@include breakpoint-down(md) {
+  .timeline {
+    margin-top: 20px;
+  }
+  .timeline,
+  .timeline:hover {
+    background-image: none;
+  }
+  .timeline-grid {
+    flex-direction: column;
+  }
+  .timeline-item::before {
+    display: none;
+  }
+  .timeline-item {
+    padding-bottom: 15px;
+    font-size: rem(13px);
+  }
+  .timeline span {
+    font-size: rem(16px);
+  }
+  .timeline h5 {
+    font-size: rem(16px);
+    margin: 3px 0;
   }
 }
