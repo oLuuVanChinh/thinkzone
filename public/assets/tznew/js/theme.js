@@ -75,14 +75,14 @@
           clearTimeout(scroll);
           scroll = setTimeout(function () {
             scrollCount = 0;
-          }, 200);
+          }, 50);
           if (scrollCount) return 0;
           scrollCount = 1;
 
           if (e.originalEvent.deltaY < 0) {
-            $(this).slick('slickNext');
-          } else {
             $(this).slick('slickPrev');
+          } else {
+            $(this).slick('slickNext');
           }
         }));
       }
@@ -332,9 +332,29 @@
       }
 
       // Close landing tab content
-      if ($('#tabsClose').length) {
-        $('#tabsClose').on('click', function () {
+      if ($('.tab-content-close').length) {
+        $('.tab-content-close').on('click', function () {
           callLandingContent(this);
+        });
+      }
+
+      // Call landing popup
+      if ($('#callFounder, #callInvestor, .landing-investor, .landing-founder').length) {
+        $('#callFounder').on('click', function () {
+          $('.landing-investor').removeClass('active');
+          $('.landing-founder').addClass('active');
+          setTimeout(function () {
+            $('.landing-founder').addClass('fade-out');
+            $('.landing-investor').removeClass('fade-out');
+          }, 1000);
+        });
+        $('#callInvestor').on('click', function () {
+          $('.landing-investor').addClass('active');
+          setTimeout(function () {
+            $('.landing-investor').addClass('fade-out');
+            $('.landing-founder').removeClass('fade-out');
+          }, 1000);
+          $('.landing-founder').removeClass('active');
         });
       }
 
