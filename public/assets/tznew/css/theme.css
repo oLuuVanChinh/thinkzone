@@ -7583,14 +7583,11 @@ blockquote:before {
 
 /* Timeline */
 .timeline {
-  background: url("images/bg-timeline.png") no-repeat bottom right;
+  background: url(images/bg-timeline-hover.png) no-repeat;
+  background-position: right 98%;
   color: #fff;
   font-size: 1.125rem;
   margin-top: 50px;
-}
-.timeline:hover {
-  background-image: url(images/bg-timeline-hover.png);
-  background-position: right 98%;
 }
 .timeline span {
   font-size: 1.5rem;
@@ -7719,6 +7716,9 @@ blockquote:before {
   border-radius: 20px;
   padding: 33px 0;
   margin-top: 0;
+}
+.content-home-founder .landing__content.open .landing__right {
+  background-color: rgba(18, 39, 74, 0.6);
 }
 .landing__content.open .landing-tabs {
   display: flex;
@@ -7861,11 +7861,53 @@ blockquote:before {
   cursor: pointer;
 }
 
-.content-home-invester::after {
-  background-color: rgba(0, 178, 83, 0.6);
+.landing-investor, .landing-founder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.landing-investor.fade-out .landing__content,
+.landing-investor.fade-out .landing__name,
+.landing-investor.fade-out .landing-overlay, .landing-founder.fade-out .landing__content,
+.landing-founder.fade-out .landing__name,
+.landing-founder.fade-out .landing-overlay {
+  transition: all 0.4s ease 0s;
+}
+.landing-investor .landing__name, .landing-founder .landing__name {
+  transition: all 1s ease 0.7s;
+}
+.landing-investor .landing__content, .landing-founder .landing__content {
+  transition: all 0.6s ease 0.4s;
+}
+.landing-investor .landing-overlay, .landing-founder .landing-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  content: "";
   top: 0;
+  transition: all 0.4s ease 0.1s;
+}
+.landing-investor.active .landing__content,
+.landing-investor.active .landing__name,
+.landing-investor.active .landing-overlay, .landing-founder.active .landing__content,
+.landing-founder.active .landing__name,
+.landing-founder.active .landing-overlay {
+  transform: translateX(0);
+}
+.landing-investor .landing__content,
+.landing-investor .landing__name,
+.landing-investor .landing-overlay {
+  transform: translateX(100vw);
+}
+.landing-investor .landing-overlay {
+  background-color: rgba(0, 178, 83, 0.6);
+}
+.landing-founder .landing__content,
+.landing-founder .landing__name,
+.landing-founder .landing-overlay {
+  transform: translateX(-100vw);
+}
+.landing-founder .landing-overlay {
+  background-color: rgba(19, 32, 60, 0.6);
 }

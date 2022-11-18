@@ -6259,14 +6259,11 @@ blockquote {
 
 /* Timeline */
 .timeline {
-  background: url("images/bg-timeline.png") no-repeat bottom right;
+  background: url(images/bg-timeline-hover.png) no-repeat;
+  background-position: right 98%;
   color: #fff;
   font-size: rem(18px);
   margin-top: 50px;
-  &:hover {
-    background-image: url(images/bg-timeline-hover.png);
-    background-position: right 98%;
-  }
   span {
     font-size: rem(24px);
     color: #00b253;
@@ -6393,6 +6390,9 @@ blockquote {
         border-radius: 20px;
         padding: 33px 0;
         margin-top: 0;
+        .content-home-founder & {
+          background-color: rgba(18, 39, 74, 0.6);
+        }
       }
       #{$landing}-tabs {
         display: flex;
@@ -6541,13 +6541,60 @@ blockquote {
     cursor: pointer;
   }
 }
-.content-home-invester {
-  &::after {
-    background-color: rgba(0, 178, 83, 0.6);
+.landing {
+  &-investor,
+  &-founder {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    content: "";
     top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    &.fade-out {
+      .landing__content,
+      .landing__name,
+      .landing-overlay {
+        transition: all 0.4s ease 0s;
+      }
+    }
+    .landing__name {
+      transition: all 1s ease 0.7s;
+    }
+    .landing__content {
+      transition: all 0.6s ease 0.4s;
+    }
+    .landing-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      transition: all 0.4s ease 0.1s;
+    }
+    &.active {
+      .landing__content,
+      .landing__name,
+      .landing-overlay {
+        transform: translateX(0);
+      }
+    }
+  }
+  &-investor {
+    .landing__content,
+    .landing__name,
+    .landing-overlay {
+      transform: translateX(100vw);
+    }
+    .landing-overlay {
+      background-color: rgba(0, 178, 83, 0.6);
+    }
+  }
+  &-founder {
+    .landing__content,
+    .landing__name,
+    .landing-overlay {
+      transform: translateX(-100vw);
+    }
+    .landing-overlay {
+      background-color: rgba(19, 32, 60, 0.6);
+    }
   }
 }
