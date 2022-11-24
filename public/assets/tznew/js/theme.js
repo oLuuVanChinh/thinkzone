@@ -310,6 +310,13 @@
     },
 
     landing: function () {
+      function toggleClassBody(status) {
+        if (status === 'open') {
+          $('body').addClass('open');
+        } else {
+          $('body').removeClass('open');
+        }
+      }
       function callLandingContent(elem) {
         if ($('.landing__content').length) {
           if ($(elem).closest('.landing__content').hasClass('open')) {
@@ -320,6 +327,18 @@
             $(elem).closest('.landing__content').find('.landing-tabs-title').removeClass('open-landing');
           }
         }
+      }
+
+      function closeLanding() {
+        toggleClassBody('remove');
+        $('.landing-investor').removeClass('active');
+        $('.landing-founder').removeClass('active');
+        $('.callInvestor').removeClass('active');
+        $('.callFounder').removeClass('active');
+        setTimeout(function () {
+          $('.landing-founder').removeClass('fade-out');
+          $('.landing-investor').removeClass('fade-out');
+        }, 1000);
       }
 
       // Call landing tab content
@@ -339,23 +358,32 @@
       }
 
       // Call landing popup
-      if ($('#callFounder, #callInvestor, .landing-investor, .landing-founder').length) {
-        $('#callFounder').on('click', function () {
+      if ($('.callFounder, .callInvestor, .landing-investor, .landing-founder, .landing-begin, .landing-popup-close').length) {
+        $('.callFounder').on('click', function () {
+          toggleClassBody('open');
           $('.landing-investor').removeClass('active');
           $('.landing-founder').addClass('active');
+          $('.callFounder').addClass('active');
+          $('.callInvestor').removeClass('active');
           setTimeout(function () {
             $('.landing-founder').addClass('fade-out');
             $('.landing-investor').removeClass('fade-out');
           }, 1000);
         });
-        $('#callInvestor').on('click', function () {
+        $('.callInvestor').on('click', function () {
+          toggleClassBody('open');
           $('.landing-investor').addClass('active');
+          $('.callFounder').removeClass('active');
+          $('.callInvestor').addClass('active');
           setTimeout(function () {
             $('.landing-investor').addClass('fade-out');
             $('.landing-founder').removeClass('fade-out');
           }, 1000);
           $('.landing-founder').removeClass('active');
         });
+        $('.landing-popup-close').on("click", function () {
+          closeLanding();
+        })
       }
 
       // Tab Content
@@ -370,6 +398,10 @@
           $(this).parent().addClass('active');
         })
       }
+      var sliderAbout = $('#slider-about');
+      sliderAbout.on("beforeChange", function () {
+        closeLanding();
+      })
     }
   }
   window.dgtTheme = dgtTheme;
