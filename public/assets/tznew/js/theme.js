@@ -309,6 +309,19 @@
       }
     },
 
+    timeline: function(){
+      if($('.timeline-item').length){
+        $('.timeline-item').hover(
+          function() {
+            $(this).closest('.timeline-grid').find('.timeline-item').removeClass('active');
+            $( this ).addClass('active');
+          }, function() {
+            $( this ).removeClass('active');
+          }
+        );
+      }
+    },
+
     landing: function () {
       function toggleClassBody(status) {
         if (status === 'open') {
@@ -416,6 +429,7 @@
     dgtTheme.iconBoxToggle();
     dgtTheme.companyToggle();
     dgtTheme.landing();
+    dgtTheme.timeline();
   });
   $(window).resize(function () {
     dgtTheme.emptySpace();
