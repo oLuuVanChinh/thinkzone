@@ -232,6 +232,11 @@ $sizes: (
     }
   }
 }
+@include breakpoint-up(md) {
+  .mr-md-4{
+    margin-right: 1.25rem;
+  }
+}
 @function rem($size) {
   @return $size / 16px * 1rem;
 }
@@ -1333,7 +1338,7 @@ a:focus {
 }
 
 .content {
-  margin-top: 124px;
+  margin-top: 100px;
   @include breakpoint-down(md) {
     margin-top: 74px;
   }
@@ -1423,6 +1428,8 @@ a:focus {
         margin-top: 32px;
         @include breakpoint-down(md) {
           font-size: rem(12px);
+          min-width: inherit;
+          padding: 0 10px;
         }
       }
       a {
@@ -1559,10 +1566,6 @@ a:focus {
             width: 66px;
             height: 66px;
           }
-          @include breakpoint-down(ls) {
-            width: 40px;
-            height: 40px;
-          }
         }
       }
     }
@@ -1680,7 +1683,7 @@ a:focus {
 }
 
 .header-primary {
-  padding-top: 37px;
+  padding-top: 25px;
   padding-bottom: 18px;
   display: flex;
   align-items: center;
@@ -1689,7 +1692,6 @@ a:focus {
   .header-dark & {
     border-bottom-color: #000;
     background-color: #fff;
-    padding-top: 49px;
     @include breakpoint-down(md) {
       padding-top: 22px;
       padding-bottom: 22px;
@@ -3982,7 +3984,7 @@ a:focus {
   transform: translateY(-23px);
   z-index: 111;
   @include breakpoint-down(md) {
-    top: 119px;
+    transform: translateY(5px);
   }
   span {
     height: 10px;
@@ -3997,7 +3999,7 @@ a:focus {
   }
   .post-title {
     a {
-      font-size: rem(26px);
+      font-size: rem(20px);
       line-height: 1.58;
       @include breakpoint-down(md) {
         font-size: rem(19px);
@@ -4448,7 +4450,7 @@ footer {
       background-color: rgba(237, 240, 255, 1);
       border-radius: 20px;
       text-align: center;
-      height: 84px;
+      min-height: 84px;
       margin: 0 9px;
       padding: 10px 5px;
       display: flex !important;
@@ -4532,6 +4534,7 @@ footer {
     border-radius: 15px;
     display: flex;
     padding: 10px 12px;
+    height: 100%;
     p {
       font-size: rem(10px);
       color: rgba(18, 39, 74, 0.6);
@@ -4552,6 +4555,7 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      justify-content: center;
     }
     &-tag {
       border-radius: 9px;
@@ -5174,7 +5178,9 @@ footer {
   }
   .search-input {
     border: none;
-    min-width: 369px;
+    @include breakpoint-up(md){
+      min-width: 369px;
+    }
 
     &::-webkit-input-placeholder {
       /* Edge */
@@ -5982,7 +5988,7 @@ blockquote {
 .part-company {
   .cell-right {
     @include breakpoint-up(md) {
-      flex: 0 0 60%;
+      flex: 0 0 59.8%;
     }
   }
 }
@@ -6285,7 +6291,7 @@ blockquote {
   &-item {
     padding-bottom: 95px;
     position: relative;
-    &:hover {
+    &:hover, &.active {
       span,
       p {
         opacity: 1;
