@@ -233,7 +233,7 @@ $sizes: (
   }
 }
 @include breakpoint-up(md) {
-  .mr-md-4{
+  .mr-md-4 {
     margin-right: 1.25rem;
   }
 }
@@ -1584,6 +1584,10 @@ a:focus {
   z-index: 13;
 }
 
+.header-absolute {
+  position: absolute;
+}
+
 .menu-toggle {
   @include breakpoint-down(md) {
     max-height: 237px;
@@ -2870,6 +2874,50 @@ a:focus {
 }
 .home-resources {
   background-position: right center;
+  > .fp-overflow {
+    @include breakpoint-up(md) {
+      padding: 70px 0;
+    }
+  }
+}
+#fp-nav.fp-right{
+  right: 20px;
+  @include breakpoint-up(md){
+    right: 128px;
+  }
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  li {
+    margin: 0;
+    margin-bottom: 13px;
+    a {
+      span {
+        width: 13px;
+        height: 13px;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
+      &.active {
+        span {
+          background-color: #fff;
+          top: 0;
+          left: 0;
+          margin: 0;
+          box-shadow: 0px 0px 4px 4px #3FAA61;
+        }
+      }
+    }
+    &:hover{
+      a span, a.active span{
+        height: inherit;
+        width: inherit;
+        margin: 0;
+      }
+    }
+  }
 }
 .home-review {
   @include breakpoint-up(sm) {
@@ -5178,7 +5226,7 @@ footer {
   }
   .search-input {
     border: none;
-    @include breakpoint-up(md){
+    @include breakpoint-up(md) {
       min-width: 369px;
     }
 
@@ -5250,7 +5298,7 @@ footer {
   .flex-container {
     flex-wrap: wrap;
     @include breakpoint-down(md) {
-      padding: 0 50px;
+      padding: 0 20px;
     }
   }
   h3 {
@@ -5266,8 +5314,7 @@ footer {
     list-style: none;
     padding: 0 32px;
     @include breakpoint-down(md) {
-      padding: 9px 22px;
-      width: calc(100% / 3);
+      padding: 9px 5px;
       display: flex;
       justify-content: center;
     }
@@ -5280,6 +5327,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    @include breakpoint-down(md) {
+      width: 40px;
+      height: 40px;
+      img{
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -6160,10 +6215,6 @@ blockquote {
 
 .slider-about {
   .home-part {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     @include breakpoint-down(md) {
       padding-left: 25px;
       padding-right: 25px;
@@ -6291,7 +6342,8 @@ blockquote {
   &-item {
     padding-bottom: 95px;
     position: relative;
-    &:hover, &.active {
+    &:hover,
+    &.active {
       span,
       p {
         opacity: 1;
@@ -6590,7 +6642,7 @@ blockquote {
     font-size: rem(33px);
     font-weight: bold;
     color: #fff;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -6661,7 +6713,7 @@ body.open {
             background-color: #fff;
             content: "";
             position: absolute;
-            bottom: 0;
+            bottom: -10px;
             left: 16px;
           }
         }
