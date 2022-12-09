@@ -30,6 +30,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="http://thinkzone.vn/public/assets/tznew/css/foundation.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="public/assets/tznew/js/onepage/dist/fullpage.css" />
   <link rel="stylesheet" href="public/assets/tznew/css/app.css">
   <link rel="stylesheet" href="public/assets/tznew/css/theme.css">
   <link rel="stylesheet" href="public/assets/tznew/css/responsive.css">
@@ -107,9 +108,9 @@
 
   <!-- Content -->
   <div id="content" class="content content-home">
-    <div class="slider-about" id="slider-about">
+    <div class="slider-about" id="fullpage">
       <!-- Begin .home-collectiton only for SP -->
-      <section class="home-part home-invest toggle-wrap">
+      <section class="section home-part home-invest toggle-wrap">
         <div class="grid-container text-center">
           <h3 class="part-title--shadow mb-4 mb-medium-2 white">ZONE FOR <span class="color-accent">GREAT MINDS</span>
           </h3>
@@ -177,7 +178,7 @@
       </section>
       <!-- End .home-collectiton -->
       <!-- Begin .home-value -->
-      <section class="home-part part-landing" id="home-value">
+      <section class="section home-part part-landing" id="home-value">
         <div class="grid-container">
           <div class="empty-space" data-height="25px" data-height-xl="96px"></div>
           <!-- About us -->
@@ -207,7 +208,7 @@
       </section>
       <!-- End .home-about -->
       <!-- Begin RESOURCES -->
-      <section class="home-part home-resources" id="home-resources">
+      <section class="section home-part home-resources" id="home-resources">
         <div class="grid-container">
           <!-- About us -->
           <div class="grid-x grid-margin-x align-middle part-company toggle-wrap">
@@ -269,7 +270,7 @@
       </section>
       <!-- End .home-about -->
       <!-- Begin .home-offer -->
-      <section class="home-part home-offer" id="home-offer">
+      <section class="section home-part home-offer" id="home-offer">
         <div class="grid-container">
           <div class="card-slider mt-5 mt-medium-8">
             <div class="card-heading">
@@ -340,10 +341,11 @@
                   </div>
                   <div class="card__item-info">
                     <span class="card__item-tag">Cloud service</span>
-                    <h4 class="card__item-title">Amazon web services Amazon web services<i class="icon-arrow-right"></i><i
-                        class="icon-arrow-right"></i></h4>
+                    <h4 class="card__item-title">Amazon web services Amazon web services<i
+                        class="icon-arrow-right"></i><i class="icon-arrow-right"></i></h4>
                     <p>
-                      <strong>$25,000</strong> cloud service for 2 years cloud service for 2 years cloud service for 2 years cloud service for 2 years
+                      <strong>$25,000</strong> cloud service for 2 years cloud service for 2 years cloud service for 2
+                      years cloud service for 2 years
                     </p>
                   </div>
                   <div class="card__item-window">
@@ -807,7 +809,7 @@
       </section>
       <!-- End .home-offer -->
       <!-- Begin .home-timeline -->
-      <section class="home-part home-timeline" id="home-timline">
+      <section class="section home-part home-timeline" id="home-timline">
         <div class="grid-container text-center">
           <div class="empty-space" data-height="25px" data-height-xl="46px"></div>
           <h3 class="part-title--shadow mb-4 mb-medium-2 white">TIMELINE & <span class="color-accent">ACTIVITIES</span>
@@ -850,7 +852,7 @@
       </section>
       <!-- End .home-timeline -->
       <!-- Begin. FAQ -->
-      <section class="home-part home-faq" id="home-faq">
+      <section class="section home-part home-faq" id="home-faq">
         <div class="grid-container">
           <div class="empty-space" data-height="25px" data-height-xl="46px"></div>
           <h3 class="part-title--small letter-spacing-0 text-center mb-5 mb-mediun-7 white" data-size-small="24px">FAQs
@@ -924,7 +926,7 @@
       </section>
       <!-- End. FAQ -->
       <!-- Begin. Landing -->
-      <section class="home-part home-landing" id="home-landing">
+      <section class="section home-part home-landing" id="home-landing">
         <ul class="dropdown menu menu-landing show-for-small-only" data-dropdown-menu>
           <li class="mr-0"><a href="#" class="active callInvestor">Investor T</a></li>
           <li><a href="#" class="callFounder">Founder Z</a></li>
@@ -1110,8 +1112,16 @@
   <script type="text/javascript">var baseUrl = 'http://thinkzone.vn/';</script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="public/assets/tznew//js/psg-countdown-timer/js/jquery.psgTimer.js"></script>
+  <script type="text/javascript" src="public/assets/tznew/js/onepage/dist/fullpage.js"></script>
   <script src="http://thinkzone.vn/public/assets/tznew/js/app.js"></script>
   <script src="public/assets/tznew/js/theme.js"></script>
+  <script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+      normalScrollElements: '.card-body, .element2',
+      scrollOverflow: true,
+      navigation: true,
+    });
+  </script>
   <script>
     // Countdown
     if ($('.item-countdown--light').length) {
