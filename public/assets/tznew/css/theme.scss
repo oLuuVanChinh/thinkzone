@@ -1814,15 +1814,6 @@ a:focus {
   transform: translateY(-50%);
 }
 
-.is-dropdown-submenu > li:after {
-  width: 1px;
-  height: 19px;
-  left: 4px;
-  bottom: -10px;
-  background: $accent-color;
-  border-radius: 6px;
-}
-
 .header-container {
   .dropdown {
     .is-dropdown-submenu {
