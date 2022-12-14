@@ -286,13 +286,19 @@
     },
 
     timeline: function () {
-      if ($('.timeline-item').length) {
+      if ($('.timeline-item, .timeline-grid').length) {
         $('.timeline-item').hover(
           function () {
             $(this).closest('.timeline-grid').find('.timeline-item').removeClass('active');
             $(this).addClass('active');
           }, function () {
             $(this).removeClass('active');
+          }
+        );
+        $('.timeline-grid').hover(
+          function () {
+          }, function () {
+            $('.timeline-item.first').addClass('active');
           }
         );
       }
